@@ -1,0 +1,23 @@
+/**
+ * Masthead -- hero template
+ */
+.hero {
+    padding-bottom: 50px;
+    background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
+    background-size: cover;
+    box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-bottom: 1px solid #989898;
+}
+#announce {
+	bottom: 24px;
+}
+section#quote {
+	background: #fefefe;
+	text-align: center;
+	height: 50px;
+	margin: 0;
+}
+section#quote p {
+	line-height: 50px;
+}
