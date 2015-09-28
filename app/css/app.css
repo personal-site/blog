@@ -6764,12 +6764,18 @@ section#quote {
  */
 section#stats {
   padding: 64px 0;
-  text-align: center; }
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: .875em; }
+  section#stats a {
+    margin-bottom: 0; }
   section#stats .mega-octicon {
     font-size: 64px;
     display: block; }
   section#stats .v {
-    display: block; }
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem; }
 
 /**
  * Section -- projects
