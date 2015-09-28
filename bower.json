@@ -1,7 +1,11 @@
 {
   "name": "zf5_project",
   "dependencies": {
+    "SVG-Loaders": "svg-loaders#~1.0.2",
+    "font-awesome": "~4.4.0",
     "foundation": "zurb/bower-foundation",
-    "font-awesome": "~4.4.0" 
+    "octicons": "~3.1.0",
+    "remodal": "~1.0.3",
+    "scrollup": "~2.4.1"
   }
 }

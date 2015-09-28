@@ -1,0 +1,12 @@
+body {
+    background: $base-grey;
+}
+.top-bar,
+.top-bar-section li:not(.has-form) a:not(.button),
+.contain-to-grid,
+footer {
+	background: #4A3E62;
+}
+.top-bar {
+	display: none;
+}

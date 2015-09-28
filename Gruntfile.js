@@ -54,6 +54,16 @@ module.exports = function(grunt) {
 					src: ['<%= app %>/bower_components/font-awesome/fonts/**'],
 					dest: '<%= dist %>/fonts/',
 					filter: 'isFile'
+				}, {
+					expand: true,
+					flatten: true,
+					src: [
+						'<%= app %>/bower_components/octicons/octicons/*.ttf',
+						'<%= app %>/bower_components/octicons/octicons/*.woff',
+						'<%= app %>/bower_components/octicons/octicons/*.svg',
+						'<%= app %>/bower_components/octicons/octicons/*.eot'],
+					dest: '<%= dist %>/css/',
+					filter: 'isFile'
 				} ]
 			},
 		},

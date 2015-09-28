@@ -7,9 +7,17 @@ d88P  Y88b d8888  888     888 d88P  Y88b
 888    888   888    Y88o88P   888    888 
 Y88b  d88P   888     Y888P    Y88b  d88P 
  "Y8888P"  8888888    Y8P      "Y8888P"**/
+$accent-grey: #eceff1;
+$base-grey: #fefefe;
+
 @import 'components/typography.scss';
+@import 'components/layout.scss';
 @import 'components/masthead.scss';
+@import 'components/quotes.scss';
 @import 'components/stats.scss';
 @import 'components/projects.scss';
+@import 'components/about.scss';
 @import 'components/accents.scss';
 @import 'components/plugins.scss';
+@import 'components/footer.scss';
+@import 'components/social.scss';

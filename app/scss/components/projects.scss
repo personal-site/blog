@@ -1,23 +1,48 @@
 /**
  * Section -- projects
  */
-.hero-content {
+.projects-content {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #EAEAEA;
     background-image: url("../images/google-abstract.png");
-}
-.hero-content .panel {
-    border-radius: 14px;
-    padding: 42px 22px;
-    text-align: center;
-}
-.hero-content p {
-    font-size: 1.125em;
+    background-size: cover;
+    .panel {
+        background-color: $base-grey;
+        border-radius: 14px;
+        box-shadow: none;
+        padding: 42px 22px;
+        text-align: center;
+    }
+    p {
+        font-size: 1.125em;
+    }
+    ul:hover li {opacity: 0.5;}
+    ul li:hover {opacity: 1;}
+    ul.pagination {
+        li {
+            height: auto;
+        }
+        a:hover {
+            background: $accent-grey;
+            color: #fefefe;
+        }
+        .mega-octicon {
+            font-size: 48px;
+            color: $base-grey;
+        }
+    }
 }
 #menu {
     margin-bottom: 288px;
 }
 #title {
     margin-bottom: 64px;
+}
+#modal-project {
+    h3 {
+        color: #181818;
+        line-height: auto;
+        padding-bottom: 0;
+        margin: 32px 0;
+    }
 }

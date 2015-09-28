@@ -7,22 +7,11 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 			$(document).foundation();
-            // needed to use joyride
-            // doc: http://foundation.zurb.com/docs/components/joyride.html
-            $(document).on('click', '#start-jr', function () {
-                $(document).foundation('joyride', 'start');
-            });
+			if ($(document).width() < 640) {
+				$(".top-bar").fadeIn();
+			}
 			_userAgentInit();
-
-			document.querySelector('.menu-button').onclick = function(e) {
-			   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
-			}
-			
-			var items = document.querySelectorAll('.circle a');
-			for(var i = 0, l = items.length; i < l; i++) {
-			  items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-			  items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-			}
+		    $.scrollUp();
 		};
 	return {
 		init: _init
@@ -31,4 +20,29 @@ var app = (function(document, $) {
 
 (function() {
 	app.init();
+})();
+
+$(document).on("scroll", function(){
+	if ($(document).width() > 640) {
+		if ($(document).scrollTop() > 300){
+			$(".top-bar").fadeIn();
+		} else {
+			$(".top-bar").fadeOut();
+		}
+	}
+});
+
+(function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/platform.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+
+	$( "#project-list li" ).hover(
+	  function() {
+	    $( this ).addClass( "hover" );
+	  }, function() {
+	    $( this ).removeClass( "hover" );
+	  }
+	);
+
 })();

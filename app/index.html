@@ -3,12 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Foundation project</title>
+<!--
+    ____ _  _ ____ _ ____ _  _ ____ ____ ___  _  _ ____ 
+    |    |__| |__/ | [__  |  | |  | | __  |   |\/| |___ 
+    |___ |  | |  \ | ___]  \/  |__| |__]  |  .|  | |___ 
+                        an open source project by @c1v0
+    
+    https://github.com/chrisvogt/quartzite
+ -->
+    <title>Chris Vogt - web developer and student in Phoenix</title>
+    <meta name="description" content="Personal site of Phoenix web developer Chris Vogt. Creator of open source projects in PHP, JavaScript, Ruby, and more.">
+    <meta name="og:title" content="CHRISVOGT.me">
+    <meta name="og:description" content="Personal site of Phoenix web developer Chris Vogt. Creator of open source projects in PHP, JavaScript, Ruby, and more.">
+    <meta name="og:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1433903064/og-banner_saphne.jpg"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@C1V0">
+    <meta name="twitter:creator" content="@C1V0">
+    <meta name="twitter:title" content="CHRISVOGT.me">
+    <meta name="twitter:description" content="Personal blog of Phoenix web developer CJ Vogt. Projects in PHP, CakePHP, Jekyll, Wordpress, and more.">
+    <meta name="twitter:description" content="Personal blog of Phoenix web developer CJ Vogt. Projects in PHP, CakePHP, Jekyll, Wordpress, and more.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1433903064/og-banner_saphne.jpg">
 
     <script type="text/javascript">
       WebFontConfig = {
-        google: { families: [ 'Quicksand::latin', 'Merriweather:400,400italic:latin' ] }
+        google: { families: [ 'Quicksand::latin', 'Merriweather:300,300italic:latin' ] }
       };
       (function() {
         var wf = document.createElement('script');
@@ -23,163 +41,191 @@
 
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/remodal/dist/remodal.css" />
+    <link rel="stylesheet" href="bower_components/remodal/dist/remodal-default-theme.css" />
     <!-- endbower -->
     <!-- endbuild -->
+
     <!-- build:css css/app.min.css -->
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/app_override.css">
     <!-- endbuild -->
+
     <!-- build:js js/vendor/modernizr.min.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- <script src="bower_components/modernizr/src/Modernizr.js"></script> -->
     <!-- endbuild -->
   </head>
   <body>
-      <section class="hero">
-        <div id="announce" class="row">
-          <div class="small-10 large-centered columns">
-              <div class="row" id="menu">
-                <div class="large-6 columns large-centered">
+    <div class="contain-to-grid sticky">
+      <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">chrisvogt.me</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
 
-                  Something.
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="divider"></li>
+            <li><a href="http://projects.chrisvogt.me" title="Projects directory">Projects Directory</a></li>
+            <li class="divider"></li>
+          </ul>
 
-                </div>
-              </div>
-            <div id="title" class="main-wrapper">
-              <h1>
-                CHRISVOGT.me
-              </h1>
-            </div>
+          <ul class="left">
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div id="announce" class="row">
+        <div class="small-10 large-centered columns">
+          <div id="title" class="main-wrapper">
+            <h1>
+              CHRISVOGT.me
+            </h1>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="quote">
-        <p>"And that's the way the cookie crumbles."</p>
-      </section>
-
-      <section id="stats">
-        <div class="row text-center">
-          <div class="small-4 columns">
-            <i class="fa fa-time"></i>
-            <span>..</span> hours
-          </div>
-          <div class="small-4 columns">
-            <i class="fa fa-time"></i>
-            <span>..</span> commits
-          </div>
-          <div class="small-4 columns">
-            <i class="fa fa-time"></i>
-            <span>..</span> projects
-          </div>
+    <section id="quote">
+      <div class="row">
+        <div class="large-12 columns">
+          <ul class="orbit" data-orbit data-options="variable_height:true;bullets:false;slide_number:false;timer_speed:6000;">
+            <!-- AJAX quotes -->
+          </ul>
         </div>
-      </section>
-      
-      <section class="hero-content"> 
+      </div>
+    </section>
+
+    <section id="stats">
+      <div class="row text-center">
+        <div id="stats-hours" class="small-4 columns">
+          <span class="mega-octicon octicon-clock"></span>
+          <span class="v"><img src="images/ajax-rings.svg" height="32" width="32"></span>
+          hours
+        </div>
+        <div id="stats-commits" class="small-4 columns">
+          <span class="mega-octicon octicon-git-commit"></span>
+          <span class="v"><img src="images/ajax-rings.svg" height="32" width="32"></span>
+          commits
+        </div>
+        <div id="stats-projects" class="small-4 columns">
+          <span class="mega-octicon octicon-microscope"></span>
+          <span class="v"><img src="images/ajax-rings.svg" height="32" width="32"></span>
+          projects
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects" class="projects-content"> 
       <div class="row">
         <div class="large-12 columns">
           <div class="panel">
             <p>Projects I have created, maintain, or contribute to frequently.</p>
           </div>
-          <ul class="small-block-grid-3 large-block-grid-6">
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
-            <li><a href="#"><img src="http://placehold.it/240x240" class="image-circle"/></a></li>
+          <ul id="project-list" class="small-block-grid-3 large-block-grid-6">
+            <!-- AJAX projects -->
           </ul>
         </div>
-        <ul class="pagination" role="menubar" aria-label="Pagination">
-          <li class="arrow unavailable" aria-disabled="true"><a href="">&laquo; Previous</a></li>
-          <li class="arrow"><a href="">Next &raquo;</a></li>
-        </ul>
       </div>
-      </section>
-      
-      <section id="about">
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="panel">
-              <div class="row">
-                <div class="large-9 columns">
-                  <h4>Get in touch!</h4>
-                  <p>We're open 9am - 5pm, Monday through Saturdays.</p>
-                </div>
-                <div class="large-3 columns">
-                  <a href="#" class="radius button right">Contact Us</a>
+    </section>
+    
+    <section id="about" class="about-content">
+      <div class="row">
+        <div class="large-12 columns">
+            <div class="row">
+              <div class="small-9 columns">
+                <h2>About me</h2>
+                <p>In the real world I inhabit Phoenix, Arizona, USA. Between five and ten weekday evenings I can typically be spotted near N33° 29.0744′, W112° 5.3194′.</p>
+                <p>I am a web developer who has worked in the eDiscovery, EdTech, and Health Care industries. I am a strong proponent of the Open Web Platform and actively contribute to and maintain projects made with, <em>inter alia</em>, JavaScript and PHP.</p>
+                <p>October 2013 I came down with a touch of lymphoma and spent fourteen months married to a chemo pump. Cancer patients have a generous amount of time to spend studying and reading, and I remain an <a href="https://www.goodreads.com/review/list/10454947-chris-vogt?shelf=read" title="Chris Vogt on Goodreads">assiduous reader</a> to this day. I also <a href="https://youtu.be/B6z4WvaFP1U?list=PLNpEtdDfoma2QoX2Oxn8tvybYoiQI_yz_" title="Chris Vogt playing piano on YouTube">play tunes on the piano</a>.</p>
+                <p>I have been in full remission since January. 💪 A few months before that I returned to school full time for discipline, structure, and networking, and in 2016 will likely transfer somewhere to study engineering, computer science, or philosophy.</p>
+                <div class="text-center">
+                  <img src="https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/favicon-57.png" title="C1V0">
                 </div>
               </div>
+              <div class="small-3 columns">
+                <div class="g-person" data-href="//plus.google.com/u/0/118311366440595712834" data-rel="author" data-width="180"></div>
+              </div>
             </div>
-          </div>
         </div>
-      </section>
-    
-    <!--
-      <div class="large-8 columns about-content">
-        <h4>This is a content section.</h4>
-        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-      </div> -->
+      </div>
+    </section>
 
-      <!--
-      <nav class="circular-menu">
-        <div class="circle">
-          <a href="" class="fa fa-home fa-2x"></a>
-          <a href="" class="fa fa-facebook fa-2x"></a>
-          <a href="" class="fa fa-twitter fa-2x"></a>
-          <a href="" class="fa fa-linkedin fa-2x"></a>
-          <a href="" class="fa fa-github fa-2x"></a>
-          <a href="" class="fa fa-rss fa-2x"></a>
-          <a href="" class="fa fa-pinterest fa-2x"></a>
-          <a href="" class="fa fa-asterisk fa-2x"></a>
-        </div>
-        <a href="" class="menu-button fa fa-bars fa-2x"></a>
-      </nav>
-      -->
-
-      <footer>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>© Copyright no one at all. Go to town.</p>
-          </div>
-          <div class="large-6 columns">
-            <ul class="inline-list right">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+    <section id="social">
+      <div class="row">
+        <div class="large-12 columns">
+          <nav id="links">
+            <ul class="inline-list">
+              <li>
+                <a href="https://github.com/chrisvogt" title="Chris Vogt on GitHub"><i class="fa fa-github fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/c1v0" title="@c1v0 on Twitter"><i class="fa fa-twitter fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/cjvogt" title="CJ Vogt on LinkedIn"><i class="fa fa-linkedin fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="https://www.behance.net/chrisvogt" title="Chris Vogt on Behance"><i class="fa fa-behance fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="http://stackoverflow.com/users/1391826/chris-vogt" title="C Vogt on StackOverflow"><i class="fa fa-stack-overflow fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/c1v0/" title="c1v0 on Instagram"><i class="fa fa-instagram fa-3x"></i></a>
+              </li>
             </ul>
-          </div>
+          </nav>
         </div>
-      </footer>
-    
+      </div>
+    </section>
 
+    <footer>
+      <div class="row">
+        <div class="large-6 columns">
+          <p><span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <i class="fa fa-twitter"></i> @c1v0</p>
+        </div>
+        <div class="large-6 columns">
+          <!--
+          <ul class="inline-list right">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </footer>
+  
+    <div id="modal-project" class="remodal" data-remodal-id="modal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <img src="#">
+      <h3>..</h3>
+      <a href="#" title=".." class="project-source button secondary"><span class="octicon octicon-code"></span> Source</a>
+      <a href="#" title=".." class="project-demo button secondary"><span class="octicon octicon-globe"></span> Demo</a>
+    </div>
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/remodal/dist/remodal.js"></script>
+    <script src="bower_components/scrollup/dist/jquery.scrollUp.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
@@ -189,6 +235,9 @@
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/projects.js"></script>
     <!-- endbuild -->
   </body>
 </html>

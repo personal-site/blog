@@ -6650,8 +6650,7 @@ Y88b  d88P   888     Y888P    Y88b  d88P
  */
 body {
   font-family: 'Merriweather', serif;
-  font-size: 100%;
-  background: #181818; }
+  font-size: 100%; }
 
 hr {
   text-align: center;
@@ -6681,7 +6680,7 @@ h1 {
 
 h2 {
   font-family: 'Merriweather', serif;
-  color: #fff;
+  color: #212121;
   font-size: 36px;
   line-height: 34px; }
 
@@ -6700,54 +6699,106 @@ h4 {
   font-size: 28px;
   padding-top: 5px; }
 
+blockquote {
+  text-decoration: none;
+  text-transform: none; }
+
+.about-content p {
+  font-size: 1.125em;
+  line-height: 1.5em; }
+
+footer,
+ul.inline-list.right a {
+  color: #afafaf; }
+
+body {
+  background: #fefefe; }
+
+.top-bar,
+.top-bar-section li:not(.has-form) a:not(.button),
+.contain-to-grid,
+footer {
+  background: #4A3E62; }
+
+.top-bar {
+  display: none; }
+
 /**
  * Masthead -- hero template
  */
 .hero {
+  padding-top: 220px;
   padding-bottom: 50px;
   background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
   background-size: cover;
-  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
   position: relative;
   border-bottom: 1px solid #989898; }
+
+.shrunken-head {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 #announce {
   bottom: 24px; }
 
 section#quote {
-  background: #fefefe;
+  background: #eceff1;
   text-align: center;
-  height: 50px;
+  min-height: 100px;
   margin: 0; }
+  section#quote p {
+    line-height: 50px; }
+  section#quote .orbit-timer {
+    display: none; }
+  section#quote blockquote {
+    border-left: none; }
 
-section#quote p {
-  line-height: 50px; }
+.orbit-container .orbit-next > span {
+  border-left-color: #6654B0; }
+
+.orbit-container .orbit-prev > span {
+  border-right-color: #6654B0; }
 
 /**
  * Section -- stats
  */
 section#stats {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background: #cecece;
+  padding: 64px 0;
   text-align: center; }
+  section#stats .mega-octicon {
+    font-size: 64px;
+    display: block; }
+  section#stats .v {
+    display: block; }
 
 /**
  * Section -- projects
  */
-.hero-content {
+.projects-content {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #EAEAEA;
-  background-image: url("../images/google-abstract.png"); }
-
-.hero-content .panel {
-  border-radius: 14px;
-  padding: 42px 22px;
-  text-align: center; }
-
-.hero-content p {
-  font-size: 1.125em; }
+  background-image: url("../images/google-abstract.png");
+  background-size: cover; }
+  .projects-content .panel {
+    background-color: #fefefe;
+    border-radius: 14px;
+    box-shadow: none;
+    padding: 42px 22px;
+    text-align: center; }
+  .projects-content p {
+    font-size: 1.125em; }
+  .projects-content ul:hover li {
+    opacity: 0.5; }
+  .projects-content ul li:hover {
+    opacity: 1; }
+  .projects-content ul.pagination li {
+    height: auto; }
+  .projects-content ul.pagination a:hover {
+    background: #eceff1;
+    color: #fefefe; }
+  .projects-content ul.pagination .mega-octicon {
+    font-size: 48px;
+    color: #fefefe; }
 
 #menu {
   margin-bottom: 288px; }
@@ -6755,67 +6806,73 @@ section#stats {
 #title {
   margin-bottom: 64px; }
 
+#modal-project h3 {
+  color: #181818;
+  line-height: auto;
+  padding-bottom: 0;
+  margin: 32px 0; }
+
+.about-content {
+  padding: 96px 0; }
+
 /**
  * Elements -- accents
  */
 .image-circle {
   border-radius: 50%; }
 
-/**
- * Circular Menu
- */
-.circular-menu {
-  width: 250px;
-  height: 250px;
-  margin: 50px auto 0;
-  position: relative; }
+.octicon-heart {
+  color: #ce0000; }
 
-.circle {
-  width: 250px;
-  height: 250px;
-  opacity: 0;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -transform: scale(0);
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out; }
+footer .fa-twitter {
+  color: #55acee; }
 
-.open.circle {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -transform: scale(1); }
-
-.circle a {
+/* Pill style */
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  background-color: #5D436F;
+  color: #fff;
+  font-size: 12px;
+  font-family: sans-serif;
   text-decoration: none;
-  color: white;
-  display: block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  margin-left: -20px;
-  margin-top: -20px;
-  position: absolute;
-  text-align: center; }
+  opacity: .9;
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-transition: background 200ms linear;
+  -moz-transition: background 200ms linear;
+  -o-transition: background 200ms linear;
+  transition: background 200ms linear;
+  -webkit-backface-visibility: hidden; }
 
-.circle a:hover {
-  color: #eef; }
+#scrollUp:hover {
+  background-color: #000; }
 
-.menu-button {
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  text-decoration: none;
+footer p,
+footer ul {
+  line-height: 32px;
+  margin-bottom: 0; }
+
+footer .inline-list {
+  margin: 0; }
+
+#social {
+  background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
+  background-size: cover;
+  background-position: 0 -300px;
+  line-height: 258px;
   text-align: center;
-  color: #444;
-  border-radius: 50%;
-  display: block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  padding: 10px;
-  background: #dde; }
+  padding: 0; }
+  #social a {
+    color: #e0e0e0; }
 
-.menu-button:hover {
-  background-color: #eef; }
+#links .inline-list {
+  margin-bottom: 0; }
+
+#links li {
+  float: none;
+  line-height: 258px;
+  margin: 0 32px;
+  display: inline-block; }

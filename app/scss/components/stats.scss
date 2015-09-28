@@ -2,8 +2,13 @@
  * Section -- stats
  */
 section#stats {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background: #cecece;
+    padding: 64px 0;
     text-align: center;
+	.mega-octicon {
+		font-size: 64px;
+		display: block;
+	}
+	.v {
+		display: block;
+	}
 }
