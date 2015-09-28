@@ -1,5 +1,5 @@
 {
-  "name": "zf5_project",
+  "name": "quartzite",
   "dependencies": {
     "SVG-Loaders": "svg-loaders#~1.0.2",
     "font-awesome": "~4.4.0",

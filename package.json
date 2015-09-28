@@ -1,16 +1,15 @@
 {
-  "name": "zf5_project",
-  "description": "",
-  "version": "0.0.1",
-  "description": "",
-  "homepage": "",
+  "name": "quartzite",
+  "description": "The new CHRISVOGT.me website.",
+  "version": "0.9.0",
+  "homepage": "https://www.chrisvogt.me",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Chris Vogt",
+    "email": "mail@chrisvogt.me"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/chrisvogt/quartzite.git"
   },
   "devDependencies": {
     "load-grunt-tasks": "~3.2.0",

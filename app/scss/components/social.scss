@@ -1,8 +1,6 @@
 #social {
     background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
     background-size: cover;
-    background-position: 0 -300px;
-    line-height: 258px;
     text-align: center;
     padding: 0;
     a {
@@ -11,10 +9,16 @@
 }
 #links .inline-list {
 	margin-bottom: 0;
+    margin: 96px auto;
 }
 #links li {
 	float: none;
-	line-height: 258px;
-    margin: 0 32px;
 	display: inline-block;
+    font-size: 1.5rem;
+}
+@media only screen and (min-width: 64.063em) { 
+    #links li {
+        margin: 0 42px;
+        font-size: 2.675rem;
+    }
 }
