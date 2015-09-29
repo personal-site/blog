@@ -24,7 +24,7 @@ var app = (function(document, $) {
 
 $(document).on("scroll", function(){
 	if ($(document).width() > 640) {
-		if ($(document).scrollTop() > 300){
+		if ($(document).scrollTop() > 200){
 			$(".top-bar").fadeIn();
 		} else {
 			$(".top-bar").fadeOut();

@@ -91,8 +91,8 @@
 
     <section class="hero">
       <div id="announce" class="row">
-        <div class="small-10 large-centered columns">
-          <div id="title" class="main-wrapper">
+        <div class="small-12 large-centered columns">
+          <div id="title" class="main-wrapper text-center">
             <h1>
               CHRISVOGT.me
             </h1>
@@ -101,34 +101,24 @@
       </div>
     </section>
 
-    <section id="quote">
-      <div class="row">
-        <div class="large-12 columns">
-          <ul class="orbit" data-orbit data-options="variable_height:true;bullets:false;slide_number:false;timer_speed:6000;">
-            <!-- AJAX quotes -->
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <section id="stats">
       <div class="row text-center">
-        <div id="stats-hours" class="small-4 columns">
-          <a href="http://stats.chrisvogt.me" class="button secondary expand" title="Open source stats, last 7 days">
+        <div id="stats-hours" class="small-6 columns">
+          <a href="http://stats.chrisvogt.me" class="button secondary expand hvr-outline-out" title="Open source stats, last 7 days">
             <span class="mega-octicon octicon-clock"></span>
             <span class="v"><img src="images/ajax-rings.svg" height="32" width="32"></span>
             hours
           </a>
         </div>
-        <div id="stats-commits" class="small-4 columns">
+        <!-- <div id="stats-commits" class="small-4 columns">
           <a href="https://github.com/chrisvogt?tab=contributions&amp;period=monthly" class="button secondary expand" title="Contributions on GitHub this month">
             <span class="mega-octicon octicon-git-commit"></span>
             <span class="v"><img src="images/ajax-rings.svg" height="32" width="32"></span>
             commits
           </a>
-        </div>
-        <div id="stats-projects" class="small-4 columns">
-          <a href="http://projects.chrisvogt.me" class="button secondary expand" title="Projects portfolio">
+        </div> -->
+        <div id="stats-projects" class="small-6 columns">
+          <a href="http://projects.chrisvogt.me" class="button secondary expand hvr-outline-out" title="Projects portfolio">
             <span class="mega-octicon octicon-microscope"></span>
             <span class="v"><img src="images/ajax-rings.svg" height="32" width="32"></span>
             projects
@@ -140,10 +130,10 @@
     <section id="projects" class="projects-content"> 
       <div class="row">
         <div class="large-12 columns">
-          <div class="panel">
-            <p>Projects I have created, maintain, or contribute to frequently.</p>
+          <div class="panel text-left">
+            <p>Projects I've created or maintain. <a href="http://projects.chrisvogt.me" title="Projects directory on CHRISVOGT.me" class="button tiny success radius">View more</a></p>
           </div>
-          <ul id="project-list" class="small-block-grid-3 large-block-grid-6">
+          <ul id="project-list" class="small-block-grid-4 large-block-grid-6">
             <!-- AJAX projects -->
           </ul>
         </div>
@@ -154,8 +144,11 @@
       <div class="row">
         <div class="large-12 columns">
             <div class="row">
-              <div class="small-9 columns">
+              <div class="small-12 large-10 large-offset-1 columns">
                 <h2>About me</h2>
+                <div id="g-person" class="pull-right hide-for-small-only">
+                  <div class="g-person" data-href="//plus.google.com/u/0/118311366440595712834" data-rel="author" data-width="180"></div>
+                </div>
                 <p>In the real world I inhabit Phoenix, Arizona, USA. Between five and ten weekday evenings I can typically be spotted near N33° 29.0744′, W112° 5.3194′.</p>
                 <p>I am a web developer who has worked in the eDiscovery, EdTech, and Health Care industries. I am a strong proponent of the Open Web Platform and actively contribute to and maintain projects made with, <em>inter alia</em>, JavaScript and PHP.</p>
                 <p>October 2013 I came down with a touch of lymphoma and spent fourteen months married to a chemo pump. Cancer patients have a generous amount of time to spend studying and reading, and I remain an <a href="https://www.goodreads.com/review/list/10454947-chris-vogt?shelf=read" title="Chris Vogt on Goodreads">assiduous reader</a> to this day. I also <a href="https://youtu.be/B6z4WvaFP1U?list=PLNpEtdDfoma2QoX2Oxn8tvybYoiQI_yz_" title="Chris Vogt playing piano on YouTube">play tunes on the piano</a>.</p>
@@ -164,10 +157,17 @@
                   <img src="https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/favicon-57.png" title="C1V0">
                 </div>
               </div>
-              <div class="small-3 columns">
-                <div class="g-person" data-href="//plus.google.com/u/0/118311366440595712834" data-rel="author" data-width="180"></div>
-              </div>
             </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote">
+      <div class="row">
+        <div class="large-12 columns">
+          <ul class="orbit" data-orbit data-options="variable_height:true;bullets:false;slide_number:false;timer_speed:6000;">
+            <!-- AJAX quotes -->
+          </ul>
         </div>
       </div>
     </section>
@@ -204,7 +204,7 @@
     <footer>
       <div class="row">
         <div class="large-6 columns">
-          <p><span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <i class="fa fa-twitter"></i> @c1v0</p>
+          <p><span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <i class="fa fa-twitter"></i> <a href="https://twitter.com/c1v0" title="@c1v0 on Twitter">@c1v0</a></p>
         </div>
         <div class="large-6 columns">
           <!--
@@ -222,8 +222,8 @@
       <button data-remodal-action="close" class="remodal-close"></button>
       <img src="#">
       <h3>..</h3>
-      <a href="#" title=".." class="project-source button secondary"><span class="octicon octicon-code"></span> Source</a>
-      <a href="#" title=".." class="project-demo button secondary"><span class="octicon octicon-globe"></span> Demo</a>
+      <a href="#" title=".." class="project-source button secondary radius"><span class="octicon octicon-code"></span> Source</a>
+      <a href="#" title=".." class="project-demo button secondary radius"><span class="octicon octicon-globe"></span> Demo</a>
     </div>
 
     <!-- build:js js/vendor/libraries.min.js -->

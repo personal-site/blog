@@ -4,7 +4,11 @@
     text-align: center;
     padding: 0;
     a {
-        color: #e0e0e0;
+        color: #cecece;
+
+    }
+    a:hover {
+        color: #fff;
     }
 }
 #links .inline-list {
@@ -14,7 +18,8 @@
 #links li {
 	float: none;
 	display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.875rem;
+    margin: 0 14px;
 }
 @media only screen and (min-width: 64.063em) { 
     #links li {

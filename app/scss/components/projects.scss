@@ -41,8 +41,16 @@
 #modal-project {
     h3 {
         color: #181818;
-        line-height: auto;
+        line-height: 1.5em;
+        font-size: 1.5em;
         padding-bottom: 0;
         margin: 32px 0;
     }
 }
+#project-list li,
+#social a {
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+ }

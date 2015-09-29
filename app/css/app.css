@@ -6671,12 +6671,11 @@ ul.inline-list.right a:hover {
 
 h1 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 4.5em;
+  font-size: 3.4em;
   color: #fff;
   line-height: 28px;
   margin-top: 16px;
-  margin-bottom: 0px;
-  text-align: center; }
+  margin-bottom: 0px; }
 
 h2 {
   font-family: 'Merriweather', serif;
@@ -6727,8 +6726,8 @@ footer {
  * Masthead -- hero template
  */
 .hero {
-  padding-top: 220px;
-  padding-bottom: 50px;
+  padding-top: 140px;
+  padding-bottom: 32px;
   background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
   background-size: cover;
   position: relative;
@@ -6777,6 +6776,12 @@ section#stats {
     font-family: 'Merriweather', serif;
     font-size: 1.5rem; }
 
+#stats-projects a {
+  background-color: #2788B3; }
+
+#stats-hours a {
+  background-color: #B5ECA2; }
+
 /**
  * Section -- projects
  */
@@ -6814,9 +6819,17 @@ section#stats {
 
 #modal-project h3 {
   color: #181818;
-  line-height: auto;
+  line-height: 1.5em;
+  font-size: 1.5em;
   padding-bottom: 0;
   margin: 32px 0; }
+
+#project-list li,
+#social a {
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in; }
 
 .about-content {
   padding: 96px 0; }
@@ -6832,6 +6845,12 @@ section#stats {
 
 footer .fa-twitter {
   color: #55acee; }
+
+.pull-right {
+  float: right; }
+
+#g-person {
+  margin: 0 0 14px 14px; }
 
 /* Pill style */
 #scrollUp {
@@ -6853,8 +6872,42 @@ footer .fa-twitter {
   transition: background 200ms linear;
   -webkit-backface-visibility: hidden; }
 
+#projects a.button {
+  margin-bottom: 0; }
+
 #scrollUp:hover {
   background-color: #000; }
+
+/* Outline Out */
+.hvr-outline-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative; }
+
+.hvr-outline-out:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left; }
+
+.hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px; }
 
 footer p,
 footer ul {
@@ -6870,7 +6923,9 @@ footer .inline-list {
   text-align: center;
   padding: 0; }
   #social a {
-    color: #e0e0e0; }
+    color: #cecece; }
+  #social a:hover {
+    color: #fff; }
 
 #links .inline-list {
   margin-bottom: 0;
@@ -6879,7 +6934,8 @@ footer .inline-list {
 #links li {
   float: none;
   display: inline-block;
-  font-size: 1.5rem; }
+  font-size: 1.875rem;
+  margin: 0 14px; }
 
 @media only screen and (min-width: 64.063em) {
   #links li {
