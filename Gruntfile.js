@@ -149,7 +149,8 @@ module.exports = function(grunt) {
 					'modernizr',
 					'font-awesome',
 					'jquery-placeholder',
-					'foundation'
+					'foundation',
+					'github-fork-ribbon-css/gh-fork-ribbon.ie.css'
 				]
 			}
 		}
