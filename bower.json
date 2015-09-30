@@ -4,6 +4,7 @@
     "SVG-Loaders": "svg-loaders#~1.0.2",
     "font-awesome": "~4.4.0",
     "foundation": "zurb/bower-foundation",
+    "github-fork-ribbon-css": "~0.1.1",
     "octicons": "~3.1.0",
     "remodal": "~1.0.3",
     "scrollup": "~2.4.1"
