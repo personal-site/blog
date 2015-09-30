@@ -7,6 +7,8 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 			$(document).foundation();
+			$('.hero').parallax({imageSrc: 'https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png'});
+			$('#projects').parallax({imageSrc: '/images/material-bg.jpg'});
 			if ($(document).width() < 640) {
 				$(".top-bar").fadeIn();
 			}
@@ -20,23 +22,9 @@ var app = (function(document, $) {
 
 (function() {
 	app.init();
-})();
-
-$(document).on("scroll", function(){
-	if ($(document).width() > 640) {
-		if ($(document).scrollTop() > 200){
-			$(".top-bar").fadeIn();
-		} else {
-			$(".top-bar").fadeOut();
-		}
-	}
-});
-
-(function() {
 	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 	po.src = 'https://apis.google.com/js/platform.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-
 	$( "#project-list li" ).hover(
 	  function() {
 	    $( this ).addClass( "hover" );
@@ -44,5 +32,13 @@ $(document).on("scroll", function(){
 	    $( this ).removeClass( "hover" );
 	  }
 	);
-
+	$(document).on("scroll", function(){
+		if ($(document).width() > 640) {
+			if ($(document).scrollTop() > 200){
+				$(".top-bar").fadeIn();
+			} else {
+				$(".top-bar").fadeOut();
+			}
+		}
+	});
 })();
