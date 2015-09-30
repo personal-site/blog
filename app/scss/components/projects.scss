@@ -4,16 +4,15 @@
 .projects-content {
     padding-top: 40px;
     padding-bottom: 40px;
-    border-top: 1px solid #574E7F;
-    background-image: url("../images/material-bg.jpg");
-    background-size: cover;
-    background-position: center;
     .panel {
         background-color: $base-grey;
         border-radius: 14px;
         box-shadow: none;
         padding: 42px 22px;
         text-align: center;
+        a {
+            margin-bottom: 0;
+        }
     }
     p {
         font-size: 1.125em;
