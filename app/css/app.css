@@ -6729,6 +6729,8 @@ footer {
  * Masthead -- hero template
  */
 .hero {
+  background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
+  background-attachment: fixed;
   padding-top: 140px;
   padding-bottom: 32px;
   position: relative; }
@@ -6781,6 +6783,8 @@ section#stats {
  * Section -- projects
  */
 .projects-content {
+  background-image: url("../images/material-bg.jpg");
+  background-attachment: fixed;
   padding-top: 40px;
   padding-bottom: 40px; }
   .projects-content .panel {
@@ -6927,7 +6931,6 @@ footer .inline-list {
 
 #social {
   background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
-  background-size: cover;
   text-align: center;
   padding: 0; }
   #social a {

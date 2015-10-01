@@ -7,8 +7,8 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 			$(document).foundation();
-			$('.hero').parallax({imageSrc: 'https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png'});
-			$('#projects').parallax({imageSrc: '/images/material-bg.jpg'});
+			$.stellar('.hero');
+			$.stellar('#projects');
 			if ($(document).width() < 640) {
 				$(".top-bar").fadeIn();
 			}
