@@ -1,15 +1,24 @@
+/*
+____ _  _ ____ _ ____ _  _ ____ ____ ___  _  _ ____ 
+|    |__| |__/ | [__  |  | |  | | __  |   |\/| |___ 
+|___ |  | |  \ | ___]  \/  |__| |__]  |  .|  | |___ 
+	                an open source project by @c1v0
+*/
+
 /**
- .d8888b.   d888  888     888  .d8888b.  
-d88P  Y88b d8888  888     888 d88P  Y88b 
-888    888   888  888     888 888    888 
-888          888  Y88b   d88P 888    888 
-888          888   Y88b d88P  888    888 
-888    888   888    Y88o88P   888    888 
-Y88b  d88P   888     Y888P    Y88b  d88P 
- "Y8888P"  8888888    Y8P      "Y8888P"**/
+ * Style Guide
+ */
 $accent-grey: #eceff1;
 $base-grey: #fefefe;
 
+$cyan-a200: #18ffff;
+$cyan-a400: #00E5FF;
+$light-green-a200: #b2ff59;
+$light-green-a400: #76FF03;
+
+/**
+ * Le Styles
+ */
 @import 'components/typography.scss';
 @import 'components/layout.scss';
 @import 'components/masthead.scss';

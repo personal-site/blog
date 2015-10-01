@@ -8,6 +8,7 @@ section#stats {
     font-size: .875em;
     a {
     	margin-bottom: 0;
+    	color: #212121;
     }
 	.mega-octicon {
 		font-size: 64px;
@@ -17,15 +18,5 @@ section#stats {
 		display: block;
 	    font-family: 'Merriweather', serif;
 		font-size: 1.5rem;
-	}
-}
-#stats-projects {
-	a {
-		background-color: #2788B3;
-	}
-}
-#stats-hours {
-	a {
-		background-color: #B5ECA2;
 	}
 }
