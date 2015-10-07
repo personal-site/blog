@@ -6816,12 +6816,16 @@ section#stats {
 #title {
   margin-bottom: 64px; }
 
-#modal-project h3 {
-  color: #181818;
-  line-height: 1.5em;
-  font-size: 1.5em;
-  padding-bottom: 0;
-  margin: 32px 0; }
+#modal-project {
+  padding: 0; }
+  #modal-project h3 {
+    color: #181818;
+    line-height: 1.25em;
+    font-size: 1.25em;
+    padding-bottom: 0;
+    margin: 32px 0; }
+  #modal-project header {
+    background: #181818; }
 
 .about-content {
   padding: 96px 0; }
