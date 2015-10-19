@@ -6,6 +6,8 @@
 
 <em>Quartzite.</em> The code behind [CHRISVOGT.me](https://www.chrisvogt.me). More info to come.
 
+[View Screenshot](screenshot.jpg)
+
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT).
@@ -13,7 +15,6 @@
 ## Built with
 
 <p align="left">
-	<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="node.js" height="48">
 	<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
 	<img src="http://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
 	<img src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg" alt="grunt.js" height="48">
