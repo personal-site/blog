@@ -15,7 +15,7 @@
 	            	var li 		= document.createElement( 'li' ),
 	            		link 	= document.createElement( 'a' ),
 	            		thumb 	= document.createElement( 'img' );
-	            	
+
 	            	// set attributes
 	            	$(li).attr({
 	            		'project-id': project.id,
