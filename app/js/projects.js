@@ -8,25 +8,35 @@
 	        url: 'https://projects.chrisvogt.me/api/1.1/all.json',
 	        success: function(data) {
 	            $('#project-list').empty();
+	            var frag = document.createDocumentFragment();
 
-	            $.each(data.projects, function(i) {
-	            	var project = data.projects[i],
-	            		item = $('<li>', {
-	            			'project-id': project.id,
-	            			'project-github': project.github,
-	            			'project-demo': project.demo,
-	            			'project-banner': project.banner,
-	            			'project-name': project.name,
-	            			html: $('<a>', {
-	            				href: '#modal',
-	            				html: $('<img>', {
-	            					class: 'image-circle',
-	            					src: project.thumb
-	            				})
-	            			})
-	            		});
-	            	$('#project-list').append(item);
+	            $.each(data.projects, function(i, project) {
+	            	// generate elements
+	            	var li 		= document.createElement( 'li' ),
+	            		link 	= document.createElement( 'a' ),
+	            		thumb 	= document.createElement( 'img' );
+	            	
+	            	// set attributes
+	            	$(li).attr({
+	            		'project-id': project.id,
+	            		'project-name': project.name,
+	            		'project-github': project.github,
+	            		'project-demo': project.demo,
+	            		'project-banner': project.banner
+	            	});
+	            	$(link).attr('href', '#modal');
+	            	$(thumb).attr({
+	            		'class': 'image-circle',
+	            		'src': project.thumb
+	            	});
+
+	            	// matryoshka
+	            	li.appendChild( link );
+	            	link.appendChild( thumb );
+	            	frag.appendChild(li);
 	            });
+
+            	$('#project-list')[0].appendChild( frag );
 
 				$( 'ul#project-list a' ).click(function(e) {
 					e.preventDefault();
