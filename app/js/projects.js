@@ -25,8 +25,10 @@
             'project-banner': project.banner,
             'project-tech': project.tech
           });
-          $(link).attr('href', project.github);
-
+          $(link).attr({
+            'href': project.github,
+            'onClick': 'ga(\‘send\’, \‘event\’, \‘Projects\’, \'modal\', \'Portfolio\' );'
+          });
           $(thumb).attr({
             'class': 'image-circle',
             'src': project.thumb
