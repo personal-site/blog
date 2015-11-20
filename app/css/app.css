@@ -6130,7 +6130,7 @@ ul#tech {
     margin-bottom: 0; }
 
 .about-content {
-  padding: 96px 0; }
+  padding: 64px 0; }
 
 /**
  * Elements -- accents
@@ -6251,8 +6251,13 @@ footer .inline-list {
 #links li {
   float: none;
   display: inline-block;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   margin: 0 14px; }
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  #links li {
+    margin: 0 24px;
+    font-size: 2rem; } }
 
 @media only screen and (min-width: 64.063em) {
   #links li {
