@@ -26,12 +26,22 @@
             'project-tech': project.tech
           });
           $(link).attr({
-            'href': project.github,
-            'onClick': 'ga(\‘send\’, \‘event\’, \‘Projects\’, \'modal\', \'Portfolio\' );'
+            'href': project.github
           });
           $(thumb).attr({
             'class': 'image-circle',
             'src': project.thumb
+          });
+
+          // bind analytics to click event
+          $(link).on('click', function() {
+            var ga = window.ga;
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Project',
+              eventAction: 'Reviewed',
+              eventLabel: project.github
+            });
           });
 
           // matryoshka
@@ -68,10 +78,19 @@
 
           // button: view source
           if (project.getAttribute('project-github')) {
-            $('#modal-project .project-source').removeClass('disabled');
-            $('#modal-project .project-source').attr({
+            var sourceBtn = $('#modal-project .project-source');
+            sourceBtn.removeClass('disabled').attr({
               href: 'https://github.com/' + project.getAttribute('project-github'),
               title: project.getAttribute('project-name') + ' on GitHub'
+            });
+            $(sourceBtn).on('click', function() {
+              var ga = window.ga;
+              ga('send', {
+                hitType: 'event',
+                eventCategory: 'Project',
+                eventAction: 'View Source',
+                eventLabel: project.getAttribute('project-github')
+              });
             });
           } else {
             $('#modal-project .project-source').addClass('disabled');
@@ -79,10 +98,19 @@
 
           // button: demo
           if (project.getAttribute('project-demo')) {
-            $('#modal-project .project-demo').removeClass('disabled');
-            $('#modal-project .project-demo').attr({
+            var demoBtn = $('#modal-project .project-demo');
+            demoBtn.removeClass('disabled').attr({
               href:  project.getAttribute('project-demo'),
               title: project.getAttribute('project-name') + ' live demo'
+            });
+            $(demoBtn).on('click', function() {
+              var ga = window.ga;
+              ga('send', {
+                hitType: 'event',
+                eventCategory: 'Project',
+                eventAction: 'View Demo',
+                eventLabel: project.getAttribute('project-github')
+              });
             });
           } else {
             $('#modal-project .project-demo').addClass('disabled');
