@@ -41,36 +41,53 @@
         init: function() {
             this._userAgentInit();
             this.fadableHeader();
+            this.scrollingNav();
         },
 
         /**
          * Browser detection
          */
-		_userAgentInit: function() {
-			docElem.setAttribute('data-useragent', navigator.userAgent);
-		},
+    		_userAgentInit: function() {
+    			docElem.setAttribute('data-useragent', navigator.userAgent);
+    		},
 
-		/**
-		 * Fadable header
-		 *
-		 * On large screens: hides the header initially
-		 * and then fades it after scrolling.
-		 */
-		fadableHeader: function() {
-			if ($(document).width() < 640) {
-				$('.top-bar').fadeIn();
-				return true;
-			}
-			$(document).on('scroll', function(){
-				if ($(document).width() > 640) {
-					if ($(document).scrollTop() > 200){
-						$('.top-bar').fadeIn();
-					} else {
-						$('.top-bar').fadeOut();
-					}
-				}
-			});
-		},
+    		/**
+    		 * Fadable header
+    		 *
+    		 * On large screens: hides the header initially
+    		 * and then fades it after scrolling.
+    		 */
+    		fadableHeader: function() {
+    			if ($(document).width() < 640) {
+    				$('.top-bar').fadeIn();
+    				return true;
+    			}
+    			$(document).on('scroll', function(){
+    				if ($(document).width() > 640) {
+    					if ($(document).scrollTop() > 200){
+    						$('.top-bar').fadeIn();
+    					} else {
+    						$('.top-bar').fadeOut();
+    					}
+    				}
+    			});
+    		},
+
+        /**
+         * Scrolling navigation
+         *
+         * Smooth scroll for the on-page navigation.
+         */
+        scrollingNav: function() {
+          $('.top-bar .left a').click(function(){
+            event.preventDefault();
+            var toGo = $(this).attr('href');
+
+            $('html, body').animate({
+                scrollTop: $(toGo).offset().top
+            }, 800);
+          });
+        },
 
     };
 
