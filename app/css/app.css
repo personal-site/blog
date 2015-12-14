@@ -5866,9 +5866,9 @@ th.hide-for-touch {
     display: none !important; } }
 
 /*
-____ _  _ ____ _ ____ _  _ ____ ____ ___  _  _ ____ 
-|    |__| |__/ | [__  |  | |  | | __  |   |\/| |___ 
-|___ |  | |  \ | ___]  \/  |__| |__]  |  .|  | |___ 
+____ _  _ ____ _ ____ _  _ ____ ____ ___  _  _ ____
+|    |__| |__/ | [__  |  | |  | | __  |   |\/| |___
+|___ |  | |  \ | ___]  \/  |__| |__]  |  .|  | |___
 	                an open source project by @c1v0
 */
 /**
@@ -5945,25 +5945,39 @@ ul.inline-list.right a {
 body {
   background: #fefefe; }
 
-.top-bar,
-.top-bar-section li:not(.has-form) a:not(.button),
 .contain-to-grid,
 footer {
-  background: #4A3E62; }
+  transition: background 1s ease;
+  background: #0a2364;
+  background: -moz-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #0a2364), color-stop(100%, #711e9b));
+  background: -webkit-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: -o-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: -ms-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: linear-gradient(135deg, #0a2364 0%, #711e9b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 ); }
+
+.top-bar {
+  background: none; }
 
 .top-bar {
   display: none; }
+  .top-bar ul li {
+    background: none; }
+  .top-bar a {
+    background: none; }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: none;
+  transition: background 1s ease; }
 
 /**
  * Masthead -- hero template
  */
 .hero {
-  background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
-  background-attachment: fixed;
   padding-top: 80px;
   padding-bottom: 32px;
-  position: relative;
-  border-bottom: 1px solid #fefefe; }
+  position: relative; }
 
 .shrunken-head {
   padding-top: 0;
@@ -5994,6 +6008,15 @@ section#quote {
  * Section -- stats
  */
 #stats {
+  border-bottom: 1px solid #b2ff59;
+  background: #0a2364;
+  background: -moz-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #0a2364), color-stop(100%, #711e9b));
+  background: -webkit-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: -o-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: -ms-linear-gradient(-45deg, #0a2364 0%, #711e9b 100%);
+  background: linear-gradient(135deg, #0a2364 0%, #711e9b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
   padding: 14px 0;
   text-align: center;
   font-family: "Quicksand", sans-serif;
@@ -6236,7 +6259,6 @@ footer .inline-list {
   margin: 0; }
 
 #social {
-  background-image: url("https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png");
   text-align: center;
   padding: 0; }
   #social a {
@@ -6263,3 +6285,14 @@ footer .inline-list {
   #links li {
     margin: 0 42px;
     font-size: 2.675rem; } }
+
+.hero,
+#social {
+  background: #4527a0;
+  background: -moz-linear-gradient(45deg, #4527a0 0%, #711e9b 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #4527a0), color-stop(100%, #711e9b));
+  background: -webkit-linear-gradient(45deg, #4527a0 0%, #711e9b 100%);
+  background: -o-linear-gradient(45deg, #4527a0 0%, #711e9b 100%);
+  background: -ms-linear-gradient(45deg, #4527a0 0%, #711e9b 100%);
+  background: linear-gradient(45deg, #4527a0 0%, #711e9b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4527a0', endColorstr='#711e9b', GradientType=1 ); }

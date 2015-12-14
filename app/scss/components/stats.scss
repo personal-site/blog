@@ -2,21 +2,31 @@
  * Section -- stats
  */
 #stats {
-    padding: 14px 0;
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: .875em;
-    a {
-    	margin-bottom: 0;
-    	color: #212121;
-    }
-	.mega-octicon {
-		font-size: 32px;
-		display: block;
-	}
-	.v {
-		display: block;
-	    font-family: 'Merriweather', serif;
-		font-size: 1.375rem;
-	}
+  border-bottom: 1px solid $light-green-a200;
+  background: rgba(10,35,100,1);
+  background: -moz-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,35,100,1)), color-stop(100%, rgba(113,30,155,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
+  background: linear-gradient(135deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
+
+  padding: 14px 0;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: .875em;
+  a {
+  	margin-bottom: 0;
+  	color: #212121;
+  }
+  .mega-octicon {
+  	font-size: 32px;
+  	display: block;
+  }
+  .v {
+  	display: block;
+      font-family: 'Merriweather', serif;
+  	font-size: 1.375rem;
+  }
 }
