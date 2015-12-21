@@ -6046,6 +6046,20 @@ section#quote {
     font-family: 'Merriweather', serif;
     font-size: 1.375rem; }
 
+#stats-projects a {
+  background-color: #03A9F4; }
+
+#stats-projects a:hover {
+  background-color: #1565C0;
+  color: #fafafa; }
+
+#stats-hours a {
+  background-color: #8BC34A; }
+
+#stats-hours a:hover {
+  background-color: #1B5E20;
+  color: #fafafa; }
+
 /**
  * Section -- projects
  */
@@ -6238,6 +6252,35 @@ em.accent {
 #scrollUp:hover {
   background-color: #000; }
 
+/* Trim */
+.hvr-trim {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative; }
+
+.hvr-trim:before {
+  content: '';
+  position: absolute;
+  border: white solid 4px;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity; }
+
+.hvr-trim:hover:before, .hvr-trim:focus:before, .hvr-trim:active:before {
+  opacity: 1; }
+
 /* Grow Shadow */
 .hvr-grow-shadow {
   display: inline-block;
@@ -6261,28 +6304,15 @@ em.accent {
 #project-list li,
 #social a,
 .button {
-  -webkit-transition: all 0.6s ease-in;
-  -moz-transition: all 0.6s ease-in;
-  -o-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in; }
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
 
 /**
  * Buttons
 */
 .button {
-  color: #212121; }
-
-.button.cyan {
-  background-color: #00E5FF; }
-
-.button.cyan:hover {
-  background-color: #00B0FF; }
-
-.button.light-green {
-  background-color: #b2ff59; }
-
-.button.light-green:hover {
-  background-color: #76FF03;
   color: #212121; }
 
 .action-button:active {
