@@ -16,3 +16,27 @@ footer .fa-twitter {
 #g-person {
 	margin: 0 0 14px 14px;
 }
+em.accent {
+  color: #90A4AE;
+}
+
+#project-list li,
+#social a,
+.button {
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+ }
+
+/**
+ * Buttons
+*/
+.button {
+  color: #212121;
+}
+.action-button:active
+{
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+}

@@ -30,3 +30,18 @@
   	font-size: 1.375rem;
   }
 }
+
+#stats-projects a {
+  background-color: #03A9F4;
+}
+#stats-projects a:hover {
+  background-color: #1565C0;
+  color: $grey-50;
+}
+#stats-hours a {
+  background-color: #8BC34A;
+}
+#stats-hours a:hover {
+  background-color: #1B5E20;
+  color: $grey-50;
+}

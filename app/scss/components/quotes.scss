@@ -1,11 +1,15 @@
 section#quote {
-	background: $accent-grey;
+	background: $grey-50;
 	text-align: center;
 	min-height: 100px;
+  padding: 42px;
 	margin: 0;
 	p {
 		line-height: 50px;
 	}
+  .orbit-container {
+    min-height: 84px;
+  }
 	.orbit-timer {
 		display: none;
 	}
