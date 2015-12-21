@@ -2,38 +2,44 @@
  * Section -- projects
  */
 .projects-content {
-    background-image: url("../images/material-bg.jpg");
-    background-attachment: fixed;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    .panel {
-        background-color: $base-grey;
-        border-radius: 14px;
-        box-shadow: none;
-        padding: 42px 22px;
-        text-align: center;
-        a {
-            margin-bottom: 0;
-        }
-    }
-    p {
-        font-size: 1.125em;
-    }
-    ul:hover li {opacity: 0.5;}
-    ul li:hover {opacity: 1;}
-    ul.pagination {
-        li {
-            height: auto;
-        }
-        a:hover {
-            background: $accent-grey;
-            color: #fefefe;
-        }
-        .mega-octicon {
-            font-size: 48px;
-            color: $base-grey;
-        }
-    }
+  background: rgba(33,149,243,1);
+  background: -moz-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(33,149,243,1)), color-stop(100%, rgba(63,81,181,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
+  background: linear-gradient(135deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2195f3', endColorstr='#3f51b5', GradientType=1 );
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 767px;
+  .panel {
+      background-color: $grey-50;
+      border-radius: 14px;
+      box-shadow: none;
+      padding: 32px 22px;
+      a {
+          margin-bottom: 0;
+      }
+  }
+  p {
+      font-size: 1.125em;
+  }
+  ul:hover li {opacity: 0.5;}
+  ul li:hover {opacity: 1;}
+  ul.pagination {
+      li {
+          height: auto;
+      }
+      a:hover {
+          background: $accent-grey;
+          color: #fefefe;
+      }
+      .mega-octicon {
+          font-size: 48px;
+          color: $base-grey;
+      }
+  }
 }
 ul#tech {
   list-style: none;
