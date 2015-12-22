@@ -117,14 +117,27 @@ ul#tech {
 }
 #modal-project {
     padding: 0;
+    .row {
+      text-align: center;
+      padding: 24px;
+    }
+    .created {
+      color: #686868;
+      font-style: italic;
+      text-align: center;
+      font-size: .75em;
+    }
     h3 {
-      color: #181818;
-      line-height: 1.25em;
-      font-size: 1.25em;
-      padding-bottom: 0;
-      margin: 18px 0;
+      color: #080808;
+      font-family: 'Quartzite', 'sans-serif';
+      font-size: 1.75em;
+      line-height: 1.4em;
+      padding: 10px 0 0;
+      margin: 14px 0 0;
     }
     h5 {
+      font-family: 'Quartzite', 'sans-serif';
+      font-size: .9em;
       @media only screen and (min-width: 40.063em) {
         text-align: right;
         margin: 18px 0;
@@ -147,7 +160,10 @@ ul#tech {
     .showcase {
       margin-top: 24px;
       padding: 22px 44px;
-      background: #efefef;
+      background: $blue-grey-50;
+    }
+    .button-group {
+      text-align: center;
     }
     .button-group a {
       margin-bottom: 0;

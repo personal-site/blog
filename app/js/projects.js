@@ -2,7 +2,9 @@
 
 (function() {
   /**
-   * @class
+   * Projects container.
+   *
+   * @var {Object}
    */
   var Projects = {};
 
@@ -13,32 +15,34 @@
    */
   Projects.init = function() {
     $.ajax({
-      url: 'https://projects.chrisvogt.me/api/1.2/all.json',
+      url: 'https://chrisvogt.firebaseio.com/projects.json',
       success: function(data) {
         $('#project-list').empty();
         var frag = document.createDocumentFragment();
 
-        $.each(data.projects, function(i, project) {
-          // generate elements
+        // convert to an array of objects
+        var d = $.map(data, function(val) {
+            return [val];
+        });
+
+        // sort data by `created`
+        d.sort(function(a, b) {
+          return b.created.localeCompare( a.created );
+        });
+
+        $.each(d, function(i, project) {
           var li = document.createElement('li'),
             link = document.createElement('a'),
             thumb = document.createElement('img');
 
-          // set attributes
-          $(li).attr({
-            'project-id': project.id,
-            'project-name': project.name,
-            'project-github': project.github,
-            'project-demo': project.demo,
-            'project-banner': project.banner,
-            'project-tech': project.tech
-          });
+          $(li).data(project);
+
           $(link).attr({
-            'href': project.github
+            'href': project.github_url
           });
           $(thumb).attr({
             'class': 'image-circle',
-            'src': project.thumb
+            'src': project.thumb_url
           });
 
           // matryoshka
@@ -53,21 +57,23 @@
         // bind click events to the projects
         $('ul#project-list a').click(function(e) {
           e.preventDefault();
-          var project = e.target.parentElement.parentElement;
+          var $project = $(e.target.parentElement.parentElement);
 
           // fire an Analytics event
-          sendEvent('Project', 'Reviewed', project.getAttribute('project-name'));
+          sendEvent('Project', 'Reviewed', $project.data('name'));
 
           // update modal content
-          $('#modal-project h3').text(project.getAttribute('project-name'));
-          $('#modal-project img').attr({src: project.getAttribute('project-banner')});
+          $('#modal-project h3').text($project.data('name'));
+          $('#modal-project .created').text('Created: ' + renderCreated($project.data('created')));
+          $('#modal-project .description').text($project.data('description'));
+          $('#modal-project img').attr({src: $project.data('banner_url')});
 
           // build's the modal tech bar
-          if (project.getAttribute('project-tech')) {
-            var techs = project.getAttribute('project-tech'),
+          if ($project.data('tech')) {
+            var techs = $project.data('tech'),
                 frag  = document.createDocumentFragment();
 
-            $.each(techs.split(','), function(i, tech) {
+            $.each(techs, function(i, tech) {
               var li = document.createElement('li'),
                   t  = document.createTextNode(tech);
 
@@ -81,21 +87,32 @@
           }
 
           // button factory
-          if (project.getAttribute('project-github')) {
-            buttonHandler('source', project);
+          if ($project.data('github_full_name')) {
+            buttonHandler('source', $project);
           } else {
             $('#modal-project .project-source').addClass('disabled');
           }
-          if (project.getAttribute('project-demo')) {
-            buttonHandler('demo', project);
+          if ($project.data('demo_url')) {
+            buttonHandler('demo', $project);
           } else {
             $('#modal-project .project-demo').addClass('disabled');
           }
 
           /**
+           * Formats the created date using moment.js.
+           *
+           * @param {String}
+           * @returns {String|Date}
+           */
+          function renderCreated(created) {
+            /*global moment */
+            return ( (typeof moment !== 'undefined') ? moment(created).startOf('day').fromNow() : new Date(created) );
+          }
+
+          /**
            * Button handler.
            *
-           * @param {string} action
+           * @param {String} action
            * @param {Object} project
            */
           function buttonHandler(action, project) {
@@ -113,31 +130,31 @@
           /**
            * Generates the appropriate set of attributes.
            *
-           * @param {string} action
-           * @param {Object} project
+           * @param {String} action
+           * @param {Object} $project
            */
-          function buildAttributes(action, project) {
+          function buildAttributes(action, $project) {
             var attr;
 
             switch (action) {
               case 'source':
-                var gh = project.getAttribute('project-github');
+                var gh = $project.data('github_full_name');
                 if (!gh) {
                   return false;
                 }
                 attr = new Attributes(
                   'https://github.com/' + gh,
-                  project.getAttribute('project-name') + ' on GitHub'
+                  $project.data('name') + ' on GitHub'
                 );
                 break;
               case 'demo':
-                var d = project.getAttribute('project-demo');
+                var d = $project.data('demo_url');
                 if (!d) {
                   return false;
                 }
                 attr = new Attributes(
                   d,
-                  project.getAttribute('project-name') + ' live demo'
+                  $project.data('name') + ' live demo'
                 );
                 break;
             }
