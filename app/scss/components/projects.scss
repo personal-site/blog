@@ -46,6 +46,9 @@ ul#tech {
   text-align: left;
   padding: 0;
   width: 100%;
+  .has-tip {
+    border-bottom: none;
+  }
   li {
     display: inline-block;
     text-indent: -9999px;

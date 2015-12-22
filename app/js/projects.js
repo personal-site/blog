@@ -77,7 +77,11 @@
               var li = document.createElement('li'),
                   t  = document.createTextNode(tech);
 
-              li.className = tech;
+              li.className = tech + ' has-tip';
+              $(li).attr('aria-haspopup', true);
+              $(li).attr('data-tooltip');
+              $(li).attr('title', tech);
+
               li.appendChild(t);
               frag.appendChild(li);
             });

@@ -6102,6 +6102,8 @@ ul#tech {
   text-align: left;
   padding: 0;
   width: 100%; }
+  ul#tech .has-tip {
+    border-bottom: none; }
   ul#tech li {
     display: inline-block;
     text-indent: -9999px;
