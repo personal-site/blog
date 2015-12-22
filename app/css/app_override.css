@@ -15,17 +15,6 @@
 .about-box {
     color: #fff;
 }
-.secondary.small.button {
-    background-color: transparent;
-    color: #fff;
-    border: 2px #fff solid;
-    border-radius: 5px;
-    padding: 15px 50px 15px 50px;
-    margin: 0;
-}
-.secondary.small.button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
 .row .main-wrapper {
     color: #fff;
 }

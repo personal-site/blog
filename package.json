@@ -1,7 +1,7 @@
 {
   "name": "quartzite",
-  "description": "The new CHRISVOGT.me website.",
-  "version": "0.7.2",
+  "description": "The chrisvogt.me website.",
+  "version": "0.7.3",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
