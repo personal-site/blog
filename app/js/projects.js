@@ -52,6 +52,7 @@
         });
 
         // append the newly generated collection of <li>s
+        $('#projects .spinner').fadeOut();
         $('#project-list').empty().append(frag).hide().fadeIn(1600);
 
         // bind click events to the projects
