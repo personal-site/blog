@@ -20,9 +20,9 @@
 
 	Stats.getProjects = function() {
 	    $.ajax({
-	        url: 'https://projects.chrisvogt.me/api/1.0/all.json',
+	        url: 'https://chrisvogt.firebaseio.com/projects.json',
 	        success: function(data) {
-	        	$('#stats-projects .v').text(data.projects.length);
+	        	$('#stats-projects .v').text(Object.keys(data).length);
 	        }
 	    });
 	};
