@@ -17,7 +17,6 @@
     $.ajax({
       url: 'https://chrisvogt.firebaseio.com/projects.json',
       success: function(data) {
-        $('#project-list').empty();
         var frag = document.createDocumentFragment();
 
         // convert to an array of objects
@@ -38,7 +37,8 @@
           $(li).data(project);
 
           $(link).attr({
-            'href': project.github_url
+            'href': project.github_url,
+            'class': 'hvr-float-shadow'
           });
           $(thumb).attr({
             'class': 'image-circle',
@@ -52,7 +52,8 @@
         });
 
         // append the newly generated collection of <li>s
-        $('#project-list')[0].appendChild(frag);
+        $('#projects .spinner').fadeOut();
+        $('#project-list').empty().append(frag).hide().fadeIn(1600);
 
         // bind click events to the projects
         $('ul#project-list a').click(function(e) {

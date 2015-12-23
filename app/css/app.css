@@ -6094,7 +6094,7 @@ section#quote {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2195f3', endColorstr='#3f51b5', GradientType=1 );
   padding-top: 40px;
   padding-bottom: 40px;
-  min-height: 767px; }
+  min-height: 367px; }
   .projects-content .panel {
     background-color: #fafafa;
     border-radius: 14px;
@@ -6279,6 +6279,11 @@ em.accent {
 .action-button:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px); }
+
+/* Center */
+.center {
+  margin: 0 auto;
+  display: block; }
 
 /* Pill style */
 #scrollUp {
