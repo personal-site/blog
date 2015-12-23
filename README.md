@@ -2,23 +2,29 @@
   <img src="/app/images/h-logo.png" alt="Quartzite">
 </p>
 
-## Overview
+My personal website and project portfolio. Based on a [website mockup](https://app.moqups.com/chris@artinreality.com/81jSoAGytP/view/page/add529438) I created, although it has gone through many iterations since then. Stats are fetched from [stats.chrisvogt.me](https://stats.chrisvogt.me), and the project data is stored in a Firebase database.
 
-<em>Quartzite.</em> The code behind [CHRISVOGT.me](https://www.chrisvogt.me). More info to come.
+_See [www.chrisvogt.me](https://www.chrisvogt.me) to view it live._
 
-View live @ [www.chrisvogt.me](https://www.chrisvogt.me).
+### Setup
 
-## Screenshot
+* Clone this repo and use `npm install` to download the build dependencies.
+* Run `bower install` to download components managed by Bower.
+* Develop in a feature branch and submit pull requests against `master`.
+* Run `grunt publish` and production-ready files will output to the `dist` directory.
 
-[View Screenshot](screenshot.jpg)
+### Screenshot
 
-## License
+[View Screenshot](screenshot.jpg).
 
-[MIT license](http://opensource.org/licenses/MIT).
+### License
 
-## Built with
+[MIT](http://opensource.org/licenses/MIT) © [Chris Vogt](https://www.chrisvogt.me).
+
+### Built with
 
 <p align="left">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Firebase_Logo.png" alt="Firebase" height="48">
 	<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
 	<img src="http://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
 	<img src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg" alt="grunt.js" height="48">
