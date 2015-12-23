@@ -37,7 +37,8 @@
           $(li).data(project);
 
           $(link).attr({
-            'href': project.github_url
+            'href': project.github_url,
+            'class': 'hvr-float-shadow'
           });
           $(thumb).attr({
             'class': 'image-circle',
