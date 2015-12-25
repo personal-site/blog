@@ -5926,6 +5926,9 @@ footer {
   background: none;
   transition: background 1s ease; }
 
+.top-bar.expanded .title-area {
+  background: none; }
+
 .hero,
 #social {
   background: #4527a0;
@@ -5966,8 +5969,7 @@ h1 {
   font-size: 3.4em;
   color: #fff;
   line-height: 28px;
-  margin-top: 16px;
-  margin-bottom: 0px; }
+  margin-top: 16px; }
 
 h2 {
   font-family: 'Quicksand', sans-serif;
@@ -6018,6 +6020,8 @@ ul.inline-list.right a {
 
 #announce {
   bottom: 24px; }
+  #announce h1 {
+    margin-bottom: .6em; }
 
 section#quote {
   background: #fafafa;
@@ -6131,7 +6135,7 @@ ul#tech {
     text-indent: -9999px;
     height: 32px;
     margin-right: 8px;
-    background: url("https://cdn.rawgit.com/chrisvogt/projects/master/img/sprite-tech.png") no-repeat; }
+    background: url("../images/sprite-tech.png") no-repeat; }
   ul#tech .php {
     width: 44px; }
   ul#tech .ruby {
@@ -6173,6 +6177,9 @@ ul#tech {
   ul#tech .sass {
     width: 32px;
     background-position: -486px 0; }
+  ul#tech .firebase {
+    width: 162px;
+    background-position: -518px 0; }
 
 #menu {
   margin-bottom: 288px; }
