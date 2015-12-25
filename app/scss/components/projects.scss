@@ -54,7 +54,7 @@ ul#tech {
     text-indent: -9999px;
     height: 32px;
     margin-right: 8px;
-    background: url('https://cdn.rawgit.com/chrisvogt/projects/master/img/sprite-tech.png') no-repeat;
+    background: url('../images/sprite-tech.png') no-repeat;
   }
   .php {
     width: 44px;
@@ -110,6 +110,10 @@ ul#tech {
   .sass {
     width: 32px;
     background-position: -486px 0;
+  }
+  .firebase {
+    width: 162px;
+    background-position: -518px 0;
   }
 }
 #menu {

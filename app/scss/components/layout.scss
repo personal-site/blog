@@ -29,6 +29,9 @@ footer {
   background: none;
   transition: background 1s ease;
 }
+.top-bar.expanded .title-area  {
+  background: none;
+}
 .hero,
 #social {
   background: rgba(69,39,160,1);
