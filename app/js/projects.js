@@ -54,6 +54,7 @@
         // append the newly generated collection of <li>s
         $('#projects .spinner').fadeOut();
         $('#project-list').empty().append(frag).hide().fadeIn(1600);
+        $('#btnFilter').delay(800).fadeIn();
 
         // bind click events to the projects
         $('ul#project-list a').click(function(e) {
