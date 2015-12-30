@@ -236,34 +236,34 @@
         $items = $('#project-list li');
 
     for (var i = 0; i < $items.length; i++) {
-      if ($.data($items[i], 'category') === singularize(category)) {
+      if ($.data($items[i], 'category') === category.singularize()) {
         switch (state) {
           case false:
-            $($items[i]).fadeOut();
+            $($items[i]).children().fadeOut();
             break;
           case true:
-            $($items[i]).fadeIn();
+            $($items[i]).children().fadeIn();
             break;
         }
       }
     }
-
-    /**
-     * Singularizes words ending in 's'.
-     *
-     * @param {string}
-     * @returns {string}
-     */
-    function singularize(word) {
-      var singular = word;
-      if (word.slice(-1) === 's') {
-        singular = word.slice(0, word.length -1);
-      }
-      return singular;
-    }
   };
 
   Projects.init();
+
+  /**
+   * Singularizes words ending in 's'.
+   *
+   * @param {string}
+   * @returns {string}
+   */
+  String.prototype.singularize = function() {
+    var singular = this;
+    if (this.slice(-1) === 's') {
+      singular = this.slice(0, this.length -1);
+    }
+    return singular;
+  };
 
   /** Capitalize the first letter of a string **/
   String.prototype.capitalize = function() {
