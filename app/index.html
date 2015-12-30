@@ -149,7 +149,64 @@
       <div class="row">
         <div class="large-12 columns">
           <div class="panel text-left">
-            <p>Project portfolio. <em class="accent">Click on a thumbnail to learn more.</em> <img src="images/ajax-squares.svg" width="24" height="24" class="right spinner" alt="Loading..."></p>
+            <p>
+              Project portfolio. <em class="accent">Click on a thumbnail to learn more.</em>
+              <img src="images/ajax-squares.svg" width="24" height="24" class="right spinner" alt="Loading...">
+
+              <button id="btnFilter" href="#" data-dropdown="filters" aria-controls="filters" aria-expanded="false" class="button secondary tiny right dropdown hidden"><i class="fa fa-filter"></i></button>
+              <div id="filters" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                <form>
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <div class="row">
+                        <div class="small-2 switch columns">
+                          <div class="switch">
+                            <input id="filterProjects" type="checkbox" checked>
+                            <label for="filterProjects">Projects</label>
+                          </div>
+                        </div>
+                        <div class="small-8 columns">
+                          Projects
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="small-2 switch columns">
+                          <div class="switch">
+                            <input id="filterExperiments" type="checkbox" checked>
+                            <label for="filterExperiments">Experiments</label>
+                          </div>
+                        </div>
+                        <div class="small-8 columns">
+                          Experiments
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="small-2 switch columns">
+                          <div class="switch">
+                            <input id="filterWip" type="checkbox" checked>
+                            <label for="filterWip">WIP</label>
+                          </div>
+                        </div>
+                        <div class="small-8 columns">
+                          In Progress
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="small-2 switch columns">
+                          <div class="switch">
+                            <input id="filterLegacy" type="checkbox" checked>
+                            <label for="filterLegacy">Legacy</label>
+                          </div>
+                        </div>
+                        <div class="small-8 columns">
+                          Legacy
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              </p>
           </div>
           <ul id="project-list" class="small-block-grid-4 medium-block-grid-6">
             <!-- projects -->
@@ -301,6 +358,7 @@
     <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>
@@ -319,8 +377,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
       $(function() {
-        $(document).foundation();
-        $(document).quartzite();
+        $(document).foundation().quartzite();
         $.scrollUp();
       });
     </script>

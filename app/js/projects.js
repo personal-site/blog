@@ -54,6 +54,11 @@
         // append the newly generated collection of <li>s
         $('#projects .spinner').fadeOut();
         $('#project-list').empty().append(frag).hide().fadeIn(1600);
+        $('#btnFilter').delay(800).fadeIn();
+
+        $('#filters input[type=\'checkbox\']').change(function() {
+          Projects.filterHandler(this.id);
+        });
 
         // bind click events to the projects
         $('ul#project-list a').click(function(e) {
@@ -220,7 +225,45 @@
     });
   };
 
+  /**
+   * Handler for the projects drop down filters.
+   *
+   * @param {string}
+   */
+  Projects.filterHandler = function(filterId) {
+    var category = filterId.replace('filter', '').toLowerCase(),
+        state = document.getElementById(filterId).checked,
+        $items = $('#project-list li');
+
+    for (var i = 0; i < $items.length; i++) {
+      if ($.data($items[i], 'category') === category.singularize()) {
+        switch (state) {
+          case false:
+            $($items[i]).children().fadeOut();
+            break;
+          case true:
+            $($items[i]).children().fadeIn();
+            break;
+        }
+      }
+    }
+  };
+
   Projects.init();
+
+  /**
+   * Singularizes words ending in 's'.
+   *
+   * @param {string}
+   * @returns {string}
+   */
+  String.prototype.singularize = function() {
+    var singular = this;
+    if (this.slice(-1) === 's') {
+      singular = this.slice(0, this.length -1);
+    }
+    return singular;
+  };
 
   /** Capitalize the first letter of a string **/
   String.prototype.capitalize = function() {

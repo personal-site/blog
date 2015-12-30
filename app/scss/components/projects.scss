@@ -18,7 +18,11 @@
       border-radius: 14px;
       box-shadow: none;
       padding: 32px 22px;
-      a {
+      p {
+        margin-bottom: 0;
+      }
+      a,
+      .switch {
           margin-bottom: 0;
       }
   }
