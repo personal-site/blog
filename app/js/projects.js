@@ -56,6 +56,10 @@
         $('#project-list').empty().append(frag).hide().fadeIn(1600);
         $('#btnFilter').delay(800).fadeIn();
 
+        $('#filters input[type=\'checkbox\']').change(function() {
+          Projects.filterHandler(this.id);
+        });
+
         // bind click events to the projects
         $('ul#project-list a').click(function(e) {
           e.preventDefault();
@@ -219,6 +223,44 @@
         }
       }
     });
+  };
+
+  /**
+   * Handler for the projects drop down filters.
+   *
+   * @param {string}
+   */
+  Projects.filterHandler = function(filterId) {
+    var category = filterId.replace('filter', '').toLowerCase(),
+        state = document.getElementById(filterId).checked,
+        $items = $('#project-list li');
+
+    for (var i = 0; i < $items.length; i++) {
+      if ($.data($items[i], 'category') === singularize(category)) {
+        switch (state) {
+          case false:
+            $($items[i]).fadeOut();
+            break;
+          case true:
+            $($items[i]).fadeIn();
+            break;
+        }
+      }
+    }
+
+    /**
+     * Singularizes words ending in 's'.
+     *
+     * @param {string}
+     * @returns {string}
+     */
+    function singularize(word) {
+      var singular = word;
+      if (word.slice(-1) === 's') {
+        singular = word.slice(0, word.length -1);
+      }
+      return singular;
+    }
   };
 
   Projects.init();
