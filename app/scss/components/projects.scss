@@ -21,9 +21,35 @@
       p {
         margin-bottom: 0;
       }
-      a,
-      .switch {
+      a {
           margin-bottom: 0;
+      }
+      .switch {
+        margin: 1px;
+      }
+      .small-8 {
+        line-height: 34px;
+      }
+      #filters {
+        border-radius: 8px;
+      }
+      em.accent,
+      #btnFilter {
+        margin-bottom: 0;
+        margin-top: .4em;
+      }
+      em.accent {
+        display: block;
+        margin-bottom: 8px;
+      }
+      @media only screen and (min-width: 40.063em) {
+        em.accent {
+          display: inline-block;
+          margin-bottom: 0;
+        }
+        #btnFilter {
+          float: right;
+        }
       }
   }
   p {
