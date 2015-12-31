@@ -148,18 +148,18 @@
     <section id="projects" class="projects-content">
       <div class="row">
         <div class="large-12 columns">
-          <div class="panel text-left">
+          <div class="panel small-only-text-center">
             <p>
               Project portfolio. <em class="accent">Click on a thumbnail to learn more.</em>
               <img src="images/ajax-squares.svg" width="24" height="24" class="right spinner" alt="Loading...">
 
-              <button id="btnFilter" href="#" data-dropdown="filters" aria-controls="filters" aria-expanded="false" class="button secondary tiny right dropdown hidden"><i class="fa fa-filter"></i></button>
+              <button id="btnFilter" href="#" data-dropdown="filters" data-options="align:left" aria-controls="filters" aria-expanded="false" class="button secondary tiny dropdown hidden"><i class="fa fa-filter"></i> Filter</button>
               <div id="filters" data-dropdown-content class="f-dropdown" aria-hidden="true">
                 <form>
                   <div class="row">
                     <div class="large-12 columns">
                       <div class="row">
-                        <div class="small-2 switch columns">
+                        <div class="small-2 switch round small columns">
                           <div class="switch">
                             <input id="filterProjects" type="checkbox" checked>
                             <label for="filterProjects">Projects</label>
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="small-2 switch columns">
+                        <div class="small-2 switch round small columns">
                           <div class="switch">
                             <input id="filterExperiments" type="checkbox" checked>
                             <label for="filterExperiments">Experiments</label>
@@ -181,7 +181,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="small-2 switch columns">
+                        <div class="small-2 switch round small columns">
                           <div class="switch">
                             <input id="filterWip" type="checkbox" checked>
                             <label for="filterWip">WIP</label>
@@ -192,7 +192,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="small-2 switch columns">
+                        <div class="small-2 switch round small columns">
                           <div class="switch">
                             <input id="filterLegacy" type="checkbox" checked>
                             <label for="filterLegacy">Legacy</label>
@@ -218,10 +218,11 @@
     <section id="promote">
           <div class="row">
               <div class="medium-8 columns">
-                  <p>Review my coding habits from the last 30 days.</p>
+                  <p class="show-for-small-only">Review my coding habits, last 30 days.</p>
+                  <p class="hidden-for-small-only">Review my coding habits from the last 30 days.</p>
               </div>
               <div class="medium-4 columns">
-                  <a href="http://stats.chrisvogt.me" title="Chris Vogt on GitHub" class="button success expand hvr-float-shadow"><i class="fa fa-area-chart"></i> View code stats</a>
+                  <a href="https://stats.chrisvogt.me" title="Recent coding habits report" class="button success expand hvr-float-shadow"><i class="fa fa-area-chart"></i> stats.chrisvogt.me</a>
               </div>
           </div>
     </section>
@@ -294,10 +295,10 @@
 
     <footer>
       <div class="row">
-        <div class="large-6 columns">
+        <div class="small-6 columns">
           <p><span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <i class="fa fa-twitter"></i> <a href="https://twitter.com/c1v0" title="@c1v0 on Twitter">@c1v0</a></p>
         </div>
-        <div class="large-6 columns">
+        <div class="small-6 columns">
           <ul class="inline-list right">
             <li><a href="http://stats.chrisvogt.me" title="Chris Vogt's open source stats">Stats</a></li>
             <li><a href="https://resume.chrisvogt.me" title="Chris Vogt's résumé">Résumé</a></li>

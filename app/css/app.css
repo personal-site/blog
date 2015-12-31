@@ -6108,9 +6108,27 @@ section#quote {
     padding: 32px 22px; }
     .projects-content .panel p {
       margin-bottom: 0; }
-    .projects-content .panel a,
-    .projects-content .panel .switch {
+    .projects-content .panel a {
       margin-bottom: 0; }
+    .projects-content .panel .switch {
+      margin: 1px; }
+    .projects-content .panel .small-8 {
+      line-height: 34px; }
+    .projects-content .panel #filters {
+      border-radius: 8px; }
+    .projects-content .panel em.accent,
+    .projects-content .panel #btnFilter {
+      margin-bottom: 0;
+      margin-top: .4em; }
+    .projects-content .panel em.accent {
+      display: block;
+      margin-bottom: 8px; }
+    @media only screen and (min-width: 40.063em) {
+      .projects-content .panel em.accent {
+        display: inline-block;
+        margin-bottom: 0; }
+      .projects-content .panel #btnFilter {
+        float: right; } }
   .projects-content p {
     font-size: 1.125em; }
   .projects-content ul:hover li {
