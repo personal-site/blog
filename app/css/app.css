@@ -6199,7 +6199,7 @@ ul#tech {
     width: 32px;
     background-position: -486px 0; }
   ul#tech .firebase {
-    width: 162px;
+    width: 26px;
     background-position: -518px 0; }
 
 #menu {
@@ -6317,6 +6317,12 @@ em.accent {
 
 .hidden {
   display: none; }
+
+.remodal-overlay {
+  z-index: 144; }
+
+.remodal-wrapper {
+  z-index: 256; }
 
 /* Pill style */
 #scrollUp {
