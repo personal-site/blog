@@ -6199,7 +6199,7 @@ ul#tech {
     width: 32px;
     background-position: -486px 0; }
   ul#tech .firebase {
-    width: 162px;
+    width: 26px;
     background-position: -518px 0; }
 
 #menu {
@@ -6251,6 +6251,16 @@ ul#tech {
     text-align: center; }
   #modal-project .button-group a {
     margin-bottom: 0; }
+
+.remodal-wrapper {
+  background: rgba(255, 255, 255, 0.75);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.75) 0%, rgba(246, 246, 246, 0.75) 47%, rgba(236, 239, 241, 0.75) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.75)), color-stop(47%, rgba(246, 246, 246, 0.75)), color-stop(100%, rgba(236, 239, 241, 0.75)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.75) 0%, rgba(246, 246, 246, 0.75) 47%, rgba(236, 239, 241, 0.75) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.75) 0%, rgba(246, 246, 246, 0.75) 47%, rgba(236, 239, 241, 0.75) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.75) 0%, rgba(246, 246, 246, 0.75) 47%, rgba(236, 239, 241, 0.75) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 0%, rgba(246, 246, 246, 0.75) 47%, rgba(236, 239, 241, 0.75) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eceff1', GradientType=0 ); }
 
 /**
  * Promotional pane
