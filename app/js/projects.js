@@ -83,9 +83,9 @@
               var li = document.createElement('li'),
                   t  = document.createTextNode(tech);
 
+              $(li).attr('data-tooltip', '');
               li.className = tech + ' has-tip';
               $(li).attr('aria-haspopup', true);
-              $(li).attr('data-tooltip');
               $(li).attr('title', tech);
 
               li.appendChild(t);
@@ -94,6 +94,7 @@
 
             // empty and append the tech bar
             $('ul#tech').empty().append(frag);
+            $(document).foundation('tooltip');
           }
 
           // button factory

@@ -6,6 +6,12 @@
 .hidden {
   display: none;
 }
+.remodal-overlay {
+  z-index: 144;
+}
+.remodal-wrapper {
+  z-index: 256;
+}
 
 /* Pill style */
 #scrollUp {
