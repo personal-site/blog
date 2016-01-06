@@ -6441,7 +6441,8 @@ em.accent {
 footer p,
 footer ul {
   line-height: 32px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: .75em; }
 
 footer .inline-list {
   margin: 0; }
