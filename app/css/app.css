@@ -6026,8 +6026,8 @@ ul.inline-list.right a {
 section#quote {
   background: #fafafa;
   text-align: center;
-  min-height: 100px;
-  padding: 42px;
+  min-height: 200px;
+  padding: 50px;
   margin: 0; }
   section#quote p {
     line-height: 50px; }
