@@ -1,17 +1,21 @@
+[![Build status](https://img.shields.io/travis/chrisvogt/quartzite.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/quartzite)
+[![GitHub release](https://img.shields.io/github/release/chrisvogt/quartzite.svg?style=flat-square)](https://github.com/chrisvogt/quartzite/releases)
+[![GitHub license](https://img.shields.io/github/license/chrisvogt/quartzite.svg?style=flat-square)](https://github.com/chrisvogt/quartzite/blob/master/LICENSE)
+
 <p align="center">
   <img src="/app/images/h-logo.png" alt="Quartzite">
 </p>
 
 My personal website and project portfolio. Based on a [website mockup](https://app.moqups.com/chris@artinreality.com/81jSoAGytP/view/page/add529438) I created, although it has gone through many iterations since then. Stats are fetched from [stats.chrisvogt.me](https://stats.chrisvogt.me), and the project data is stored in a Firebase database.
 
-_See [www.chrisvogt.me](https://www.chrisvogt.me) to view it live._
+_View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
-### Setup
+### How to use
 
-* Clone this repo and use `npm install` to download the build dependencies.
-* Run `bower install` to download components managed by Bower.
+* Run `npm install && bower install` to install dependencies.
 * Develop in a feature branch and submit pull requests against `master`.
-* Run `grunt publish` and production-ready files will output to the `dist` directory.
+* Build with `grunt publish`. Production-ready files will output to the `dist` directory.
+* Commit the `dist` directory contents to the `gh-pages` branch.
 
 ### Screenshot
 
@@ -19,7 +23,7 @@ _See [www.chrisvogt.me](https://www.chrisvogt.me) to view it live._
 
 ### License
 
-[MIT](http://opensource.org/licenses/MIT) © [Chris Vogt](https://www.chrisvogt.me).
+[MIT](LICENSE) © [Chris Vogt](https://www.chrisvogt.me).
 
 ### Built with
 
