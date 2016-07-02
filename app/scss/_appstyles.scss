@@ -1,40 +1,29 @@
-/*
-____ _  _ ____ _ ____ _  _ ____ ____ ___  _  _ ____
-|    |__| |__/ | [__  |  | |  | | __  |   |\/| |___
-|___ |  | |  \ | ___]  \/  |__| |__]  |  .|  | |___
-	                an open source project by @c1v0
-*/
+// -----------------------------------------------------------------------------
+// This file imports all application-wide Sass stylesheets.
+// -----------------------------------------------------------------------------
 
-/**
- * Style Guide
- */
-$accent-grey: #eceff1;
-$base-grey: #fefefe;
+/* Abstracts */
+@import 'abstracts/variables';
 
-$cyan-a200: #18ffff;
-$cyan-a400: #00E5FF;
+/* Base */
+@import 'base/helpers';
+@import 'base/typography';
 
-$light-blue-a200: #81D4FA;
-$light-blue-a400: #29B6F6;
-$light-green-a200: #b2ff59;
-$light-green-a400: #76FF03;
+/* Components */
+@import 'components/projects';
+@import 'components/promo';
+@import 'components/quotes';
+@import 'components/social';
+@import 'components/stats';
 
-$grey-50: #fafafa;
-$grey-100: #f5f5f5;
-$blue-grey-50: #eceff1;
+/* Layout */
+@import 'layout/accents';
+@import 'layout/common';
+@import 'layout/footer';
+@import 'layout/masthead';
 
-/**
- * Le Styles
- */
-@import 'components/layout.scss';
-@import 'components/typography.scss';
-@import 'components/masthead.scss';
-@import 'components/quotes.scss';
-@import 'components/stats.scss';
-@import 'components/projects.scss';
-@import 'components/promo.scss';
-@import 'components/about.scss';
-@import 'components/accents.scss';
-@import 'components/plugins.scss';
-@import 'components/footer.scss';
-@import 'components/social.scss';
+/* Pages */
+@import 'pages/about';
+
+/* Vendor */
+@import 'vendor/hover';

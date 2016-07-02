@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the MASTHEAD of the site/application.
+// -----------------------------------------------------------------------------
+
+.hero {
+	padding-top: 80px;
+  padding-bottom: 32px;
+  position: relative;
+}
+.shrunken-head {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#announce {
+	bottom: 24px;
+  h1 {
+    margin-bottom: .6em;
+  }
+}

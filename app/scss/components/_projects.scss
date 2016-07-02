@@ -1,6 +1,11 @@
-/**
- * Section -- projects
- */
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the PROJECTS component.
+// -----------------------------------------------------------------------------
+
+#projects a.button {
+    margin-bottom: 0;
+}
+
 .projects-content {
   background: rgba(33,149,243,1);
   background: -moz-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);

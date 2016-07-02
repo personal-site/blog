@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the BUTTON component.
+// -----------------------------------------------------------------------------
+
+.button {
+  color: #212121;
+}
+
+.action-button:active {
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+}

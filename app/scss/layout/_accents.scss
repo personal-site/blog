@@ -1,6 +1,7 @@
-/**
- * Elements -- accents
- */
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the ACCENTS of the site/application.
+// -----------------------------------------------------------------------------
+
 .image-circle {
 	border-radius: 50%;
 }
@@ -28,15 +29,3 @@ em.accent {
     -o-transition: all .4s ease-in;
     transition: all .4s ease-in;
  }
-
-/**
- * Buttons
-*/
-.button {
-  color: #212121;
-}
-.action-button:active
-{
-  transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-}
