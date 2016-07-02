@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the ACCENTS of the site/application.
+// -----------------------------------------------------------------------------
+
+.image-circle {
+	border-radius: 50%;
+}
+
+.octicon-heart {
+	color: #ce0000;
+}
+
+footer .fa-twitter {
+	color: #55acee;
+}
+
+#g-person {
+	margin: 0 0 14px 14px;
+}
+
+em.accent {
+  color: #90A4AE;
+}
+
+#answerdash #qazzow-helpButton {
+  background: $cyan-a400!important;
+
+  &:hover {
+    background: $cyan-a700!important;
+  }
+}
+
+/* Pill style */
+#scrollUp {
+    bottom: 20px;
+    right: 20px;
+    background-color: #5D436F;
+    color: #fff;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    opacity: .9;
+    padding: 10px 20px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-transition: background 200ms linear;
+    -moz-transition: background 200ms linear;
+    -o-transition: background 200ms linear;
+    transition: background 200ms linear;
+    -webkit-backface-visibility: hidden;
+}
+
+#scrollUp:hover {
+    background-color: #000;
+}
+
+.remodal-overlay {
+  z-index: 144;
+}
+
+.remodal-wrapper {
+  z-index: 256;
+}
+
+#project-list li,
+#social a,
+.button {
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+ }

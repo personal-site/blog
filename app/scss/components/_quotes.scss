@@ -1,5 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the QUOTES component.
+// -----------------------------------------------------------------------------
+
 section#quote {
-	background: $grey-50;
+	background: $grey-100;
+  border-top: $divider-light;
 	text-align: center;
 	min-height: 200px;
   padding: 50px;

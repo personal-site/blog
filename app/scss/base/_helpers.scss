@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Centers a block-level element.
+ */
+.center {
+  margin: 0 auto;
+  display: block;
+}
+
+/**
+ * Hides an element from the DOM.
+ */
+.hidden {
+  display: none;
+}
+
+/**
+ * Floats an element to the right.
+ */
+.pull-right {
+  float: right;
+}

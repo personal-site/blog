@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the FOOTER of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+	p,
+	ul {
+		line-height: 32px;
+		margin-bottom: 0;
+    font-size: .75em;
+	}
+	.inline-list {
+		margin: 0;
+	}
+}

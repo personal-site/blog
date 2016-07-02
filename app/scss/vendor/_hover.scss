@@ -1,44 +1,13 @@
-/* Helpers */
-.center {
-  margin: 0 auto;
-  display: block;
-}
-.hidden {
-  display: none;
-}
-.remodal-overlay {
-  z-index: 144;
-}
-.remodal-wrapper {
-  z-index: 256;
-}
-
-/* Pill style */
-#scrollUp {
-    bottom: 20px;
-    right: 20px;
-    background-color: #5D436F;
-    color: #fff;
-    font-size: 12px;
-    font-family: sans-serif;
-    text-decoration: none;
-    opacity: .9;
-    padding: 10px 20px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;
-    -webkit-transition: background 200ms linear;
-    -moz-transition: background 200ms linear;
-    -o-transition: background 200ms linear;
-    transition: background 200ms linear;
-    -webkit-backface-visibility: hidden;
-}
-#projects a.button {
-    margin-bottom: 0;
-}
-#scrollUp:hover {
-    background-color: #000;
-}
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.0.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ * Hover.css Copyright Ian Lunn 2014. Generated with Sass.
+ */
 
 /* Trim */
 .hvr-trim {
@@ -90,6 +59,7 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 /* Float Shadow */
 .hvr-float-shadow {
   display: inline-block;

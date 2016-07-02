@@ -1,20 +1,21 @@
-/**
- * Section -- projects
- */
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the PROJECTS component.
+// -----------------------------------------------------------------------------
+
+#projects {
+  a.button {
+      margin-bottom: 0;
+  }
+}
+
 .projects-content {
-  background: rgba(33,149,243,1);
-  background: -moz-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(33,149,243,1)), color-stop(100%, rgba(63,81,181,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
-  background: linear-gradient(135deg, rgba(33,149,243,1) 0%, rgba(63,81,181,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2195f3', endColorstr='#3f51b5', GradientType=1 );
+  background-color: $grey-900;
   padding-top: 40px;
   padding-bottom: 40px;
   min-height: 367px;
+
   .panel {
-      background-color: $grey-50;
+      background-color: $grey-100;
       border-radius: 14px;
       box-shadow: none;
       padding: 32px 22px;
@@ -195,6 +196,7 @@ ul#tech {
         background: #181818;
     }
     .showcase {
+      border-top: $divider-light;
       margin-top: 24px;
       padding: 22px 44px;
       background: $blue-grey-50;

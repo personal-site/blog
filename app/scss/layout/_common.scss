@@ -1,6 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all COMMON styles for the site/application.
+// -----------------------------------------------------------------------------
+
 body {
-  background: $blue-grey-50;
+  background: $grey-50;
 }
+
 .contain-to-grid,
 footer {
   transition: background 1s ease;
@@ -13,6 +18,7 @@ footer {
   background: linear-gradient(135deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
 }
+
 .top-bar {
   background: none;
 }
@@ -32,6 +38,7 @@ footer {
 .top-bar.expanded .title-area  {
   background: none;
 }
+
 .hero,
 #social {
   background: rgba(69,39,160,1);
