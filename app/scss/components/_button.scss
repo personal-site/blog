@@ -4,6 +4,21 @@
 
 .button {
   color: #212121;
+
+  &.pigment {
+    background-color: $green-a700;
+
+    &:hover {
+      background-color: $green-a400;
+    }
+  }
+  &.neon-green {
+    background-color: $light-green-a400;
+
+    &:hover {
+      background-color: $light-green-a700;
+    }
+  }
 }
 
 .action-button:active {

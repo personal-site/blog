@@ -21,6 +21,14 @@ em.accent {
   color: #90A4AE;
 }
 
+#answerdash #qazzow-helpButton {
+  background: $cyan-a400!important;
+
+  &:hover {
+    background: $cyan-a700!important;
+  }
+}
+
 #project-list li,
 #social a,
 .button {

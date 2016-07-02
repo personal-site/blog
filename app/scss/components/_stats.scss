@@ -4,6 +4,12 @@
 
 #stats {
   border-bottom: 1px solid $light-green-a200;
+  padding: 14px 0;
+
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: .875em;
+
   background: rgba(10,35,100,1);
   background: -moz-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,35,100,1)), color-stop(100%, rgba(113,30,155,1)));
@@ -13,36 +19,27 @@
   background: linear-gradient(135deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
 
-  padding: 14px 0;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: .875em;
   a {
   	margin-bottom: 0;
   	color: #212121;
   }
+
   .mega-octicon {
   	font-size: 32px;
   	display: block;
   }
+
   .v {
   	display: block;
-      font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
   	font-size: 1.375rem;
   }
-}
 
-#stats-projects a {
-  background-color: #03A9F4;
-}
-#stats-projects a:hover {
-  background-color: #1565C0;
-  color: $grey-50;
-}
-#stats-hours a {
-  background-color: #8BC34A;
-}
-#stats-hours a:hover {
-  background-color: #1B5E20;
-  color: $grey-50;
+  #stats-projects a {
+    background-color: $cyan-a400;
+
+    &:hover {
+      background-color: $cyan-a700;
+    }
+  }
 }
