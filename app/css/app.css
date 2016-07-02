@@ -5738,34 +5738,11 @@ th.hide-for-touch {
 .hidden {
   display: none; }
 
-/* Pill style */
-#scrollUp {
-  bottom: 20px;
-  right: 20px;
-  background-color: #5D436F;
-  color: #fff;
-  font-size: 12px;
-  font-family: sans-serif;
-  text-decoration: none;
-  opacity: .9;
-  padding: 10px 20px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-  -webkit-transition: background 200ms linear;
-  -moz-transition: background 200ms linear;
-  -o-transition: background 200ms linear;
-  transition: background 200ms linear;
-  -webkit-backface-visibility: hidden; }
-
-#scrollUp:hover {
-  background-color: #000; }
-
-.remodal-overlay {
-  z-index: 144; }
-
-.remodal-wrapper {
-  z-index: 256; }
+/**
+ * Floats an element to the right.
+ */
+.pull-right {
+  float: right; }
 
 /**
  * Typography
@@ -5853,19 +5830,12 @@ ul.inline-list.right a {
   margin-bottom: 0; }
 
 .projects-content {
-  background: #2195f3;
-  background: -moz-linear-gradient(-45deg, #2195f3 0%, #3f51b5 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #2195f3), color-stop(100%, #3f51b5));
-  background: -webkit-linear-gradient(-45deg, #2195f3 0%, #3f51b5 100%);
-  background: -o-linear-gradient(-45deg, #2195f3 0%, #3f51b5 100%);
-  background: -ms-linear-gradient(-45deg, #2195f3 0%, #3f51b5 100%);
-  background: linear-gradient(135deg, #2195f3 0%, #3f51b5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2195f3', endColorstr='#3f51b5', GradientType=1 );
+  background-color: #212121;
   padding-top: 40px;
   padding-bottom: 40px;
   min-height: 367px; }
   .projects-content .panel {
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     border-radius: 14px;
     box-shadow: none;
     padding: 32px 22px; }
@@ -6102,10 +6072,21 @@ section#quote {
     display: block;
     font-family: 'Merriweather', serif;
     font-size: 1.375rem; }
+  #stats #stats-hours a,
   #stats #stats-projects a {
-    background-color: #00E5FF; }
+    background-color: #212121;
+    color: #fafafa; }
+    #stats #stats-hours a:hover,
     #stats #stats-projects a:hover {
-      background-color: #00B8D4; }
+      color: #212121; }
+  #stats #stats-hours a {
+    border: 1px solid #76FF03; }
+    #stats #stats-hours a:hover {
+      background-color: #76FF03; }
+  #stats #stats-projects a {
+    border: 1px solid #00E5FF; }
+    #stats #stats-projects a:hover {
+      background-color: #00E5FF; }
 
 /* Layout */
 .image-circle {
@@ -6117,9 +6098,6 @@ section#quote {
 footer .fa-twitter {
   color: #55acee; }
 
-.pull-right {
-  float: right; }
-
 #g-person {
   margin: 0 0 14px 14px; }
 
@@ -6130,6 +6108,35 @@ em.accent {
   background: #00E5FF !important; }
   #answerdash #qazzow-helpButton:hover {
     background: #00B8D4 !important; }
+
+/* Pill style */
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  background-color: #5D436F;
+  color: #fff;
+  font-size: 12px;
+  font-family: sans-serif;
+  text-decoration: none;
+  opacity: .9;
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-transition: background 200ms linear;
+  -moz-transition: background 200ms linear;
+  -o-transition: background 200ms linear;
+  transition: background 200ms linear;
+  -webkit-backface-visibility: hidden; }
+
+#scrollUp:hover {
+  background-color: #000; }
+
+.remodal-overlay {
+  z-index: 144; }
+
+.remodal-wrapper {
+  z-index: 256; }
 
 #project-list li,
 #social a,

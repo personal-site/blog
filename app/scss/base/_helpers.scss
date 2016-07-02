@@ -17,35 +17,9 @@
   display: none;
 }
 
-/* Pill style */
-#scrollUp {
-    bottom: 20px;
-    right: 20px;
-    background-color: #5D436F;
-    color: #fff;
-    font-size: 12px;
-    font-family: sans-serif;
-    text-decoration: none;
-    opacity: .9;
-    padding: 10px 20px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;
-    -webkit-transition: background 200ms linear;
-    -moz-transition: background 200ms linear;
-    -o-transition: background 200ms linear;
-    transition: background 200ms linear;
-    -webkit-backface-visibility: hidden;
-}
-
-#scrollUp:hover {
-    background-color: #000;
-}
-
-.remodal-overlay {
-  z-index: 144;
-}
-
-.remodal-wrapper {
-  z-index: 256;
+/**
+ * Floats an element to the right.
+ */
+.pull-right {
+  float: right;
 }
