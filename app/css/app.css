@@ -5977,6 +5977,7 @@ ul#tech {
   #modal-project header {
     background: #181818; }
   #modal-project .showcase {
+    border-top: 1px solid #dfdfdf;
     margin-top: 24px;
     padding: 22px 44px;
     background: #eceff1; }
