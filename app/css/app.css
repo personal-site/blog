@@ -5987,7 +5987,7 @@ ul#tech {
     margin-bottom: 0; }
 
 #promote {
-  background: #f5f5f5;
+  background: white;
   border-bottom: 1px solid #dfdfdf;
   padding: 10px 0;
   text-align: center; }
@@ -6000,7 +6000,7 @@ ul#tech {
       margin: 10px auto 0; } }
 
 section#quote {
-  background: #f5f5f5;
+  background: white;
   border-top: 1px solid #dfdfdf;
   text-align: center;
   min-height: 200px;
@@ -6148,7 +6148,7 @@ em.accent {
   transition: all .4s ease-in; }
 
 body {
-  background: #fafafa; }
+  background: #eee; }
 
 .contain-to-grid,
 footer {
