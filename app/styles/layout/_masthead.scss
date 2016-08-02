@@ -3,16 +3,19 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-	padding-top: 80px;
+  padding-top: 80px;
   padding-bottom: 32px;
   position: relative;
 }
+#title .lead {
+  color: $grey-50;
+}
 .shrunken-head {
-	padding-top: 0;
-	padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 #announce {
-	bottom: 24px;
+  bottom: 24px;
   h1 {
     margin-bottom: .6em;
   }
