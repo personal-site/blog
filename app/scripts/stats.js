@@ -10,7 +10,15 @@
  */
 $.extend( true, C1V0, {
   stats: {
+
+    /**
+     * HOURS container
+     */
     hours: {},
+
+    /**
+     * PROJECTS container
+     */
     projects: {},
 
     /**
