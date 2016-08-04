@@ -59,13 +59,12 @@
     		 */
     		fadableHeader: function() {
           $('#primary-nav').removeClass('sticky');
+
     			$(document).on('scroll', function(){
     				if ($(document).width() > 640) {
     					if ($(document).scrollTop() > 420){
-                console.log('Adding sticky');
     						$('#primary-nav').addClass('sticky');
     					} else {
-                console.log('Removing sticky');
     						$('#primary-nav').removeClass('sticky fixed');
                 $('body').removeClass('f-topbar-fixed');
     					}
