@@ -14,22 +14,25 @@
     <title>Chris Vogt — Front end developer in Phoenix, Arizona</title>
 
     <meta name="description" content="Front end developer and engineering student for hire in Phoenix, Arizona. Sharing open source projects written in PHP and JavaScript.">
+    <link rel="author" href="humans.txt">
+
+    <meta name="theme-color" content="#4527a0">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+
     <meta name="og:title" content="Chris Vogt — Front end developer in Phoenix, Arizona">
     <meta name="og:description" content="Front end developer and engineering student for hire in Phoenix, Arizona. Sharing open source projects written in PHP and JavaScript.">
     <meta name="og:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1433903064/og-banner_saphne.jpg"/>
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@C1V0">
     <meta name="twitter:creator" content="@C1V0">
     <meta name="twitter:title" content="Chris Vogt — Front end developer in Phoenix, Arizona">
     <meta name="twitter:description" content="Front end developer and engineering student for hire in Phoenix, Arizona. Sharing open source projects written in PHP and JavaScript.">
     <meta name="twitter:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1433903064/og-banner_saphne.jpg">
-    <meta name="theme-color" content="#4527a0">
-
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
 
     <script type="application/ld+json">
     {
@@ -86,7 +89,7 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="contain-to-grid sticky">
+    <div id="primary-nav" class="contain-to-grid sticky">
       <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;">
         <ul class="title-area">
           <li class="name">
@@ -338,14 +341,12 @@
       </div>
     </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-33558417-1', 'auto', {'allowLinker': true});
+      ga('require', 'linker');
+      ga('linker:autoLink', ['stats.chrisvogt.me']);
+      ga('send', 'pageview');
     </script>
 
     <!-- build:js scripts/vendor.js -->

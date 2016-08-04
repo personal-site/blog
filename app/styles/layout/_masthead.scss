@@ -4,11 +4,11 @@
 
 .hero {
   padding-top: 80px;
-  padding-bottom: 32px;
   position: relative;
 }
 #title .lead {
   color: $grey-50;
+  font-family: 'Quicksand', sans-serif;
 }
 .shrunken-head {
   padding-top: 0;
@@ -17,6 +17,6 @@
 #announce {
   bottom: 24px;
   h1 {
-    margin-bottom: .6em;
+    margin-bottom: .24em;
   }
 }

@@ -25,19 +25,17 @@
   }
 
   .mega-octicon {
-  	font-size: 32px;
-  	display: block;
+    display: block;
   }
 
   .v {
-  	display: block;
-    font-family: 'Merriweather', serif;
-  	font-size: 1.375rem;
+  	font-size: 2.375rem;
   }
 
   #stats-hours a,
   #stats-projects a {
-    background-color: $grey-900;
+    background-color: rgba(10, 10, 10, .4);
+    border-radius: 6px;
     color: $grey-50;
 
     &:hover {
@@ -46,17 +44,25 @@
   }
 
   #stats-hours a {
-    border: 1px solid $light-green-a400;
-
     &:hover {
       background-color: $light-green-a400;
     }
   }
   #stats-projects a {
-    border: 1px solid $cyan-a400;
-
     &:hover {
       background-color: $cyan-a400;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    .mega-octicon {
+      color: rgba(255, 255, 255, .05);
+      display: inline;
+      font-size: 48px;
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      margin-top: -24px;
     }
   }
 }

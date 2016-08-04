@@ -1,6 +1,6 @@
 {
   "name": "quartzite",
-  "private": true,
+  "description": "Personal website and project portfolio",
   "dependencies": {
     "SVG-Loaders": "svg-loaders#~1.0.2",
     "font-awesome": "^4.6.3",
@@ -26,5 +26,6 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
-  }
+  },
+  "private": true
 }

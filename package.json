@@ -1,7 +1,7 @@
 {
   "name": "quartzite",
   "description": "My personal website and project portfolio, in JavaScript and HTML5.",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",

@@ -58,16 +58,16 @@
     		 * and then fades it after scrolling.
     		 */
     		fadableHeader: function() {
-    			if ($(document).width() < 640) {
-    				$('.top-bar').fadeIn();
-    				return true;
-    			}
+          $('#primary-nav').removeClass('sticky');
     			$(document).on('scroll', function(){
     				if ($(document).width() > 640) {
-    					if ($(document).scrollTop() > 200){
-    						$('.top-bar').fadeIn();
+    					if ($(document).scrollTop() > 420){
+                console.log('Adding sticky');
+    						$('#primary-nav').addClass('sticky');
     					} else {
-    						$('.top-bar').fadeOut();
+                console.log('Removing sticky');
+    						$('#primary-nav').removeClass('sticky fixed');
+                $('body').removeClass('f-topbar-fixed');
     					}
     				}
     			});
