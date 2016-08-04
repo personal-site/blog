@@ -38,10 +38,11 @@
 
           $(link).attr({
             'href': project.github_url,
-            'class': 'hvr-float-shadow'
+            'class': 'hvr-shadow-radial'
           });
           $(thumb).attr({
-            'class': 'image-circle',
+            'alt': project.name,
+            'class': 'radius',
             'src': project.thumb_url
           });
 
