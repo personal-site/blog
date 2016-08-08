@@ -1,5 +1,15 @@
 'use strict';
 
+// top-level namespace
+var C1V0 = C1V0 || {};
+
+// directly assign a nested namespace
+C1V0.library = {
+  foo:function(){
+    //...
+  }
+};
+
 /**
  * Quartzite
  *

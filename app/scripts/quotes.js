@@ -1,36 +1,84 @@
 'use strict';
 
-(function(){
-	var Quotes = {};
+/**
+ * QUOTES module
+ *
+ * GET and RENDER quotes on www.chrisvogt.me
+ *
+ * @author Chris Vogt <mail@chrisvogt.me>
+ *
+ */
+$.extend( true, C1V0, {
+  quotes: {
 
-	Quotes.init = function() {
-	    $.ajax({
-	        url: 'https://cdn.rawgit.com/chrisvogt/49b51791348a09cbddb0/raw/585d1712885dda5c13d63c17b5e093d543640e42/book-quotes.json',
-	        success: function(data) {
-				var $elem = $('#quote .orbit').empty(),
-					frag = document.createDocumentFragment();
+    /**
+     * QUOTES container
+     */
+    quotes: {},
 
-	            $.each(data.quotes, function(i, quote) {
-	            	var li 	 = document.createElement( 'li' ),
-            			div  = document.createElement( 'div' ),
-            			bq 	 = document.createElement( 'blockquote' ),
-            			cite = document.createElement( 'cite' );
+    /**
+     * INIT method
+     */
+    init: function() {
+      this.get('quotes', this._renderQuotes);
+    },
 
-        			bq.innerHTML   = quote.text;
-        			cite.innerHTML = quote.cite ;
+    /**
+     * AJAX wrapper
+     */
+    get: function(type, cb) {
+      var url;
 
-        			li.appendChild( div )
-        			  .appendChild( bq )
-        			  .appendChild( cite );
+      $.ajax({
+        'url': this._path(type),
+        'success': function(data) {
+          this.quotes = data.quotes;
+        }
+      }).done(cb);
+    },
 
-            		frag.appendChild( li );
-	            });
+    /**
+     * Returns an HTTP datafile path
+     */
+    _path: function(type) {
+      var url;
 
-	            $elem.append( frag );
-	            $(document).foundation('orbit', 'reflow');
-	        }
-	    });
-	};
+      if (type === 'quotes') {
+        url = 'https://cdn.rawgit.com/chrisvogt/49b51791348a09cbddb0/raw/585d1712885dda5c13d63c17b5e093d543640e42/book-quotes.json';
+      }
 
-	Quotes.init();
-})();
+      return url;
+    },
+
+    /**
+     * Renders QUOTE data
+     */
+    _renderQuotes: function() {
+      var $elem = $('#quote .orbit').empty();
+      var frag = document.createDocumentFragment();
+
+      console.log(this.quotes);
+
+      $.each(this.quotes, function(i, quote) {
+        var li   = document.createElement( 'li' ),
+          div  = document.createElement( 'div' ),
+          bq   = document.createElement( 'blockquote' ),
+          cite = document.createElement( 'cite' );
+
+      bq.innerHTML   = quote.text;
+      cite.innerHTML = quote.cite ;
+
+      li.appendChild( div )
+        .appendChild( bq )
+        .appendChild( cite );
+
+        frag.appendChild( li );
+      });
+
+      $elem.append( frag );
+      $(document).foundation('orbit', 'reflow');
+    }
+  }
+});
+
+C1V0.quotes.init();

@@ -1,9 +1,9 @@
-[![Build status](https://img.shields.io/travis/chrisvogt/quartzite.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/quartzite)
-[![GitHub release](https://img.shields.io/github/release/chrisvogt/quartzite.svg?style=flat-square)](https://github.com/chrisvogt/quartzite/releases)
-[![GitHub license](https://img.shields.io/github/license/chrisvogt/quartzite.svg?style=flat-square)](https://github.com/chrisvogt/quartzite/blob/master/LICENSE)
+[![Build status](https://img.shields.io/travis/chrisvogt/www.chrisvogt.me.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www.chrisvogt.me)
+[![GitHub release](https://img.shields.io/github/release/chrisvogt/www.chrisvogt.me.svg?style=flat-square)](https://github.com/chrisvogt/www.chrisvogt.me/releases)
+[![GitHub license](https://img.shields.io/github/license/chrisvogt/www.chrisvogt.me.svg?style=flat-square)](https://github.com/chrisvogt/www.chrisvogt.me/blob/master/LICENSE)
 
 <p align="center">
-  <img src="app/images/h-logo.png" alt="Quartzite">
+  <img src="app/images/h-logo.png" alt="www.chrisvogt.me">
 </p>
 
 My personal website and project portfolio, based on a [Moqups design](https://app.moqups.com/chris@artinreality.com/81jSoAGytP/view/page/add529438) I created first, though it has gone through many iterations since. Stats data is fetched from [stats.chrisvogt.me](https://stats.chrisvogt.me) and the project data is in [Firebase](https://firebase.google.com/).
