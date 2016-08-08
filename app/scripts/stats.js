@@ -52,6 +52,12 @@ $.extend( true, C1V0, {
 
     /**
      * Returns an HTTP datafile path
+     *
+     * Valid types:
+     * - hours
+     * - projects
+     *
+     * @param {String} type   type of stats data to get
      */
     _path: function(type) {
       var url = '';
