@@ -1,28 +1,34 @@
 'use strict';
 
 /**
- * STATS module
- *
- * GET and RENDER developer stats for stats.chrisvogt.me.
- *
- * @author Chris Vogt <mail@chrisvogt.me>
- *
+ * @function
+ * @ignore
+ * @name jQuery#extend
+ * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
 $.extend( true, C1V0, {
+  /**
+   * Class representing stats.
+   * @class
+   * @extends C1V0
+   * @author Chris Vogt <mail@chrisvogt.me>
+   */
   stats: {
 
     /**
-     * HOURS container
+     * Local container object for hours data.
+     * retrieved using {@link stats#get}.
      */
     hours: {},
 
     /**
-     * PROJECTS container
+     * Local container object for projects data.
+     * retrieved using {@link stats#get}.
      */
     projects: {},
 
     /**
-     * INIT method
+     * Init method.
      */
     init: function() {
       this.get('hours', this._renderHours);
@@ -30,7 +36,10 @@ $.extend( true, C1V0, {
     },
 
     /**
-     * AJAX wrapper
+     * AJAX wrapper to get data. Use {@link stats#_path} to build the path.
+     *
+     * @param {string} type - The data type to get.
+     * @param {Object} cb - Callback function to call when done.
      */
     get: function(type, cb) {
       var url;
@@ -51,6 +60,7 @@ $.extend( true, C1V0, {
     },
 
     /**
+<<<<<<< 457642f454b9b3324090e730ce741712075c1c68
      * Returns an HTTP datafile path
      *
      * Valid types:
@@ -58,6 +68,12 @@ $.extend( true, C1V0, {
      * - projects
      *
      * @param {String} type   type of stats data to get
+=======
+     * Returns an HTTP datafile path.
+     *
+     * @param {string} type - The data type to get.
+     * @returns {string} The datafile path.
+>>>>>>> Code cleanup for JavaScript recently refactored into a pattern using jQuery .extend() to create a namespace and classes.
      */
     _path: function(type) {
       var url = '';
@@ -75,7 +91,7 @@ $.extend( true, C1V0, {
     },
 
     /**
-     * Renders TIME data
+     * Renders data from {@link stats#hours} onto the page.
      */
     _renderHours: function() {
       var $t = $(this.hours).find('totalTimeInWords').text().split(', ');
@@ -83,7 +99,7 @@ $.extend( true, C1V0, {
     },
 
     /**
-     * Renders PROJECT data
+     * Renders data from {@link stats#projects} onto the page.
      */
     _renderProjects: function() {
       $('#stats-projects .v').text(Object.keys(this.projects).length);

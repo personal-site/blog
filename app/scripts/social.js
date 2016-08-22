@@ -1,42 +1,49 @@
 'use strict';
 
 /**
- * SOCIAL module
- *
- * GET and RENDER social links
- *
- * @author Chris Vogt <mail@chrisvogt.me>
+ * @function
+ * @ignore
+ * @name jQuery#extend
+ * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
 $.extend( true, C1V0, {
+  /**
+   * Class representing social links.
+   *
+   * @class
+   * @extends C1V0
+   * @author Chris Vogt <mail@chrisvogt.me>
+   */
   social: {
 
     /**
-     * PROFILES container
+     * Local container object for social profiles data.
+     * retrieved using {@link social#get}.
      */
     profiles: {},
 
     /**
-     * DATA path
+     * HTTP data path.
      */
     path: 'https://chrisvogt.firebaseio.com/profiles.json',
 
     /**
-     * CONTAINER element
+     * jQuery reference to the social links list.
      */
     $container: $('#social #links ul'),
 
     /**
-     * INIT
+     * Init method.
      */
     init: function() {
       this.get('profiles', this._renderSocialList);
     },
 
     /**
-     * AJAX wrapper
-     *
-     * @param {String}
-     * @param {Object}
+     * AJAX wrapper to get data. Use {@link social#_path} to build the path.
+
+     * @param {string} type - The data type to get.
+     * @param {Object} cb - Callback function to call when done.
      */
     get: function(type, cb) {
       $.ajax({
@@ -48,16 +55,17 @@ $.extend( true, C1V0, {
     },
 
     /**
-     * PATH getter
+     * Getter method for the HTTP datafile path.
      *
-     * @param {String}
+     * @param {string} type - The data type to get.
+     * @returns {string} The datafile from {@link social#path}.
      */
     _getPath: function(type) {
       return this.path;
     },
 
     /**
-     * RENDER social profile linkes
+     * Renders social profile links from {@link social#profiles} onto the page.
      */
     _renderSocialList: function() {
       var _profiles = this.profiles;
