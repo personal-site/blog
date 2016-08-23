@@ -88,5 +88,3 @@ $.extend( true, C1V0, {
     }
   }
 });
-
-C1V0.quotes.init();

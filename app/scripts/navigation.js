@@ -1,16 +1,23 @@
 'use strict';
 
 /**
- * NAVIGATION module
- *
- * @author Chris Vogt <mail@chrisvogt.me>
+ * @function
+ * @ignore
+ * @name jQuery#extend
+ * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
-$.extend( true, C1V0, {
+$.extend(true, C1V0, {
+  /**
+   * Class representing site navigation.
+   * @extends C1V0
+   * @author Chris Vogt <mail@chrisvogt.me>
+   */
   navigation: {
 
     init: function() {
-      this._fadableHeader();
-      this._scrollingNav();
+      $.scrollUp();
+      this.fadableHeader();
+      this.scrollingNav();
     },
 
     /**
@@ -19,12 +26,12 @@ $.extend( true, C1V0, {
      * On large screens: hides the header initially
      * and then fades it after scrolling.
      */
-    _fadableHeader: function() {
+    fadableHeader: function() {
       $('#primary-nav').removeClass('sticky');
 
-      $(document).on('scroll', function(){
+      $(document).on('scroll', function() {
         if ($(document).width() > 640) {
-          if ($(document).scrollTop() > 420){
+          if ($(document).scrollTop() > 420) {
             $('#primary-nav').addClass('sticky');
           } else {
             $('#primary-nav').removeClass('sticky fixed');
@@ -39,17 +46,15 @@ $.extend( true, C1V0, {
      *
      * Smooth scroll for the on-page navigation.
      */
-    _scrollingNav: function() {
-      $('.top-bar .left a').click(function(){
-        event.preventDefault();
-        var toGo = $(this).attr('href');
+    scrollingNav: function() {
+      $('.top-bar .left a').click(function(e) {
+        e.preventDefault();
+        var goTo = $(this).attr('href');
 
         $('html, body').animate({
-            scrollTop: $(toGo).offset().top
+          scrollTop: $(goTo).offset().top
         }, 800);
       });
     },
   }
 });
-
-C1V0.navigation.init();

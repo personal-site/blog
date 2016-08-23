@@ -348,7 +348,6 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.slider.js"></script>
@@ -360,6 +359,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/common.js"></script>
+    <script src="scripts/navigation.js"></script>
     <script src="scripts/stats.js"></script>
     <script src="scripts/quotes.js"></script>
     <script src="scripts/projects.js"></script>
@@ -368,8 +368,10 @@
 
     <script>
       $(function() {
-        $(document).foundation().quartzite();
-        $.scrollUp();
+        C1V0.navigation.init();
+        C1V0.stats.init();
+        C1V0.quotes.init();
+        C1V0.social.init();
       });
     </script>
 
