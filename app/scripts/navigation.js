@@ -32,7 +32,7 @@ $.extend(true, C1V0, {
       $(document).on('scroll', function() {
         if ($(document).width() > 640) {
           if ($(document).scrollTop() > 420) {
-            $('#primary-nav').addClass('sticky');
+            $('#primary-nav').addClass('sticky fixed');
           } else {
             $('#primary-nav').removeClass('sticky fixed');
             $('body').removeClass('f-topbar-fixed');

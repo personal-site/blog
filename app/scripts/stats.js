@@ -60,20 +60,10 @@ $.extend( true, C1V0, {
     },
 
     /**
-<<<<<<< 457642f454b9b3324090e730ce741712075c1c68
-     * Returns an HTTP datafile path
-     *
-     * Valid types:
-     * - hours
-     * - projects
-     *
-     * @param {String} type   type of stats data to get
-=======
      * Returns an HTTP datafile path.
      *
      * @param {string} type - The data type to get.
      * @returns {string} The datafile path.
->>>>>>> Code cleanup for JavaScript recently refactored into a pattern using jQuery .extend() to create a namespace and classes.
      */
     _path: function(type) {
       var url = '';
