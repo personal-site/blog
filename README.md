@@ -16,6 +16,7 @@ _View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 * Develop in a feature branch and submit pull requests against `master`.
 * Use `gulp serve` to preview and watch for changes, with BrowserSync enabled.
 * Use `gulp build` to output production-ready files to the _/dist_ directory.
+* Use `gulp documentation` to generate JavaScript documentation using [documentation.js](http://documentation.js.org/).
 * Deploy the contents of _/dist_ to the `gh-pages` branch using `gulp deploy`.
 
 ### Screenshot

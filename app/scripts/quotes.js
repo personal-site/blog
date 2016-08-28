@@ -1,33 +1,37 @@
 'use strict';
 
 /**
- * QUOTES module
- *
- * GET and RENDER quotes on www.chrisvogt.me
- *
- * @author Chris Vogt <mail@chrisvogt.me>
- *
+ * @function
+ * @ignore
+ * @name jQuery#extend
+ * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
 $.extend( true, C1V0, {
+  /**
+   * Class representing quotes.
+   * @extends C1V0
+   * @author Chris Vogt <mail@chrisvogt.me>
+   */
   quotes: {
 
     /**
-     * QUOTES container
+     * Local container object for quotes.
+     * value of {@link quotes#get}.
      */
     quotes: {},
 
     /**
-     * INIT method
+     * Init method.
      */
     init: function() {
       this.get('quotes', this._renderQuotes);
     },
 
     /**
-     * AJAX wrapper
+     * AJAX wrapper to get data. Use {@link quotes#_path} to build the path.
      *
-     * @param {String} type   type of path to return
-     * @param {Object} cb     callback function
+     * @param {string} type - The data type to get.
+     * @param {Object} cb - Callback function to call when done.
      */
     get: function(type, cb) {
       var url;
@@ -41,12 +45,10 @@ $.extend( true, C1V0, {
     },
 
     /**
-     * Returns an HTTP datafile path
+     * Returns an HTTP datafile path.
      *
-     * Valid types:
-     * - quotes
-     *
-     * @param {String} type   type of path to return
+     * @param {string} type - The data type to get.
+     * @returns {string} The datafile path.
      */
     _path: function(type) {
       var url;
@@ -59,32 +61,30 @@ $.extend( true, C1V0, {
     },
 
     /**
-     * Renders QUOTE data
+     * Renders quotes from {@link quotes#quotes} onto the page.
      */
     _renderQuotes: function() {
       var $elem = $('#quote .orbit').empty();
       var frag = document.createDocumentFragment();
 
       $.each(this.quotes, function(i, quote) {
-        var li   = document.createElement( 'li' ),
-          div  = document.createElement( 'div' ),
-          bq   = document.createElement( 'blockquote' ),
-          cite = document.createElement( 'cite' );
+        var li   = document.createElement('li'),
+          div    = document.createElement('div'),
+          bq     = document.createElement('blockquote'),
+          cite   = document.createElement('cite');
 
       bq.innerHTML   = quote.text;
       cite.innerHTML = quote.cite ;
 
-      li.appendChild( div )
-        .appendChild( bq )
-        .appendChild( cite );
+      li.appendChild(div)
+        .appendChild(bq)
+        .appendChild(cite);
 
-        frag.appendChild( li );
+        frag.appendChild(li);
       });
 
-      $elem.append( frag );
+      $elem.append(frag);
       $(document).foundation('orbit', 'reflow');
     }
   }
 });
-
-C1V0.quotes.init();

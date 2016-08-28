@@ -9,6 +9,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 var ghPages = require('gulp-gh-pages');
+var documentation = require('gulp-documentation');
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -166,6 +167,12 @@ gulp.task('wiredep', () => {
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));
+});
+
+gulp.task('documentation', function () {
+  gulp.src('app/scripts/stats.js')
+    .pipe(documentation({ shallow: true, format: 'html' }))
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {

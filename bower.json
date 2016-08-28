@@ -2,7 +2,7 @@
   "name": "quartzite",
   "description": "Personal website and project portfolio",
   "dependencies": {
-    "SVG-Loaders": "svg-loaders#~1.0.2",
+    "SVG-Loaders": "svg-loaders#^1.0.2",
     "font-awesome": "^4.6.3",
     "foundation": "zurb/bower-foundation",
     "modernizr": "~2.8.1",
