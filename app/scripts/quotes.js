@@ -25,6 +25,9 @@ $.extend( true, C1V0, {
 
     /**
      * AJAX wrapper
+     *
+     * @param {String} type   type of path to return
+     * @param {Object} cb     callback function
      */
     get: function(type, cb) {
       var url;
@@ -39,6 +42,11 @@ $.extend( true, C1V0, {
 
     /**
      * Returns an HTTP datafile path
+     *
+     * Valid types:
+     * - quotes
+     *
+     * @param {String} type   type of path to return
      */
     _path: function(type) {
       var url;
@@ -56,8 +64,6 @@ $.extend( true, C1V0, {
     _renderQuotes: function() {
       var $elem = $('#quote .orbit').empty();
       var frag = document.createDocumentFragment();
-
-      console.log(this.quotes);
 
       $.each(this.quotes, function(i, quote) {
         var li   = document.createElement( 'li' ),
