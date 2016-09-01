@@ -15,84 +15,66 @@ $.extend( true, C1V0, {
    */
   stats: {
 
-    /**
-     * Local container object for hours data.
-     * retrieved using {@link stats#get}.
-     */
-    hours: {},
-
-    /**
-     * Local container object for projects data.
-     * retrieved using {@link stats#get}.
-     */
-    projects: {},
-
-    /**
-     * Init method.
-     */
     init: function() {
-      this.get('hours', this.renderHours);
-      this.get('projects', this.renderProjects);
+      this.hours.init();
+      this.projects.init();
     },
 
-    /**
-     * AJAX wrapper to get data. Use {@link stats#path} to build the path.
-     *
-     * @param {string} type - The data type to get.
-     * @param {object} cb - Callback function to call when done.
-     */
-    get: function(type, cb) {
-      var url;
+    hours: {
+      /**
+       * Hours data endpoint.
+       */
+      path: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22https%3A%2F%2Fstats.chrisvogt.me%2Freports%2Fdashboard.json%22&diagnostics=true',
 
-      $.ajax({
-        'url': this.path(type),
-        'success': function(data) {
-          switch (type) {
-            case 'hours':
-              this.hours = data;
-              break;
-            case 'projects':
-              this.projects = data;
-              break;
-          }
-        }
-      }).done(cb);
+      /**
+       * Used to make HTTP requests.
+       * @type {object}
+       */
+      http: {},
+
+      /**
+       * Init method.
+       */
+      init: function() {
+        this.http = new HttpSocket(this.path);
+        this.http.get(this.renderHours);
+      },
+
+      /**
+       * Renders data from {@link stats#hours} onto the page.
+       */
+      renderHours: function() {
+        var $t = $(this.data).find('totalTimeInWords').text().split(', ');
+        $('#stats-hours .v').text($t[0].replace(/\D/g,''));
+      },
     },
 
-    /**
-     * Returns an HTTP datafile path.
-     *
-     * @param {string} type - The data type to get.
-     * @returns {string} The datafile path.
-     */
-    path: function(type) {
-      var url = '';
+    projects: {
+      /**
+       * Projects data endpoint.
+       */
+      path: 'https://chrisvogt.firebaseio.com/projects.json',
 
-      switch (type) {
-        case 'hours':
-          url = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22https%3A%2F%2Fstats.chrisvogt.me%2Freports%2Fdashboard.json%22&diagnostics=true';
-          break;
-        case 'projects':
-          url = 'https://chrisvogt.firebaseio.com/projects.json';
-          break;
+      /**
+       * Used to make HTTP requests.
+       * @type {object}
+       */
+      http: {},
+
+      /**
+       * Init method.
+       */
+      init: function() {
+        this.http = new HttpSocket(this.path);
+        this.http.get(this.renderProjects);
+      },
+
+      /**
+       * Renders data from {@link stats#projects} onto the page.
+       */
+      renderProjects: function() {
+        $('#stats-projects .v').text(Object.keys(this.data).length);
       }
-
-      return url;
-    },
-
-    /**
-     * Renders data from {@link stats#hours} onto the page.
-     */
-    renderHours: function() {
-      var $t = $(this.hours).find('totalTimeInWords').text().split(', ');
-      $('#stats-hours .v').text($t[0].replace(/\D/g,''));
-    },
-
-    /**
-     * Renders data from {@link stats#projects} onto the page.
-     */
-    renderProjects: function() {
-      $('#stats-projects .v').text(Object.keys(this.projects).length);
     }
   }
 });
