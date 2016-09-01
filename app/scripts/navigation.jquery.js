@@ -26,7 +26,7 @@ $.extend(true, C1V0, {
      * On large screens: hides the header initially
      * and then fades it after scrolling.
      */
-    fadableHeader: function() {
+    fadableHeader() {
       $('#primary-nav').removeClass('sticky');
 
       $(document).on('scroll', function() {
@@ -46,10 +46,10 @@ $.extend(true, C1V0, {
      *
      * Smooth scroll for the on-page navigation.
      */
-    scrollingNav: function() {
+    scrollingNav() {
       $('.top-bar .left a').click(function(e) {
         e.preventDefault();
-        var goTo = $(this).attr('href');
+        const goTo = $(this).attr('href');
 
         $('html, body').animate({
           scrollTop: $(goTo).offset().top
