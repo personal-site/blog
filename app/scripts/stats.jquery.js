@@ -31,21 +31,21 @@ $.extend( true, C1V0, {
      * Init method.
      */
     init: function() {
-      this.get('hours', this._renderHours);
-      this.get('projects', this._renderProjects);
+      this.get('hours', this.renderHours);
+      this.get('projects', this.renderProjects);
     },
 
     /**
-     * AJAX wrapper to get data. Use {@link stats#_path} to build the path.
+     * AJAX wrapper to get data. Use {@link stats#path} to build the path.
      *
      * @param {string} type - The data type to get.
-     * @param {Object} cb - Callback function to call when done.
+     * @param {object} cb - Callback function to call when done.
      */
     get: function(type, cb) {
       var url;
 
       $.ajax({
-        'url': this._path(type),
+        'url': this.path(type),
         'success': function(data) {
           switch (type) {
             case 'hours':
@@ -65,7 +65,7 @@ $.extend( true, C1V0, {
      * @param {string} type - The data type to get.
      * @returns {string} The datafile path.
      */
-    _path: function(type) {
+    path: function(type) {
       var url = '';
 
       switch (type) {
@@ -83,7 +83,7 @@ $.extend( true, C1V0, {
     /**
      * Renders data from {@link stats#hours} onto the page.
      */
-    _renderHours: function() {
+    renderHours: function() {
       var $t = $(this.hours).find('totalTimeInWords').text().split(', ');
       $('#stats-hours .v').text($t[0].replace(/\D/g,''));
     },
@@ -91,7 +91,7 @@ $.extend( true, C1V0, {
     /**
      * Renders data from {@link stats#projects} onto the page.
      */
-    _renderProjects: function() {
+    renderProjects: function() {
       $('#stats-projects .v').text(Object.keys(this.projects).length);
     }
   }
