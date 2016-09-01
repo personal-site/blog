@@ -39,16 +39,16 @@ $.extend( true, C1V0, {
      * @return {boolean}
      */
     renderSocialList: function() {
-      var profiles = [...this.data];
-      var frag = document.createDocumentFragment();
+      const profiles = [...this.data];
+      const frag = document.createDocumentFragment();
 
       profiles.forEach(function(profile) {
-        var a = $('<a></a>', {
+        const a = $('<a></a>', {
           'href': profile.href,
           'title': 'Chris Vogt on ' + profile.name
         });
-        var i = $('<i class="' + profile.icon + '"></i>');
-        var li = $('<li></li>').append(a);
+        const i = $('<i class="' + profile.icon + '"></i>');
+        const li = $('<li></li>').append(a);
 
         $(a).append(i);
         $(frag).append(li);

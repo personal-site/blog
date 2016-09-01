@@ -49,7 +49,7 @@ $.extend(true, C1V0, {
     scrollingNav() {
       $('.top-bar .left a').click(function(e) {
         e.preventDefault();
-        var goTo = $(this).attr('href');
+        const goTo = $(this).attr('href');
 
         $('html, body').animate({
           scrollTop: $(goTo).offset().top

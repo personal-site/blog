@@ -38,11 +38,11 @@ $.extend( true, C1V0, {
      * Renders quotes from onto the page.
      */
     renderQuotes() {
-      var $elem = $('#quote .orbit').empty();
-      var frag = document.createDocumentFragment();
+      const $elem = $('#quote .orbit').empty();
+      const frag = document.createDocumentFragment();
 
       $.each(this.data.quotes, function(i, quote) {
-        var li   = document.createElement('li'),
+        const li   = document.createElement('li'),
           div    = document.createElement('div'),
           bq     = document.createElement('blockquote'),
           cite   = document.createElement('cite');

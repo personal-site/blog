@@ -49,7 +49,7 @@ $.extend( true, C1V0, {
        * Renders data from {@link stats#hours} onto the page.
        */
       renderHours: function() {
-        var $t = $(this.data).find('totalTimeInWords').text().split(', ');
+        const $t = $(this.data).find('totalTimeInWords').text().split(', ');
         $('#stats-hours .v').text($t[0].replace(/\D/g,''));
       },
     },
