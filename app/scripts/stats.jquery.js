@@ -72,7 +72,7 @@ $.extend( true, C1V0, {
       /**
        * Init method.
        */
-      init: function() {
+      init() {
         this.http = new HttpSocket(this.path);
         this.http.get(this.renderProjects);
       },
@@ -80,7 +80,7 @@ $.extend( true, C1V0, {
       /**
        * Renders data from {@link stats#projects} onto the page.
        */
-      renderProjects: function() {
+      renderProjects() {
         $('#stats-projects .v').text(Object.keys(this.data).length);
       }
     }

@@ -29,7 +29,7 @@ $.extend( true, C1V0, {
     /**
      * Init method.
      */
-    init: function() {
+    init() {
       this.http = new HttpSocket(this.path);
       this.http.get(this.renderQuotes);
     },
@@ -37,7 +37,7 @@ $.extend( true, C1V0, {
     /**
      * Renders quotes from onto the page.
      */
-    renderQuotes: function() {
+    renderQuotes() {
       var $elem = $('#quote .orbit').empty();
       var frag = document.createDocumentFragment();
 
