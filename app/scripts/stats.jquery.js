@@ -14,12 +14,17 @@ $.extend( true, C1V0, {
    * @author Chris Vogt <mail@chrisvogt.me>
    */
   stats: {
-
+    /**
+     * Init method.
+     */
     init: function() {
       this.hours.init();
       this.projects.init();
     },
 
+    /**
+     * @extends C1V0.stats
+     */
     hours: {
       /**
        * Hours data endpoint.
@@ -49,6 +54,9 @@ $.extend( true, C1V0, {
       },
     },
 
+    /**
+     * @extends C1V0.stats
+     */
     projects: {
       /**
        * Projects data endpoint.
