@@ -6,14 +6,16 @@
  * @name jQuery#extend
  * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
-$.extend(true, C1V0, {
+$.extend(true, C1V0 || {}, {
   /**
-   * Class representing site navigation.
-   * @extends C1V0
-   * @author Chris Vogt <mail@chrisvogt.me>
+   * Site navigation module.
+   * @module
+   * @this {navigation}
+   * @alias C1V0.navigation
    */
   navigation: {
 
+    /** Initializer. */
     init: function() {
       $.scrollUp();
       this.fadableHeader();
@@ -58,3 +60,5 @@ $.extend(true, C1V0, {
     },
   }
 });
+
+C1V0.navigation.init();

@@ -1,7 +1,7 @@
 /**
  * Represents an HTTP request.
  * @constructor
- * @param {string} path - The path of the data endpoint.
+ * @this {HttpSocket}
  */
 function HttpSocket(path) {
   /**
@@ -21,7 +21,7 @@ HttpSocket.prototype = {
    * Data path.
    * @type {string}
    */
-  // path: '',
+  path: '',
 
   /**
    * Wrapper around {jQuery#ajax}.

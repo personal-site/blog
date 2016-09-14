@@ -6,13 +6,12 @@
  * @name jQuery#extend
  * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
-$.extend( true, C1V0, {
+$.extend( true, C1V0 || {}, {
   /**
-   * Class representing social links.
-   *
-   * @class
-   * @extends C1V0
-   * @author Chris Vogt <mail@chrisvogt.me>
+   * Social profiles module.
+   * @module
+   * @this {social}
+   * @alias C1V0.social
    */
   social: {
     /**
@@ -22,22 +21,18 @@ $.extend( true, C1V0, {
 
     /**
      * jQuery reference to the social links list.
+     *
+     * @type {object}
      */
     $container: $('#social #links ul'),
 
-    /**
-     * Init method.
-     */
+    /** Initializer. */
     init: function() {
       this.http = new HttpSocket(this.path);
-      this.http.get(this.renderSocialList);
+      this.http.get(this.renderSocialList, this.failure);
     },
 
-    /**
-     * Renders social profile links onto the page.
-     *
-     * @return {boolean}
-     */
+    /** Renders social profile links onto the page. */
     renderSocialList: function() {
       const profiles = [...this.data];
       const frag = document.createDocumentFragment();
@@ -56,10 +51,16 @@ $.extend( true, C1V0, {
 
       if (profiles.length > 0) {
         $('#social #links ul').empty().append(frag);
-        return true;
       } else {
-        return false;
+        this.failure();
       }
+    },
+
+    /** Handles HTTP request failure. */
+    failure: function() {
+      $('#social').addClass('hidden');
     }
   }
 });
+
+C1V0.social.init();

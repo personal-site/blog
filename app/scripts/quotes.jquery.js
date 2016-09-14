@@ -6,11 +6,12 @@
  * @name jQuery#extend
  * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
-$.extend( true, C1V0, {
+$.extend( true, C1V0 || {}, {
   /**
-   * Class representing quotes.
-   * @extends C1V0
-   * @author Chris Vogt <mail@chrisvogt.me>
+   * Social profiles module.
+   * @module
+   * @this {quotes}
+   * @alias C1V0.quotes
    */
   quotes: {
 
@@ -26,12 +27,10 @@ $.extend( true, C1V0, {
      */
     http: {},
 
-    /**
-     * Init method.
-     */
+    /** Initializer. */
     init() {
       this.http = new HttpSocket(this.path);
-      this.http.get(this.renderQuotes);
+      this.http.get(this.renderQuotes, this.failure);
     },
 
     /**
@@ -66,5 +65,12 @@ $.extend( true, C1V0, {
         return false;
       }
     }
+  },
+
+  /** Handles HTTP request failure. */
+  failure() {
+    $('#quote').addClass('hidden');
   }
 });
+
+C1V0.quotes.init();
