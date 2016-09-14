@@ -12,22 +12,29 @@ function HttpSocket(path) {
 }
 HttpSocket.prototype = {
   /**
-   * Data object container.
-   * @type {Object}
+   * Data container.
+   * @type {object}
    */
   data: {},
 
   /**
+   * Data path.
+   * @type {string}
+   */
+  // path: '',
+
+  /**
    * Wrapper around {jQuery#ajax}.
-   * @param  {function} cb - Callback function, on completion.
+   * @param  {function} success Success callback function.
+   * @param  {function} failure Failure callback function.
    * @return {boolean}
    */
-  get: function(cb) {
+  get: function(success, failure) {
     $.ajax({
       'url': this.path,
       'success': function(data) {
         this.data = data;
       }
-    }).done(cb);
+    }).done(success).fail(failure);
   }
 }

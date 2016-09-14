@@ -14,6 +14,19 @@ ga('require', 'linker');
 ga('linker:autoLink', ['stats.chrisvogt.me']);
 ga('send', 'pageview');
 
+$.createCache = function( requestFunction ) {
+  var cache = {};
+
+  return function( key, callback ) {
+    if ( !cache[key] ) {
+      cache[ key ] = $.Deferred(function( defer ) {
+        requestFunction( defer, key );
+      }).promise();
+      return cache[ key ].done( callback );
+    }
+  };
+};
+
 /**
  * Twitter API
  *

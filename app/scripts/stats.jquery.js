@@ -42,7 +42,7 @@ $.extend( true, C1V0, {
        */
       init: function() {
         this.http = new HttpSocket(this.path);
-        this.http.get(this.renderHours);
+        this.http.get(this.renderHours, this.failure);
       },
 
       /**
@@ -52,6 +52,16 @@ $.extend( true, C1V0, {
         const $t = $(this.data).find('totalTimeInWords').text().split(', ');
         $('#stats-hours .v').text($t[0].replace(/\D/g,''));
       },
+
+      failure: function() {
+        $('#stats-hours').addClass('hidden');
+        $('#stats-projects').removeClass('small-6').addClass('small-12');
+
+        /* Hide the entire pane if the other request failed. */
+        if ($('#stats-projects').hasClass('hidden')) {
+          $('#stats').addClass('hidden');
+        }
+      }
     },
 
     /**
@@ -72,16 +82,26 @@ $.extend( true, C1V0, {
       /**
        * Init method.
        */
-      init() {
+      init: function() {
         this.http = new HttpSocket(this.path);
-        this.http.get(this.renderProjects);
+        this.http.get(this.renderProjects, this.failure);
       },
 
       /**
        * Renders data from {@link stats#projects} onto the page.
        */
-      renderProjects() {
+      renderProjects: function() {
         $('#stats-projects .v').text(Object.keys(this.data).length);
+      },
+
+      failure: function() {
+        $('#stats-projects').addClass('hidden');
+        $('#stats-hours').removeClass('small-6').addClass('small-12');
+
+        /* Hide the entire pane if the other request failed. */
+        if ($('#stats-hours').hasClass('hidden')) {
+          $('#stats').addClass('hidden');
+        }
       }
     }
   }
