@@ -14,6 +14,13 @@ footer .fa-twitter {
 	color: #55acee;
 }
 
+#follow-button {
+  background: $dodger-blue;
+  &:hover {
+    background: $dodger-uniform-blue;
+  }
+}
+
 #g-person {
 	margin: 0 0 14px 14px;
 }
@@ -23,11 +30,14 @@ em.accent {
 }
 
 #answerdash #qazzow-helpButton {
-  background: $cyan-a400!important;
+  background: $dodger-blue!important;
 
   &:hover {
     background: $cyan-a700!important;
   }
+}
+.answerdash-tooltipped.answerdash-hover {
+  background: red!important;
 }
 
 /* Pill style */
@@ -61,6 +71,14 @@ em.accent {
 
 .remodal-wrapper {
   z-index: 256;
+}
+
+.remodal-close {
+  color: $grey-200;
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
 }
 
 #project-list li,

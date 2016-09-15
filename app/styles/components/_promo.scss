@@ -5,7 +5,8 @@
 #promote {
     background: white;
     border-bottom: $divider-light;
-    padding: 10px 0;
+    padding-top: 24px;
+    padding-bottom: 0;
     text-align: center;
     @media only screen and (min-width: 40.063em) {
         p {
@@ -16,4 +17,9 @@
             margin: 10px auto 0;
         }
     }
+}
+@media #{$medium-up} {
+  #promote {
+    padding: 10px 0;
+  }
 }
