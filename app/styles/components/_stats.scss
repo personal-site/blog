@@ -38,12 +38,13 @@
 
   .v {
   	font-size: 2.375rem;
+    margin-right: .124em
   }
 
   #stats-hours a,
   #stats-projects a {
     background-color: rgba(10, 10, 10, .4);
-    border-radius: 6px;
+    border-radius: 8px;
     color: $grey-50;
   }
 

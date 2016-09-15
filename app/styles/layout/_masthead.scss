@@ -31,3 +31,8 @@
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   background-color: $dodger-blue;
 }
+.top-bar-section li:not(.has-form) a:not(.button) {
+  &:hover {
+    background-color: $dodger-uniform-blue;
+  }
+}
