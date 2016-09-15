@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 body {
-  background: $grey-200;
+  background: $blue-grey-50;
 }
 
 .contain-to-grid,
@@ -18,7 +18,9 @@ footer {
   background: linear-gradient(135deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
 }
-
+.panel {
+  border-color: #dfdfdf;
+}
 .top-bar {
   background: none;
 }

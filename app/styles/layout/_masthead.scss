@@ -9,6 +9,14 @@
 #title .lead {
   color: $grey-50;
   font-family: 'Quicksand', sans-serif;
+  span {
+    display: none;
+  }
+  @media #{$medium-up} {
+    span {
+      display: inline;
+    }
+  }
 }
 .shrunken-head {
   padding-top: 0;
@@ -18,5 +26,13 @@
   bottom: 24px;
   h1 {
     margin-bottom: .24em;
+  }
+}
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background-color: $dodger-blue;
+}
+.top-bar-section li:not(.has-form) a:not(.button) {
+  &:hover {
+    background-color: $dodger-uniform-blue;
   }
 }

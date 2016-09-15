@@ -3,6 +3,19 @@
 // -----------------------------------------------------------------------------
 
 .about-content {
-  background-color: none;
-	padding: 64px 0;
+  font-size: .875em;
+
+  .panel {
+    background-color: $grey-100;
+    border-radius: 8px;
+    color: $text-raven;
+  }
+
+  h2 {
+    margin-bottom: .438em;
+  }
+
+  @media #{$medium-up} {
+    padding: 42px 0;
+  }
 }

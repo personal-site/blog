@@ -1,3 +1,5 @@
+$(document).foundation();
+
 /**
  * Google Analytics
  *

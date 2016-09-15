@@ -3,7 +3,6 @@
 // -----------------------------------------------------------------------------
 
 #stats {
-  border-bottom: 1px solid $light-green-a200;
   padding: 14px 0;
 
   text-align: center;
@@ -25,37 +24,53 @@
   }
 
   .mega-octicon {
-    display: block;
     margin-right: 1em;
+  }
+
+  @media #{$small-only} {
+    .mega-octicon {
+      color: $text-asher;
+    }
+    #stats-hours {
+      margin-bottom: 14px;
+    }
   }
 
   .v {
   	font-size: 2.375rem;
+    margin-right: .124em
   }
 
   #stats-hours a,
   #stats-projects a {
     background-color: rgba(10, 10, 10, .4);
-    border-radius: 6px;
+    border-radius: 8px;
     color: $grey-50;
-
-    &:hover {
-      color: $grey-900;
-    }
   }
 
   #stats-hours a {
     &:hover {
-      background-color: $light-green-a400;
+      color: $text-raven;
+      background-color: $vegas-gold;
+      .mega-octicon {
+        color: $text-raven;
+      }
     }
   }
   #stats-projects a {
     &:hover {
-      background-color: $cyan-a400;
+      color: white;
+      background-color: $dodger-blue;
+      .mega-octicon {
+        color: white;
+      }
     }
   }
 
   @media only screen and (min-width: 40.063em) {
+    &:first-of-type {
+      margin-bottom: 24px;
+    }
     .mega-octicon {
       color: rgba(255, 255, 255, .05);
       display: inline;
