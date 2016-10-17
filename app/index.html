@@ -136,10 +136,18 @@
     <section id="projects" class="projects-content">
       <div class="row">
         <div class="large-12 columns">
-          <div class="panel small-only-text-center">
+          <div class="panel panel-loading text-center">
+            <p>
+              <img src="images/ajax-squares.svg" width="24" height="24" class="spinner" alt="Loading...">
+              <span class="text-small">Loading projects...</span>
+            </p>
+          </div>
+          <div class="panel panel-unresolved hidden text-center">
+            <p class="text-small">An error occured fetching project data.</p>
+          </div>
+          <div class="panel panel-controls small-only-text-center hide">
             <p>
               Project portfolio. <span class="accent">Click on a thumbnail to learn more.</span>
-              <img src="images/ajax-squares.svg" width="24" height="24" class="right spinner" alt="Loading...">
 
               <button id="btnFilter" href="#" data-dropdown="filters" data-options="align:left" aria-controls="filters" aria-expanded="false" class="button secondary tiny dropdown hidden"><i class="fa fa-filter"></i> Filter</button>
               <div id="filters" data-dropdown-content class="f-dropdown" aria-hidden="true">
@@ -196,7 +204,7 @@
               </div>
               </p>
           </div>
-          <ul id="project-list" class="small-block-grid-3 medium-block-grid-6">
+          <ul id="project-list" class="hidden small-block-grid-3 medium-block-grid-6">
             <!-- projects -->
           </ul>
         </div>
@@ -247,7 +255,7 @@
     <footer>
       <div class="row">
         <div class="small-6 columns">
-          <p>Made with <span class="octicon octicon-code"></span> + <span class="octicon octicon-heart"></span> by in Phoenix 🌵</p>
+          <p>Made with <span class="octicon octicon-code"></span> + <span class="octicon octicon-heart"></span> by <a href="https://https://twitter.com/c1v0" title="@C1V0 on Twitter">@C1V0</a> in Phoenix 🌵</p>
         </div>
         <div class="small-6 columns">
           <ul class="inline-list right">

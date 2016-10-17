@@ -6,6 +6,14 @@
   a.button {
       margin-bottom: 0;
   }
+  .panel-loading {
+    margin-top: 24px;
+    margin-bottom: 0;
+
+    span.text-small {
+      line-height: 24px;
+    }
+  }
 }
 #project-list img {
   border-radius: 6px;
@@ -13,9 +21,9 @@
 .projects-content {
   padding-top: 24px;
   padding-bottom: 4px;
-  min-height: 367px;
+  // min-height: 367px;
 
-  .panel {
+  .panel-controls {
       background-color: $grey-100;
       border-radius: 8px;
       box-shadow: none;
@@ -40,7 +48,7 @@
       span.accent,
       #btnFilter {
         margin-bottom: 0;
-        margin-top: .4em;
+        margin-top: -4px;
       }
       span.accent {
         color: $text-asher;
@@ -60,9 +68,6 @@
           float: right;
         }
       }
-  }
-  p {
-      font-size: 1.125em;
   }
   ul:hover li {opacity: 0.5;}
   ul li:hover {opacity: 1;}
