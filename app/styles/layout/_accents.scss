@@ -42,27 +42,31 @@ em.accent {
 
 /* Pill style */
 #scrollUp {
-    bottom: 20px;
-    right: 20px;
+  bottom: 20px;
+  right: 20px;
+  background-color: $vegas-gold;
+  color: #5D436F;
+  font-size: 12px;
+  font-family: sans-serif;
+  text-decoration: none;
+  opacity: .9;
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-transition: background 200ms linear;
+  -moz-transition: background 200ms linear;
+  -o-transition: background 200ms linear;
+  transition: background 200ms linear;
+  -webkit-backface-visibility: hidden;
+  &:hover {
     background-color: #5D436F;
-    color: #fff;
-    font-size: 12px;
-    font-family: sans-serif;
-    text-decoration: none;
-    opacity: .9;
-    padding: 10px 20px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;
-    -webkit-transition: background 200ms linear;
-    -moz-transition: background 200ms linear;
-    -o-transition: background 200ms linear;
-    transition: background 200ms linear;
-    -webkit-backface-visibility: hidden;
-}
-
-#scrollUp:hover {
-    background-color: #000;
+    color: $vegas-gold;
+  }
+  @media only screen and (max-width: 64.063em) {
+    display: none!important;
+    border: 1px solid red;
+  }
 }
 
 .remodal-overlay {

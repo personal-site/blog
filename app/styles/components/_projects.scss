@@ -3,12 +3,18 @@
 // -----------------------------------------------------------------------------
 
 #projects {
+  position: relative;
+  min-height: 140px;
+
   a.button {
       margin-bottom: 0;
   }
   .panel-loading {
-    margin-top: 24px;
-    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 24;
+    margin: 24px auto 24px;
 
     span.text-small {
       line-height: 24px;
@@ -19,15 +25,15 @@
   border-radius: 6px;
 }
 .projects-content {
-  padding-top: 24px;
-  padding-bottom: 4px;
-  // min-height: 367px;
+  position: absolute;
+  top: 0;
+  z-index: 55;
 
   .panel-controls {
       background-color: $grey-100;
       border-radius: 8px;
       box-shadow: none;
-      margin-bottom: 24px;
+      margin: 24px auto;
       padding: 32px 22px;
 
       p {
