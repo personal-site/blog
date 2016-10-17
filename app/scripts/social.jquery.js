@@ -9,7 +9,8 @@
 $.extend( true, C1V0 || {}, {
   /**
    * Social profiles module.
-   * @module
+   *
+   * @namespace
    * @this {social}
    * @alias C1V0.social
    */
@@ -17,7 +18,7 @@ $.extend( true, C1V0 || {}, {
     /**
      * HTTP data path.
      */
-    path: 'https://chrisvogt.firebaseio.com/profiles.json',
+    path: C1V0.config.social,
 
     /**
      * jQuery reference to the social links list.

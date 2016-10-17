@@ -8,6 +8,7 @@
 $.extend( true, C1V0 || {}, {
   /**
    * Projects module.
+   *
    * @namespace
    * @this {projects}
    * @alias C1V0.quotes
@@ -16,12 +17,14 @@ $.extend( true, C1V0 || {}, {
 
     /**
      * Path to the projects data.
+     *
      * @type {string}
      */
-    path: 'https://chrisvogt.firebaseio.com/projects.json',
+    path: C1V0.config.projects,
 
     /**
      * HttpSocket container.
+     *
      * @type {HttpSocket}
      */
     http: {},
@@ -67,10 +70,10 @@ $.extend( true, C1V0 || {}, {
       });
 
       // append the newly generated collection of <li>s
-      $('#projects .panel-loading').fadeOut();
-      $('#project-list').empty().append(frag).fadeIn(1600);
-      $('#projects .panel-controls').fadeIn();
-      $('#btnFilter').delay(800).fadeIn();
+      $('#projects .panel-loading').fadeOut(function() {
+        $('#project-list').append(frag).fadeIn(1600);
+        $('#projects .panel-controls').fadeIn();
+      });
 
       // attach event bindings
       C1V0.projects.applyUIBindings();
@@ -83,7 +86,8 @@ $.extend( true, C1V0 || {}, {
 
     /**
      * Handler for the projects drop down filters.
-     * @param {string}
+     *
+     * @param {String}
      */
     filter: function(filterId) {
       var category = filterId.replace('filter', '').toLowerCase(),
@@ -183,6 +187,7 @@ $.extend( true, C1V0 || {}, {
 
         /**
          * Formats the created date using moment.js.
+         *
          * @param {String}
          * @returns {String|Date} Returns a moment.js-formatted string or falls back to the default Date string.
          */
@@ -193,6 +198,7 @@ $.extend( true, C1V0 || {}, {
 
         /**
          * Button handler.
+         *
          * @param {String} action The button action. Either `source` or `demo`.
          * @param {Object} project
          * @returns {jQuery}
@@ -208,6 +214,7 @@ $.extend( true, C1V0 || {}, {
 
         /**
          * Generates the appropriate set of attributes.
+         *
          * @param {String} action
          * @param {Object} $project
          */
@@ -239,6 +246,7 @@ $.extend( true, C1V0 || {}, {
 
         /**
          * Contains a collection of attributes.
+         *
          * @constructor
          * @param {String} href The hyperlink url for the button `href` attribute.
          * @param {String} title The label text for the button.

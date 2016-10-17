@@ -1,7 +1,6 @@
 'use strict';
 
 /**
- * @function
  * @ignore
  * @name jQuery#extend
  * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
@@ -9,7 +8,8 @@
 $.extend( true, C1V0 || {}, {
   /**
    * Social profiles module.
-   * @module
+   *
+   * @namespace
    * @this {quotes}
    * @alias C1V0.quotes
    */
@@ -19,7 +19,7 @@ $.extend( true, C1V0 || {}, {
      * Path to the quotes data.
      * @type {string}
      */
-    path: 'https://cdn.rawgit.com/chrisvogt/49b51791348a09cbddb0/raw/585d1712885dda5c13d63c17b5e093d543640e42/book-quotes.json',
+    path: C1V0.config.quotes,
 
     /**
      * Used to make HTTP requests.
