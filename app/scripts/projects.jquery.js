@@ -34,21 +34,17 @@ $.extend( true, C1V0 || {}, {
 
     /** Renders the projects index. */
     render: function() {
-      var frag = document.createDocumentFragment();
+      // stringholds projects <ul>
+      const frag = document.createDocumentFragment();
 
       // convert to an array of objects
-      var d = $.map(this.data, function(val) {
+      var projects = $.map(this.data, function(val) {
           return [val];
       });
 
-      // sort data by `created`
-      d.sort(function(a, b) {
-        return b.created.localeCompare( a.created );
-      });
-
       // iterate through data and build projects index
-      $.each(d, function(i, project) {
-        var li = document.createElement('li'),
+      $.each(projects, function(i, project) {
+        const li = document.createElement('li'),
           link = document.createElement('a'),
           thumb = document.createElement('img');
 
@@ -80,9 +76,13 @@ $.extend( true, C1V0 || {}, {
       C1V0.projects.applyUIBindings();
     },
 
+    /** Sorts data by creation data. */
+    sort: function(a, b) {
+      return b.created.localeCompare( a.created );
+    },
+
     /**
      * Handler for the projects drop down filters.
-     *
      * @param {string}
      */
     filter: function(filterId) {
@@ -90,7 +90,7 @@ $.extend( true, C1V0 || {}, {
           state = document.getElementById(filterId).checked,
           $items = $('#project-list li');
 
-      for (var i = 0; i < $items.length; i++) {
+      for (var i = 0, max = $items.length; i < max; i += 1) {
         if ($.data($items[i], 'category') === category.singularize()) {
           switch (state) {
             case false:
@@ -104,71 +104,87 @@ $.extend( true, C1V0 || {}, {
       }
     },
 
+    /** Failure handler. Hides the loading panel and displays an error. */
     failure: function() {
-      $('#projects .panel-loading').fadeOut();
+      $('#projects .panel-loading').addClass('hidden');
       $('#projects .panel-unresolved').removeClass('hidden');
     },
 
+    /** Applies event bindings. */
     applyUIBindings: function() {
-      /* Project index filters */
+      /** Project filter click handler. */
       $('#filters input[type=\'checkbox\']').change(function() {
         C1V0.projects.filter(this.id);
       });
 
-      // click on a project
+      /** Project thumbnail click handler.  */
       $('ul#project-list a').click(function(e) {
-        e.preventDefault();
         var $project = $(e.target.parentElement.parentElement);
 
-        // fire an Analytics event
+        /** Logs a Google Analytics `Project Reviewed` event. */
         sendEvent('Project', 'Reviewed', $project.data('name'));
 
-        // update modal content
-        $('#modal-project h3').text($project.data('name'));
-        $('#modal-project .created').text('Created: ' + renderCreated($project.data('created')));
-        $('#modal-project .description').text($project.data('description'));
-        $('#modal-project img').attr({src: $project.data('banner_url')});
+        /** @function Updates the modal's content. */
+        (function updateModal() {
+          let $modal = $('#modal-project');
 
-        // build's the modal tech bar
-        if ($project.data('tech')) {
-          var techs = $project.data('tech'),
-              frag  = document.createDocumentFragment();
+          $modal.find('h3').text($project.data('name'));
+          $modal.find('.created').text('Created: ' + renderCreated($project.data('created')));
+          $modal.find('.description').text($project.data('description'));
+          $modal.find('img').attr({src: $project.data('banner_url')});
+        })();
 
-          $.each(techs, function(i, tech) {
-            var li = document.createElement('li'),
-                t  = document.createTextNode(tech);
+        /** @function Builds and renders the tech bar. */
+        (function renderTechBar() {
+          if ($project.data('tech')) {
+            let techs = $project.data('tech'),
+                frag  = document.createDocumentFragment();
 
-            $(li).attr('data-tooltip', '');
-            li.className = tech + ' has-tip';
-            $(li).attr('aria-haspopup', true);
-            $(li).attr('title', tech);
+            $.each(techs, function(i, tech) {
+              const $li = $('<li></li>', {
+                text: tech,
+                class: `${tech} has-tip`,
+                attr: {
+                  'data-tooltip': '',
+                  'aria-haspopup': true,
+                  'title': tech
+                },
+                appendTo: frag
+              });
+            });
 
-            li.appendChild(t);
-            frag.appendChild(li);
-          });
+            $('ul#tech')
+              .empty()
+              .append(frag);
 
-          // empty and append the tech bar
-          $('ul#tech').empty().append(frag);
-          $(document).foundation('tooltip');
-        }
+            $(document).foundation('tooltip', 'reflow');
+          }
 
-        // button factory
-        if ($project.data('github_full_name')) {
-          buttonHandler('source', $project);
-        } else {
-          $('#modal-project .project-source').addClass('disabled');
-        }
-        if ($project.data('demo_url')) {
-          buttonHandler('demo', $project);
-        } else {
-          $('#modal-project .project-demo').addClass('disabled');
-        }
+          e.preventDefault(); // disables hyperlink on thumbnail
+        })();
+
+        /** @function Applies bindings to the project `source` and `demo` buttons. */
+        (function applyButtonBindings() {
+          if ($project.data('github_full_name')) {
+            buttonHandler('source', $project);
+          } else {
+            $('#modal-project .project-source')
+              .addClass('disabled')
+              .attr('disabled', 'disabled');
+          }
+          if ($project.data('demo_url')) {
+            buttonHandler('demo', $project);
+          } else {
+            $('#modal-project .project-demo')
+              .addClass('disabled')
+              .attr('disabled', 'disabled');
+          }
+        })();
 
         /**
          * Formats the created date using moment.js.
-         *
          * @param {String}
-         * @returns {String|Date}
+         * @returns {String|Date} Returns a moment.js-formatted string or falls back to the default Date string.
          */
         function renderCreated(created) {
           /*global moment */
@@ -177,69 +193,62 @@ $.extend( true, C1V0 || {}, {
 
         /**
          * Button handler.
-         *
-         * @param {String} action
+         * @param {String} action The button action. Either `source` or `demo`.
          * @param {Object} project
+         * @returns {jQuery}
          */
         function buttonHandler(action, project) {
-          var btn = $('#modal-project .project-' + action);
-
-          btn.removeClass('disabled');
-          btn.attr(buildAttributes(action, project));
-
-          btn.on('click', function() {
-            sendEvent('Project', action, project.getAttribute('project-name'));
-          });
+          return $(`#modal-project .project-${action}`)
+            .removeClass('disabled')
+            .attr(buildAttributes(action, project))
+            .on('click', function() {
+              sendEvent('Project', action, project.getAttribute('project-name'));
+            });
         }
 
         /**
          * Generates the appropriate set of attributes.
-         *
          * @param {String} action
          * @param {Object} $project
          */
         function buildAttributes(action, $project) {
-          var attr;
+          let attr;
 
-          switch (action) {
-            case 'source':
-              var gh = $project.data('github_full_name');
+          if (action === 'source') {
+              const gh = $project.data('github_full_name');
+              const href = 'https://github.com/' + gh;
+              const title = $project.data('name') + ' on GitHub';
+
               if (!gh) {
                 return false;
+              } else {
+                attr = new Attributes(href, title);
               }
-              attr = new Attributes(
-                'https://github.com/' + gh,
-                $project.data('name') + ' on GitHub'
-              );
-              break;
-            case 'demo':
-              var d = $project.data('demo_url');
-              if (!d) {
+          } else if (action === 'demo') {
+              const demo = $project.data('demo_url');
+
+              if (!demo) {
                 return false;
+              } else {
+                attr = new Attributes(demo, $project.data('name') + ' live demo');
               }
-              attr = new Attributes(
-                d,
-                $project.data('name') + ' live demo'
-              );
-              break;
           }
 
           return attr;
         }
 
         /**
-         * Attributes collection
-         *
+         * Contains a collection of attributes.
          * @constructor
-         * @param {string} href
-         * @param {string} title
+         * @param {String} href The hyperlink url for the button `href` attribute.
+         * @param {String} title The label text for the button.
          */
         function Attributes(href, title) {
           this.href  = href;
           this.title = title;
         }
 
-        // launch the modal
+        /** Bind ZURB Foundation's Remodal to each thumbnail. */
         $('[data-remodal-id=modal]').remodal({
           hashTracking: false
         }).open();
