@@ -3,31 +3,33 @@
 // -----------------------------------------------------------------------------
 
 .button {
-  border-radius: 4px;
-  color: #212121;
+    border-radius: 4px;
+    color: #212121;
 
-  &.pigment {
-    background-color: $green-a700;
+    &.pigment {
+        background-color: $green-a700;
 
-    &:hover {
-      background-color: $green-a400;
+        &:hover {
+            background-color: $green-a400;
+        }
     }
-  }
-  &.neon-green {
-    background-color: $light-green-a400;
 
-    &:hover {
-      background-color: $light-green-a700;
+    &.neon-green {
+        background-color: $light-green-a400;
+
+        &:hover {
+            background-color: $light-green-a700;
+        }
     }
-  }
-  &.dodger-blue {
-    background-color: $dodger-blue;
-    border-color: #1577b3;
-    color: #fff;
-  }
+
+    &.dodger-blue {
+        background-color: $dodger-blue;
+        border-color: #1577b3;
+        color: #fff;
+    }
 }
 
 .action-button:active {
-  transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
 }

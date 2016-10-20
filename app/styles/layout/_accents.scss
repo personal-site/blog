@@ -3,86 +3,90 @@
 // -----------------------------------------------------------------------------
 
 .image-circle {
-	border-radius: 50%;
+    border-radius: 50%;
 }
 
 .octicon-heart {
-	color: #ce0000;
+    color: #ce0000;
 }
 
 footer .fa-twitter {
-	color: #55acee;
+    color: #55acee;
 }
 
 #follow-button {
-  background: $dodger-blue;
-  &:hover {
-    background: $dodger-uniform-blue;
-  }
+    background: $dodger-blue;
+
+    &:hover {
+        background: $dodger-uniform-blue;
+    }
 }
 
 #g-person {
-	margin: 14px 0 7px 14px;
+    margin: 14px 0 7px 14px;
 }
 
 em.accent {
-  color: #90A4AE;
+    color: #90A4AE;
 }
 
 #answerdash #qazzow-helpButton {
-  background: $dodger-blue!important;
+    background: $dodger-blue !important;
 
-  &:hover {
-    background: $cyan-a700!important;
-  }
+    &:hover {
+        background: $cyan-a700 !important;
+    }
 }
+
 .answerdash-tooltipped.answerdash-hover {
-  background: red!important;
+    background: red !important;
 }
 
 /* Pill style */
 #scrollUp {
-  bottom: 20px;
-  right: 20px;
-  background-color: $vegas-gold;
-  color: #5D436F;
-  font-size: 12px;
-  font-family: sans-serif;
-  text-decoration: none;
-  opacity: .9;
-  padding: 10px 20px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-  -webkit-transition: background 200ms linear;
-  -moz-transition: background 200ms linear;
-  -o-transition: background 200ms linear;
-  transition: background 200ms linear;
-  -webkit-backface-visibility: hidden;
-  &:hover {
-    background-color: #5D436F;
-    color: $vegas-gold;
-  }
-  @media only screen and (max-width: 64.063em) {
-    display: none!important;
-    border: 1px solid red;
-  }
+    bottom: 20px;
+    right: 20px;
+    background-color: $vegas-gold;
+    color: #5D436F;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    opacity: .9;
+    padding: 10px 20px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-transition: background 200ms linear;
+    -moz-transition: background 200ms linear;
+    -o-transition: background 200ms linear;
+    transition: background 200ms linear;
+    -webkit-backface-visibility: hidden;
+
+    &:hover {
+        background-color: lighten($vegas-gold, 10%);
+    }
+
+    @media only screen and (max-width: 64.063em) {
+        display: none !important;
+        border: 1px solid red;
+    }
 }
 
 .remodal-overlay {
-  z-index: 144;
+    z-index: 144;
 }
 
 .remodal-wrapper {
-  z-index: 256;
+    z-index: 256;
 }
 
 .remodal-close {
-  color: $grey-200;
-  &:hover {
-    background-color: transparent;
-    color: white;
-  }
+    color: $grey-200;
+
+    &:hover {
+        background-color: transparent;
+        color: white;
+    }
 }
 
 #project-list li,
@@ -92,4 +96,4 @@ em.accent {
     -moz-transition: all .4s ease-in;
     -o-transition: all .4s ease-in;
     transition: all .4s ease-in;
- }
+}

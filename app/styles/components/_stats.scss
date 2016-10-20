@@ -3,83 +3,86 @@
 // -----------------------------------------------------------------------------
 
 #stats {
-  padding: 14px 0;
+    padding: 14px 0;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: .875em;
+    background: rgba(10, 35, 100, 1);
+    background: -moz-linear-gradient(-45deg, rgba(10, 35, 100, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10, 35, 100, 1)), color-stop(100%, rgba(113, 30, 155, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(10, 35, 100, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(10, 35, 100, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(10, 35, 100, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: linear-gradient(135deg, rgba(10, 35, 100, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
 
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: .875em;
+    a {
+        margin-bottom: 0;
+        color: #212121;
+    }
 
-  background: rgba(10,35,100,1);
-  background: -moz-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,35,100,1)), color-stop(100%, rgba(113,30,155,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
-  background: linear-gradient(135deg, rgba(10,35,100,1) 0%, rgba(113,30,155,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2364', endColorstr='#711e9b', GradientType=1 );
-
-  a {
-  	margin-bottom: 0;
-  	color: #212121;
-  }
-
-  .mega-octicon {
-    margin-right: 1em;
-  }
-
-  @media #{$small-only} {
     .mega-octicon {
-      color: $text-asher;
+        margin-right: 1em;
     }
-    #stats-hours {
-      margin-bottom: 14px;
-    }
-  }
 
-  .v {
-  	font-size: 2.375rem;
-    margin-right: .124em
-  }
+    @media #{$small-only} {
+        .mega-octicon {
+            color: $text-asher;
+        }
 
-  #stats-hours a,
-  #stats-projects a {
-    background-color: rgba(10, 10, 10, .4);
-    border-radius: 8px;
-    color: $grey-50;
-  }
+        #stats-hours {
+            margin-bottom: 14px;
+        }
+    }
 
-  #stats-hours a {
-    &:hover {
-      color: $text-raven;
-      background-color: $vegas-gold;
-      .mega-octicon {
-        color: $text-raven;
-      }
+    .v {
+        font-size: 2.375rem;
+        margin-right: 0.124em;
     }
-  }
-  #stats-projects a {
-    &:hover {
-      color: white;
-      background-color: $dodger-blue;
-      .mega-octicon {
-        color: white;
-      }
-    }
-  }
 
-  @media only screen and (min-width: 40.063em) {
-    &:first-of-type {
-      margin-bottom: 24px;
+    #stats-hours a,
+    #stats-projects a {
+        background-color: rgba(10, 10, 10, 0.4);
+        border-radius: 8px;
+        color: $grey-50;
     }
-    .mega-octicon {
-      color: rgba(255, 255, 255, .05);
-      display: inline;
-      font-size: 48px;
-      position: absolute;
-      left: 24px;
-      top: 50%;
-      margin-top: -24px;
-      margin-right: 0;
+
+    #stats-hours a {
+        &:hover {
+            color: $text-raven;
+            background-color: $vegas-gold;
+
+            .mega-octicon {
+                color: $text-raven;
+            }
+        }
     }
-  }
+
+    #stats-projects a {
+        &:hover {
+            color: white;
+            background-color: $dodger-blue;
+
+            .mega-octicon {
+                color: white;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 40.063em) {
+        &:first-of-type {
+            margin-bottom: 24px;
+        }
+
+        .mega-octicon {
+            color: rgba(255, 255, 255, 0.05);
+            display: inline;
+            font-size: 48px;
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            margin-top: -24px;
+            margin-right: 0;
+        }
+    }
 }

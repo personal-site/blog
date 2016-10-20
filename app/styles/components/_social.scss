@@ -5,30 +5,35 @@
 #social {
     text-align: center;
     padding: 0;
+
     a {
         color: #cecece;
-
     }
+
     a:hover {
         color: #fff;
     }
 }
+
 #links .inline-list {
-	margin-bottom: 0;
+    margin-bottom: 0;
     margin: 64px auto;
 }
+
 #links li {
-	float: none;
-	display: inline-block;
+    float: none;
+    display: inline-block;
     font-size: 1.25rem;
     margin: 0 14px;
 }
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-#links li {
+    #links li {
         margin: 0 24px;
         font-size: 2rem;
     }
 }
+
 @media only screen and (min-width: 64.063em) {
     #links li {
         margin: 0 42px;

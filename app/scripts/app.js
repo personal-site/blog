@@ -20,15 +20,6 @@ var C1V0 = C1V0 || {
   init: function() {
     $(document).foundation();
 
-    /** Singularizes words ending in 's'. */
-    String.prototype.singularize = function() {
-      var singular = this;
-      if (this.slice(-1) === 's') {
-        singular = this.slice(0, this.length -1);
-      }
-      return singular;
-    };
-
     /** Capitalize the first letter of a string **/
     String.prototype.capitalize = function() {
       return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });

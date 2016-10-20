@@ -4,22 +4,25 @@
 
 #promote {
     background: white;
-    border-bottom: $divider-light;
     padding-top: 24px;
     padding-bottom: 0;
     text-align: center;
+
     @media only screen and (min-width: 40.063em) {
         p {
             text-align: left;
-            padding: 24px 0; margin: 0;
+            padding: 24px 0;
+            margin: 0;
         }
+
         a {
             margin: 10px auto 0;
         }
     }
 }
+
 @media #{$medium-up} {
-  #promote {
-    padding: 10px 0;
-  }
+    #promote {
+        padding: 10px 0;
+    }
 }
