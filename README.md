@@ -1,4 +1,6 @@
 [![Build status](https://img.shields.io/travis/chrisvogt/www.chrisvogt.me.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www.chrisvogt.me)
+[![Code Climate](https://codeclimate.com/github/chrisvogt/www.chrisvogt.me/badges/gpa.svg)](https://codeclimate.com/github/chrisvogt/www.chrisvogt.me)
+[![devDependencies Status](https://david-dm.org/chrisvogt/www.chrisvogt.me/dev-status.svg?style=flat-square)](https://david-dm.org/chrisvogt/www.chrisvogt.me?type=dev)
 [![GitHub release](https://img.shields.io/github/release/chrisvogt/www.chrisvogt.me.svg?style=flat-square)](https://github.com/chrisvogt/www.chrisvogt.me/releases)
 [![GitHub license](https://img.shields.io/github/license/chrisvogt/www.chrisvogt.me.svg?style=flat-square)](https://github.com/chrisvogt/www.chrisvogt.me/blob/master/LICENSE)
 
