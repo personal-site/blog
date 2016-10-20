@@ -1,7 +1,7 @@
 {
-  "name": "quartzite",
-  "description": "My personal website and project portfolio, in JavaScript and HTML5.",
-  "version": "0.8.1",
+  "name": "www.chrisvogt.me",
+  "description": "Personal website and project portfolio.",
+  "version": "0.8.5",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisvogt/quartzite.git"
+    "url": "https://github.com/chrisvogt/www.chrisvogt.me.git"
   },
   "private": true,
   "engines": {
