@@ -86,13 +86,12 @@ $.extend( true, C1V0 || {}, {
      *
      * @param {String}
      */
-    filter: function(filterId) {
-      var category = filterId.replace('filter', '').toLowerCase(),
-          state = document.getElementById(filterId).checked,
+    filter: function(id, category) {
+      let state = document.getElementById(id).checked,
           $items = $('#project-list li');
 
       for (var i = 0, max = $items.length; i < max; i += 1) {
-        if ($.data($items[i], 'category') === category.singularize()) {
+        if ($.data($items[i], 'category') === category) {
           switch (state) {
             case false:
               $($items[i]).addClass('hidden');
@@ -115,7 +114,7 @@ $.extend( true, C1V0 || {}, {
     applyUIBindings: function() {
       /** Project filter click handler. */
       $('#filters input[type=\'checkbox\']').change(function() {
-        C1V0.projects.filter(this.id);
+        C1V0.projects.filter(this.id, $(this).data('category'));
       });
 
       /** Project thumbnail click handler.  */
