@@ -1,7 +1,6 @@
 /**
  * Represents an HTTP request.
  * @constructor
- * @this {HttpSocket}
  */
 function HttpSocket(path) {
   /**

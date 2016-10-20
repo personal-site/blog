@@ -1,7 +1,6 @@
 'use strict';
 
 /**
- * @function
  * @ignore
  * @name jQuery#extend
  * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
@@ -9,7 +8,8 @@
 $.extend(true, C1V0 || {}, {
   /**
    * Site navigation module.
-   * @module
+   *
+   * @namespace
    * @this {navigation}
    * @alias C1V0.navigation
    */

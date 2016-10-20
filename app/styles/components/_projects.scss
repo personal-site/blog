@@ -3,23 +3,37 @@
 // -----------------------------------------------------------------------------
 
 #projects {
+  position: relative;
+  min-height: 140px;
+
   a.button {
       margin-bottom: 0;
+  }
+  .panel-loading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 24;
+    margin: 24px auto 24px;
+
+    span.text-small {
+      line-height: 24px;
+    }
   }
 }
 #project-list img {
   border-radius: 6px;
 }
 .projects-content {
-  padding-top: 24px;
-  padding-bottom: 4px;
-  min-height: 367px;
+  position: absolute;
+  top: 0;
+  z-index: 55;
 
-  .panel {
+  .panel-controls {
       background-color: $grey-100;
       border-radius: 8px;
       box-shadow: none;
-      margin-bottom: 24px;
+      margin: 24px auto;
       padding: 32px 22px;
 
       p {
@@ -40,7 +54,7 @@
       span.accent,
       #btnFilter {
         margin-bottom: 0;
-        margin-top: .4em;
+        margin-top: -4px;
       }
       span.accent {
         color: $text-asher;
@@ -60,9 +74,6 @@
           float: right;
         }
       }
-  }
-  p {
-      font-size: 1.125em;
   }
   ul:hover li {opacity: 0.5;}
   ul li:hover {opacity: 1;}

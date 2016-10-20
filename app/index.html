@@ -7,9 +7,9 @@
     www.chrisvogt.me » @c1v0
     https://github.com/chrisvogt/www.chrisvogt.me
  -->
-    <title>Chris Vogt — Front End Developer &amp; engineering student ✌ SF ➳ PHX️</title>
+    <title>Chris Vogt — Front End Developer ✌ SF ➳ PHX️</title>
 
-    <meta name="description" content="Front End Developer and engineering student in Phoenix, sharing open source projects written in JavaScript and PHP.">
+    <meta name="description" content="Front End Developer in Phoenix, sharing open source projects written in JavaScript and PHP.">
     <link rel="author" href="humans.txt">
 
     <meta name="theme-color" content="#4527a0">
@@ -19,15 +19,15 @@
     <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon-120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
 
-    <meta name="og:title" content="Chris Vogt — Front End Developer &amp; engineering student ✌ SF ➳ PHX️">
-    <meta name="og:description" content="Front End Developer and engineering student in Phoenix, sharing open source projects written in JavaScript and PHP.">
+    <meta name="og:title" content="Chris Vogt — Front End Developer ✌ SF ➳ PHX️">
+    <meta name="og:description" content="Front End Developer in Phoenix, sharing open source projects written in JavaScript and PHP.">
     <meta name="og:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1433903064/og-banner_saphne.jpg"/>
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@c1v0">
     <meta name="twitter:creator" content="@c1v0">
-    <meta name="twitter:title" content="Chris Vogt — Front End Developer &amp; engineering student ✌ SF ➳ PHXX">
-    <meta name="twitter:description" content="Front End Developer and engineering student in Phoenix, sharing open source projects written in JavaScript and PHP.">
+    <meta name="twitter:title" content="Chris Vogt — Front End Developer ✌ SF ➳ PHXX">
+    <meta name="twitter:description" content="Front End Developer in Phoenix, sharing open source projects written in JavaScript and PHP.">
     <meta name="twitter:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1433903064/og-banner_saphne.jpg">
 
     <script type="application/ld+json">
@@ -56,8 +56,8 @@
 
     <!-- build:css styles/app.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal.css" />
-    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal-default-theme.css" />
+    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal-default-theme.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbower -->
     <!-- endbuild -->
@@ -73,7 +73,7 @@
         </ul>
         <section class="top-bar-section">
           <ul class="right">
-            <li><a href="http://stats.chrisvogt.me" title="Coding stats, last 30 days"><i class="fa fa-area-chart"></i> Stats</a></li>
+            <li><a href="https://stats.chrisvogt.me" title="Coding stats, last 30 days"><i class="fa fa-area-chart"></i> Stats</a></li>
             <li><a href="https://resume.chrisvogt.me" title="My résumé on StackOverflow Careers"><i class="fa fa-briefcase"></i> Résumé</a></li>
           </ul>
           <ul class="left">
@@ -136,12 +136,20 @@
     <section id="projects" class="projects-content">
       <div class="row">
         <div class="large-12 columns">
-          <div class="panel small-only-text-center">
+          <div class="panel panel-loading text-center">
+            <p>
+              <img src="images/ajax-squares.svg" width="24" height="24" class="spinner" alt="Loading...">
+              <span class="text-small">Loading projects...</span>
+            </p>
+          </div>
+          <div class="panel panel-unresolved hidden text-center">
+            <p class="text-small">An error occured fetching project data.</p>
+          </div>
+          <div class="panel panel-controls small-only-text-center hide">
             <p>
               Project portfolio. <span class="accent">Click on a thumbnail to learn more.</span>
-              <img src="images/ajax-squares.svg" width="24" height="24" class="right spinner" alt="Loading...">
 
-              <button id="btnFilter" href="#" data-dropdown="filters" data-options="align:left" aria-controls="filters" aria-expanded="false" class="button secondary tiny dropdown hidden"><i class="fa fa-filter"></i> Filter</button>
+              <button id="btnFilter" href="#" data-dropdown="filters" data-options="align:left" aria-controls="filters" aria-expanded="false" class="button secondary tiny dropdown"><i class="fa fa-filter"></i> Filter</button>
               <div id="filters" data-dropdown-content class="f-dropdown" aria-hidden="true">
                 <form>
                   <div class="row">
@@ -196,7 +204,7 @@
               </div>
               </p>
           </div>
-          <ul id="project-list" class="small-block-grid-3 medium-block-grid-6">
+          <ul id="project-list" class="hidden small-block-grid-3 medium-block-grid-6">
             <!-- projects -->
           </ul>
         </div>
@@ -212,8 +220,8 @@
             </div>
             <h2>About Me</h2>
 
-            <p>In the real world I inhabit Phoenix, Arizona, USA. During the day, I'm a Front End Developer building healthcare payment processing solutions. Most weekday nights I can be spotted near N33° 29.0744&#96;, W112° 5.3194&#96;.</p>
-            <p>Over the last decade I've been a developer for electronic discovery, healthcare, and education companies. I have been enrolled in night courses at Phoenix College every semester since Fall 2014, and am a member of both the Phi Theta Kappa Honor Society and the IEEE Society on Social Implications of Technology.</p>
+            <p>In the real world I inhabit Phoenix, Arizona, USA. During the day, I'm a Front End Developer building healthcare payment processing solutions. Weekday nights I can often be spotted near N33° 29.0744&#96;, W112° 5.3194&#96;.</p>
+            <p>Over the last decade I've been a developer for electronic discovery, healthcare, and education technology companies working on intranets, web portals, and learning management systems. I have been enrolled in night courses at Phoenix College every semester since Fall 2014, and am a member of both the Phi Theta Kappa Honor Society and the IEEE Society on Social Implications of Technology.</p>
             <p>I'm a multifaceted individual with a strong interest in the web, music, literature, and science. I'm motivated by an innate drive to both understand and create. To learn more, check out my <a href="https://github.com/chrisvogt" title="Chris Vogt on GitHub">code</a> on GitHub, <a href="https://youtu.be/OoT70uJpB5w?list=PLNpEtdDfoma2QoX2Oxn8tvybYoiQI_yz_" title="Chris Vogt piano YouTube channel">piano channel</a> on YouTube, and Sci Phi <a href="https://soundcloud.com/findmebymidnight/sets/starry" title="Find Me By Midnight on SoundCloud">electronic music</a> on SoundCloud.</p>
           </div>
         </div>
@@ -244,13 +252,13 @@
       </div>
     </section>
 
-    <footer>
+    <footer id="docfoot">
       <div class="row">
-        <div class="small-6 columns">
-          <p>Made with <span class="octicon octicon-code"></span> + <span class="octicon octicon-heart"></span> by in Phoenix 🌵</p>
+        <div class="small-12 medium-6 columns">
+          <p>Made with <span class="octicon octicon-code"></span> + <span class="octicon octicon-heart"></span> by <a href="https://https://twitter.com/c1v0" title="@C1V0 on Twitter">@C1V0</a> in Phoenix 🌵</p>
         </div>
-        <div class="small-6 columns">
-          <ul class="inline-list right">
+        <div class="small-12 medium-6 columns">
+          <ul class="inline-list">
             <li><a href="http://stats.chrisvogt.me" title="Chris Vogt's open source stats">Stats</a></li>
             <li><a href="https://resume.chrisvogt.me" title="Chris Vogt's résumé">Résumé</a></li>
           </ul>
@@ -273,10 +281,16 @@
 
         <ul id="actions" class="button-group">
           <li>
-            <a href="" title="" class="project-source button tiny dodger-blue"><span class="octicon octicon-code"></span> View Source</a>
+            <a href="" title="" class="project-source button tiny dodger-blue">
+              <span class="octicon octicon-code"></span>
+              View Source
+            </a>
           </li>
           <li>
-            <a href="" title="" class="project-demo button tiny dodger-blue"><span class="octicon octicon-globe"></span> Visit</a>
+            <a href="" title="" class="project-demo button tiny dodger-blue">
+              <span class="octicon octicon-globe"></span>
+              Visit
+            </a>
           </li>
         </ul>
       </div>
@@ -292,14 +306,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-33558417-1', 'auto', {'allowLinker': true});
-      ga('require', 'linker');
-      ga('linker:autoLink', ['stats.chrisvogt.me']);
-      ga('send', 'pageview');
-    </script>
 
     <script>
       WebFontConfig = {
@@ -338,13 +344,13 @@
     <script src="/bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
     <!-- main -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/common.js"></script>
     <script src="scripts/HttpSocket.js"></script>
     <script src="scripts/navigation.jquery.js"></script>
     <script src="scripts/stats.jquery.js"></script>
     <script src="scripts/quotes.jquery.js"></script>
     <script src="scripts/projects.jquery.js"></script>
     <script src="scripts/social.jquery.js"></script>
+    <script src="scripts/analytics.jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
   </body>
