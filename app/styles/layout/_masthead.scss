@@ -3,36 +3,79 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-  padding-top: 80px;
-  position: relative;
+    padding-top: 80px;
+    position: relative;
 }
+
 #title .lead {
-  color: $grey-50;
-  font-family: 'Quicksand', sans-serif;
-  span {
-    display: none;
-  }
-  @media #{$medium-up} {
+    color: $grey-50;
+    font-family: 'Quicksand', sans-serif;
+
     span {
-      display: inline;
+        display: none;
     }
-  }
+
+    @media #{$medium-up} {
+        span {
+            display: inline;
+        }
+    }
 }
+
 .shrunken-head {
-  padding-top: 0;
-  padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
+
 #announce {
-  bottom: 24px;
-  h1 {
-    margin-bottom: .24em;
-  }
+    bottom: 24px;
+
+    h1 {
+        margin-bottom: .24em;
+    }
 }
+
+.hero,
+#social {
+    background: rgba(69, 39, 160, 1);
+    background: -moz-linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(69, 39, 160, 1)), color-stop(100%, rgba(113, 30, 155, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    background: linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4527a0', endColorstr='#711e9b', GradientType=1 );
+}
+
 .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background-color: $dodger-blue;
+    background-color: $dodger-blue;
 }
+
 .top-bar-section li:not(.has-form) a:not(.button) {
-  &:hover {
-    background-color: $dodger-uniform-blue;
-  }
+    &:hover {
+        background-color: $dodger-uniform-blue;
+    }
+}
+
+.top-bar {
+    background: none;
+}
+
+.top-bar {
+    ul li {
+        background: none;
+    }
+
+    a {
+        background: none;
+    }
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: none;
+    transition: background 1s ease;
+}
+
+.top-bar.expanded .title-area {
+    background: none;
 }

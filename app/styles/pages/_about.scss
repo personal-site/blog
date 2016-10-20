@@ -3,19 +3,19 @@
 // -----------------------------------------------------------------------------
 
 .about-content {
-  font-size: .875em;
+    font-size: .875em;
 
-  .panel {
-    background-color: $grey-100;
-    border-radius: 8px;
-    color: $text-raven;
-  }
+    .panel {
+        background-color: white;
+        border-radius: 8px;
+        color: $text-raven;
+    }
 
-  h2 {
-    margin-bottom: .438em;
-  }
+    h2 {
+        margin-bottom: .438em;
+    }
 
-  @media #{$medium-up} {
-    padding-bottom: 4px;
-  }
+    @media #{$medium-up} {
+        padding-bottom: 4px;
+    }
 }

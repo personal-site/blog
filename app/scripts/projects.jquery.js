@@ -95,10 +95,10 @@ $.extend( true, C1V0 || {}, {
         if ($.data($items[i], 'category') === category.singularize()) {
           switch (state) {
             case false:
-              $($items[i]).children().fadeOut();
+              $($items[i]).addClass('hidden');
               break;
             case true:
-              $($items[i]).children().fadeIn();
+              $($items[i]).removeClass('hidden');
               break;
           }
         }

@@ -3,28 +3,33 @@
 // -----------------------------------------------------------------------------
 
 section#quote {
-	background: white;
-  border-top: $divider-light;
-	text-align: center;
-	min-height: 200px;
-  padding: 50px;
-	margin: 0;
-	p {
-		line-height: 50px;
-	}
-  .orbit-container {
-    min-height: 84px;
-  }
-	.orbit-timer {
-		display: none;
-	}
-	blockquote {
-		border-left: none;
-	}
+    background: white;
+    text-align: center;
+    min-height: 200px;
+    padding: 50px;
+    margin: 0;
+
+    p {
+        line-height: 50px;
+    }
+
+    .orbit-container {
+        min-height: 84px;
+    }
+
+    .orbit-timer {
+        display: none;
+    }
+
+    blockquote {
+        border-left: none;
+    }
 }
+
 .orbit-container .orbit-next > span {
-	border-left-color: #6654B0;
+    border-left-color: #6654B0;
 }
+
 .orbit-container .orbit-prev > span {
-	border-right-color: #6654B0;
+    border-right-color: #6654B0;
 }
