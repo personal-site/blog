@@ -14,15 +14,16 @@ $.extend( true, C1V0 || {}, {
    * @alias C1V0.quotes
    */
   quotes: {
-
     /**
      * Path to the quotes data.
+     *
      * @type {string}
      */
     path: C1V0.config.quotes,
 
     /**
      * Used to make HTTP requests.
+     *
      * @type {object}
      */
     http: {},
@@ -33,9 +34,7 @@ $.extend( true, C1V0 || {}, {
       this.http.get(this.renderQuotes, this.failure);
     },
 
-    /**
-     * Renders quotes from onto the page.
-     */
+    /** Renders quotes from onto the page. */
     renderQuotes() {
       const $elem = $('#quote .orbit').empty();
       const frag = document.createDocumentFragment();
@@ -49,7 +48,8 @@ $.extend( true, C1V0 || {}, {
         bq.innerHTML   = quote.text;
         cite.innerHTML = quote.cite ;
 
-        li.appendChild(div)
+        li
+          .appendChild(div)
           .appendChild(bq)
           .appendChild(cite);
 
@@ -58,12 +58,6 @@ $.extend( true, C1V0 || {}, {
 
       $elem.append(frag);
       $(document).foundation('orbit', 'reflow');
-
-      if (this.data.quotes.length > 0) {
-        return true;
-      } else {
-        return false;
-      }
     }
   },
 

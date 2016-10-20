@@ -14,7 +14,6 @@ $.extend( true, C1V0 || {}, {
    * @alias C1V0.quotes
    */
   projects: {
-
     /**
      * Path to the projects data.
      *
@@ -37,10 +36,10 @@ $.extend( true, C1V0 || {}, {
 
     /** Renders the projects index. */
     render: function() {
-      // stringholds projects <ul>
+      // holds projects <ul>
       const frag = document.createDocumentFragment();
 
-      // convert to an array of objects
+      // convert projects to an array of objects
       var projects = $.map(this.data, function(val) {
           return [val];
       });
@@ -73,10 +72,8 @@ $.extend( true, C1V0 || {}, {
       $('#projects .panel-loading').fadeOut(function() {
         $('#project-list').append(frag).fadeIn(1600);
         $('#projects .panel-controls').fadeIn();
+        C1V0.projects.applyUIBindings();
       });
-
-      // attach event bindings
-      C1V0.projects.applyUIBindings();
     },
 
     /** Sorts data by creation data. */
@@ -125,8 +122,10 @@ $.extend( true, C1V0 || {}, {
       $('ul#project-list a').click(function(e) {
         var $project = $(e.target.parentElement.parentElement);
 
+        e.preventDefault(); // disables hyperlink on thumbnail
+
         /** Logs a Google Analytics `Project Reviewed` event. */
-        sendEvent('Project', 'Reviewed', $project.data('name'));
+        C1V0.analytics.sendEvent('Project', 'Reviewed', $project.data('name'));
 
         /** @function Updates the modal's content. */
         (function updateModal() {
@@ -163,8 +162,6 @@ $.extend( true, C1V0 || {}, {
 
             $(document).foundation('tooltip', 'reflow');
           }
-
-          e.preventDefault(); // disables hyperlink on thumbnail
         })();
 
         /** @function Applies bindings to the project `source` and `demo` buttons. */
@@ -174,14 +171,16 @@ $.extend( true, C1V0 || {}, {
           } else {
             $('#modal-project .project-source')
               .addClass('disabled')
-              .attr('disabled', 'disabled');
+              .attr('disabled', 'disabled')
+              .removeAttr('href');
           }
           if ($project.data('demo_url')) {
             buttonHandler('demo', $project);
           } else {
             $('#modal-project .project-demo')
               .addClass('disabled')
-              .attr('disabled', 'disabled');
+              .attr('disabled', 'disabled')
+              .removeAttr('href');;
           }
         })();
 
@@ -206,6 +205,7 @@ $.extend( true, C1V0 || {}, {
         function buttonHandler(action, project) {
           return $(`#modal-project .project-${action}`)
             .removeClass('disabled')
+            .removeAttr('disabled')
             .attr(buildAttributes(action, project))
             .on('click', function() {
               sendEvent('Project', action, project.getAttribute('project-name'));

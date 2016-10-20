@@ -1,16 +1,12 @@
 /* TEAM */
 Developer: Chris Vogt
 Site: www.chrisvogt.me
-Twitter: @c1v0
+Twitter: @C1V0
 Location: Phoenix, Arizona, USA
-
-/* THANKS */
-Pure logical thinking cannot yield us any knowledge of the empirical world; all knowledge of reality starts from experience and ends in it. —Albert Einstein, "Ideas and Opinions"
 
 /* SITE */
 Standards: HTML5, CSS3, UTF-8, JSON, SVG
 Components: Modernizr, jQuery, ZURB Foundation, Moment.js, Remodal, scrollUp, Fastclick
 Software: Node.js, Gulp, EditorConfig, TravisCI, Git, Bower, NPM
 
-The only source of knowledge is experience.
-Read more at: http://www.brainyquote.com/quotes/quotes/a/alberteins148778.html
+Pure logical thinking cannot yield us any knowledge of the empirical world; all knowledge of reality starts from experience and ends in it. —Albert Einstein, "Ideas and Opinions"

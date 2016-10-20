@@ -2,14 +2,32 @@
 // This file contains all styles related to the FOOTER of the site/application.
 // -----------------------------------------------------------------------------
 
-footer {
+footer#docfoot {
 	p,
 	ul {
+    font-size: .75em;
 		line-height: 32px;
 		margin-bottom: 0;
-    font-size: .75em;
 	}
+  p {
+    @media #{$small-only} {
+      text-align: center;
+    }
+  }
+  ul {
+    float: right;
+    @media #{$small-only} {
+      display: inline-block;
+      float: none;
+      text-align: center;
+    }
+  }
 	.inline-list {
 		margin: 0;
 	}
+  @media #{$small-only} {
+    div {
+      text-align: center;
+    }
+  }
 }
