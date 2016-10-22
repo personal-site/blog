@@ -1,15 +1,12 @@
-// generated on 2016-08-01 using generator-webapp 2.1.0
-const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync');
-const del = require('del');
-const wiredep = require('wiredep').stream;
-
-const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
-
-var ghPages = require('gulp-gh-pages');
-var documentation = require('gulp-documentation');
+const gulp = require('gulp'),
+      gulpLoadPlugins = require('gulp-load-plugins'),
+      browserSync = require('browser-sync'),
+      del = require('del'),
+      wiredep = require('wiredep').stream,
+      reload = browserSync.reload,
+      ghPages = require('gulp-gh-pages'),
+      documentation = require('gulp-documentation'),
+      $ = gulpLoadPlugins();
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -170,8 +167,11 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('documentation', function () {
-  gulp.src('app/scripts/stats.js')
-    .pipe(documentation({ shallow: true, format: 'html' }))
+  gulp.src('app/scripts/HttpSocket.js')
+    .pipe(documentation({
+      github: true,
+      format: 'md'
+    }))
     .pipe(gulp.dest('docs'));
 });
 

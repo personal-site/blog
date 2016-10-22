@@ -7,9 +7,9 @@
   <img src="app/images/h-logo.png" alt="www.chrisvogt.me" width="680">
 </p>
 
-My personal website and project portfolio, originally based on simple [Moqups design](https://app.moqups.com/chris@artinreality.com/81jSoAGytP/view/page/add529438), which it has gone through _many_ iterations.
+My personal website and project portfolio — originally based on a simple [Moqups design](https://app.moqups.com/chris@artinreality.com/81jSoAGytP/view/page/add529438) — though it has gone through _many_ iterations since.
 
-Stats data is fetched from an API behind [stats.chrisvogt.me](https://stats.chrisvogt.me). The project data is stored in a [Firebase](https://firebase.google.com/) NoSQL database.
+Houly coding data is fetched from [stats.chrisvogt.me](https://github.com/chrisvogt/stats). Project data is stored in a [Firebase](https://firebase.google.com/) NoSQL database.
 
 _View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
