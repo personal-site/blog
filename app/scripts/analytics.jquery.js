@@ -14,31 +14,6 @@ $.extend(true, C1V0 || {}, {
    * @alias C1V0.navigation
    */
   analytics: {
-
-    /** Initializer. */
-    init: function() {
-      this.initAnalytics();
-    },
-
-    /** Initializes and configures Google Analytics. Then sends off a pageview event. */
-    initAnalytics: function() {
-      /**
-       * Google Analytics
-       *
-       * @link https://developers.google.com/analytics/devguides/collection/analyticsjs/
-       */
-      window.ga = window.ga || function() {
-          (ga.q = ga.q || []).push(arguments)
-      };
-      ga.l = +new Date;
-      ga('create', C1V0.config.analytics, 'auto', {
-          'allowLinker': true
-      });
-      ga('require', 'linker');
-      ga('linker:autoLink', ['stats.chrisvogt.me', 'projects.chrisvogt.me']);
-      ga('send', 'pageview');
-    },
-
     /**
      * Fires off a Google Analytics event.
      *
