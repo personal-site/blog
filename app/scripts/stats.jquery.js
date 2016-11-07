@@ -69,7 +69,7 @@ $.extend( true, C1V0 || {}, {
       /**
        * Projects data endpoint.
        */
-      path: 'https://chrisvogt.firebaseio.com/projects.json',
+      path: C1V0.config.projects,
 
       /**
        * Used to make HTTP requests.
