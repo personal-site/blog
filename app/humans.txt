@@ -2,7 +2,7 @@
 Developer: Chris Vogt
 Site: www.chrisvogt.me
 Twitter: @C1V0
-Location: Phoenix, Arizona, USA
+Location: San Francisco, California, USA
 
 /* SITE */
 Standards: HTML5, CSS3, UTF-8, JSON, SVG
