@@ -9,7 +9,6 @@
 $.extend( true, C1V0 || {}, {
   /**
    * Social profiles module.
-   *
    * @namespace
    * @this {social}
    * @alias C1V0.social
