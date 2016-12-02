@@ -9,13 +9,10 @@
         background-color: white;
         border-radius: 8px;
         color: $text-raven;
+        margin-bottom: 0;
     }
 
     h2 {
         margin-bottom: .438em;
-    }
-
-    @media #{$medium-up} {
-        padding-bottom: 4px;
     }
 }

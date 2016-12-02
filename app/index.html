@@ -111,6 +111,11 @@
                 About
               </a>
             </li>
+            <li>
+              <a href="#photos" title="Photos">
+                Photos
+              </a>
+            </li>
           </ul>
         </section>
       </nav>
@@ -238,7 +243,7 @@
                   </div>
                 </form>
               </div>
-              </p>
+            </p>
           </div>
           <ul id="project-list" class="hidden small-block-grid-3 medium-block-grid-6">
             <!-- AJAX: projects -->
@@ -264,6 +269,25 @@
         </div>
       </div>
     </section>
+
+    <!-- Component: Instafeed -->
+    <div id="photos" class="hidden">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="panel panel-controls small-only-text-center">
+            <p>
+              Recent Photography. <span class="accent">Click on a thumbnail to view in Instagram.</span>
+
+              <a href="https://www.instagram.com/c1v0/" class="button secondary tiny" title="C1V0 on Instagram"><i class="fa fa-instagram"></i> Visit Instagram</a>
+            </p>
+          </div>
+
+          <ul id="instafeed" class="small-block-grid-3 medium-block-grid-6">
+            <!-- AJAX: instagram photos -->
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Component: Quote -->
     <section id="quote">
@@ -386,6 +410,7 @@
     <script src="/bower_components/remodal/dist/remodal.js"></script>
     <script src="/bower_components/scrollup/dist/jquery.scrollUp.min.js"></script>
     <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/instafeed.js/instafeed.min.js"></script>
     <!-- plugins -->
     <script src="/bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.reveal.js"></script>
