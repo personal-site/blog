@@ -1,7 +1,8 @@
-[![Build status](https://img.shields.io/travis/chrisvogt/www.chrisvogt.me.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www.chrisvogt.me)
-[![Code Climate](https://codeclimate.com/github/chrisvogt/www.chrisvogt.me/badges/gpa.svg)](https://codeclimate.com/github/chrisvogt/www.chrisvogt.me)
-[![GitHub release](https://img.shields.io/github/release/chrisvogt/www.chrisvogt.me.svg?style=flat-square)](https://github.com/chrisvogt/www.chrisvogt.me/releases)
-[![GitHub license](https://img.shields.io/github/license/chrisvogt/www.chrisvogt.me.svg?style=flat-square)](https://github.com/chrisvogt/www.chrisvogt.me/blob/master/LICENSE)
+[![Build status](https://img.shields.io/travis/chrisvogt/www.chrisvogt.me.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www)
+[![Code Climate](https://codeclimate.com/github/chrisvogt/www/badges/gpa.svg)](https://codeclimate.com/github/chrisvogt/www)
+[![GitHub release](https://img.shields.io/github/release/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/releases)
+[![David.io Dev Dependencies](https://david-dm.org/chrisvogt/www/dev-status.svg?style=flat-square)](https://david-dm.org/chrisvogt/www?type=dev)
+[![GitHub license](https://img.shields.io/github/license/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/blob/master/LICENSE)
 
 <p align="center">
   <img src="app/images/h-logo.png" alt="www.chrisvogt.me" width="680">
@@ -15,7 +16,7 @@ _View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
 ### How to use
 
-* Run `npm install && bower install` to install [dev dependencies](https://david-dm.org/chrisvogt/www.chrisvogt.me/?type=dev).
+* Run `npm install && bower install` to install [dev dependencies](https://david-dm.org/chrisvogt/www/?type=dev).
 * Develop in a feature branch and submit pull requests against `master`.
 * Use `gulp serve` to preview and watch for changes, with [BrowserSync](https://www.browsersync.io/) enabled.
 * Use `gulp build` to output production-ready files to the _/dist_ directory.
