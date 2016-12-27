@@ -41,9 +41,9 @@ $.extend(true, C1V0 || {}, {
         let definition = '';
 
         if (action.toLowerCase() === 'reviewed') {
-          definition = action.capitalize();
+          definition = C1V0.common.capitalize(action);
         } else {
-          definition = 'View ' + action.capitalize();
+          definition = 'View ' + C1V0.common.capitalize(action);
         }
 
         return definition;
