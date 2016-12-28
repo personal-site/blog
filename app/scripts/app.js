@@ -20,11 +20,6 @@ var C1V0 = C1V0 || {
   init: function() {
     $(document).foundation();
 
-    /** Capitalize the first letter of a string **/
-    String.prototype.capitalize = function() {
-      return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
-    };
-
     /**
      * Twitter API
      *
