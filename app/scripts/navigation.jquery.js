@@ -14,12 +14,21 @@ $.extend(true, C1V0 || {}, {
    * @alias C1V0.navigation
    */
   navigation: {
+    /**
+     * Cache of commonly-accessed navigation objects.
+     * @type {Object}
+     */
+    element: {
+      /** @type {jQuery} Navigation component container. */
+      $primaryNav: $('#primary-nav')
+    },
 
     /** Initializer. */
     init: function() {
       $.scrollUp();
       this.fadableHeader();
       this.scrollingNav();
+      this.applyUIBindings();
     },
 
     /**
@@ -29,18 +38,34 @@ $.extend(true, C1V0 || {}, {
      * and then fades it after scrolling.
      */
     fadableHeader() {
-      $('#primary-nav').removeClass('sticky');
+      var $primaryNav = this.element.$primaryNav;
+
+      $primaryNav.removeClass('sticky');
 
       $(document).on('scroll', function() {
         if ($(document).width() > 640) {
           if ($(document).scrollTop() > 420) {
-            $('#primary-nav').addClass('sticky fixed');
+            $primaryNav.addClass('sticky fixed');
           } else {
-            $('#primary-nav').removeClass('sticky fixed');
+            $primaryNav.removeClass('sticky fixed');
             $('body').removeClass('f-topbar-fixed');
           }
         }
       });
+    },
+
+    /**
+     * Sets the active class on a nav item.
+     * @param  {jQuery.Event} e Click event.
+     */
+    makeActive(e) {
+      var self = C1V0.navigation,
+          $primaryNav = self.element.$primaryNav;
+
+      $primaryNav
+        .find('li')
+        .removeClass('active');
+      $(e.target).parent('li').addClass('active');
     },
 
     /**
@@ -50,14 +75,26 @@ $.extend(true, C1V0 || {}, {
      */
     scrollingNav() {
       $('.top-bar .left a').click(function(e) {
-        e.preventDefault();
         const goTo = $(this).attr('href');
 
         $('html, body').animate({
           scrollTop: $(goTo).offset().top
         }, 800);
+
+        e.preventDefault();
       });
     },
+
+    /**
+     * Apply UI event bindings.
+     */
+    applyUIBindings() {
+      var $items = this.element.$primaryNav.find('li');
+
+      $.each($items, function() {
+        $(this).on('click', C1V0.navigation.makeActive);
+      });
+    }
   }
 });
 
