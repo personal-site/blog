@@ -163,11 +163,11 @@ $.extend( true, C1V0 || {}, {
           }
         })();
 
-        /** @function Applies bindings to the project `source` and `demo` buttons. */
+        /** @function Applies bindings to the project 'source' and 'demo' buttons. */
         (function applyButtonBindings() {
           if ($project.data('github_full_name')) {
             buttonHandler('source', $project);
-          } else {
+          } else { // disable the 'source' button
             $('#modal-project .project-source')
               .addClass('disabled')
               .attr('disabled', 'disabled')
@@ -175,7 +175,7 @@ $.extend( true, C1V0 || {}, {
           }
           if ($project.data('demo_url')) {
             buttonHandler('demo', $project);
-          } else {
+          } else { // disable the 'demo' button
             $('#modal-project .project-demo')
               .addClass('disabled')
               .attr('disabled', 'disabled')
@@ -226,7 +226,7 @@ $.extend( true, C1V0 || {}, {
               const title = $project.data('name') + ' on GitHub';
 
               if (!gh) {
-                return false;
+                attr = false;
               } else {
                 attr = new Attributes(href, title);
               }
@@ -234,7 +234,7 @@ $.extend( true, C1V0 || {}, {
               const demo = $project.data('demo_url');
 
               if (!demo) {
-                return false;
+                attr = false;
               } else {
                 attr = new Attributes(demo, $project.data('name') + ' live demo');
               }
