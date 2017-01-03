@@ -56,9 +56,9 @@
 
     <!-- build:css styles/app.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal.css">
-    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal-default-theme.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal.css" />
+    <link rel="stylesheet" href="/bower_components/remodal/dist/remodal-default-theme.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -403,37 +403,35 @@
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <!-- build:js scripts/app.js -->
+    <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/foundation/js/foundation.js"></script>
+    <script src="/bower_components/remodal/dist/remodal.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/instafeed.js/instafeed.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="/bower_components/foundation/js/foundation.js"></script>
-    <script src="/bower_components/remodal/dist/remodal.js"></script>
     <script src="/bower_components/scrollup/dist/jquery.scrollUp.min.js"></script>
-    <script src="/bower_components/moment/moment.js"></script>
-    <script src="/bower_components/instafeed.js/instafeed.min.js"></script>
-    <!-- plugins -->
-    <script src="/bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.reveal.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.slider.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.orbit.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.topbar.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-    <!-- main -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/HttpSocket.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/common.jquery.js"></script>
-    <script src="scripts/HttpSocket.js"></script>
     <script src="scripts/navigation.jquery.js"></script>
+    <script src="scripts/social.jquery.js"></script>
+    <script src="scripts/projects.jquery.js"></script>
     <script src="scripts/stats.jquery.js"></script>
     <script src="scripts/stats/hours.jquery.js"></script>
     <script src="scripts/stats/projects.jquery.js"></script>
-    <script src="scripts/quotes.jquery.js"></script>
-    <script src="scripts/projects.jquery.js"></script>
-    <script src="scripts/social.jquery.js"></script>
     <script src="scripts/analytics.jquery.js"></script>
-    <!-- endbower -->
+    <script src="scripts/quotes.jquery.js"></script>
     <!-- endbuild -->
   </body>
 </html>

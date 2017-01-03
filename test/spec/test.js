@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  describe('Give it some context', function () {
-    describe('maybe a bit more context here', function () {
-      it('should run here few assertions', function () {
-
+  describe('Top-level object', function () {
+    describe('C1V0 object', function () {
+      it('should be an object', function () {
+        expect(C1V0).to.be.an('object');
       });
     });
   });

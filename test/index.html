@@ -8,7 +8,7 @@
 <body>
   <div id="mocha"></div>
   <script src="../bower_components/mocha/mocha.js"></script>
-  <script>mocha.setup('tdd');</script>
+  <script>mocha.setup('bdd');</script>
   <script src="../bower_components/chai/chai.js"></script>
   <script>
     var assert = chai.assert;
@@ -18,6 +18,10 @@
   <!-- bower:js -->
   <!-- endbower -->
   <!-- include source files here... -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/HttpSocket.js"></script>
+  <script src="scripts/common.jquery.js"></script>
+  <script src="scripts/social.jquery.js"></script>
   <!-- include spec files here... -->
   <script src="spec/test.js"></script>
   <script>
