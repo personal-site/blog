@@ -18,5 +18,10 @@ $.extend( true, C1V0 || {}, {
      * @type {jQuery}
      */
     $container: $('#stats'),
+
+    hideStats: function (type) {
+      $stat = C1V0.stats[type].$container;
+      console.log($stat);
+    }
   }
 });
