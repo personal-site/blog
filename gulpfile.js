@@ -69,9 +69,9 @@ gulp.task('images', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('app/fonts/**/*'))
-    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
+  return gulp.src(['bower_components/font-awesome/fonts/**/*', 'app/fonts/**/*'])
+    .pipe($.if(dev, gulp.dest('.tmp/fonts')))
+    .pipe($.if(dev, gulp.dest('dist/fonts')));
 });
 
 gulp.task('extras', () => {
