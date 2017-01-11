@@ -1,15 +1,15 @@
-const gulp = require('gulp'),
-      gulpLoadPlugins = require('gulp-load-plugins'),
-      browserSync = require('browser-sync').create(),
-      del = require('del'),
-      wiredep = require('wiredep').stream,
-      reload = browserSync.reload,
-      ghPages = require('gulp-gh-pages'),
-      runSequence = require('run-sequence');
-      documentation = require('gulp-documentation'),
-      $ = gulpLoadPlugins();
+const gulp = require('gulp');
+const gulpLoadPlugins = require('gulp-load-plugins');
+const browserSync = require('browser-sync').create();
+const del = require('del');
+const wiredep = require('wiredep').stream;
+const reload = browserSync.reload;
+const ghPages = require('gulp-gh-pages');
+const runSequence = require('run-sequence');
+const documentation = require('gulp-documentation');
+const $ = gulpLoadPlugins();
 
-var dev = true;
+let dev = true;
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -38,7 +38,13 @@ gulp.task('scripts', () => {
 
 function lint(files, options) {
   return gulp.src(files)
-    .pipe($.eslint({ fix: true }))
+    .pipe($.eslint({
+//      fix: true,
+      globals: [
+        'jQuery',
+        '$'
+      ]
+    }))
     .pipe(reload({stream: true, once: true}))
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()));

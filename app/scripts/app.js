@@ -1,7 +1,7 @@
 'use strict';
 
 /** @namespace */
-var C1V0 = C1V0 || {
+const C1V0 = C1V0 || {
   /**
    * Configuration object.
    *
@@ -26,7 +26,7 @@ var C1V0 = C1V0 || {
      * @link https://dev.twitter.com/overview/documentation
      */
     window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
+        let js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
         if (d.getElementById(id)) return t;
         js = d.createElement(s);
@@ -47,10 +47,10 @@ var C1V0 = C1V0 || {
      *
      * @link http://www.answerdash.com/
      */
-    var AnswerDash;
+    let AnswerDash;
     ! function(e, t, n, s, a) {
         if (!t.getElementById(s)) {
-            var i, r = t.createElement(n),
+            let i, r = t.createElement(n),
                 c = t.getElementsByTagName(n)[0];
             e[a] || (i = e[a] = function() {
                 i.__oninit.push(arguments)
@@ -63,7 +63,7 @@ var C1V0 = C1V0 || {
      *
      * @link http://instafeedjs.com/
      */
-    var userFeed = new Instafeed({
+    const userFeed = new Instafeed({
       get: 'user',
       userId: '1546421127',
       clientId: ' 7e07fcf783e746b3a236341049fa3cc0',
