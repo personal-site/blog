@@ -38,7 +38,7 @@ $.extend(true, C1V0 || {}, {
      * and then fades it after scrolling.
      */
     fadableHeader() {
-      var $primaryNav = this.element.$primaryNav;
+      const $primaryNav = this.element.$primaryNav;
 
       $primaryNav.removeClass('sticky');
 
@@ -59,8 +59,8 @@ $.extend(true, C1V0 || {}, {
      * @param  {jQuery.Event} e Click event.
      */
     makeActive(e) {
-      var self = C1V0.navigation,
-          $primaryNav = self.element.$primaryNav;
+      let self = C1V0.navigation;
+      const $primaryNav = self.element.$primaryNav;
 
       $primaryNav
         .find('li')
@@ -89,7 +89,7 @@ $.extend(true, C1V0 || {}, {
      * Apply UI event bindings.
      */
     applyUIBindings() {
-      var $items = this.element.$primaryNav.find('li');
+      const $items = this.element.$primaryNav.find('li');
 
       $.each($items, function() {
         $(this).on('click', C1V0.navigation.makeActive);

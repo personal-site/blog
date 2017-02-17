@@ -17,10 +17,10 @@
     var should = chai.should();
   </script>
   <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="/bower_components/foundation/js/foundation.js"></script>
-  <script src="/bower_components/remodal/dist/remodal.js"></script>
-  <script src="/bower_components/moment/moment.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/foundation/js/foundation.js"></script>
+  <script src="../bower_components/remodal/dist/remodal.js"></script>
+  <script src="../bower_components/moment/moment.js"></script>
   <!-- <script src="/bower_components/instafeed.js/instafeed.min.js"></script> -->
   <!-- endbower -->
   <!-- include source files here... -->
@@ -29,7 +29,8 @@
   <script src="scripts/common.jquery.js"></script>
   <script src="scripts/social.jquery.js"></script>
   <!-- include spec files here... -->
-  <script src="spec/test.js"></script>
+  <script src="spec/common.js"></script>
+  <script src="spec/social.js"></script>
   <script>
     if (navigator.userAgent.indexOf('PhantomJS') === -1) {
       mocha.run();

@@ -43,9 +43,14 @@ $.extend( true, C1V0.stats || {}, {
           .find('totalTimeInWords')
           .text()
           .split(', ');
-      const phrase = time[0].replace(/\D/g,'');
+      const hours = time[0].replace(/\D/g,'');
+      const $term = C1V0.stats.hours.$container.find('span.term');
 
-      C1V0.stats.hours.$container.find('.v').text(phrase);
+      if (hours === '1') {
+        $term.text('hour');
+      }
+
+      C1V0.stats.hours.$container.find('.v').text(hours);
     },
 
     failure: function() {
