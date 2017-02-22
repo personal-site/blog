@@ -10,7 +10,8 @@
     "remodal": "~1.0.3",
     "scrollup": "~2.4.1",
     "moment": "~2.10.6",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "instafeed.js": "^1.4.1"
   },
   "overrides": {
     "fontawesome": {

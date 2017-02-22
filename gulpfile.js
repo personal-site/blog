@@ -75,7 +75,11 @@ gulp.task('images', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(['bower_components/font-awesome/fonts/**/*', 'app/fonts/**/*'])
+  return gulp.src([
+      'bower_components/font-awesome/fonts/**/*',
+      'bower_components/octicons/octicons/*.{ttf,woff,eot}',
+      'app/fonts/**/*'
+    ])
     .pipe($.if(dev, gulp.dest('.tmp/fonts')))
     .pipe($.if(dev, gulp.dest('dist/fonts')));
 });
