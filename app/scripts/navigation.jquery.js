@@ -37,7 +37,7 @@ $.extend(true, C1V0 || {}, {
      * On large screens: hides the header initially
      * and then fades it after scrolling.
      */
-    fadableHeader() {
+    fadableHeader: function() {
       const $primaryNav = this.element.$primaryNav;
 
       $primaryNav.removeClass('sticky');
@@ -58,7 +58,7 @@ $.extend(true, C1V0 || {}, {
      * Sets the active class on a nav item.
      * @param  {jQuery.Event} e Click event.
      */
-    makeActive(e) {
+    makeActive: function(e) {
       let self = C1V0.navigation;
       const $primaryNav = self.element.$primaryNav;
 
@@ -73,7 +73,7 @@ $.extend(true, C1V0 || {}, {
      *
      * Smooth scroll for the on-page navigation.
      */
-    scrollingNav() {
+    scrollingNav: function() {
       $('.top-bar .left a').click(function(e) {
         const goTo = $(this).attr('href');
 
@@ -88,7 +88,7 @@ $.extend(true, C1V0 || {}, {
     /**
      * Apply UI event bindings.
      */
-    applyUIBindings() {
+    applyUIBindings: function() {
       const $items = this.element.$primaryNav.find('li');
 
       $.each($items, function() {

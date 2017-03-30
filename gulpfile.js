@@ -75,7 +75,11 @@ gulp.task('images', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(['bower_components/font-awesome/fonts/**/*', 'app/fonts/**/*'])
+  return gulp.src([
+      'bower_components/font-awesome/fonts/**/*',
+      'bower_components/octicons/octicons/**/*',
+      'app/fonts/**/*'
+    ])
     .pipe($.if(dev, gulp.dest('.tmp/fonts')))
     .pipe($.if(dev, gulp.dest('dist/fonts')));
 });
@@ -148,12 +152,14 @@ gulp.task('serve:test', ['scripts'], () => {
 
 // inject bower components
 gulp.task('wiredep', () => {
+  /*
   gulp.src('app/styles/*.scss')
     .pipe($.filter(file => file.stat && file.stat.size))
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)+/
     }))
     .pipe(gulp.dest('app/styles'));
+  */
 
   gulp.src('app/*.html')
     .pipe(wiredep({
