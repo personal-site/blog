@@ -29,7 +29,7 @@ $.extend( true, C1V0 || {}, {
     http: {},
 
     /** Initializer. */
-    init() {
+    init: function() {
       this.http = new HttpSocket(this.path);
       this.http.get(this.render, this.failure);
     },
@@ -40,12 +40,17 @@ $.extend( true, C1V0 || {}, {
       const frag = document.createDocumentFragment();
 
       // convert projects to an array of objects
-      var projects = $.map(this.data, function(val) {
+      let projects = $.map(this.data, function(val) {
           return [val];
       });
 
+      /** Sort projects by id. */
+      function sortById(a, b) {
+        return a.id - b.id;
+      }
+
       // iterate through data and build projects index
-      $.each(projects, function(i, project) {
+      $.each(projects.sort(sortById), function(i, project) {
         const li = document.createElement('li'),
           link = document.createElement('a'),
           thumb = document.createElement('img');
@@ -76,11 +81,6 @@ $.extend( true, C1V0 || {}, {
       });
     },
 
-    /** Sorts data by creation data. */
-    sort: function(a, b) {
-      return b.created.localeCompare( a.created );
-    },
-
     /**
      * Handler for the projects drop down filters.
      *
@@ -90,7 +90,7 @@ $.extend( true, C1V0 || {}, {
       let state = document.getElementById(id).checked,
           $items = $('#project-list li');
 
-      for (var i = 0, max = $items.length; i < max; i += 1) {
+      for (let i = 0, max = $items.length; i < max; i += 1) {
         if ($.data($items[i], 'category') === category) {
           switch (state) {
             case false:
@@ -119,7 +119,7 @@ $.extend( true, C1V0 || {}, {
 
       /** Project thumbnail click handler.  */
       $('ul#project-list a').click(function(e) {
-        var $project = $(e.target.parentElement.parentElement);
+        let $project = $(e.target.parentElement.parentElement);
 
         e.preventDefault(); // disables hyperlink on thumbnail
 
