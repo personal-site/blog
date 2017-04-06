@@ -34,51 +34,69 @@ $.extend( true, C1V0 || {}, {
       this.http.get(this.render, this.failure);
     },
 
-    /** Renders the projects index. */
-    render: function() {
-      // holds projects <ul>
-      const frag = document.createDocumentFragment();
-
+    /**
+     * Render the project.
+     * @param  {[type]} data [description]
+     * @return {[type]}      [description]
+     */
+    render: function(data) {
+      const _this = C1V0.projects;
       // convert projects to an array of objects
-      let projects = $.map(this.data, function(val) {
+      const projects = $.map(this.data, function(val) {
           return [val];
       });
 
-      /** Sort projects by id. */
-      function sortById(a, b) {
-        return a.id - b.id;
-      }
-
       // iterate through data and build projects index
-      $.each(projects.sort(sortById), function(i, project) {
-        const li = document.createElement('li'),
-          link = document.createElement('a'),
-          thumb = document.createElement('img');
-
-        $(li).data(project);
-
-        $(link).attr({
-          'href': project.github_url,
-          'class': 'hvr-shadow-radial'
-        });
-        $(thumb).attr({
-          'alt': project.name,
-          'class': 'radius',
-          'src': project.thumb_url
-        });
-
-        // matryoshka
-        li.appendChild(link);
-        link.appendChild(thumb);
-        frag.appendChild(li);
-      });
+      $.each(projects.sort(_this.sortById), _this.buildAndRenderProject);
 
       // append the newly generated collection of <li>s
       $('#projects .panel-loading').fadeOut(function() {
-        $('#project-list').append(frag).fadeIn(1600);
         $('#projects .panel-controls').fadeIn();
-        C1V0.projects.applyUIBindings();
+        _this.applyUIBindings();
       });
+    },
+
+    /**
+     * Build and render the project thumbnail.
+     *
+     * @param  {number} i       The current project index. Corresponds with the project ID.
+     * @param  {object} project The project data object.
+     */
+    buildAndRenderProject: function(i, project) {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      const thumb = document.createElement('img');
+      const frag = document.createDocumentFragment();
+
+      $(li).data(project);
+
+      $(link).attr({
+        'href': project.github_url,
+        'class': 'hvr-shadow-radial'
+      });
+      $(thumb).attr({
+        'alt': project.name,
+        'class': 'radius',
+        'src': project.thumb_url
+      });
+
+      // matryoshka
+      [li, link, thumb].forEach(function(el, i, parent) {
+        const next = parent[i + 1];
+
+        if (next) {
+          el.appendChild(next);
+        }
+      });
+
+      frag.appendChild(li);
+
+      $('#project-list').append(frag).fadeIn(1600);
+    },
+
+    /** Sort projects by id. */
+    sortById: function(a, b) {
+      return a.id - b.id;
     },
 
     /**
