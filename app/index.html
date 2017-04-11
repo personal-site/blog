@@ -72,7 +72,7 @@
   <body>
     <!-- Component: Navigation -->
     <div id="primary-nav" class="contain-to-grid sticky">
-      <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;">
+      <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
         <ul class="title-area">
           <li class="name">
             <h1><a href="/">chrisvogt.me</a></h1>
@@ -102,17 +102,17 @@
                 <i class="fa fa-home" aria-hidden="true"></i> Home
               </a>
             </li>
-            <li>
-              <a href="#projects" title="My projects">
+            <li data-magellan-arrival="projects">
+              <a href="#projects" title="Projects">
                 Projects
               </a>
             </li>
-            <li>
-              <a href="#about" title="About me">
+            <li data-magellan-arrival="about">
+              <a href="#about" title="About">
                 About
               </a>
             </li>
-            <li>
+            <li data-magellan-arrival="photos">
               <a href="#photos" title="Photos">
                 Photos
               </a>
@@ -178,7 +178,7 @@
     </section>
 
     <!-- Component: Projects -->
-    <section id="projects" class="projects-content">
+    <section id="projects" class="projects-content" data-magellan-destination="projects">
       <div class="row">
         <div class="large-12 columns">
           <div class="panel panel-loading text-center">
@@ -257,7 +257,7 @@
     </section>
 
     <!-- Page: About -->
-    <section id="about" class="about-content">
+    <section id="about" class="about-content" data-magellan-destination="about">
       <div class="row">
         <div class="small-12 columns">
           <div class="panel">
@@ -268,9 +268,7 @@
             <h2>About Me</h2>
 
             <p>In the real world I inhabit San Francisco, California, USA. During the day, I am a remote developer who works on the front end — the stylesheets, markup, presentation logic, and client-side scripts — of patient payment software. My evenings and weekends are typically spent developing my craft, reading <a href="https://www.goodreads.com/user/show/10454947-chris-vogt" title="Chris Vogt on Goodreads">both fiction and non-fiction</a>, playing <a href="http://store.steampowered.com/app/346110/" title="ARK: Survival Evolved on Steam">ARK: Survival Evolved</a>, or exploring the Bay Area.</p>
-
             <p>Since 2010, I've been a web developer for the eDiscovery, litigation support, healthcare, and education technology industries. I've worked on intranets, web portals, patient payment applications, and learning management systems. I was a student at Phoenix College from Fall 2014 through October 2016, and a member of the Phi Theta Kappa Honor Society.</p>
-
             <p>I'm a multifaceted individual with a strong interest in the web, music, literature, and many fields of science. I'm motivated by an innate drive to both understand and create. To learn more, check out my <a href="https://github.com/chrisvogt" title="Chris Vogt on GitHub">code</a> on GitHub, <a href="https://youtu.be/OoT70uJpB5w?list=PLNpEtdDfoma2QoX2Oxn8tvybYoiQI_yz_" title="Chris Vogt piano YouTube channel">piano channel</a> on YouTube, and "Sci Phi" <a href="https://soundcloud.com/findmebymidnight/sets/starry" title="Find Me By Midnight on SoundCloud">electronic music</a> on SoundCloud.</p>
           </div>
         </div>
@@ -278,7 +276,7 @@
     </section>
 
     <!-- Component: Instafeed -->
-    <div id="photos" class="hidden">
+    <div id="photos" class="hidden" data-magellan-destination="photos">
       <div class="row">
         <div class="large-12 columns">
           <div class="panel panel-controls small-only-text-center">
@@ -428,8 +426,6 @@
     <script src="/bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.clearing.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.interchange.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.joyride.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.magellan.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
@@ -438,7 +434,7 @@
     <script src="/bower_components/foundation/js/foundation/foundation.slider.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.tab.js"></script>
     <script src="/bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.toolbar.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.topbar.js"></script>
     <script src="/bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
