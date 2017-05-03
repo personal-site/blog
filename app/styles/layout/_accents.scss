@@ -32,6 +32,8 @@ em.accent {
 
 #answerdash #qazzow-helpButton {
     background: $dodger-blue !important;
+    border-radius: 0!important;
+    box-shadow: $default-box-shadow;
 
     &:hover {
         background: $cyan-a700 !important;
@@ -47,15 +49,13 @@ em.accent {
     bottom: 20px;
     right: 20px;
     background-color: $vegas-gold;
+    box-shadow: $default-box-shadow;
     color: #5D436F;
     font-size: 12px;
     font-family: sans-serif;
     text-decoration: none;
     opacity: .9;
     padding: 10px 20px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;
     -webkit-transition: background 200ms linear;
     -moz-transition: background 200ms linear;
     -o-transition: background 200ms linear;

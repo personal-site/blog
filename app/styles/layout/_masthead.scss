@@ -57,11 +57,13 @@
     }
 }
 
-.top-bar {
-    background: none;
+#primary-nav.fixed {
+    box-shadow: $default-box-shadow;
 }
 
 .top-bar {
+    background: none;
+
     ul li {
         background: none;
     }
