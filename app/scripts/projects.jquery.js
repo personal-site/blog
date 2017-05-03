@@ -76,7 +76,6 @@ $.extend( true, C1V0 || {}, {
       });
       $(thumb).attr({
         'alt': project.name,
-        'class': 'radius',
         'src': project.thumb_url
       });
 

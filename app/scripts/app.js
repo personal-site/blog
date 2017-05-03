@@ -70,7 +70,7 @@ const C1V0 = C1V0 || {
       accessToken: '1546421127.1677ed0.9c94d860989e470f8c60fc596caa9c16',
       sortBy: 'most-recent',
       limit: 18,
-      template: '<li><a href="{{link}}" class="hvr-shadow-radial" title="View on Instagram"><img src="{{image}}" alt="{{caption}}" class="radius"></a></li>',
+      template: '<li><a href="{{link}}" class="hvr-shadow-radial" title="View on Instagram"><img src="{{image}}" alt="{{caption}}"></a></li>',
       after: function() {
         $('#photos').removeClass('hidden');
       },
