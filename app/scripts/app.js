@@ -82,14 +82,20 @@ const C1V0 = C1V0 || {
       sortBy: 'most-recent',
       limit: 18,
       template: '<li><a href="{{link}}" class="hvr-shadow-radial" title="View on Instagram"><img src="{{image}}" alt="{{caption}}"></a></li>',
-      after: function() {
+      success: function() {
         $('#photos').removeClass('hidden');
+        $('#photos .js-load-more').click(function() {
+          if (feed && typeof feed.next === 'function') {
+            feed.next()
+          };
+        });
       },
       error: function() {
         $('#primary-nav a[href="#photos"]').parent('li').addClass('hidden');
       }
     });
     userFeed.run();
+    window.feed = userFeed;
   }
 };
 
