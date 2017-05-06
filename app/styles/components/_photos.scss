@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 #photos {
-    .panel {
+    .panel-controls {
         background-color: white;
         border-radius: 8px;
         box-shadow: none;
@@ -52,5 +52,11 @@
 
     ul {
         margin: 0 -0.625rem -1.25em;
+    }
+
+    .panel-sub {
+        margin-top: 1.25rem;
+        margin-bottom: .5rem;
+        background: none;
     }
 }
