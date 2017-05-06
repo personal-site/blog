@@ -57,6 +57,11 @@
     }
 }
 
+[data-magellan-expedition],
+[data-magellan-expedition-clone] {
+    padding: 0;
+}
+
 #primary-nav.fixed {
     box-shadow: $default-box-shadow;
 }

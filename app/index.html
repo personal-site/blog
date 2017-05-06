@@ -69,7 +69,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body data-magellan-destination="home">
     <!-- Component: Navigation -->
     <div id="primary-nav" class="contain-to-grid sticky">
       <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
@@ -83,7 +83,7 @@
             </a>
           </li>
         </ul>
-        <section class="top-bar-section">
+        <section class="top-bar-section" data-magellan-expedition>
           <ul class="right">
             <li>
               <a href="https://stats.chrisvogt.me" title="Coding stats — last 30 days">
@@ -97,23 +97,23 @@
             </li>
           </ul>
           <ul class="left">
-            <li class="active">
-              <a href="#masthead" title="CHRISVOGT.me">
+            <li class="active" data-magellan-arrival="home">
+              <a href="#masthead" title="CHRISVOGT.me" name="home">
                 <i class="fa fa-home" aria-hidden="true"></i> Home
               </a>
             </li>
             <li data-magellan-arrival="projects">
-              <a href="#projects" title="Projects">
+              <a href="#projects" title="Projects" name="projects">
                 Projects
               </a>
             </li>
             <li data-magellan-arrival="about">
-              <a href="#about" title="About">
+              <a href="#about" title="About" name="about">
                 About
               </a>
             </li>
             <li data-magellan-arrival="photos">
-              <a href="#photos" title="Photos">
+              <a href="#photos" title="Photos" name="photos">
                 Photos
               </a>
             </li>
