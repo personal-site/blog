@@ -27,7 +27,7 @@ $.extend(true, C1V0 || {}, {
     init: function() {
       $.scrollUp();
       this.fadableHeader();
-      this.scrollingNav();
+//      this.scrollingNav();
       this.applyUIBindings();
     },
 
@@ -89,11 +89,13 @@ $.extend(true, C1V0 || {}, {
      * Apply UI event bindings.
      */
     applyUIBindings: function() {
+      /*
       const $items = this.element.$primaryNav.find('li');
 
       $.each($items, function() {
         $(this).on('click', C1V0.navigation.makeActive);
       });
+      */
     }
   }
 });
