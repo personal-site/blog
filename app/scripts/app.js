@@ -77,8 +77,8 @@ const C1V0 = C1V0 || {
     const userFeed = new Instafeed({
       get: 'user',
       userId: '1546421127',
-      clientId: ' 7e07fcf783e746b3a236341049fa3cc0',
-      accessToken: '1546421127.1677ed0.9c94d860989e470f8c60fc596caa9c16',
+      clientId: '7e07fcf783e746b3a236341049fa3cc0',
+      accessToken: '1546421127.1677ed0.a27baecaf8c546108f7d333a02a7eb9d',
       sortBy: 'most-recent',
       limit: 18,
       template: '<li><a href="{{link}}" class="hvr-shadow-radial" title="View on Instagram"><img src="{{image}}" alt="{{caption}}"></a></li>',
@@ -90,7 +90,8 @@ const C1V0 = C1V0 || {
           };
         });
       },
-      error: function() {
+      error: function(data) {
+        console.log(data);
         $('#primary-nav a[href="#photos"]').parent('li').addClass('hidden');
       }
     });
