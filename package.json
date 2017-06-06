@@ -16,7 +16,10 @@
     "node": ">=4"
   },
   "scripts": {
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "build": "gulp build",
+    "deploy": "gulp build && gulp deploy",
+    "postinstall": "bower install"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
