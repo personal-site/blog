@@ -5,4 +5,4 @@ before_script:
 node_js:
   - v8
   - v7
-  - v7
+  - v6
