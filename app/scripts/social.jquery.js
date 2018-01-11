@@ -39,8 +39,9 @@ $.extend( true, C1V0 || {}, {
 
       profiles.forEach(function(profile) {
         const a = $('<a></a>', {
-          'href': profile.href,
-          'title': 'Chris Vogt on ' + profile.name
+          href: profile.href,
+          rel: 'me',
+          title: 'Chris Vogt on ' + profile.name
         });
         const i = $('<i class="' + profile.icon + '"></i>');
         const li = $('<li></li>').append(a);
