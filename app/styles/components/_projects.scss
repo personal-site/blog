@@ -23,7 +23,7 @@
     }
 
     .panel-loading {
-        border-radius: 8px;
+        border-radius: $default-border-radius;
         margin: 24px auto;
 
         span.text-small {

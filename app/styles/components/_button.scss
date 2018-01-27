@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .button {
+    border-radius: $default-border-radius;
     color: #212121;
 
     &.pigment {
