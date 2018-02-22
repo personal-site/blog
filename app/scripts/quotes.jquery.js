@@ -31,19 +31,25 @@ $.extend( true, C1V0 || {}, {
     /** Initializer. */
     init() {
       this.http = new HttpSocket(this.path);
-      this.http.get(this.renderQuotes, this.failure);
+      this.http.get(this.renderQuotes, this.handleFailure);
+    },
+
+    /** Handles HTTP request failure. */
+    handlefailure() {
+      $('#quote').addClass('hidden');
     },
 
     /** Renders quotes from onto the page. */
     renderQuotes() {
       const $elem = $('#quote .orbit').empty();
       const frag = document.createDocumentFragment();
+      const { quotes } = this.data;
 
-      $.each(this.data.quotes, function(i, quote) {
-        const li   = document.createElement('li'),
-          div    = document.createElement('div'),
-          bq     = document.createElement('blockquote'),
-          cite   = document.createElement('cite');
+      $.each(quotes, (i, quote) => {
+        const li   = document.createElement('li');
+        const div  = document.createElement('div');
+        const bq   = document.createElement('blockquote');
+        const cite = document.createElement('cite');
 
         bq.innerHTML   = quote.text;
         cite.innerHTML = quote.cite ;
@@ -59,11 +65,6 @@ $.extend( true, C1V0 || {}, {
       $elem.append(frag);
       $(document).foundation('orbit', 'reflow');
     }
-  },
-
-  /** Handles HTTP request failure. */
-  failure() {
-    $('#quote').addClass('hidden');
   }
 });
 

@@ -5,12 +5,13 @@
     "SVG-Loaders": "svg-loaders#^1.0.2",
     "font-awesome": "^4.6.3",
     "foundation": "zurb/bower-foundation",
-    "modernizr": "~2.8.1",
+    "modernizr": "~2.8.3",
     "octicons": "~3.1.0",
     "remodal": "~1.0.3",
     "scrollup": "~2.4.1",
     "moment": "~2.10.6",
-    "jquery": "~2.1.0"
+    "jquery": "~2.2.4",
+    "instafeed.js": "^1.4.1"
   },
   "overrides": {
     "fontawesome": {

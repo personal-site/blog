@@ -30,9 +30,22 @@ $.extend( true, C1V0.stats || {}, {
     /**
      * Init method.
      */
-    init: function() {
+    init() {
       this.http = new HttpSocket(this.path);
-      this.http.get(this.render, this.failure);
+      this.http.get(this.render, this.handleFailure);
+    },
+
+    /** Handles HTTP request failure. */
+    handleFailure() {
+      C1V0.stats.projects.$container.addClass('hidden');
+      C1V0.stats.hours.$container
+          .removeClass('small-6')
+          .addClass('small-12');
+
+      /* Hide the entire pane if the other request failed. */
+      if (C1V0.stats.hours.$container.hasClass('hidden')) {
+        C1V0.stats.$container.addClass('hidden');
+      }
     },
 
     /**
@@ -43,19 +56,6 @@ $.extend( true, C1V0.stats || {}, {
       C1V0.stats.projects.$container
           .find('.v')
           .text(count);
-    },
-
-    /** Handles HTTP request failure. */
-    failure: function() {
-      C1V0.stats.projects.$container.addClass('hidden');
-      C1V0.stats.hours.$container
-          .removeClass('small-6')
-          .addClass('small-12');
-
-      /* Hide the entire pane if the other request failed. */
-      if (C1V0.stats.hours.$container.hasClass('hidden')) {
-        C1V0.stats.$container.addClass('hidden');
-      }
     }
   }
 });

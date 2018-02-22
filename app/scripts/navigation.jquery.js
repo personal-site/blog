@@ -24,11 +24,9 @@ $.extend(true, C1V0 || {}, {
     },
 
     /** Initializer. */
-    init: function() {
+    init() {
       $.scrollUp();
       this.fadableHeader();
-//      this.scrollingNav();
-      this.applyUIBindings();
     },
 
     /**
@@ -37,7 +35,7 @@ $.extend(true, C1V0 || {}, {
      * On large screens: hides the header initially
      * and then fades it after scrolling.
      */
-    fadableHeader: function() {
+    fadableHeader() {
       const $primaryNav = this.element.$primaryNav;
 
       $primaryNav.removeClass('sticky');
@@ -58,14 +56,17 @@ $.extend(true, C1V0 || {}, {
      * Sets the active class on a nav item.
      * @param  {jQuery.Event} e Click event.
      */
-    makeActive: function(e) {
+    makeActive(e) {
       let self = C1V0.navigation;
       const $primaryNav = self.element.$primaryNav;
 
       $primaryNav
         .find('li')
         .removeClass('active');
-      $(e.target).parent('li').addClass('active');
+
+      $(e.target)
+        .parent('li')
+        .addClass('active');
     },
 
     /**
@@ -73,8 +74,8 @@ $.extend(true, C1V0 || {}, {
      *
      * Smooth scroll for the on-page navigation.
      */
-    scrollingNav: function() {
-      $('.top-bar .left a').click(function(e) {
+    scrollingNav() {
+      $('.top-bar .left a').click((e) => {
         const goTo = $(this).attr('href');
 
         $('html, body').animate({
@@ -83,19 +84,6 @@ $.extend(true, C1V0 || {}, {
 
         e.preventDefault();
       });
-    },
-
-    /**
-     * Apply UI event bindings.
-     */
-    applyUIBindings: function() {
-      /*
-      const $items = this.element.$primaryNav.find('li');
-
-      $.each($items, function() {
-        $(this).on('click', C1V0.navigation.makeActive);
-      });
-      */
     }
   }
 });

@@ -24,16 +24,18 @@ HttpSocket.prototype = {
 
   /**
    * Wrapper around {jQuery#ajax}.
-   * @param  {function} success Success callback function.
-   * @param  {function} failure Failure callback function.
+   * @param  {function} onSuccess Success callback function.
+   * @param  {function} onFailure Failure callback function.
    * @return {boolean}
    */
-  get: function(success, failure) {
+  get(onSuccess, onFailure) {
     $.ajax({
-      'url': this.path,
-      'success': function(data) {
+      url: this.path,
+      success: function(data) {
         this.data = data;
       }
-    }).done(success).fail(failure);
+    })
+    .done(onSuccess)
+    .fail(onFailure);
   }
 }
