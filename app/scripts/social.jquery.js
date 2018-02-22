@@ -27,39 +27,40 @@ $.extend( true, C1V0 || {}, {
     $container: $('#social #links ul'),
 
     /** Initializer. */
-    init: function() {
-      this.http = new HttpSocket(this.path);
-      this.http.get(this.renderSocialList, this.failure);
-    },
-
-    /** Renders social profile links onto the page. */
-    renderSocialList: function() {
-      const profiles = [...this.data];
-      const frag = document.createDocumentFragment();
-
-      profiles.forEach(function(profile) {
-        const a = $('<a></a>', {
-          href: profile.href,
-          rel: 'me',
-          title: 'Chris Vogt on ' + profile.name
-        });
-        const i = $('<i class="' + profile.icon + '"></i>');
-        const li = $('<li></li>').append(a);
-
-        $(a).append(i);
-        $(frag).append(li);
-      });
-
-      if (profiles.length > 0) {
-        $('#social #links ul').empty().append(frag);
-      } else {
-        this.failure();
-      }
+    init() {
+      this.http = new HttpSocket(C1V0.social.path);
+      this.http.get(C1V0.social.renderSocialList, C1V0.social.handleFailure);
     },
 
     /** Handles HTTP request failure. */
-    failure: function() {
+    handleFailure() {
       $('#social').addClass('hidden');
+    },
+
+    /** Renders social profile links onto the page. */
+    renderSocialList() {
+      const profiles = [...this.data];
+      const frag = document.createDocumentFragment();
+
+      if (profiles.length < 1) {
+        this.failure();
+      }
+
+      profiles.forEach(profile => {
+        const { href, icon, name } = profile;
+        const $hyperlink = $('<a></a>', {
+          href: href,
+          rel: 'me',
+          title: `Chris Vogt on ${ name }`
+        });
+        const $icon = $(`<i class="${ icon }"></i>`);
+        const $listItem = $('<li></li>').append($hyperlink);
+
+        $($hyperlink).append($icon);
+        $(frag).append($listItem);
+      });
+
+      $('#social #links ul').empty().append(frag);
     }
   }
 });

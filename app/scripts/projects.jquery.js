@@ -29,7 +29,7 @@ $.extend( true, C1V0 || {}, {
     http: {},
 
     /** Initializer. */
-    init: function() {
+    init() {
       this.http = new HttpSocket(this.path);
       this.http.get(this.render, this.failure);
     },
@@ -39,7 +39,7 @@ $.extend( true, C1V0 || {}, {
      * @param  {[type]} data [description]
      * @return {[type]}      [description]
      */
-    render: function(data) {
+    render(data) {
       const _this = C1V0.projects;
       // convert projects to an array of objects
       const projects = $.map(this.data, function(val) {
@@ -62,7 +62,7 @@ $.extend( true, C1V0 || {}, {
      * @param  {number} i       The current project index. Corresponds with the project ID.
      * @param  {object} project The project data object.
      */
-    buildAndRenderProject: function(i, project) {
+    buildAndRenderProject(i, project) {
       const li = document.createElement('li');
       const link = document.createElement('a');
       const thumb = document.createElement('img');
@@ -94,7 +94,7 @@ $.extend( true, C1V0 || {}, {
     },
 
     /** Sort projects by id. */
-    sortById: function(a, b) {
+    sortById(a, b) {
       return a.id - b.id;
     },
 
@@ -103,7 +103,7 @@ $.extend( true, C1V0 || {}, {
      *
      * @param {String}
      */
-    filter: function(id, category) {
+    filter(id, category) {
       let state = document.getElementById(id).checked,
           $items = $('#project-list li');
 
@@ -122,13 +122,13 @@ $.extend( true, C1V0 || {}, {
     },
 
     /** Failure handler. Hides the loading panel and displays an error. */
-    failure: function() {
+    failure() {
       $('#projects .panel-loading').addClass('hidden');
       $('#projects .panel-unresolved').removeClass('hidden');
     },
 
     /** Applies event bindings. */
-    applyUIBindings: function() {
+    applyUIBindings() {
       /** Project filter click handler. */
       $('#filters input[type=\'checkbox\']').change(function() {
         C1V0.projects.filter(this.id, $(this).data('category'));

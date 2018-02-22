@@ -19,7 +19,7 @@ $.extend( true, C1V0 || {}, {
      */
     $container: $('#stats'),
 
-    hideStats: function (type) {
+    hideStats(type) {
       $stat = C1V0.stats[type].$container;
     }
   }

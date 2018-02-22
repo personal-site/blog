@@ -14,14 +14,11 @@ $.extend(true, C1V0 || {}, {
    * @alias C1V0.common
    */
   common: {
-    /** Initializer. */
-    init: function() {
-
-    },
-
     /** Capitalize the first letter of a string **/
-    capitalize: function(str) {
-      return str.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+    capitalize(str) {
+      return str.replace(/(?:^|\s)\S/g, a => {
+        return a.toUpperCase();
+      });
     }
   }
 });

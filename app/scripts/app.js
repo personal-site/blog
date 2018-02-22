@@ -17,7 +17,7 @@ const C1V0 = C1V0 || {
   },
 
   /** Initializer. */
-  init: function() {
+  init() {
     $(document).foundation();
 
     /**

@@ -21,10 +21,11 @@ $.extend(true, C1V0 || {}, {
      * @param {string} action
      * @param {string} gh - source code url
      */
-    sendEvent: function(category, action, gh) {
+    sendEvent(category, action, gh) {
       window.ga = window.ga || function() {
           (ga.q = ga.q || []).push(arguments)
       };
+
       ga('send', {
         hitType: 'event',
         eventCategory: category,
