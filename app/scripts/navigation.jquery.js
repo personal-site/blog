@@ -26,9 +26,7 @@ $.extend(true, C1V0 || {}, {
     /** Initializer. */
     init() {
       $.scrollUp();
-
       this.fadableHeader();
-      this.applyUIBindings();
     },
 
     /**
