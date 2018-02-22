@@ -32,20 +32,20 @@
     "gulp": "https://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
-    "gulp-cache": "^0.4.2",
-    "gulp-cli": "^1.4.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cli": "^2.0.1",
     "gulp-cssnano": "^2.0.0",
     "gulp-documentation": "^3.2.1",
     "gulp-eslint": "^4.0.0",
     "gulp-filter": "^5.0.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-htmlmin": "^3.0.0",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.4.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^3.0.0",
-    "gulp-size": "^2.1.0",
+    "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.0.0",
@@ -67,6 +67,6 @@
     }
   },
   "dependencies": {
-    "ajv": "^5.2.3"
+    "ajv": "^6.1.1"
   }
 }
