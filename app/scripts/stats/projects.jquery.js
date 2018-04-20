@@ -13,7 +13,7 @@ $.extend( true, C1V0.stats || {}, {
     /**
      * Projects data endpoint.
      */
-    path: 'https://chrisvogt.firebaseio.com/projects.json',
+    path: 'https://chrisvogt.firebaseio.com/v1/projects.json',
 
     /**
      * Used to make HTTP requests.
