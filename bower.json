@@ -4,7 +4,7 @@
   "dependencies": {
     "SVG-Loaders": "svg-loaders#^1.0.2",
     "font-awesome": "^4.6.3",
-    "foundation": "zurb/bower-foundation",
+    "foundation": "https://github.com/chrisvogt/bower-foundation.git#patch-magellan-selector",
     "modernizr": "~2.8.3",
     "octicons": "~3.1.0",
     "remodal": "~1.0.3",
