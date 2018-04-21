@@ -1,5 +1,5 @@
 {
-  "name": "quartzite",
+  "name": "www",
   "description": "Personal website and project portfolio",
   "dependencies": {
     "SVG-Loaders": "svg-loaders#^1.0.2",
