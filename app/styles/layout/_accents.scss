@@ -23,25 +23,11 @@ footer .fa-twitter {
 }
 
 #g-person {
-    margin: 14px 0 7px 14px;
+    margin: 32px 0 32px 32px;
 }
 
 em.accent {
     color: #90A4AE;
-}
-
-#answerdash #qazzow-helpButton {
-    background: $dodger-blue !important;
-    border-radius: 0!important;
-    box-shadow: $default-box-shadow;
-
-    &:hover {
-        background: $cyan-a700 !important;
-    }
-}
-
-.answerdash-tooltipped.answerdash-hover {
-    background: red !important;
 }
 
 /* Pill style */

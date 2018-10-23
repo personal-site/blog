@@ -97,7 +97,7 @@
                 Home
               </a>
             </li>
-            <li data-magellan-arrival="projects">
+            <li class="link-projects" data-magellan-arrival="projects">
               <a href="#projects" title="Projects">
                 Projects
               </a>
@@ -137,9 +137,9 @@
     </section>
 
     <!-- Component: Stats -->
-    <div id="stats">
+    <!-- <div id="stats">
       <div class="row">
-        <div id="stats-hours" class="small-12 medium-6 columns">
+        <div id="stats-hours" class="small-12 columns">
           <a href="http://stats.chrisvogt.me" class="button neon-green expand radius" title="Open source stats, last 7 days">
             <span class="mega-octicon octicon-clock"></span>
             <span class="v">
@@ -149,15 +149,8 @@
             <span class="show-for-medium-up">on personal projects</span>.
           </a>
         </div>
-        <div id="stats-projects" class="small-12 medium-6 columns">
-          <a href="http://projects.chrisvogt.me" class="button expand radius" title="Projects portfolio">
-            <span class="mega-octicon octicon-microscope"></span>
-            <span class="v"><img src="images/ajax-rings.svg" height="32" width="32" onerror="this.src='images/spinner-white.gif'; this.onerror=null;"></span>
-            <span class="show-for-medium-up">open source</span> projects published.
-          </a>
-        </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Component: Promotional -->
     <section id="promote">
@@ -173,80 +166,28 @@
     </section>
 
     <!-- Component: Projects -->
-    <section id="projects" class="projects-content" data-magellan-destination="projects">
+    <section id="projects" data-magellan-destination="projects">
       <div class="row">
-        <div class="large-12 columns">
-          <div class="panel panel-loading text-center">
-            <p>
-              <img src="images/ajax-squares.svg" width="24" height="24" class="spinner" alt="Loading...">
-              <span class="text-small">Loading projects...</span>
-            </p>
+        <div class="small-12 medium-3 columns">
+          <h3>Latest Commit</h3>
+          <div id="latest-commit">
+            <a class="commit-title nice-link" href=""></a>
+            <span class="commit-date"></span> in <a class="repo-title" href=""></a>
           </div>
-          <div class="panel panel-unresolved hidden text-center">
-            <p class="text-small">An error occured fetching project data.</p>
-          </div>
-          <div class="panel panel-controls small-only-text-center hide">
-            <p>
-              Project portfolio. <span class="accent">Click on a thumbnail to learn more.</span>
-
-              <button id="btnFilter" href="#" data-dropdown="filters" data-options="align:left" aria-controls="filters" aria-expanded="false" class="button secondary tiny dropdown"><i class="fa fa-filter"></i> Filter</button>
-              <div id="filters" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                <form>
-                  <div class="row">
-                    <div class="large-12 columns">
-                      <div class="row">
-                        <div class="small-2 switch round small columns">
-                          <div class="switch">
-                            <input id="filterProjects" type="checkbox" data-category="project" checked>
-                            <label for="filterProjects">Projects</label>
-                          </div>
-                        </div>
-                        <div class="small-8 columns">
-                          Projects
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="small-2 switch round small columns">
-                          <div class="switch">
-                            <input id="filterExperiments" type="checkbox" data-category="experiment" checked>
-                            <label for="filterExperiments">Experiments</label>
-                          </div>
-                        </div>
-                        <div class="small-8 columns">
-                          Experiments
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="small-2 switch round small columns">
-                          <div class="switch">
-                            <input id="filterWip" type="checkbox" data-category="wip" checked>
-                            <label for="filterWip">WIP</label>
-                          </div>
-                        </div>
-                        <div class="small-8 columns">
-                          In Progress
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="small-2 switch round small columns">
-                          <div class="switch">
-                            <input id="filterLegacy" type="checkbox" data-category="legacy" checked>
-                            <label for="filterLegacy">Legacy</label>
-                          </div>
-                        </div>
-                        <div class="small-8 columns">
-                          Legacy
-                        </div>
-                      </div>
-                    </div>
+        </div>
+        <div id="latest-repos" class="small-12 medium-9 columns">
+          <h3>Latest Repos</h3>
+          <div class="row">
+            <template id="latest-repos-template">
+              <a class="latest-repos-link" href="">
+                <div class="small-12 medium-6 columns">
+                  <div class="panel hvr-trim">
+                    <h5 class="latest-repos-title"></h5>
+                    <p class="latest-repos-description"></p>
                   </div>
-                </form>
-              </div>
-            </p>
-          </div>
-          <ul id="project-list" class="hidden small-block-grid-3 medium-block-grid-6">
-            <!-- AJAX: projects -->
-          </ul>
+                </div>
+              </a>
+            </template>
         </div>
       </div>
     </section>
@@ -413,7 +354,12 @@
     <script src="/bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="/bower_components/foundation/js/foundation.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="/bower_components/foundation/js/foundation/foundation.topbar.js"></script>
     <script src="/bower_components/remodal/dist/remodal.js"></script>
     <script src="/bower_components/scrollup/dist/jquery.scrollUp.min.js"></script>
     <script src="/bower_components/moment/moment.js"></script>
@@ -421,30 +367,14 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.magellan.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.orbit.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.topbar.js"></script>
-    <script src="/bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
-    <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="/bower_components/scrollup/dist/jquery.scrollUp.min.js"></script>
-    <script src="/bower_components/instafeed.js/instafeed.js"></script>
-    <!-- endbuild -->
-
     <!-- build:js scripts/main.js -->
     <script src="scripts/HttpSocket.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/common.jquery.js"></script>
     <script src="scripts/navigation.jquery.js"></script>
+    <script src="scripts/latest-commit.js"></script>
+    <script src="scripts/latest-repos.js"></script>
     <script src="scripts/social.jquery.js"></script>
-    <script src="scripts/projects.jquery.js"></script>
-    <script src="scripts/stats.jquery.js"></script>
-    <script src="scripts/stats/hours.jquery.js"></script>
-    <script src="scripts/stats/projects.jquery.js"></script>
     <script src="scripts/analytics.jquery.js"></script>
     <script src="scripts/quotes.jquery.js"></script>
     <!-- endbuild -->

@@ -1,7 +1,7 @@
 'use strict';
 
 /** @namespace */
-const C1V0 = C1V0 || {
+const C1V0 = {
   /**
    * Configuration object.
    *
@@ -52,22 +52,6 @@ const C1V0 = C1V0 || {
         offset_by_height: true
       }
     });
-
-    /**
-     * AnswerDash
-     *
-     * @link http://www.answerdash.com/
-     */
-    let AnswerDash;
-    ! function(e, t, n, s, a) {
-        if (!t.getElementById(s)) {
-            let i, r = t.createElement(n),
-                c = t.getElementsByTagName(n)[0];
-            e[a] || (i = e[a] = function() {
-                i.__oninit.push(arguments)
-            }, i.__oninit = []), r.type = 'text/javascript', r.async = !0, r.src = 'https://p1.answerdash.com/answerdash.min.js?siteid=831', r.setAttribute('id', s), c.parentNode.insertBefore(r, c)
-        }
-    }(window, document, 'script', 'answerdash-script', 'AnswerDash');
 
     /**
      * Instagram via instafeed.js
