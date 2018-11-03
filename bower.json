@@ -1,10 +1,10 @@
 {
-  "name": "quartzite",
+  "name": "www",
   "description": "Personal website and project portfolio",
   "dependencies": {
     "SVG-Loaders": "svg-loaders#^1.0.2",
     "font-awesome": "^4.6.3",
-    "foundation": "zurb/bower-foundation",
+    "foundation": "https://github.com/chrisvogt/bower-foundation.git#master",
     "modernizr": "~2.8.3",
     "octicons": "~3.1.0",
     "remodal": "~1.0.3",
@@ -29,5 +29,8 @@
     "mocha": "^3.2.0",
     "instafeed.js": "^1.4.1"
   },
-  "private": true
+  "private": true,
+  "resolutions": {
+    "jquery": "~2.2.4"
+  }
 }
