@@ -75,7 +75,7 @@
       <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/">chrisvogt.me</a></h1>
+            <span class="brand"><a href="/">chrisvogt.me</a></span>
           </li>
           <li class="toggle-topbar menu-icon">
             <a href="#">
@@ -92,19 +92,9 @@
             </li>
           </ul>
           <ul class="left">
-            <li class="active" data-magellan-arrival="home">
-              <a href="#masthead" title="CHRISVOGT.me">
-                Home
-              </a>
-            </li>
             <li class="link-projects" data-magellan-arrival="projects">
               <a href="#projects" title="Projects">
                 Projects
-              </a>
-            </li>
-            <li data-magellan-arrival="about">
-              <a href="#about" title="About">
-                About
               </a>
             </li>
             <li data-magellan-arrival="photos">
@@ -119,14 +109,17 @@
 
     <!-- Component: Masthead -->
     <section id="masthead" class="hero">
-      <div id="announce" class="row">
-        <div class="small-12 large-centered columns">
-          <div id="title" class="main-wrapper text-center">
+      <div class="row">
+        <div class="small-12 medium-3 columns text-center">
+          <img class="circle" src="images/chris-vogt-2016-256px.jpg" alt="Chris Vogt Engineer San Francisco" width="128" height="128" />
+        </div>
+        <div class="small-12 medium-9 columns d-flex align-items-start text-center text-medium-left" style="min-height: 128px;">
+          <div style="width: 100%;">
             <h1>
-              CHRISVOGT.me
+              Chris Vogt
             </h1>
 
-            <p class="lead">Software Engineer <span>in San Francisco</span></p>
+            <p class="lead text-subhead-font-stack">Software Engineer <span>in San Francisco</span></p>
             <a class="twitter-follow-button"
               href="https://twitter.com/c1v0">
             Follow @c1v0</a>
@@ -188,25 +181,6 @@
                 </div>
               </a>
             </template>
-        </div>
-      </div>
-    </section>
-
-    <!-- Page: About -->
-    <section id="about" class="about-content" data-magellan-destination="about">
-      <div class="row">
-        <div class="small-12 columns">
-          <div class="panel">
-            <div id="g-person" class="pull-right hide-for-small-only">
-              <div class="g-person" data-href="//plus.google.com/u/0/118311366440595712834" data-rel="author" data-width="180"></div>
-            </div>
-
-            <h2>About Me</h2>
-
-            <p>I am a software engineer who inhabits San Francisco, California, USA and works on web software that helps small businesses create and grow their online presence. Over the last 9 years I have worked as a developer for both startups and corporations, focused on eDiscovery, healthcare, and education technology.</p>
-            <p>I'm a multifaceted individual with a strong interest in the web, music, literature, and many fields of science and art. I'm motivated by an innate drive to both understand and create. Over time I have explored a variety of interests, often involving the creation of original code, cinematography, photography and written content.</p>
-            <p>This website exists as a hub to connect visitors to my work, much of which is available for use under open source, copyleft and Creative Commons licenses.</p>
-          </div>
         </div>
       </div>
     </section>
