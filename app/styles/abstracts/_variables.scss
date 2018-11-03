@@ -2,8 +2,8 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/* Colors */
-$accent-grey: #eceff1;
+/* Palettes */
+
 $base-grey: #fefefe;
 $grey-50: #fafafa;
 $grey-100: #f5f5f5;
@@ -23,7 +23,6 @@ $dodger-uniform-blue: #005A9C;
 $light-green-a200: #b2ff59;
 $light-green-a400: #76FF03;
 $light-green-a700: #64DD17;
-
 $green-500: #4CAF50;
 $green-a700: #00C853;
 $green-a400: #00E676;
@@ -31,11 +30,16 @@ $green-a400: #00E676;
 $vegas-gold: #c5b358;
 
 /* Text */
+
 $text-jet: #131516;
 $text-raven: #373D3f;
 $text-asher: #555F61;
+$text-headline-font-stack: 'Quicksand', sans-serif;
+$text-subhead-font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$text-default-font-stack: 'Merriweather', serif;
 
 /* Elements */
+
 $divider-light: 1px solid #dfdfdf;
 $default-border-radius: 4px;
 $default-box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);

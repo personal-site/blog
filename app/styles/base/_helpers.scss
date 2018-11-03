@@ -11,6 +11,13 @@
 }
 
 /**
+ * Makes an image or element a perfect circle.
+ */
+img.circle {
+    border-radius: 50%;
+}
+
+/**
  * Hides an element from the DOM.
  */
 .hidden {
@@ -22,4 +29,23 @@
  */
 .pull-right {
     float: right;
+}
+
+/**
+ * Flexbox helpers
+ */
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: start;
+}
+
+.align-self-center {
+    align-self: center;
 }

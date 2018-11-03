@@ -4,7 +4,7 @@
 
 .button {
     border-radius: $default-border-radius;
-    color: #212121;
+    color: $grey-900;
 
     &.pigment {
         background-color: $green-a700;
@@ -24,8 +24,8 @@
 
     &.dodger-blue {
         background-color: $dodger-blue;
-        border-color: #1577b3;
-        color: #fff;
+        border-color: darken($dodger-blue, 25%);
+        color: white;
     }
 }
 
