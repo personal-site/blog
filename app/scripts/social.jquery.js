@@ -1,68 +1,39 @@
-'use strict';
+(async () => {
+  const dom = {
+    select: document.querySelector.bind(document)
+  };
 
-/**
- * @function
- * @ignore
- * @name jQuery#extend
- * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
- */
-$.extend( true, C1V0 || {}, {
-  /**
-   * Social profiles module.
-   * @namespace
-   * @this {social}
-   * @alias C1V0.social
-   */
-  social: {
-    /**
-     * HTTP data path.
-     */
-    path: C1V0.config.social,
+  const template = dom.select('#social-item-template').content;
+  const container = dom.select('#social-profiles');
 
-    /**
-     * jQuery reference to the social links list.
-     *
-     * @type {object}
-     */
-    $container: $('#social #links ul'),
+  try {
+    const profiles = await $.getJSON({ url: 'https://chrisvogt.firebaseio.com/v1/profiles.json' });
+    const fragment = document.createDocumentFragment();
 
-    /** Initializer. */
-    init() {
-      this.http = new HttpSocket(C1V0.social.path);
-      this.http.get(C1V0.social.renderSocialList, C1V0.social.handleFailure);
-    },
+    for (const profile of profiles) {
+      const content = template.cloneNode(true);
 
-    /** Handles HTTP request failure. */
-    handleFailure() {
-      $('#social').addClass('hidden');
-    },
+      const {
+        href,
+        icon,
+        name
+      } = profile;
 
-    /** Renders social profile links onto the page. */
-    renderSocialList() {
-      const profiles = [...this.data];
-      const frag = document.createDocumentFragment();
+      const iconCss = icon.split(' ');
+      content.querySelector('.social-item-icon').classList.add(...iconCss);
 
-      if (profiles.length < 1) {
-        this.failure();
-      }
+      const link = content.querySelector('.social-item-link');
+      link.title = `Chris Vogt on ${ name }`;
+      link.href = href;
 
-      profiles.forEach(profile => {
-        const { href, icon, name } = profile;
-        const $hyperlink = $('<a></a>', {
-          href: href,
-          rel: 'me',
-          title: `Chris Vogt on ${ name }`
-        });
-        const $icon = $(`<i class="${ icon }"></i>`);
-        const $listItem = $('<li></li>').append($hyperlink);
-
-        $($hyperlink).append($icon);
-        $(frag).append($listItem);
-      });
-
-      $('#social #links ul').empty().append(frag);
+      fragment.appendChild(document.importNode(content, true));
     }
-  }
-});
 
-C1V0.social.init();
+    container.innerHTML = '';
+    container.appendChild(document.importNode(fragment, true));
+
+  } catch (error) {
+    console.warn('Error loading social profiles section', error);
+    dom.select('#social').classList.add('hidden');
+  }
+})();

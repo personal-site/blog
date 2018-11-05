@@ -225,12 +225,19 @@
     <section id="social">
       <div class="row">
         <div class="large-12 columns">
-          <nav id="links">
-            <ul class="inline-list">
-              <li>
+          <nav>
+            <ul id="social-profiles" class="inline-list">
+              <li class="loader-item">
                 <img class="loader" src="images/ajax-rings.svg" onerror="this.src='images/spinner-white.gif'; this.onerror=null;">
               </li>
             </ul>
+            <template id="social-item-template">
+              <li>
+                <a href="#" rel="me" class="social-item-link" title="">
+                  <i class="social-item-icon"></i>
+                </a>
+              </li>
+            </template>
           </nav>
         </div>
       </div>
