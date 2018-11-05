@@ -10,6 +10,10 @@
     const profiles = await $.getJSON({ url: 'https://chrisvogt.firebaseio.com/v1/profiles.json' });
     const fragment = document.createDocumentFragment();
 
+    if (!profiles.length) {
+      throw new Error('No profiles found.');
+    }
+
     for (const profile of profiles) {
       const content = template.cloneNode(true);
 
