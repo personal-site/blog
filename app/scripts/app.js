@@ -56,7 +56,7 @@ const C1V0 = {
     /**
      * Instagram via instafeed.js
      *
-     * @link http://instafeedjs.com/
+     * @link https://instafeedjs.com/
      */
     const userFeed = new Instafeed({
       get: 'user',
