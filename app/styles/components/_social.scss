@@ -15,12 +15,12 @@
     }
 }
 
-#links .inline-list {
+#social-profiles {
     margin-bottom: 0;
     margin: 64px auto;
 }
 
-#links li {
+#social-profiles li {
     float: none;
     display: inline-block;
     font-size: 1.25rem;
@@ -28,14 +28,14 @@
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    #links li {
+    #social-profiles li {
         margin: 0 24px;
         font-size: 2rem;
     }
 }
 
 @media only screen and (min-width: 64.063em) {
-    #links li {
+    #social-profiles li {
         margin: 0 42px;
         font-size: 2.675rem;
     }
