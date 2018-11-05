@@ -34,10 +34,10 @@ _View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 ### Built with
 
 <p align="left">
-  <img src="http://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
+  <img src="https://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
   <img src="https://cdn.rawgit.com/gulpjs/artwork/master/gulp-2x.png" alt="Gulp" height="48">
   <img src="https://avatars0.githubusercontent.com/u/1335026?v=3&s=200" alt="Firebase" height="48">
-	<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
+	<img src="https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg" alt="HTML5 &amp; CSS3" height="48">
 	<img src="https://cdn.rawgit.com/mathamoz/ionic-builder/898ac76dc9e9edeb02d1825358eca95ec742b985/public/images/why-the-yeti.svg" alt="Zurb Foundation" height="48">
 </p>
