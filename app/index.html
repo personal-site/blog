@@ -102,6 +102,11 @@
                 Photos
               </a>
             </li>
+            <li data-magellan-arrival="recently-read">
+              <a href="#recently-read" title="Recently read books">
+                Recently Read
+              </a>
+            </li>
           </ul>
         </section>
       </nav>
@@ -190,6 +195,30 @@
               <i class="fa fa-refresh"></i> Load More
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Component: Recently Read -->
+    <div id="recently-read" data-magellan-destination="recently-read">
+      <div class="row">
+        <div class="large-12 columns">
+            <div class="panel panel-controls small-only-text-center">
+              <p>
+                Recently read books. <span class="accent">Click on a thumbnail to view on Google Books.</span>
+
+                <a href="https://www.goodreads.com/user/show/10454947-chris-vogt" class="button secondary tiny" title="Chris Vogt on Goodreads"><i class="fa fa-book"></i> Visit Goodreads</a>
+              </p>
+            </div>
+          <ul id="recent-books" class="small-block-grid-3 medium-block-grid-6">
+            <template id="recent-book-template">
+              <li>
+                <a class="recent-book-link hvr-shadow-radial" href="" title="">
+                  <img class="recent-book-image" height="150" src="" alt="" />
+                </a>
+              </li>
+            </template>
+          </ul>
         </div>
       </div>
     </div>
@@ -342,6 +371,7 @@
     <script src="scripts/social-profiles.js"></script>
     <script src="scripts/analytics.jquery.js"></script>
     <script src="scripts/quotes.jquery.js"></script>
+    <script src="scripts/recently-read.js"></script>
     <!-- endbuild -->
   </body>
 </html>
