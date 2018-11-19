@@ -17,13 +17,13 @@ $.extend(true, C1V0 || {}, {
     /**
      * Fires off a Google Analytics event.
      *
-     * @param {string} category
-     * @param {string} action
-     * @param {string} gh - source code url
+     * @param {string} category The event category.
+     * @param {string} action The action to track.
+     * @param {string} gh The source code URL.
      */
     sendEvent(category, action, gh) {
-      window.ga = window.ga || function() {
-          (ga.q = ga.q || []).push(arguments)
+      window.ga = window.ga || function (...args) {
+        (ga.q = ga.q || []).push(args);
       };
 
       ga('send', {
@@ -36,7 +36,8 @@ $.extend(true, C1V0 || {}, {
       /**
        * Sanitizes the action names.
        *
-       * @param {string} action
+       * @param {string} action The CTA name.
+       * @returns {string} The CTA.
        */
       function defineAction(action) {
         let definition = '';

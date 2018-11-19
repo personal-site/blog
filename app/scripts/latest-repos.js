@@ -7,8 +7,8 @@
   const container = dom.select('#latest-repos');
 
   try {
-    const response = await $.getJSON({ url: `https://gh-latest-repos-fmyaneprcd.now.sh/` });
-    const repos = response.reverse().filter(repo => !!repo.description);
+    const response = await $.getJSON({url: 'https://gh-latest-repos-fmyaneprcd.now.sh'});
+    const repos = response.reverse().filter(repo => Boolean(repo.description));
 
     for (const repo of repos) {
       const content = template.cloneNode(true);

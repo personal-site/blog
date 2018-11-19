@@ -16,10 +16,11 @@
     "node": ">=6"
   },
   "scripts": {
-    "start": "gulp serve",
     "build": "gulp build",
     "deploy": "gulp build && gulp deploy",
-    "postinstall": "bower install"
+    "lint": "xo app/scripts",
+    "postinstall": "bower install",
+    "start": "gulp serve"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -37,7 +38,6 @@
     "gulp-cli": "^2.0.1",
     "gulp-cssnano": "^2.0.0",
     "gulp-documentation": "^3.2.1",
-    "gulp-eslint": "^4.0.0",
     "gulp-filter": "^5.0.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^4.0.0",
@@ -52,22 +52,24 @@
     "gulp-useref": "^3.0.0",
     "main-bower-files": "^2.5.0",
     "run-sequence": "^2.2.0",
-    "wiredep": "^4.0.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true,
-      "browser": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ]
-    }
+    "wiredep": "^4.0.0",
+    "xo": "^0.23.0"
   },
   "dependencies": {
     "ajv": "^6.1.1"
+  },
+  "xo": {
+    "globals": [
+      "$",
+      "C1V0",
+      "document",
+      "HttpSocket",
+      "feed",
+      "Instafeed",
+      "moment",
+      "ga",
+      "window"
+    ],
+    "space": true
   }
 }

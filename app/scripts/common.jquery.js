@@ -14,7 +14,11 @@ $.extend(true, C1V0 || {}, {
    * @alias C1V0.common
    */
   common: {
-    /** Capitalize the first letter of a string **/
+    /**
+     * Capitalize the first letter of a string
+     * @param {string} str The string to capitalize.
+     * @returns {string} The capitalized string.
+     */
     capitalize(str) {
       return str.replace(/(?:^|\s)\S/g, a => {
         return a.toUpperCase();
