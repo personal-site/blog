@@ -29,11 +29,13 @@ HttpSocket.prototype = {
    * @param  {function} onFailure Failure callback function.
    */
   get(onSuccess, onFailure) {
+    function handleSuccess(data) {
+      this.data = data;
+    }
+
     $.ajax({
       url: this.path,
-      success: data => {
-        this.data = data;
-      }
+      success: handleSuccess
     }).done(onSuccess).fail(onFailure);
   }
 };

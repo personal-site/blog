@@ -20,7 +20,8 @@
     "deploy": "gulp build && gulp deploy",
     "lint": "xo app/scripts",
     "postinstall": "bower install",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "test": "npm run lint"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
