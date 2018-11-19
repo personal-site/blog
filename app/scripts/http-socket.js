@@ -1,6 +1,7 @@
 /**
  * Represents an HTTP request.
  * @constructor
+ * @param {string} path The path to query.
  */
 function HttpSocket(path) {
   /**
@@ -26,16 +27,15 @@ HttpSocket.prototype = {
    * Wrapper around {jQuery#ajax}.
    * @param  {function} onSuccess Success callback function.
    * @param  {function} onFailure Failure callback function.
-   * @return {boolean}
    */
   get(onSuccess, onFailure) {
+    function handleSuccess(data) {
+      this.data = data;
+    }
+
     $.ajax({
       url: this.path,
-      success: function(data) {
-        this.data = data;
-      }
-    })
-    .done(onSuccess)
-    .fail(onFailure);
+      success: handleSuccess
+    }).done(onSuccess).fail(onFailure);
   }
-}
+};

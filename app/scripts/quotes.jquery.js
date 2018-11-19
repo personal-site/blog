@@ -5,7 +5,7 @@
  * @name jQuery#extend
  * @description This documents the jQuery method adds the Social class to the C1V0 namespace.
  */
-$.extend( true, C1V0 || {}, {
+$.extend(true, C1V0 || {}, {
   /**
    * Social profiles module.
    *
@@ -43,16 +43,16 @@ $.extend( true, C1V0 || {}, {
     renderQuotes() {
       const $elem = $('#quote .orbit').empty();
       const frag = document.createDocumentFragment();
-      const { quotes } = this.data;
+      const {quotes} = this.data;
 
       $.each(quotes, (i, quote) => {
-        const li   = document.createElement('li');
-        const div  = document.createElement('div');
-        const bq   = document.createElement('blockquote');
+        const li = document.createElement('li');
+        const div = document.createElement('div');
+        const bq = document.createElement('blockquote');
         const cite = document.createElement('cite');
 
-        bq.innerHTML   = quote.text;
-        cite.innerHTML = quote.cite ;
+        bq.innerHTML = quote.text;
+        cite.innerHTML = quote.cite;
 
         li
           .appendChild(div)

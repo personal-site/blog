@@ -36,11 +36,11 @@ $.extend(true, C1V0 || {}, {
      * and then fades it after scrolling.
      */
     fadableHeader() {
-      const $primaryNav = this.element.$primaryNav;
+      const {$primaryNav} = this.element;
 
       $primaryNav.removeClass('sticky');
 
-      $(document).on('scroll', function() {
+      $(document).on('scroll', () => {
         if ($(document).width() > 640) {
           if ($(document).scrollTop() > 420) {
             $primaryNav.addClass('sticky fixed');
@@ -57,8 +57,8 @@ $.extend(true, C1V0 || {}, {
      * @param  {jQuery.Event} e Click event.
      */
     makeActive(e) {
-      let self = C1V0.navigation;
-      const $primaryNav = self.element.$primaryNav;
+      const self = C1V0.navigation;
+      const {$primaryNav} = self.element;
 
       $primaryNav
         .find('li')
@@ -75,7 +75,7 @@ $.extend(true, C1V0 || {}, {
      * Smooth scroll for the on-page navigation.
      */
     scrollingNav() {
-      $('.top-bar .left a').click((e) => {
+      $('.top-bar .left a').click(e => {
         const goTo = $(this).attr('href');
 
         $('html, body').animate({

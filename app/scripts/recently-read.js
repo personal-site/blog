@@ -7,7 +7,7 @@
   const container = dom.select('#recent-books');
 
   try {
-    const books = await $.getJSON({ url: 'https://recently-read.chrisvogt.me' });
+    const books = await $.getJSON({url: 'https://recently-read.chrisvogt.me'});
 
     for (const book of books.slice(0, 9)) {
       const content = template.cloneNode(true);

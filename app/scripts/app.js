@@ -25,31 +25,39 @@ const C1V0 = {
      *
      * @link https://dev.twitter.com/overview/documentation
      */
-    window.twttr = (function(d, s, id) {
-        let js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js, fjs);
+    window.twttr = (function (d, s, id) {
+      const t = window.twttr || {};
 
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
-
+      if (d.getElementById(id)) {
         return t;
-    }(document, 'script', 'twitter-wjs'));
+      }
+
+      let js = d.getElementsByTagName(s)[0];
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://platform.twitter.com/widgets.js';
+
+      const fjs = d.getElementsByTagName(s)[0];
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function (f) {
+        t._e.push(f);
+      };
+
+      return t;
+    })(document, 'script', 'twitter-wjs');
 
     $(document).foundation({
-      "magellan-expedition": {
+      'magellan-expedition': {
+        /* eslint-disable camelcase */
         active_class: 'active',
         threshold: false,
         destination_threshold: 20,
         throttle_delay: 50,
         fixed_top: 0,
         offset_by_height: true
+        /* eslint-enable camelcase */
       }
     });
 
@@ -66,15 +74,15 @@ const C1V0 = {
       sortBy: 'most-recent',
       limit: 18,
       template: '<li><a href="{{link}}" class="hvr-shadow-radial" title="View on Instagram"><img src="{{image}}" alt="{{caption}}"></a></li>',
-      success: function() {
+      success: () => {
         $('#photos').removeClass('hidden');
-        $('#photos .js-load-more').click(function() {
+        $('#photos .js-load-more').click(() => {
           if (feed && typeof feed.next === 'function') {
-            feed.next()
-          };
+            feed.next();
+          }
         });
       },
-      error: function(data) {
+      error: data => {
         console.log(data);
         $('#primary-nav a[href="#photos"]').parent('li').addClass('hidden');
       }
