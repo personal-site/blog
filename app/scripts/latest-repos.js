@@ -3,12 +3,12 @@
     select: document.querySelector.bind(document)
   };
 
-  const container = dom.select('#latest-repos');
+  const container = dom.select('#latest-repos-items');
   const placeholderTemplate = dom.select('#latest-repo-placeholder').content;
   const template = dom.select('#latest-repos-template').content;
 
-  for (let i = 0; i <= 6; i += 1) {
-    const placeholder = placeholderTemplate.cloneNode(true);
+  const placeholder = placeholderTemplate.cloneNode(true);
+  for (let i = 0; i < 6; i += 1) {
     container.appendChild(document.importNode(placeholder, true));
   }
 

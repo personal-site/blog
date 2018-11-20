@@ -25,35 +25,37 @@
     position: absolute;
 }
 
-.placeholder-mask.header-top,
-.placeholder-mask.header-bottom,
-.placeholder-mask.subheader-bottom {
-    top: 30px;
-    left: 0;
-    right: 20%;
-    height: 18px;
-}
+.latest-repo-item {
+    .header-top,
+    .header-bottom,
+    .subheader-bottom {
+        top: 30px;
+        left: 0;
+        right: 20%;
+        height: 18px;
+    }
 
-.placeholder-mask.header-left,
-.placeholder-mask.subheader-left,
-.placeholder-mask.header-right,
-.placeholder-mask.subheader-right {
-    top: 0;
-    right: 0;
-    height: 48px;
-    width: 20%;
-}
+    .placeholder-mask.header-left,
+    .placeholder-mask.subheader-left,
+    .placeholder-mask.header-right,
+    .placeholder-mask.subheader-right {
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 20%;
+    }
 
-.placeholder-mask.header-bottom {
-    height: 16px;
-    left: 0;
-    right: 0;
-    top: 66px;
-}
+    .placeholder-mask.header-bottom {
+        height: 16px;
+        left: 0;
+        right: 0;
+        top: 66px;
+    }
 
-.placeholder-mask.second-paragraph-bottom {
-    height: 16px;
-    top: 82px + 16px;
-    left: 0;
-    right: 0;
+    .placeholder-mask.second-paragraph-bottom {
+        height: 16px;
+        top: 82px + 16px;
+        left: 0;
+        right: 0;
+    }
 }
