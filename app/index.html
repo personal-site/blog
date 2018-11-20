@@ -160,6 +160,22 @@
         <div id="latest-repos" class="small-12 medium-9 columns">
           <h3>Latest Repos</h3>
           <div class="row">
+            <template id="latest-repo-placeholder">
+              <div class="latest-repos-link" href="">
+                <div class="small-12 medium-6 columns">
+                  <div class="latest-repo-item panel hvr-trim">
+                    <div class="bg-placeholder">
+                      <div class="placeholder-mask header-top"></div>
+                      <div class="placeholder-mask header-right"></div>
+                      <div class="placeholder-mask header-bottom"></div>
+                      <div class="placeholder-mask subheader-left"></div>
+                      <div class="placeholder-mask subheader-right"></div>
+                      <div class="placeholder-mask second-paragraph-bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
             <template id="latest-repos-template">
               <a class="latest-repos-link" href="">
                 <div class="small-12 medium-6 columns">
@@ -367,7 +383,7 @@
     <script src="scripts/common.jquery.js"></script>
     <script src="scripts/navigation.jquery.js"></script>
     <script src="scripts/latest-commit.js"></script>
-    <script src="scripts/latest-repos.js"></script>
+    <script src="scripts/latest-repos.js  "></script>
     <script src="scripts/social-profiles.js"></script>
     <script src="scripts/analytics.jquery.js"></script>
     <script src="scripts/quotes.jquery.js"></script>
