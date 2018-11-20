@@ -3,12 +3,20 @@
     select: document.querySelector.bind(document)
   };
 
+  const container = dom.select('#latest-repos-items');
+  const placeholderTemplate = dom.select('#latest-repo-placeholder').content;
   const template = dom.select('#latest-repos-template').content;
-  const container = dom.select('#latest-repos');
+
+  const placeholder = placeholderTemplate.cloneNode(true);
+  for (let i = 0; i < 6; i += 1) {
+    container.appendChild(document.importNode(placeholder, true));
+  }
 
   try {
     const response = await $.getJSON({url: 'https://gh-latest-repos-fmyaneprcd.now.sh'});
     const repos = response.reverse().filter(repo => Boolean(repo.description));
+
+    container.innerHTML = '';
 
     for (const repo of repos) {
       const content = template.cloneNode(true);

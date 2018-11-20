@@ -1,0 +1,61 @@
+@keyframes placeholderAnimation{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.bg-placeholder {
+    animation-duration: 2.4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeholderAnimation;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 100% 240px;
+    height: 98px;
+    position: relative;
+}
+
+.placeholder-mask {
+    background: #f2f2f2;
+    position: absolute;
+}
+
+.latest-repo-item {
+    .header-top,
+    .header-bottom,
+    .subheader-bottom {
+        top: 30px;
+        left: 0;
+        right: 20%;
+        height: 18px;
+    }
+
+    .placeholder-mask.header-left,
+    .placeholder-mask.subheader-left,
+    .placeholder-mask.header-right,
+    .placeholder-mask.subheader-right {
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 20%;
+    }
+
+    .placeholder-mask.header-bottom {
+        height: 16px;
+        left: 0;
+        right: 0;
+        top: 66px;
+    }
+
+    .placeholder-mask.second-paragraph-bottom {
+        height: 16px;
+        top: 82px + 16px;
+        left: 0;
+        right: 0;
+    }
+}
