@@ -243,11 +243,18 @@
     <section id="quote">
       <div class="row">
         <div class="large-12 columns">
-          <ul class="orbit" data-orbit data-options="variable_height:true;bullets:false;slide_number:false;timer_speed:6000;">
-            <!-- AJAX: quotes -->
+          <ul id="quote-container" class="orbit" data-orbit data-options="variable_height:true;bullets:false;slide_number:false;timer_speed:6000;">
           </ul>
         </div>
       </div>
+      <template id="quote-template">
+          <li>
+            <div>
+              <blockquote class="quote-content">
+              </blockquote>
+            </div>
+          </li>
+        </template>
     </section>
 
     <!-- Component: Social -->
@@ -386,7 +393,7 @@
     <script src="scripts/latest-repos.js"></script>
     <script src="scripts/social-profiles.js"></script>
     <script src="scripts/analytics.jquery.js"></script>
-    <script src="scripts/quotes.jquery.js"></script>
+    <script src="scripts/quotes.js"></script>
     <script src="scripts/recently-read.js"></script>
     <!-- endbuild -->
   </body>
