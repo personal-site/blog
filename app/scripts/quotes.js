@@ -10,8 +10,12 @@
     const {quotes} = await $.getJSON({
       url: 'https://cdn.rawgit.com/chrisvogt/49b51791348a09cbddb0/raw/585d1712885dda5c13d63c17b5e093d543640e42/book-quotes.json'
     });
-
     const fragment = document.createDocumentFragment();
+
+    if (!quotes || quotes.length === 0) {
+      throw new Error('No quotes found.');
+    }
+
     for (const quote of quotes) {
       const {cite, text} = quote;
       const content = template.cloneNode(true);
