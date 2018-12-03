@@ -49,3 +49,18 @@ img.circle {
 .align-self-center {
     align-self: center;
 }
+
+/**
+ * Spacing helpers
+ */
+.mb-3 {
+    margin-bottom: $default-spacing;
+}
+
+.pt-3 {
+    padding-top: $default-spacing;
+}
+
+.bg-dark-grey {
+    background-color: $grey-800;
+}
