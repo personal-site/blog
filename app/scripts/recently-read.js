@@ -3,12 +3,13 @@
     select: document.querySelector.bind(document)
   };
 
+  const container = dom.select('#recently-read');
+  const bookList = dom.select('#recent-books');
+  const navButton = dom.select('#primary-nav li[data-magellan-arrival="recently-read"]');
   const template = dom.select('#recent-book-template').content;
-  const container = dom.select('#recent-books');
 
   try {
     const books = await $.getJSON({url: 'https://recently-read.chrisvogt.me'});
-
     for (const book of books.slice(0, 9)) {
       const content = template.cloneNode(true);
 
@@ -20,11 +21,10 @@
       image.src = book.smallThumbnail;
       image.alt = book.title;
 
-      container.appendChild(document.importNode(content, true));
+      bookList.appendChild(document.importNode(content, true));
+      [container, navButton].forEach(el => el.classList.remove('hidden'));
     }
   } catch (error) {
     console.warn('Error loading recently read section', error);
-    dom.select('#recent-books').classList.add('hidden');
-    dom.select('#primary-nav li[data-magellan-arrival="recently-read"]').classList.add('hidden');
   }
 })();
