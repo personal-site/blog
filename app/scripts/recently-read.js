@@ -26,6 +26,5 @@
     }
   } catch (error) {
     console.warn('Error loading recently read section', error);
-    navButton.classList.add('hidden');
   }
 })();
