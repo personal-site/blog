@@ -14,7 +14,7 @@
    * On large screens: hides the header initially
    * and then fades it after scrolling.
    */
-  const fadableHeader = () =>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {
+  const fadableHeader = () => {
     const {
       $primaryNav
     } = element;
