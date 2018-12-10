@@ -58,23 +58,6 @@ em.accent {
     }
 }
 
-.remodal-overlay {
-    z-index: 144;
-}
-
-.remodal-wrapper {
-    z-index: 256;
-}
-
-.remodal-close {
-    color: $grey-200;
-
-    &:hover {
-        background-color: transparent;
-        color: white;
-    }
-}
-
 #project-list li,
 #social a,
 .button {

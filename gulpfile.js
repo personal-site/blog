@@ -2,10 +2,9 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync').create();
 const del = require('del');
-const reload = browserSync.reload;
+const {reload} = browserSync;
 const ghPages = require('gulp-gh-pages');
 const runSequence = require('run-sequence');
-const documentation = require('gulp-documentation');
 const $ = gulpLoadPlugins();
 
 let dev = true;
@@ -38,7 +37,6 @@ gulp.task('scripts', () => {
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    // .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
@@ -52,10 +50,9 @@ gulp.task('images', () => {
 
 gulp.task('fonts', () => {
   return gulp.src([
-      'bower_components/font-awesome/fonts/**/*',
-      'bower_components/octicons/octicons/**/*',
-      'app/fonts/**/*'
-    ])
+    'bower_components/octicons/octicons/**/*',
+    'app/fonts/**/*'
+  ])
     .pipe($.if(dev, gulp.dest('.tmp/fonts')))
     .pipe($.if(dev, gulp.dest('dist/fonts')));
 });
@@ -125,20 +122,11 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
 });
 
-gulp.task('documentation', function () {
-  gulp.src('app/scripts/HttpSocket.js')
-    .pipe(documentation({
-      github: true,
-      format: 'md'
-    }))
-    .pipe(gulp.dest('docs'));
-});
-
 gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', () => {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });

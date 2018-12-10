@@ -3,31 +3,17 @@
   "description": "Personal website and project portfolio",
   "dependencies": {
     "SVG-Loaders": "svg-loaders#^1.0.2",
-    "font-awesome": "^4.6.3",
     "foundation": "https://github.com/chrisvogt/bower-foundation.git#master",
     "modernizr": "~2.8.3",
     "octicons": "~3.1.0",
-    "remodal": "~1.0.3",
     "scrollup": "~2.4.1",
     "moment": "~2.10.6",
     "jquery": "~2.2.4",
     "instafeed.js": "^1.4.1"
   },
-  "overrides": {
-    "fontawesome": {
-      "main": [
-        "css/font-awesome.css",
-        "fonts/fontawesome-webfont.eot",
-        "fonts/fontawesome-webfont.woff",
-        "fonts/fontawesome-webfont.ttf",
-        "fonts/fontawesome-webfont.svg"
-      ]
-    }
-  },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "instafeed.js": "^1.4.1"
+    "mocha": "^3.2.0"
   },
   "private": true,
   "resolutions": {
