@@ -21,7 +21,7 @@
     "lint": "xo app/scripts",
     "postinstall": "bower install",
     "start": "gulp serve",
-    "test": "npm run lint"
+    "test": "npm run lint && bundlesize"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -30,6 +30,7 @@
     "babel-register": "^6.26.0",
     "bower": "^1.8.2",
     "browser-sync": "^2.18.13",
+    "bundlesize": "^0.17.0",
     "del": "^3.0.0",
     "documentation": "^5.3.2",
     "gulp": "https://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz",
@@ -72,5 +73,19 @@
       "window"
     ],
     "space": true
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/**/*.js",
+      "maxSize": "150 kB"
+    },
+    {
+      "path": "./dist/**/*.css",
+      "maxSize": "35 kB"
+    },
+    {
+      "path": "./dist/**/*.html",
+      "maxSize": "15 kB"
+    }
+  ]
 }

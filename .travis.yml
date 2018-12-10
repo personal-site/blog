@@ -1,8 +1,11 @@
 sudo: false
 language: node_js
-before_script:
-  - npm install -g bower gulp
 node_js:
   - v8
   - v7
   - v6
+install:
+  - npm install -g bower gulp
+  - bower install
+  - npm install
+  - npm run build
