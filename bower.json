@@ -7,9 +7,9 @@
     "modernizr": "~2.8.3",
     "octicons": "~3.1.0",
     "scrollup": "~2.4.1",
-    "moment": "~2.10.6",
     "jquery": "~2.2.4",
-    "instafeed.js": "^1.4.1"
+    "instafeed.js": "^1.4.1",
+    "jquery-timeago": "^1.6.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
