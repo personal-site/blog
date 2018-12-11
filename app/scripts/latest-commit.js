@@ -1,4 +1,4 @@
-(async () => {
+(async jQuery => {
   const dom = {
     select: document.querySelector.bind(document)
   };
@@ -22,9 +22,10 @@
   commitTitleElement.textContent = latestCommit.message;
 
   const commitDateElement = dom.select('#latest-commit .commit-date');
-  commitDateElement.textContent = moment(createdAt).startOf('day').fromNow();
+  commitDateElement.setAttribute('datetime', createdAt);
+  commitDateElement.textContent = jQuery.timeago(createdAt);
 
   const repoTitleElement = dom.select('#latest-commit .repo-title');
   repoTitleElement.href = repoUrl;
   repoTitleElement.textContent = repo.name.replace(new RegExp(`^${username}/`), '');
-})();
+})($);

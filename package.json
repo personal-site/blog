@@ -21,6 +21,7 @@
     "lint": "xo app/scripts",
     "postinstall": "bower install",
     "start": "gulp serve",
+    "pretest": "npm run build",
     "test": "npm run lint && bundlesize"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "browser-sync": "^2.18.13",
     "bundlesize": "^0.17.0",
     "del": "^3.0.0",
-    "documentation": "^5.3.2",
     "gulp": "https://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
