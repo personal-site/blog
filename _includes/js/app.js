@@ -1,3 +1,5 @@
+const latestCommit = require('./latest-commit');
+
 (() => {
   $(document).foundation();
 

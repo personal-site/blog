@@ -1,0 +1,18 @@
+# Site settings
+title: 'website'
+email: 'mail@chrisvogt.me'
+description:  ''
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+sass:
+  sass_dir: ./assets/styles
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor.sh
+  - package.json
+  - node_modules
+  - README.md
