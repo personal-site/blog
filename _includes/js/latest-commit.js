@@ -3,8 +3,6 @@
     select: document.querySelector.bind(document)
   };
 
-  console.log('I am in latest commit!');
-
   const username = 'chrisvogt';
   const response = await $.getJSON({url: `https://api.github.com/users/${username}/events/public`});
 
@@ -31,5 +29,3 @@
   repoTitleElement.href = repoUrl;
   repoTitleElement.textContent = repo.name.replace(new RegExp(`^${username}/`), '');
 })($);
-
-console.log('latest-commit module loaded');
