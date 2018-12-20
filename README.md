@@ -8,24 +8,33 @@
   <img src="app/images/h-logo.png" alt="www.chrisvogt.me" width="680">
 </p>
 
-My personal website and project portfolio — originally based on a simple [Moqups design](https://app.moqups.com/chris@artinreality.com/81jSoAGytP/view/page/add529438) — though it has gone through _many_ iterations since.
+My personal website and blog, current a Jekyll + ES7 website deployed to GitHub Pages.
 
-Houly coding data is fetched from [stats.chrisvogt.me](https://github.com/chrisvogt/stats). Project data is stored in a [Firebase](https://firebase.google.com/) NoSQL database.
+This is an open source project. I plan to make it fully customizable by [`v1.0.0`](https://github.com/chrisvogt/www/milestone/1) so others can spin up their own sites using this template.
 
-_View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
+_View live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
 ### How to use
 
-* Run `npm install && bower install` to install [dev dependencies](https://david-dm.org/chrisvogt/www/?type=dev).
-* Develop in a feature branch and submit pull requests against `master`.
-* Use `gulp serve` to preview and watch for changes, with [BrowserSync](https://www.browsersync.io/) enabled.
-* Use `gulp build` to output production-ready files to the _/dist_ directory.
-* Use `gulp documentation` to rebuild the documentation.
-* Use `gulp deploy` to push the contents of _/dist_ into the `gh-pages` branch.
+###### Install dependencies
+
+* `gem install bundler && npm install`
+
+###### Develop
+
+* `npm run start`
+
+###### Build
+
+* `npm run build`
+
+###### Deploy
+
+Builds output to _/_build_. This currently must be manually deployed.
 
 ### Screenshot
 
-[View Screenshot](screenshot.jpg).
+<img src="screenshot.jpg" alt="Website Screenshot" width="100%" />
 
 ### License
 
@@ -35,9 +44,9 @@ _View it live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
 <p align="left">
   <img src="https://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
-  <img src="https://cdn.rawgit.com/gulpjs/artwork/master/gulp-2x.png" alt="Gulp" height="48">
   <img src="https://avatars0.githubusercontent.com/u/1335026?v=3&s=200" alt="Firebase" height="48">
 	<img src="https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg" alt="HTML5 &amp; CSS3" height="48">
+  https://cdn.jsdelivr.net/gh/babel/logo/babel.png
 	<img src="https://cdn.rawgit.com/mathamoz/ionic-builder/898ac76dc9e9edeb02d1825358eca95ec742b985/public/images/why-the-yeti.svg" alt="Zurb Foundation" height="48">
 </p>
