@@ -1,3 +1,10 @@
+import latestCommit from './latest-commit';
+import latestRepos from './latest-repos';
+import navigation from './navigation';
+import quotes from './quotes';
+import recentlyRead from './recently-read';
+import socialProfiles from './social-profiles';
+
 (() => {
   $(document).foundation();
 

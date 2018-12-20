@@ -1,0 +1,19 @@
+# Site settings
+title: 'Chris Vogt — Software Engineer in San Francisco'
+email: 'mail@chrisvogt.me'
+description:  ''
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+destination: './_build'
+sass:
+  sass_dir: ./assets/styles
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - vendor.sh
