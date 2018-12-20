@@ -21,7 +21,7 @@
     "js:min": "uglifyjs ./assets/js/app.js -o ./assets/js/app.js",
     "js": "watchify ./_includes/js/app.js -o ./assets/js/app.js -d -t [ babelify  --presets [ es2015 ] ]",
     "build": "npm run js:vendors && npm run js:babel && npm run js:min && jekyll build --config _config.prod.yml",
-    "start": "jekyll server & npm run js",
+    "start": " bundle exec jekyll serve --watch --incremental & npm run js",
     "lint": "xo app/scripts",
     "pretest": "npm run build",
     "test": "npm run lint && bundlesize"
