@@ -34,7 +34,7 @@ Builds output to _/_build_. This currently must be manually deployed.
 
 ### Screenshot
 
-<img src="screenshot.jpg" alt="Website Screenshot" width="100%" />
+<img src="screenshot.png" alt="Website Screenshot" width="100%" />
 
 ### License
 
