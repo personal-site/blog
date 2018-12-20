@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import latestCommit from './latest-commit';
 import latestRepos from './latest-repos';
 import navigation from './navigation';

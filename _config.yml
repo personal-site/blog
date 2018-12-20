@@ -12,7 +12,7 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - vendor.sh
-  - package.json
-  - node_modules
   - README.md
+  - node_modules
+  - package.json
+  - vendor.sh

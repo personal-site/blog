@@ -14,6 +14,6 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - vendor.sh
-  - package.json
   - node_modules
+  - package.json
+  - vendor.sh
