@@ -1,0 +1,23 @@
+<section id="projects" data-magellan-destination="projects">
+  <div class="row">
+
+    <div class="small-12 medium-3 columns">
+      <h3>Latest Commit</h3>
+
+      <div id="latest-commit">
+        <a class="commit-title nice-link" href=""></a>
+        <time class="timeago commit-date" datetime=""></time> in <a class="repo-title" href=""></a>
+      </div>
+
+    </div>
+
+    <div id="latest-repos" class="small-12 medium-9 columns">
+      <h3>Latest Repos</h3>
+
+      <div id="latest-repos-items" class="row">
+        {% include template/latest-repos/placeholder.html %}
+        {% include template/latest-repos/link.html %}
+      </div>
+
+    </div>
+</section>
