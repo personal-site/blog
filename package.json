@@ -22,9 +22,9 @@
     "js": "watchify ./_includes/js/app.js -o ./assets/js/app.js -d -t [ babelify ]",
     "build": "npm run js:vendors && npm run js:babel && npm run js:min && jekyll build --config _config.prod.yml",
     "start": " bundle exec jekyll serve --watch --incremental & npm run js",
-    "lint": "xo app/scripts",
+    "lint": "xo _includes/js",
     "pretest": "npm run build",
-    "test": "npm run lint && bundlesize"
+    "test": "bundlesize"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -5,6 +5,11 @@ banner_image_url: https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/
 baseurl: '' # the subpath of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
 
+destination: './_build'
+sass:
+  sass_dir: ./_stylesheets
+  style: compressed
+
 analytics_id: UA-33558417-1
 
 social:
@@ -25,6 +30,7 @@ sass:
   sass_dir: ./assets/styles
 
 exclude:
+  - design
   - Gemfile
   - Gemfile.lock
   - LICENSE

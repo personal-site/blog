@@ -6,6 +6,7 @@
 .vscode
 _build
 _site
+assets/js
 bower_components
 node_modules
 npm-debug.log

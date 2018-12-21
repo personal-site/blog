@@ -22,9 +22,10 @@ theme_options:
 
 # Build settings
 sass:
-  sass_dir: ./assets/styles
+  sass_dir: ./_stylesheets
 
 exclude:
+  - design
   - Gemfile
   - Gemfile.lock
   - LICENSE
