@@ -1,0 +1,27 @@
+<div id="recently-read" class="hidden" data-magellan-destination="recently-read">
+  <div class="row">
+    <div class="panel large-12 columns">
+
+      <div class="panel panel-controls small-only-text-center">
+        <p>
+          Recently read books. <span class="accent">Click on a thumbnail to view on Google Books.</span>
+
+          {% if site.social.goodreads_link %}
+          <a
+            href="{{ site.social.goodreads_link }}"
+            class="button secondary tiny"
+            title="Chris Vogt on Goodreads"
+          >
+            <i class="fab fa-goodreads"></i> Visit Goodreads
+          </a>
+          {% endif %}
+        </p>
+      </div>
+
+      <ul id="recent-books" class="small-block-grid-3 medium-block-grid-6">
+        {% include template/recently-read/book.html %}
+      </ul>
+
+    </div>
+  </div>
+</div>
