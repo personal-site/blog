@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Health Checks and Graceful Shutdown for Node.js Applications"
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ligula nisi. Vestibulum et ullamcorper ex. Cras gravida elementum mi, quis bibendum ante eleifend eget. Integer auctor, eros eu imperdiet placerat, dui risus faucibus ipsum, non interdum lorem odio vel arcu. Aenean ultrices elit quis sollicitudin ullamcorper. Nam tempor eu velit sed ultrices. Nulla enim turpis, posuere nec gravida sit amet, iaculis id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent est mi, fermentum non ligula vel, finibus tincidunt arcu. Nam non quam feugiat, laoreet metus vitae, imperdiet lorem. Mauris fringilla quam lacus, a faucibus nisi cursus sit amet. Aliquam ut nunc at metus molestie euismod non sed justo. Mauris commodo lorem eu tempor vestibulum.
+
+Proin lacinia id sapien in lobortis. Quisque odio ligula, finibus eget tellus et, mollis suscipit urna. Sed condimentum, enim sed iaculis feugiat, mauris ligula feugiat metus, ac efficitur mi lacus nec ex. Donec lobortis, nisl eget convallis vulputate, lacus odio efficitur velit, eget consectetur felis urna nec augue. Aliquam rutrum, nibh id pharetra imperdiet, dolor erat accumsan augue, consectetur pellentesque purus erat a erat. Suspendisse ultrices, turpis non dignissim convallis, dolor est tincidunt arcu, in pulvinar lorem tortor ut lectus. Morbi eu arcu leo. Quisque congue eros vitae magna volutpat tincidunt. Curabitur sit amet pretium est, ut aliquet turpis. Donec et semper mi.
+
