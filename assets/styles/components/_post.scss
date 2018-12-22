@@ -1,0 +1,17 @@
+.post-container {
+    --x-height-multiplier: 0.375;
+    --baseline-multiplier: 0.17;
+    max-width: 740px;
+}
+
+.page-post {
+    h1 {
+        font-family: $text-default-font-stack;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .post-date {
+        color: $text-raven;
+    }
+}

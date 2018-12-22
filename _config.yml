@@ -2,6 +2,7 @@ title: Chris Vogt — Software Engineer in San Francisco
 description:  Software Engineer in San Francisco, sharing open source projects written in JavaScript and PHP.
 banner_image_url: https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/og-image_a1i3rp.png
 baseurl: ''
+locale: en-US
 url: ''
 
 analytics_id: UA-33558417-1
@@ -23,6 +24,7 @@ sass:
   sass_dir: ./assets/styles
 
 exclude:
+  - _build
   - design
   - Gemfile
   - Gemfile.lock

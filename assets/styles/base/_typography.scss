@@ -13,6 +13,10 @@ body {
     font-size: .875em;
 }
 
+.text-inverse {
+    color: white;
+}
+
 @media #{$medium-up} {
     .text-medium-left {
         text-align: left!important;
@@ -49,9 +53,10 @@ footer ul.inline-list {
 h1 {
     font-family: $text-headline-font-stack;
     font-size: 2.124em;
-    color: white;
-    line-height: 28px;
     margin-top: 16px;
+}
+.page-home h1 {
+    line-height: 28px;
 }
 
 @media #{$medium-up} {
@@ -99,4 +104,14 @@ blockquote {
 footer,
 ul.inline-list a {
     color: #afafaf;
+}
+
+.text-drop-cap {
+    color: $text-jet;
+    float: left;
+    font-family: $text-default-font-stack;
+    font-size: 75px;
+    line-height: 75px;
+    padding-right: 8px;
+    padding-left: 3px;
 }

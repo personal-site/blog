@@ -3,11 +3,21 @@ slug: post
 ---
 
 {% include section/header.html %}
+{% capture headline %}<h1>{{ page.title }}</h1>{% endcapture %}
 
-<h1>
-  {{ page.title }}
-</h1>
+  <div class="row">
+    <div class="large-12" style="padding: 1em 2em;">
 
-{{ content }}
+      {{ headline }}
 
-{% include section/header.html %}
+      <div class="post-date text-center m-b-1">
+        <i class="far fa-calendar-alt"></i> {{ page.date | date_to_long_string }}
+      </div>
+
+      {{ content }}
+
+    </div>
+  </div>
+</div>
+
+{% include section/footer.html %}

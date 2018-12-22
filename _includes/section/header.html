@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" >
+<html class="no-js" lang="{{ site.locale | default: 'en-US' }}" >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     <link rel="author" href="humans.txt">
 
     <meta name="theme-color" content="#4527a0">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/assets/images/favicon-57.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon-120.png">
@@ -21,14 +21,14 @@
 
     <meta name="og:title" content="{{ site.title }}">
     <meta name="og:description" content="{{ site.description }}">
-    <meta name="og:image" content="{{ site.banner_image_url }}"/>
+    <meta name="og:image" content="{{ site.banner_image_url }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@c1v0">
     <meta name="twitter:creator" content="@c1v0">
     <meta name="twitter:title" content="{{ site.title }}">
     <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/og-image_a1i3rp.png">
+    <meta name="twitter:image" content="{{ site.banner_image_url }}">
 
     <script type="application/ld+json">
     {
@@ -62,7 +62,7 @@
     <link rel="dns-prefetch" href="//recently-read.chrisvogt.me">
     <link rel="dns-prefetch" href="//scontent.cdninstagram.com">
   </head>
-  <body data-magellan-destination="home">
+  <body class="page-{{ layout.slug }}" data-magellan-destination="home">
     <!-- Component: Navigation -->
     <div id="primary-nav" class="contain-to-grid sticky">
       <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
