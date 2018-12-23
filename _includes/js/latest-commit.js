@@ -1,4 +1,4 @@
-(async jQuery => {
+export default async jQuery => {
   const dom = {
     select: document.querySelector.bind(document)
   };
@@ -28,4 +28,4 @@
   const repoTitleElement = dom.select('#latest-commit .repo-title');
   repoTitleElement.href = repoUrl;
   repoTitleElement.textContent = repo.name.replace(new RegExp(`^${username}/`), '');
-})($);
+};

@@ -1,4 +1,4 @@
-(async () => {
+export default async () => {
   const dom = {
     select: document.querySelector.bind(document)
   };
@@ -35,4 +35,4 @@
     dom.select('#projects').classList.add('hidden');
     dom.select('#primary-nav li[data-magellan-arrival="projects"]').classList.add('hidden');
   }
-})();
+};

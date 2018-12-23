@@ -1,4 +1,4 @@
-(async () => {
+export default async () => {
   const dom = {
     select: document.querySelector.bind(document)
   };
@@ -34,4 +34,4 @@
   } catch (error) {
     console.warn('Error loading quotes section', error);
   }
-})();
+};

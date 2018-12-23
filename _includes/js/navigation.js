@@ -1,4 +1,4 @@
-(() => {
+export default () => {
   /**
    * Cache of commonly-accessed navigation objects.
    * @type {Object}
@@ -35,4 +35,4 @@
 
   $.scrollUp();
   fadableHeader();
-})();
+};
