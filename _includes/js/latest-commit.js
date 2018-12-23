@@ -1,10 +1,15 @@
+const getRelativeTimeSinceString = date => {
+  const {timeago} = $;
+
+  return timeago ? timeago(date) : new Date(date).toISOString();
+};
+
 export default async jQuery => {
-  const dom = {
-    select: document.querySelector.bind(document)
-  };
+  const {getJSON} = jQuery;
+  const dom = {select: document.querySelector.bind(document)};
 
   const username = 'chrisvogt';
-  const response = await $.getJSON({url: `https://api.github.com/users/${username}/events/public`});
+  const response = await getJSON({url: `https://api.github.com/users/${username}/events/public`});
 
   const latestPushEvent = response.find(event => event.type === 'PushEvent');
   const {repo, payload, created_at: createdAt} = latestPushEvent;
@@ -23,7 +28,7 @@ export default async jQuery => {
 
   const commitDateElement = dom.select('#latest-commit .commit-date');
   commitDateElement.setAttribute('datetime', createdAt);
-  commitDateElement.textContent = jQuery.timeago(createdAt);
+  commitDateElement.textContent = getRelativeTimeSinceString(createdAt);
 
   const repoTitleElement = dom.select('#latest-commit .repo-title');
   repoTitleElement.href = repoUrl;

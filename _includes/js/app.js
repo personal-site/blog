@@ -1,6 +1,6 @@
 import loadLayoutModules from './load-layout-modules';
 
-(() => {
+const __WWW_SITE__ = () => {
   $(document).foundation();
 
   loadLayoutModules();
@@ -17,4 +17,6 @@ import loadLayoutModules from './load-layout-modules';
       /* eslint-enable camelcase */
     }
   });
-})();
+};
+
+$(document).ready(__WWW_SITE__);
