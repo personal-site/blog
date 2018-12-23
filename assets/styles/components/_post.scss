@@ -5,6 +5,8 @@
 }
 
 .page-post {
+    background-color: white;
+
     h1 {
         font-family: $text-default-font-stack;
         font-weight: 600;
@@ -17,6 +19,6 @@
 }
 
 .author-container {
-    background-color: white;
+    background-color: $blue-grey-50;
     padding: 32px 0;
 }

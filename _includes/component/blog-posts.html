@@ -1,0 +1,39 @@
+<section id="blog-posts" data-magellan-destination="blog-posts">
+    <div class="row">
+      <div class="panel large-12 columns">
+
+        <div class="panel panel-controls small-only-text-center">
+          <p>
+            Latest blog posts. <span class="accent">New blog posts published weekly.</span>
+          </p>
+        </div>
+
+        <div id="latest-posts">
+
+          {% for post in site.posts %}
+          <a href="{{ post.url }}" class="hvr-float-shadow" title="{{ post.title }}">
+            <div class="panel panel-post small-only-text-center">
+              <h5>{{ post.title }}</h5>
+
+              <div class="post-date m-b-1 text-small">
+                <i class="far fa-calendar-alt"></i> {{ post.date | date: '%B %d, %Y' }}
+              </div>
+
+              <p>
+                Curabitur vitae nunc ex. Ut iaculis urna augue, in interdum erat semper et.
+                Suspendisse sed facilisis tortor. Nunc sodales vitae felis ac aliquam.
+
+                <span class="text-small text-muted font-stack-default">
+                  Read More &raquo;
+                </span>
+              </p>
+            </div>
+          </a>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>

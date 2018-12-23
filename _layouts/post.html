@@ -11,7 +11,7 @@ slug: post
       {{ headline }}
 
       <div class="post-date text-center m-b-1">
-        <i class="far fa-calendar-alt"></i> {{ page.date | date_to_long_string }}
+        <i class="far fa-calendar-alt"></i> {{ page.date | date: '%B %d, %Y' }}
       </div>
 
       {{ content }}
@@ -24,7 +24,7 @@ slug: post
 
       <div class="small-12 medium-3 columns text-center">
         <img
-          alt="Chris Vogt Engineer San Francisco"
+          alt="Avatar – Chris Vogt"
           class="circle"
           src="/assets/images/avatar-256px.jpg"
           height="128"
