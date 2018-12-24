@@ -27,6 +27,7 @@ sass:
 
 exclude:
   - design
+  - empty
   - Gemfile
   - Gemfile.lock
   - LICENSE

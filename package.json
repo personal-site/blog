@@ -44,12 +44,12 @@
     "globals": [
       "$",
       "C1V0",
-      "document",
-      "HttpSocket",
-      "feed",
       "Instafeed",
-      "moment",
+      "document",
+      "feed",
       "ga",
+      "jQuery",
+      "moment",
       "window"
     ],
     "space": true
