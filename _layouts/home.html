@@ -11,8 +11,9 @@ slug: home
 {% include component/projects.html %}
 
 <div class="pt-3 bg-dark-grey">
-
+  {% if site.posts.size > 0 %}
   {% include component/blog-posts.html %}
+  {% endif %}
 
   {% include component/instagram.html %}
 
