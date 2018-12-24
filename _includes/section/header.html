@@ -85,11 +85,13 @@
               </a>
             </li>
             {% endif %}
+            {% if site.posts.size > 0 %}
             <li class="link-blog {% if page.layout == 'post' %}active{% endif %}" data-magellan-arrival="blog-posts">
               <a href="/#blog-posts" title="Blog Posts">
                 Blog
               </a>
             </li>
+            {% endif %}
             {% if page.layout == 'home' %}
             <li data-magellan-arrival="photos">
               <a href="/#photos" title="Photos">
