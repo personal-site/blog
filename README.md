@@ -1,12 +1,12 @@
+<p align="center">
+  <img src="assets/images/h-logo.png" alt="www.chrisvogt.me" width="350" height="350">
+</p>
+
 [![Build status](https://img.shields.io/travis/chrisvogt/www.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www)
 [![Code Climate](https://codeclimate.com/github/chrisvogt/www/badges/gpa.svg)](https://codeclimate.com/github/chrisvogt/www)
 [![GitHub release](https://img.shields.io/github/release/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/releases)
 [![David.io Dev Dependencies](https://david-dm.org/chrisvogt/www/dev-status.svg?style=flat-square)](https://david-dm.org/chrisvogt/www?type=dev)
 [![GitHub license](https://img.shields.io/github/license/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/blob/master/LICENSE)
-
-<p align="center">
-  <img src="assets/images/h-logo.png" alt="www.chrisvogt.me" width="680">
-</p>
 
 My personal website and blog, current a Jekyll + ES7 website deployed to GitHub Pages.
 
