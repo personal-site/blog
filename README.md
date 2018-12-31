@@ -1,6 +1,8 @@
 <p align="center">
   <img src="assets/images/h-logo.png" alt="www.chrisvogt.me" width="200" height="200">
+</p>
 
+<p align="center">
   [![Build status](https://img.shields.io/travis/chrisvogt/www.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www)
   [![Code Climate](https://codeclimate.com/github/chrisvogt/www/badges/gpa.svg)](https://codeclimate.com/github/chrisvogt/www)
   [![GitHub release](https://img.shields.io/github/release/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/releases)
