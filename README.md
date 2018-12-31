@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/blob/master/LICENSE)
 
 <p align="center">
-  <img src="app/images/h-logo.png" alt="www.chrisvogt.me" width="680">
+  <img src="assets/images/h-logo.png" alt="www.chrisvogt.me" width="680">
 </p>
 
 My personal website and blog, current a Jekyll + ES7 website deployed to GitHub Pages.

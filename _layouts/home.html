@@ -1,3 +1,7 @@
+---
+slug: home
+---
+
 {% include section/header.html %}
 
 {% include component/masthead.html %}
@@ -6,14 +10,28 @@
 
 {% include component/projects.html %}
 
-    <div class="pt-3 bg-dark-grey">
-      {% include component/instagram.html %}
+<div class="pt-3 bg-dark-grey">
+  {% if site.posts.size > 0 %}
+  {% include component/blog-posts.html %}
+  {% endif %}
 
-      {% include component/recently-read.html %}
-    </div>
+  {% include component/instagram.html %}
 
-    {% include component/quotes.html %}
+  {% include component/recently-read.html %}
 
-    {% include component/social.html %}
+</div>
+
+{% include component/quotes.html %}
+
+<script>
+  window.__WWW_LAYOUT_MODULES__ = [
+    'instagram',
+    'latest-commit',
+    'latest-repository',
+    'quotes',
+    'recently-read',
+    'twitter'
+  ];
+</script>
 
 {% include section/footer.html %}

@@ -1,4 +1,4 @@
-(async () => {
+export default async () => {
   const dom = {
     select: document.querySelector.bind(document)
   };
@@ -38,4 +38,4 @@
     console.warn('Error loading social profiles section', error);
     dom.select('#social').classList.add('hidden');
   }
-})();
+};

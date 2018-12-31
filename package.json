@@ -1,7 +1,7 @@
 {
   "name": "www.chrisvogt.me",
   "description": "Personal website and project portfolio.",
-  "version": "0.8.6",
+  "version": "0.9.0-beta",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
@@ -16,14 +16,15 @@
     "node": ">=6"
   },
   "scripts": {
-    "js:vendors": "uglifyjs $(cat ./vendor-packages.txt) -o ./assets/js/vendor.min.js",
-    "js:babel": "browserify ./_includes/js/app.js -o ./assets/js/app.js -t [ babelify ]",
-    "js:min": "uglifyjs ./assets/js/app.js -o ./assets/js/app.js",
     "js": "watchify ./_includes/js/app.js -o ./assets/js/app.js -d -t [ babelify ]",
+    "js:babel": "browserify ./_includes/js/app.js -o ./assets/js/app.js -t [ babelify ]",
+    "js:clean": "rm ./assets/js/*.js",
+    "js:min": "uglifyjs ./assets/js/app.js -o ./assets/js/app.js",
+    "js:vendors": "uglifyjs $(cat ./vendor-packages.txt) -o ./assets/js/vendor.min.js",
     "build": "npm run js:vendors && npm run js:babel && npm run js:min && jekyll build --config _config.prod.yml",
-    "start": " bundle exec jekyll serve --watch --incremental & npm run js",
     "lint": "xo _includes/js",
     "pretest": "npm run build",
+    "start": "bundle exec jekyll serve --watch --incremental --drafts & npm run js",
     "test": "bundlesize"
   },
   "devDependencies": {
@@ -43,12 +44,12 @@
     "globals": [
       "$",
       "C1V0",
-      "document",
-      "HttpSocket",
-      "feed",
       "Instafeed",
-      "moment",
+      "document",
+      "feed",
       "ga",
+      "jQuery",
+      "moment",
       "window"
     ],
     "space": true
