@@ -18,10 +18,8 @@ const registry = {
   twitter
 };
 
-// NOTE: the names of modules common to each plan type
 const commonModules = [
-  'social-profiles',
-  'navigation'
+  'social-profiles'
 ];
 
 export default () => {

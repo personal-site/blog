@@ -3,6 +3,7 @@ description:  Software Engineer in San Francisco, sharing open source projects w
 banner_image_url: https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/og-image_a1i3rp.png
 baseurl: ''
 locale: en-US
+permalink: /blog/:year/:title
 url: ''
 
 analytics_id: UA-33558417-1
@@ -15,10 +16,13 @@ social:
 strings:
   headline: Chris Vogt
   subhead: Software Engineer <span>in San Francisco</span>
-  title: Chris Vogt — Software Engineer in San Francisco
+  title: Chris Vogt, Software Engineer in San Francisco
 
 theme_options:
   show_credits: true
+
+plugins:
+  - jekyll-feed
 
 sass:
   sass_dir: ./assets/styles

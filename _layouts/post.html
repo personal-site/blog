@@ -11,10 +11,13 @@ slug: post
       {{ headline }}
 
       <div class="post-date text-center m-b-1">
-        <i class="far fa-calendar-alt"></i> {{ page.date | date: '%B %d, %Y' }}
+        <i class="far fa-calendar-alt"></i>&nbsp;
+        {{ page.date | date: '%B %d, %Y' }}
       </div>
 
-      {{ content }}
+      <div class="post-content">
+        {{ content }}
+      </div>
 
     </div>
   </div>
@@ -33,13 +36,10 @@ slug: post
       </div>
 
       <div
-        class="small-12 medium-9 columns d-flex align-items-start text-center text-medium-left"
-        style="min-height: 128px;"
+        class="small-12 medium-9 columns d-flex align-items-center text-center text-medium-left"
+        style="min-height: 128px;line-height: 1.9em;"
       >
-        Proin lacinia id sapien in lobortis. Quisque odio ligula, finibus eget tellus et, mollis
-        suscipit urna. Sed condimentum, enim sed iaculis feugiat, mauris ligula feugiat metus, ac
-        efficitur mi lacus nec ex. Donec lobortis, nisl eget convallis vulputate, lacus odio efficitur
-        velit, eget consectetur felis urna nec augue.
+        Chris Vogt is a hobby photographer and developer who lives and works in San Francisco.
       </div>
 
     </div>
