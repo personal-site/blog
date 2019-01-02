@@ -1,64 +1,83 @@
-<!doctype html>
+{% if page.excerpt %}
+  {%- assign description = page.excerpt -%}
+{% else %}
+  {%- assign description = site.description -%}
+{% endif %}<!doctype html>
 <html class="no-js" lang="{{ site.locale | default: 'en-US' }}" >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!--
     www.chrisvogt.me » @c1v0
     https://github.com/chrisvogt/www
- -->
-    <title>{{ site.title }}</title>
+-->
 
-    <meta name="description" content="{{ site.description }}">
-    <link rel="author" href="humans.txt">
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description }}">
 
     <meta name="theme-color" content="#4527a0">
+    {% feed_meta %}
+    <link rel="author" href="/humans.txt">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/assets/images/favicon-57.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon-120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon-152.png">
+    <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ site.url }}{{ page.url}}{% endif %}">
 
-    <meta name="og:title" content="{{ site.title }}">
-    <meta name="og:description" content="{{ site.description }}">
-    <meta name="og:image" content="{{ site.banner_image_url }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="www.chrisvogt.me">
+    <meta property="og:url" content="{{ site.url }}{{ page.url}}">
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{% if page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.banner_image_url }}{% endif %}">
+    {% if page.layout == 'post' %}
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{{ page.date }}">
+    {% endif %}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@c1v0">
     <meta name="twitter:creator" content="@c1v0">
-    <meta name="twitter:title" content="{{ site.title }}">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="{{ site.banner_image_url }}">
-
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "givenName": "Chris",
-      "familyName": "Vogt",
-      "name": "Chris Vogt",
-      "alternateName": "c1v0",
-      "jobTitle": "Software Engineer",
-      "image": "https://gravatar.com/avatar/3e0cd2da42672a768e98a2b0c0617b72?s=500",
-      "url": "https://www.chrisvogt.me",
-      "sameAs" : [
-        "https://twitter.com/c1v0",
-        "https://www.instagram.com/c1v0",
-        "https://www.linkedin.com/in/cjvogt",
-        "https://plus.google.com/+chrisvogt94952",
-        "https://github.com/chrisvogt",
-        "https://www.behance.net/chrisvogt",
-        "https://stackoverflow.com/users/1391826/chris-vogt",
-        "https://dribbble.com/chrisvogt"
-      ]
-    }
-    </script>
 
     <link rel="stylesheet" href="/assets/styles/main.css">
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://pro.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-4Gm0M5DjJ0zGaEtLu0ztNIoHWiuJ5rKiaVlpZKeNqXAW49eIIa2ymxb3C4c3uEXR" crossorigin="anonymous" async defer></script>
+
+    {% if page.layout == 'home' %}
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "givenName": "Chris",
+        "familyName": "Vogt",
+        "name": "Chris Vogt",
+        "alternateName": "c1v0",
+        "jobTitle": "Software Engineer",
+        "image": "https://gravatar.com/avatar/3e0cd2da42672a768e98a2b0c0617b72?s=500",
+        "url": "https://www.chrisvogt.me",
+        "sameAs" : [
+          "https://twitter.com/c1v0",
+          "https://www.instagram.com/c1v0",
+          "https://www.linkedin.com/in/cjvogt",
+          "https://plus.google.com/+chrisvogt94952",
+          "https://github.com/chrisvogt",
+          "https://www.behance.net/chrisvogt",
+          "https://stackoverflow.com/users/1391826/chris-vogt",
+          "https://dribbble.com/chrisvogt"
+        ]
+      }
+    </script>
+    {% endif %}
+
     <link rel="dns-prefetch" href="//api.github.com">
+    <link rel="dns-prefetch" href="//apis.google.com">
     <link rel="dns-prefetch" href="//books.google.com">
     <link rel="dns-prefetch" href="//chrisvogt.firebaseio.com">
+    <link rel="dns-prefetch" href="//pro.fontawesome.com">
     <link rel="dns-prefetch" href="//recently-read.chrisvogt.me">
     <link rel="dns-prefetch" href="//scontent.cdninstagram.com">
   </head>

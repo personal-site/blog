@@ -2,3 +2,10 @@
     background-color: white;
     margin-bottom: 0;
 }
+
+#latest-posts a {
+    margin-bottom: 16px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

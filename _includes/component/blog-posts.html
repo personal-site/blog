@@ -10,8 +10,8 @@
 
         <div id="latest-posts">
 
-          {% for post in site.posts %}
-          <a href="{{ post.url }}" class="hvr-float-shadow" title="{{ post.title }}">
+          {% for post in site.posts limit:5 %}
+          <a href="{{ post.url | relative_url }}" class="hvr-float-shadow" title="{{ post.title }}">
             <div class="panel panel-post small-only-text-center">
               <h5>{{ post.title }}</h5>
 
@@ -20,8 +20,7 @@
               </div>
 
               <p>
-                Curabitur vitae nunc ex. Ut iaculis urna augue, in interdum erat semper et.
-                Suspendisse sed facilisis tortor. Nunc sodales vitae felis ac aliquam.
+                {{ post.excerpt }}
 
                 <span class="text-small text-muted font-stack-default">
                   Read More &raquo;
