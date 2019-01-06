@@ -11,14 +11,13 @@
 }
 
 footer .fa-twitter {
-    color: #55acee;
+    color: $twitter-blue;
 }
 
 #follow-button {
     background: $dodger-blue;
-
     &:hover {
-        background: $dodger-uniform-blue;
+        background: $dodger-blue;
     }
 }
 
@@ -30,7 +29,6 @@ em.accent {
     color: #90A4AE;
 }
 
-/* Pill style */
 #scrollUp {
     bottom: 20px;
     right: 20px;

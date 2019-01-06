@@ -1,0 +1,52 @@
+<!-- Component: Navigation -->
+<div id="primary-nav" class="contain-to-grid sticky">
+  <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <span class="brand">
+          <a href="/" alt="Home – {{ site.strings.title }}">
+            {{ site.strings.brand }}
+          </a>
+        </span>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#">
+          <span>Menu</span>
+        </a>
+      </li>
+    </ul>
+    <section class="top-bar-section" data-magellan-expedition>
+      <ul class="left">
+        <li class="link-projects" data-magellan-arrival="projects">
+          <a href="/#projects" title="Projects">
+            Projects
+          </a>
+        </li>
+        {% if site.posts.size > 0 %}
+        <li class="link-blog {% if page.layout == 'post' %}active{% endif %}" data-magellan-arrival="blog-posts">
+          <a href="/#blog-posts" title="Blog Posts">
+            Blog
+          </a>
+        </li>
+        {% endif %}
+        <li data-magellan-arrival="photos">
+          <a href="/#photos" title="Photos">
+            Photos
+          </a>
+        </li>
+        <li class="hidden" data-magellan-arrival="recently-read">
+          <a href="/#recently-read" title="Recently read books">
+            Recently Read
+          </a>
+        </li>
+      </ul>
+      <ul class="right">
+        <li>
+          <a href="https://stats.chrisvogt.me" title="Coding stats — last 30 days">
+            Stats
+          </a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
