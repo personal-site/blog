@@ -1,13 +1,10 @@
-export default async () => {
-  const dom = {
-    select: document.querySelector.bind(document)
-  };
-
+export default async ({dom, jQuery}) => {
   const template = dom.select('#social-item-template').content;
   const container = dom.select('#social-profiles');
 
   try {
-    const profiles = await $.getJSON({url: 'https://chrisvogt.firebaseio.com/v1/profiles.json'});
+    const {getJSON} = jQuery;
+    const profiles = await getJSON({url: 'https://chrisvogt.firebaseio.com/v1/profiles.json'});
 
     if (!profiles || profiles.length === 0) {
       throw new Error('No profiles found.');

@@ -4,10 +4,8 @@ const getRelativeTimeSinceString = date => {
   return timeago ? timeago(date) : new Date(date).toISOString();
 };
 
-export default async jQuery => {
+export default async ({dom, jQuery}) => {
   const {getJSON} = jQuery;
-  const dom = {select: document.querySelector.bind(document)};
-
   const username = 'chrisvogt';
   const response = await getJSON({url: `https://api.github.com/users/${username}/events/public`});
 

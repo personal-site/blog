@@ -7,6 +7,14 @@ import recentlyRead from './recently-read';
 import socialProfiles from './social-profiles';
 import twitter from './twitter';
 
+const dom = {
+  select: document.querySelector.bind(document)
+};
+
+const commonModules = [
+  'social-profiles'
+];
+
 const registry = {
   instagram,
   'latest-commit': latestCommit,
@@ -18,19 +26,17 @@ const registry = {
   twitter
 };
 
-const commonModules = [
-  'social-profiles'
-];
-
 export default () => {
   const modules = [
     ...commonModules,
     ...(window.__WWW_LAYOUT_MODULES__ ? window.__WWW_LAYOUT_MODULES__ : [])
   ];
 
+  const props = {dom, jQuery};
+
   modules.forEach(moduleName => {
     try {
-      return registry[moduleName] && registry[moduleName](jQuery);
+      return registry[moduleName] && registry[moduleName](props);
     } catch (error) {
       console.warn(`Error loading the ${moduleName} module.`, error);
     }
