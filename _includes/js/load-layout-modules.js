@@ -32,11 +32,11 @@ export default () => {
     ...(window.__WWW_LAYOUT_MODULES__ ? window.__WWW_LAYOUT_MODULES__ : [])
   ];
 
-  const props = {dom, jQuery};
+  const args = {dom, jQuery};
 
   modules.forEach(moduleName => {
     try {
-      return registry[moduleName] && registry[moduleName](props);
+      return registry[moduleName] && registry[moduleName](args);
     } catch (error) {
       console.warn(`Error loading the ${moduleName} module.`, error);
     }
