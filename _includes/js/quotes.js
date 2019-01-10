@@ -1,13 +1,10 @@
-export default async () => {
-  const dom = {
-    select: document.querySelector.bind(document)
-  };
-
+export default async ({dom, jQuery}) => {
   const template = dom.select('#quote-template').content;
   const container = dom.select('#quote-container');
 
   try {
-    const {result: {quotes}} = await $.getJSON({url: 'https://api.chrisvogt.me/quotes'});
+    const {getJSON} = jQuery;
+    const {result: {quotes}} = await getJSON({url: 'https://api.chrisvogt.me/quotes'});
     const fragment = document.createDocumentFragment();
 
     if (!quotes || quotes.length === 0) {

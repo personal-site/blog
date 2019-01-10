@@ -1,8 +1,4 @@
-export default async () => {
-  const dom = {
-    select: document.querySelector.bind(document)
-  };
-
+export default async ({dom, jQuery}) => {
   const container = dom.select('#latest-repos-items');
   const placeholderTemplate = dom.select('#latest-repo-placeholder').content;
   const template = dom.select('#latest-repos-template').content;
@@ -13,7 +9,8 @@ export default async () => {
   }
 
   try {
-    const response = await $.getJSON({url: 'https://gh-latest-repos-fmyaneprcd.now.sh'});
+    const {getJSON} = jQuery;
+    const response = await getJSON({url: 'https://gh-latest-repos-fmyaneprcd.now.sh'});
     const repos = response.reverse().filter(repo => Boolean(repo.description));
 
     container.innerHTML = '';
