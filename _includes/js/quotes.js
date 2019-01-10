@@ -7,9 +7,7 @@ export default async () => {
   const container = dom.select('#quote-container');
 
   try {
-    const {quotes} = await $.getJSON({
-      url: 'https://cdn.rawgit.com/chrisvogt/49b51791348a09cbddb0/raw/585d1712885dda5c13d63c17b5e093d543640e42/book-quotes.json'
-    });
+    const {result: {quotes}} = await $.getJSON({url: 'https://api.chrisvogt.me/quotes'});
     const fragment = document.createDocumentFragment();
 
     if (!quotes || quotes.length === 0) {
@@ -17,14 +15,14 @@ export default async () => {
     }
 
     for (const quote of quotes) {
-      const {cite, text} = quote;
+      const {cite, body} = quote;
       const content = template.cloneNode(true);
       const blockquote = content.querySelector('.quote-content');
 
       const citeEl = document.createElement('cite');
       citeEl.appendChild(document.createTextNode(cite));
 
-      blockquote.appendChild(document.createTextNode(text));
+      blockquote.appendChild(document.createTextNode(body));
       blockquote.appendChild(citeEl);
 
       fragment.appendChild(content);
