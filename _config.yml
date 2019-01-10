@@ -8,6 +8,11 @@ url: ''
 
 analytics_id: UA-33558417-1
 
+instagram:
+  access_token: 0000000000.0000000.00000000000000000000000000000000
+  client_id: 00000000000000000000000000000000
+  user_id: 0000000000
+
 social:
   instagram_username: c1v0
   twitter_username: c1v0

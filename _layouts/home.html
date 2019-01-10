@@ -24,6 +24,14 @@ slug: home
 {% include component/quotes.html %}
 
 <script>
+  window.__WWW_CONFIG__ = {
+    instagram: {
+      accessToken: '{{site.instagram.access_token}}',
+      clientId: '{{site.instagram.client_id}}',
+      userId: '{{site.instagram.user_id}}'
+    }
+  };
+
   window.__WWW_LAYOUT_MODULES__ = [
     'instagram',
     'latest-commit',

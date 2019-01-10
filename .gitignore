@@ -5,6 +5,7 @@
 .tmp
 .vscode
 _build
+_config.prod.yml
 _site
 assets/js/*.js
 bower_components
