@@ -6,7 +6,7 @@ banner_image_url: https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/
 baseurl: ''
 locale: en-US
 permalink: /blog/:year/:title
-url: ''
+url: https://www.chrisvogt.me
 
 analytics_id: UA-33558417-1
 
@@ -32,12 +32,14 @@ theme_options:
 plugins:
   - jekyll-feed
 
+destination: './_build'
 sass:
   sass_dir: ./assets/styles
+  style: compressed
 
 exclude:
-  - _build
   - design
+  - empty
   - Gemfile
   - Gemfile.lock
   - LICENSE
