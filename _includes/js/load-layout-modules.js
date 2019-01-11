@@ -27,12 +27,13 @@ const registry = {
 };
 
 export default () => {
+  const config = window.__WWW_CONFIG__ || {};
+  const args = {config, dom, jQuery};
+
   const modules = [
     ...commonModules,
     ...(window.__WWW_LAYOUT_MODULES__ ? window.__WWW_LAYOUT_MODULES__ : [])
   ];
-
-  const args = {dom, jQuery};
 
   modules.forEach(moduleName => {
     try {
