@@ -48,8 +48,6 @@ export default () => {
     });
   };
 
-  $.scrollUp();
-
   fadableHeader();
   initMagellan();
 };

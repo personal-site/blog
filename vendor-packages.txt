@@ -10,5 +10,4 @@
 ./bower_components/foundation/js/foundation/foundation.orbit.js
 ./bower_components/foundation/js/foundation/foundation.tooltip.js
 ./bower_components/foundation/js/foundation/foundation.topbar.js
-./bower_components/scrollup/dist/jquery.scrollUp.min.js
 ./bower_components/instafeed.js/instafeed.js
