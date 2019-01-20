@@ -29,17 +29,15 @@
     "test": "bundlesize"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^7.3.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babelify": "^10.0.0",
     "bower": "^1.8.2",
-    "browserify": "^14.3.0",
+    "browserify": "^16.2.3",
     "bundlesize": "^0.17.0",
-    "regenerator-runtime": "^0.13.1",
     "uglify-js": "^3.4.9",
     "watchify": "^3.9.0",
-    "xo": "^0.23.0"
+    "xo": "^0.24.0"
   },
   "xo": {
     "globals": [
@@ -64,5 +62,8 @@
       "path": "./_build/assets/css/**/*.css",
       "maxSize": "25 kB"
     }
-  ]
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  }
 }
