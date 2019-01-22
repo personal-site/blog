@@ -3,9 +3,7 @@
   "description": "Personal website and project portfolio",
   "dependencies": {
     "foundation": "https://github.com/chrisvogt/bower-foundation.git#master",
-    "jquery": "~2.2.4",
-    "instafeed.js": "^1.4.1",
-    "jquery-timeago": "^1.6.3"
+    "jquery": "~2.2.4"
   },
   "private": true,
   "resolutions": {
