@@ -64,6 +64,8 @@
     }
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.2.5"
+    "@babel/polyfill": "^7.2.5",
+    "instafeed.js": "^1.4.1",
+    "timeago": "^1.6.3"
   }
 }

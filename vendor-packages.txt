@@ -1,13 +1,8 @@
 ./bower_components/jquery/dist/jquery.js
-./bower_components/modernizr/modernizr.js
-./bower_components/fastclick/lib/fastclick.js
-./bower_components/jquery.cookie/jquery.cookie.js
-./bower_components/jquery-timeago/jquery.timeago.js
-./bower_components/jquery-placeholder/jquery.placeholder.js
+./node_modules/timeago/jquery.timeago.js
 ./bower_components/foundation/js/foundation/foundation.js
 ./bower_components/foundation/js/foundation/foundation.dropdown.js
 ./bower_components/foundation/js/foundation/foundation.magellan.js
 ./bower_components/foundation/js/foundation/foundation.orbit.js
-./bower_components/foundation/js/foundation/foundation.tooltip.js
 ./bower_components/foundation/js/foundation/foundation.topbar.js
-./bower_components/instafeed.js/instafeed.js
+./node_modules/instafeed.js/instafeed.min.js

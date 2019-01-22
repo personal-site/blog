@@ -6,7 +6,7 @@ Location: San Francisco, California, USA
 
 /* SITE */
 Standards: HTML5, CSS3, JSON, SVG
-Components: Modernizr, jQuery, ZURB Foundation, Moment.js, Fastclick
-Software: Node.js, Gulp, EditorConfig, TravisCI, Git, Bower, NPM
+Components: jQuery, ZURB Foundation
+Software: Node.js, EditorConfig
 
 Pure logical thinking cannot yield us any knowledge of the empirical world; all knowledge of reality starts from experience and ends in it. —Albert Einstein, "Ideas and Opinions"
