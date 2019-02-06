@@ -21,8 +21,12 @@ social:
   goodreads_link: https://www.goodreads.com/user/show/10454947-chris-vogt
 
 strings:
+  bio: >
+    Chris Vogt is a software engineer who works on digital marketing products
+    and lives in San Francisco. He enjoys reading science fiction, capturing
+    photos and drone footage, playing piano and brewing beer.
   brand: chrisvogt.me
-  headline: Chris Vogt
+  name: Chris Vogt
   subhead: Software Engineer <span>in San Francisco</span>
   title: Chris Vogt — Software Engineer in San Francisco
 

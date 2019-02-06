@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import loadLayoutModules from './load-layout-modules';
 
 const __WWW_SITE__ = () => {
