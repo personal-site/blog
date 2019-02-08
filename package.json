@@ -41,7 +41,7 @@
     "babelify": "^10.0.0",
     "bower": "^1.8.2",
     "browserify": "^16.2.3",
-    "bundlesize": "^0.17.0",
+    "bundlesize": "^0.17.1",
     "uglify-js": "^3.4.9",
     "watchify": "^3.9.0",
     "xo": "^0.24.0"
