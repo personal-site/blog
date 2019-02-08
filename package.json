@@ -19,7 +19,7 @@
     "js": "watchify ./_includes/js/app.js -o ./assets/js/app.js -d -t [ babelify ]",
     "js:babel": "browserify ./_includes/js/app.js -o ./assets/js/app.js -t [ babelify ]",
     "js:clean": "rm ./assets/js/*.js",
-    "js:min": "uglifyjs ./assets/js/app.js -o ./assets/js/app.js",
+    "js:min": "minify ./assets/js/app.js -d ./assets/js",
     "js:vendors": "uglifyjs $(cat ./vendor-packages.txt) -o ./assets/js/vendor.min.js",
     "build": "npm run js:vendors && npm run js:babel && npm run js:min && jekyll build --config _config.prod.yml",
     "prestart": "npm run js:vendors",
@@ -37,6 +37,7 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "babel-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "bower": "^1.8.2",
     "browserify": "^16.2.3",
