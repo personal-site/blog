@@ -1,33 +1,52 @@
+import arrayToObj from 'array-to-obj';
+
 export default async ({dom, jQuery}) => {
-  const template = dom.select('#social-item-template').content;
+  const {getJSON} = jQuery;
+
   const container = dom.select('#social-profiles');
+  const template = dom.select('#social-item-template').content;
 
   try {
-    const {getJSON} = jQuery;
-    const profiles = await getJSON({url: 'https://chrisvogt.firebaseio.com/v1/profiles.json'});
+    const responses = [
+      getJSON({url: 'https://api.chrisvogt.me/profiles'}),
+      getJSON({url: 'https://api.chrisvogt.me/metas'})
+    ];
+    const [profilesResponse, metasResponse] = await Promise.all(responses);
+    const {result: {profiles: profilesArray = []} = {}} = profilesResponse;
+    const {result: {metas: metasArray = []} = {}} = metasResponse;
 
-    if (!profiles || profiles.length === 0) {
-      throw new Error('No profiles found.');
+    const {order, orderBy} = metasArray.find(meta => meta.key === 'socialProfilesOrder') || {};
+    if (metasArray.length === 0 || !order || !orderBy) {
+      throw new Error('Profile metadata not found.');
+    }
+
+    const profiles = arrayToObj(profilesArray, {key: orderBy});
+    if (profilesArray.length === 0 || !profiles) {
+      throw new Error('Profile data not found.');
     }
 
     const fragment = document.createDocumentFragment();
-    for (const profile of profiles) {
+    order.forEach(key => {
+      if (!profiles[key]) {
+        return;
+      }
+
       const content = template.cloneNode(true);
       const {
+        displayName,
         href,
-        icon,
-        name
-      } = profile;
+        icon
+      } = profiles[key];
 
-      const iconCss = icon.split(' ');
+      const iconCss = icon.class.split(' ');
       content.querySelector('.social-item-icon').classList.add(...iconCss);
 
       const link = content.querySelector('.social-item-link');
-      link.title = `Chris Vogt on ${name}`;
+      link.title = `Chris Vogt on ${displayName}`;
       link.href = href;
 
       fragment.appendChild(document.importNode(content, true));
-    }
+    });
 
     container.innerHTML = '';
     container.appendChild(document.importNode(fragment, true));
