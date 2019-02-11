@@ -1,6 +1,7 @@
 ---
 title:  Here, There and Everywhere
-categories: [personal, music]
+categories: [piano-covers]
+slug: here-there-everywhere
 tags: [piano, music]
 excerpt: >
   Playing "Here, There and Everywhere" on the piano. This is the first in a

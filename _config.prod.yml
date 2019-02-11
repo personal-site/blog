@@ -5,7 +5,7 @@ description: >
 banner_image_url: https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/og-image_a1i3rp.png
 baseurl: ''
 locale: en-US
-permalink: /blog/:year/:title
+permalink: /blog/:categories/:slug
 url: https://www.chrisvogt.me
 
 analytics_id: UA-33558417-1

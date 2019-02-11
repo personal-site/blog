@@ -1,6 +1,7 @@
 ---
 title:  Hello, 🌎
-categories: [meta, personal]
+categories: [meta]
+slug: hello-world
 tags: [GitHub, open source, JavaScript]
 excerpt: >
   On this new blog I plan to share things I find interesting, collections of drone
