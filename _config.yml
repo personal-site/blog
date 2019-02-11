@@ -5,15 +5,15 @@ description: >
 banner_image_url: https://res.cloudinary.com/chrisvogt/image/upload/v1482915326/og-image_a1i3rp.png
 baseurl: ''
 locale: en-US
-permalink: /blog/:year/:title
+permalink: /blog/:categories/:slug
 url: ''
 
 analytics_id: UA-33558417-1
 
 instagram:
-  access_token: 0000000000.0000000.00000000000000000000000000000000
-  client_id: 00000000000000000000000000000000
-  user_id: 0000000000
+  access_token: 1546421127.1677ed0.362078a0d37a4fcb8bcbf520a4459cdd
+  client_id: 7e07fcf783e746b3a236341049fa3cc0
+  user_id: 1546421127
 
 social:
   instagram_username: c1v0
