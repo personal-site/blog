@@ -1,5 +1,5 @@
 ---
-title:  Here, There And Everywhere
+title:  Here, There and Everywhere
 categories: [personal, music]
 tags: [piano, music]
 excerpt: >
