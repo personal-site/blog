@@ -14,6 +14,18 @@ _View live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
 ### How to use
 
+###### Setup components
+
+The components expect data be available from HTTP endpoints that return data demonstrated in the _\_schema_ directory.
+
+| Component | Example |
+|---|---|
+| Latest Commit | _\_schema/latest-commit.json_ |
+| Latest Repos | _\_schema/latest-repos.json_ |
+| Social Profiles | _\_schema/profiles.json_ |
+| Quotes | _\_schema/quotes.json_ |
+| Recently Read | _\_schema/quotes.json_ |
+
 ###### Install dependencies
 
 * `gem install bundler && npm install`

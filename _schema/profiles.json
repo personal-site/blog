@@ -1,0 +1,13 @@
+{
+  "status": "ok",
+  "result": {
+    "profiles": [{
+      "displayName": "StackOverflow",
+      "icon": {
+        "class": "fab fa-stack-overflow"
+      },
+      "slug": "stack-overflow",
+      "href": "http://stackoverflow.com/users/1391826/chris-vogt?tab=profile"
+    }]
+  }
+}
