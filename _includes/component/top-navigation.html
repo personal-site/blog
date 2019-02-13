@@ -17,35 +17,23 @@
     </ul>
     <section class="top-bar-section" data-magellan-expedition>
       <ul class="left">
-        <li class="link-projects" data-magellan-arrival="projects">
-          <a href="/#projects" title="Projects">
-            Projects
-          </a>
-        </li>
-        {% if site.posts.size > 0 %}
-        <li class="link-blog {% if page.layout == 'post' %}active{% endif %}" data-magellan-arrival="blog-posts">
-          <a href="/#blog-posts" title="Blog Posts">
-            Blog
-          </a>
-        </li>
-        {% endif %}
-        <li data-magellan-arrival="photos">
-          <a href="/#photos" title="Photos">
-            Photos
-          </a>
-        </li>
-        <li class="hidden" data-magellan-arrival="recently-read">
-          <a href="/#recently-read" title="Recently read books">
-            Recently Read
-          </a>
-        </li>
+        {% for item in site.data.navigation.top.left %}
+          {% if item.slug == 'blog' and site.posts.size == 0 %}{% break %}{% endif %}
+          <li class="link-{{ item.slug }}{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}" data-magellan-arrival="{{ item.slug }}">
+            <a href="{{ item.path }}" title="{{ item.title }}">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
       </ul>
       <ul class="right">
+        {% for item in site.data.navigation.top.right %}
         <li>
-          <a href="https://stats.chrisvogt.me" title="Coding stats — last 30 days">
-            Stats
+          <a href="{{ item.path }}" title="{{ item.title }}">
+            {{ item.text }}
           </a>
         </li>
+        {% endfor %}
       </ul>
     </section>
   </nav>

@@ -9,16 +9,13 @@
         {% endif %}
         <div class="small-12 {% if site.theme_options.show_credits %}medium-6 columns{% endif %}">
           <ul class="inline-list">
+            {% for item in site.data.navigation.bottom %}
             <li>
-              <a href="https://stats.chrisvogt.me" title="Chris Vogt's open source stats">
-                Stats
+              <a href="{{ item.path }}" title="{{ item.title }}">
+                {{ item.text }}
               </a>
             </li>
-            <li>
-              <a href="https://resume.chrisvogt.me" title="Chris Vogt on StackOverflow">
-                <i class="fab fa-stack-overflow" aria-hidden="true"></i> Developer Story
-              </a>
-            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
