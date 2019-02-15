@@ -27,10 +27,12 @@ export default async ({config, dom, jQuery}) => {
 
   try {
     const {getJSON} = jQuery;
+
     const responses = [
-      getJSON({url: metasURL}),
-      getJSON({url: profilesURL})
+      getJSON({url: profilesURL}),
+      getJSON({url: metasURL})
     ];
+
     const [profilesResponse, metasResponse] = await Promise.all(responses);
     const {result: {profiles: profilesArray = []} = {}} = profilesResponse;
     const {result: {metas: metasArray = []} = {}} = metasResponse;

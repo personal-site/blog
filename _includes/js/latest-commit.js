@@ -4,25 +4,21 @@ const getRelativeTimeSinceString = date => {
 };
 
 export default async ({config, dom, jQuery}) => {
-  const selectURL = config => {
+  const selectLatestCommit = config => {
     const {
-      latestCommit: {
-        url,
-        username
-      } = {}
+      latestCommit = {}
     } = config;
-
-    return url ? url.replace('{username}', username) : null;
+    return latestCommit;
   };
 
-  const url = selectURL(config);
+  const {url: urlTemplate, username} = selectLatestCommit(config);
 
-  if (!url) {
+  if (!urlTemplate || !username) {
     console.warn('Unable to load the Latest Commit component without a config url.');
   }
 
   const {getJSON} = jQuery;
-  const username = 'chrisvogt';
+  const url = urlTemplate.replace(/{username}/, username);
   const response = await getJSON({url});
 
   const latestPushEvent = response.find(event => event.type === 'PushEvent');
