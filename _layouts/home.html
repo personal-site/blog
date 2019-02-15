@@ -26,10 +26,16 @@ slug: home
 <script>
   window.__WWW_CONFIG__ = {
     instagram: {
-      accessToken: '{{site.instagram.access_token}}',
-      clientId: '{{site.instagram.client_id}}',
-      userId: '{{site.instagram.user_id}}'
-    }
+      accessToken: '{{site.components.instagram.access_token}}',
+      clientId: '{{site.components.instagram.client_id}}',
+      userId: '{{site.components.instagram.user_id}}'
+    },
+    latestCommit: '{{site.components.latest_commit}}',
+    latestRepos: '{{site.components.latest_repos}}',
+    metas: '{{site.components.metas}}',
+    profiles: '{{site.components.profiles}}',
+    quotes: '{{site.components.quotes}}',
+    recentlyRead: '{{site.components.recently_read}}'
   };
 
   window.__WWW_LAYOUT_MODULES__ = [

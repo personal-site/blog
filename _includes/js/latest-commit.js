@@ -1,13 +1,36 @@
 const getRelativeTimeSinceString = date => {
   const {timeago} = $;
-
   return timeago ? timeago(date) : new Date(date).toISOString();
 };
 
-export default async ({dom, jQuery}) => {
+export default async ({config, dom, jQuery}) => {
+  const selectURL = config => {
+    const {
+      latestCommit: {
+        url,
+        username
+      } = {}
+    } = config;
+
+    console.log(config);
+
+    return url ? url.replace('{username}', username) : null;
+  };
+
+  const url = selectURL(config);
+
+  console.log(url);
+  console.log('LATEST COMMIT');
+
+  console.log(config);
+
+  if (!url) {
+    console.warn('Unable to load the Latest Commit component without a config url.');
+  }
+
   const {getJSON} = jQuery;
   const username = 'chrisvogt';
-  const response = await getJSON({url: `https://api.github.com/users/${username}/events/public`});
+  const response = await getJSON({url});
 
   const latestPushEvent = response.find(event => event.type === 'PushEvent');
   const {repo, payload, created_at: createdAt} = latestPushEvent;

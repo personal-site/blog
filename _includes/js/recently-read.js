@@ -1,12 +1,24 @@
-export default async ({dom, jQuery}) => {
-  const container = dom.select('#recently-read');
+export default async ({config, dom, jQuery}) => {
+  const selectURL = config => {
+    const {
+      recentlyRead
+    } = config;
+    return recentlyRead;
+  };
+
+  const url = selectURL(config);
+  if (!url) {
+    console.warn('Unable to load the Recently Read component without a config url.');
+  }
+
   const bookList = dom.select('#recent-books');
+  const container = dom.select('#recently-read');
   const navButton = dom.select('#primary-nav li[data-magellan-arrival="recently-read"]');
   const template = dom.select('#recent-book-template').content;
 
   try {
     const {getJSON} = jQuery;
-    const books = await getJSON({url: 'https://recently-read.chrisvogt.me'});
+    const books = await getJSON({url});
     for (const book of books.slice(0, 9)) {
       const content = template.cloneNode(true);
 
