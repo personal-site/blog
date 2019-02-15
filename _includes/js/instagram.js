@@ -9,7 +9,7 @@ export default ({config, jQuery}) => {
 
   try {
     if (!accessToken || !clientId || !userId) {
-      throw new Error('An access_token, client_id, and user_id are required.');
+      throw new Error('An access_token, client_id and user_id are required.');
     }
 
     /**
@@ -38,6 +38,7 @@ export default ({config, jQuery}) => {
         jQuery('#primary-nav a[href="#photos"]').parent('li').addClass('hidden');
       }
     });
+
     userFeed.run();
     window.feed = userFeed;
   } catch (error) {

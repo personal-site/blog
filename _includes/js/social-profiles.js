@@ -1,16 +1,38 @@
 import arrayToObj from 'array-to-obj';
 
-export default async ({dom, jQuery}) => {
-  const {getJSON} = jQuery;
+const selectMetasURL = config => {
+  const {
+    metas
+  } = config;
+  return metas;
+};
+
+const selectProfilesURL = config => {
+  const {
+    profiles
+  } = config;
+  return profiles;
+};
+
+export default async ({config, dom, jQuery}) => {
+  const metasURL = selectMetasURL(config);
+  const profilesURL = selectProfilesURL(config);
+
+  if (!metasURL || !profilesURL) {
+    console.warn('Unable to load the Social Profiles component without metas and profiles urls.');
+  }
 
   const container = dom.select('#social-profiles');
   const template = dom.select('#social-item-template').content;
 
   try {
+    const {getJSON} = jQuery;
+
     const responses = [
-      getJSON({url: 'https://api.chrisvogt.me/profiles'}),
-      getJSON({url: 'https://api.chrisvogt.me/metas'})
+      getJSON({url: profilesURL}),
+      getJSON({url: metasURL})
     ];
+
     const [profilesResponse, metasResponse] = await Promise.all(responses);
     const {result: {profiles: profilesArray = []} = {}} = profilesResponse;
     const {result: {metas: metasArray = []} = {}} = metasResponse;

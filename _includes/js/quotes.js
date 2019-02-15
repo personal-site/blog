@@ -1,10 +1,22 @@
-export default async ({dom, jQuery}) => {
+export default async ({config, dom, jQuery}) => {
+  const selectURL = config => {
+    const {
+      quotes = {}
+    } = config;
+    return quotes;
+  };
+
+  const url = selectURL(config);
+  if (!url) {
+    console.warn('Unable to load the Quotes component without a config url.');
+  }
+
   const template = dom.select('#quote-template').content;
   const container = dom.select('#quote-container');
 
   try {
     const {getJSON} = jQuery;
-    const {result: {quotes}} = await getJSON({url: 'https://api.chrisvogt.me/quotes'});
+    const {result: {quotes} = {}} = await getJSON({url});
     const fragment = document.createDocumentFragment();
 
     if (!quotes || quotes.length === 0) {

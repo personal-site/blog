@@ -1,4 +1,17 @@
-export default async ({dom, jQuery}) => {
+export default async ({config, dom, jQuery}) => {
+  const selectURL = config => {
+    const {
+      latestRepos
+    } = config;
+    return latestRepos;
+  };
+
+  const url = selectURL(config);
+
+  if (!url) {
+    console.warn('Unable to load the Latest Repos component without a config url.');
+  }
+
   const container = dom.select('#latest-repos-items');
   const placeholderTemplate = dom.select('#latest-repo-placeholder').content;
   const template = dom.select('#latest-repos-template').content;
@@ -10,7 +23,7 @@ export default async ({dom, jQuery}) => {
 
   try {
     const {getJSON} = jQuery;
-    const response = await getJSON({url: 'https://gh-latest-repos-fmyaneprcd.now.sh'});
+    const response = await getJSON({url});
     const repos = response.reverse().filter(repo => Boolean(repo.description));
 
     container.innerHTML = '';
