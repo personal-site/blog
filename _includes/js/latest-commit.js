@@ -12,17 +12,10 @@ export default async ({config, dom, jQuery}) => {
       } = {}
     } = config;
 
-    console.log(config);
-
     return url ? url.replace('{username}', username) : null;
   };
 
   const url = selectURL(config);
-
-  console.log(url);
-  console.log('LATEST COMMIT');
-
-  console.log(config);
 
   if (!url) {
     console.warn('Unable to load the Latest Commit component without a config url.');
