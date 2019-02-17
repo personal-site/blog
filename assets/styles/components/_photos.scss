@@ -14,7 +14,7 @@
     }
 }
 
-body.no-scroll {
+body.ig-modal-open {
     overflow: hidden;
 }
 
@@ -87,9 +87,19 @@ body.no-scroll {
         }
     }
 
+    .relative {
+        position: relative;
+    }
+
     .modal-head {
         display: flex;
         margin-bottom: 25px;
+    }
+
+    .ig-modal-close {
+        position: absolute;
+        top: 12.5px;
+        right: 12.5px;
     }
 
     .head-content {

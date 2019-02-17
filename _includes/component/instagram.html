@@ -19,78 +19,18 @@
         </p>
       </div>
 
-      <ul id="instafeed" class="small-block-grid-3 medium-block-grid-6">
-        <!-- AJAX: instagram photos -->
+      <ul id="feed" class="small-block-grid-3 medium-block-grid-6">
+        {% include template/instagram/thumbnail.html %}
       </ul>
 
-      <div class="panel panel-sub text-center">
+      <!-- <div class="panel panel-sub text-center">
         <button type="button" class="js-load-more button tiny dodger-blue" title="Load More">
           <i class="fas fa-sync-alt"></i> Load More
         </button>
-      </div>
+      </div> -->
 
     </div>
   </div>
 </div>
 
-<div id="instagram-overlay">
-  <div class="modal">
-    <div class="flex-50 bg-dark-gray">
-      <img src="https://i.imgur.com/seVQwqi.jpg" />
-      <!-- <img src="https://scontent.cdninstagram.com/vp/038cafb7288409790aeef3059b147b91/5CE3804D/t51.2885-15/sh0.08/e35/s640x640/50601133_380409109420380_5791851988204984285_n.jpg?_nc_ht=scontent.cdninstagram.com" /> -->
-    </div>
-
-    <div class="flex-50 padding-3">
-      <div class="modal-head margin-b-1">
-        <div class="avatar">
-          <img class="avatar-circle" src="https://scontent.cdninstagram.com/vp/9a1adcbfa769f272e0c36432df814167/5D0724C6/t51.2885-19/s150x150/44209755_979982635518910_5496386888413478912_n.jpg?_nc_ht=scontent.cdninstagram.com" width="40" />
-        </div>
-        <div class="head-content">
-          <div id="ig-username">
-            <strong>c1v0</strong>
-          </div>
-          <div class="txt-small txt-muted" id="ig-location">
-            Location, Location, Location
-          </div>
-        </div>
-      </div>
-
-      <hr class="margin-b-1">
-
-      <p class="margin-b-2">
-        <strong>c1v0</strong>&nbsp;
-        This is what a sleepy Alex looks like. He needs some boops on his snoot. #sleepydog #doggo #boop #boopthesnoot #dognose #goldenretriever #goldenmix #dogs #dog #🐶 #dogsofinstagram #dogsofinsta #instadog #instadogs #instadogsfeature #goldenmix #goldenretrieverlover #goldenchow #worldofcutepets #petsofinstagram #petstagram #dogphotography #petphotography
-      </p>
-
-      <div class="margin-b-2 txt-small txt-muted">
-        <span id="ig-time-ago">6 days ago</span>
-      </div>
-
-      <div class="margin-b-1 display-flex wrapper txt-center txt-stats">
-        <div class="flex-50 margin-r-1">
-          <div class="bg-off-white radius-default padding-1">
-            <i class="fas fa-heart"></i>
-            <span id="ig-likes-count">50</span>
-          </div>
-        </div>
-        <div class="flex-50">
-          <div class="bg-off-white radius-default padding-1">
-            <i class="fas fa-comment"></i>
-            <span id="ig-comments-count">13</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-cta">
-        <a
-          href="https://stats.chrisvogt.me"
-          title="View on instagram"
-          class="button dodger-blue expand"
-        >
-          <i class="far fa-external-link"></i>
-          View on Instagram
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+{% include template/instagram/modal.html %}
