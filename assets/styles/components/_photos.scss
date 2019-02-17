@@ -168,6 +168,14 @@ body.ig-modal-open {
         display: flex;
     }
 
+    .ig-image-container {
+        flex: 70%;
+
+        @media only screen and (min-width: 40.063em) {
+            flex: 50%;
+        }
+    }
+
     .flex-30 {
         flex: 30%;
     }

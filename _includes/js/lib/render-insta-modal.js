@@ -33,16 +33,22 @@ export default ({dom, photo}) => {
   content.querySelector('.ig-modal-text').textContent = photo.text;
   content.querySelector('.ig-time-ago').textContent = getRelativeTimeSinceString(photo.createdAt);
 
-  const node = document.importNode(content, true);
-  node.querySelector('.ig-modal-close').addEventListener('click', () => {
+  const closeModal = () => {
+    console.log('closing modal...');
     dom.select('#instagram-overlay').remove();
-  });
+    dom.select('body').classList.remove('ig-modal-open');
+  };
+
+  const node = document.importNode(content, true);
+  node.querySelector('.ig-modal-close').addEventListener('click', closeModal);
+  dom.select('body').classList.add('ig-modal-open');
 
   const handleCloseClick = event => {
     if (event.key === 'Escape') {
       dom.select('#instagram-overlay').remove();
+      dom.select('body').classList.remove('ig-modal-open');
+      event.target.removeEventListener('keyup', handleCloseClick);
     }
-    event.target.removeEventListener('keyup', handleCloseClick);
   };
   document.addEventListener('keyup', handleCloseClick);
 
