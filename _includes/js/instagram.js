@@ -1,4 +1,5 @@
-import renderInstaModal from './lib/render-insta-modal';
+import renderInstagramModal from './renderers/instagram-modal';
+import transformPhotos from './utils/transform-photos';
 
 export default async ({config, dom, jQuery}) => {
   const {
@@ -17,63 +18,35 @@ export default async ({config, dom, jQuery}) => {
       const {getJSON} = jQuery;
       const {result: {photos} = {}} = await getJSON({url});
 
-      const photosObj = photos.reduce((acc, photo = {}) => {
-        const {
-          id,
-          user: {
-            username = ''
-          } = {},
-          images = {},
-          caption: {
-            text = ''
-          },
-          comments: {
-            count: commentsCount = 0
-          } = {},
-          likes: {
-            count: likesCount = 0
-          } = {},
-          type,
-          link,
-          location: {
-            name: locationName = ''
-          } = {},
-          created_time: createdAt
-        } = photo;
+      // NOTE: the initial version of this modal only supported rendering
+      // image previews, but enough data is available to render embedded
+      // video previews of Instagram media.
+      const filtered = photos.filter(photo => photo.type === 'image');
+      const photosObj = filtered.reduce(transformPhotos, {});
 
-        const item = {
-          commentsCount,
-          createdAt,
-          id,
-          images,
-          likesCount,
-          link,
-          locationName,
-          text,
-          type,
-          username
-        };
-
-        acc[id] = item;
-        return acc;
-      }, {});
+      console.log(photosObj);
+      window.instagramPhotos = photosObj;
 
       const getClickHandler = id => {
         const selected = photosObj[id];
 
+        console.log('Looking for ', id);
+        console.log('Generating click handler...', selected);
+
         if (!selected) {
+          console.log('Missing photo in object');
           return;
         }
 
         const handleThumbnailClick = event => {
-          renderInstaModal({dom, photo: selected});
+          renderInstagramModal({dom, photo: selected});
           event.preventDefault();
         };
 
         return handleThumbnailClick;
       };
 
-      for (const photo of photos.filter(photo => photo.type === 'image').slice(0, 12)) {
+      for (const photo of filtered.slice(0, 12)) {
         const content = thumbnailTemplate.cloneNode(true);
 
         const img = content.querySelector('.ig-thumb-image');
