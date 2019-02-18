@@ -101,6 +101,11 @@ body.ig-modal-open {
             position: fixed;
             transform: translate(-50%, -50%);
         }
+
+        // HACK: quick fix for an issue (#109) visible on large resolutions
+        @media only screen and (min-width: 1400px) {
+            max-width: 1280px;
+        }
     }
 
     .relative {
