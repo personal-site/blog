@@ -14,7 +14,7 @@ components:
   instagram: https://api.chrisvogt.me/instagram
   latest_repos: https://gh-latest-repos-fmyaneprcd.now.sh
   latest_commit:
-    url: https://api.github.com/users/${username}/events/public
+    url: https://api.github.com/users/{username}/events/public
     username: chrisvogt
   metas: https://api.chrisvogt.me/metas
   profiles: https://api.chrisvogt.me/profiles
