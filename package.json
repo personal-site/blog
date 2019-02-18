@@ -11,9 +11,10 @@
     "type": "git",
     "url": "https://github.com/personal-site/blog.git"
   },
+  "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "js": "watchify ./_includes/js/app.js -o ./assets/js/app.js -d -t [ babelify ]",
