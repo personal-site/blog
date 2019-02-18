@@ -32,7 +32,6 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "array-to-obj": "^1.0.0",
-    "instafeed.js": "^1.4.1",
     "timeago": "^1.6.3"
   },
   "devDependencies": {
@@ -50,10 +49,7 @@
   "xo": {
     "globals": [
       "$",
-      "C1V0",
-      "Instafeed",
       "document",
-      "feed",
       "ga",
       "jQuery",
       "moment",
