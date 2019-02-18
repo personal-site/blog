@@ -60,6 +60,22 @@ body.ig-modal-open {
         font-size: 14px;
     }
 
+    a {
+        color: #262626;
+
+        &:hover {
+            color: #363636;
+        };
+    }
+
+    a.button {
+        color: white;
+
+        &:hover {
+            color: #efefef;
+        }
+    }
+
     @media only screen and (min-width: 40.063em) {
         overflow-y: hidden;
     }
@@ -110,7 +126,7 @@ body.ig-modal-open {
         font-size: 12px;
     }
 
-    .txt-stats {
+    .txt-size-default {
         font-size: 14px;
     }
 
@@ -145,6 +161,7 @@ body.ig-modal-open {
 
     .txt-small {
         font-size: 12px;
+        line-height: 14px;
     }
 
     .ig-image {

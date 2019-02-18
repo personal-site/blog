@@ -28,6 +28,7 @@ export default ({dom, photo}) => {
 
   const usernameLink = content.querySelector('.ig-modal-username-link');
   usernameLink.href = `https://instagram.com/${photo.username}`;
+  usernameLink.title = photo.fullName;
 
   const closeModal = event => {
     dom.select('#instagram-overlay').remove();

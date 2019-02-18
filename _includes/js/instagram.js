@@ -18,23 +18,13 @@ export default async ({config, dom, jQuery}) => {
       const {getJSON} = jQuery;
       const {result: {photos} = {}} = await getJSON({url});
 
-      // NOTE: the initial version of this modal only supported rendering
-      // image previews, but enough data is available to render embedded
-      // video previews of Instagram media.
       const filtered = photos.filter(photo => photo.type === 'image');
       const photosObj = filtered.reduce(transformPhotos, {});
-
-      console.log(photosObj);
-      window.instagramPhotos = photosObj;
 
       const getClickHandler = id => {
         const selected = photosObj[id];
 
-        console.log('Looking for ', id);
-        console.log('Generating click handler...', selected);
-
         if (!selected) {
-          console.log('Missing photo in object');
           return;
         }
 
