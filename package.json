@@ -1,7 +1,7 @@
 {
-  "name": "www.chrisvogt.me",
-  "description": "Personal website and project portfolio.",
-  "version": "0.9.0-beta",
+  "name": "@personal-site/blog",
+  "description": "Code and photography focused Jekyll blog backed by a Personal API.",
+  "version": "0.9.0",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisvogt/www.chrisvogt.me.git"
+    "url": "https://github.com/personal-site/blog.git"
   },
-  "private": true,
+  "private": false,
   "engines": {
     "node": ">=6"
   },

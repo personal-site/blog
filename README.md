@@ -1,14 +1,14 @@
 <img src="assets/images/h-logo.png" alt="www.chrisvogt.me" width="200" height="200">
 
-[![Build status](https://img.shields.io/travis/chrisvogt/www.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/www)
-[![Code Climate](https://codeclimate.com/github/chrisvogt/www/badges/gpa.svg)](https://codeclimate.com/github/chrisvogt/www)
-[![GitHub release](https://img.shields.io/github/release/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/releases)
-[![David.io Dev Dependencies](https://david-dm.org/chrisvogt/www/dev-status.svg?style=flat-square)](https://david-dm.org/chrisvogt/www?type=dev)
-[![GitHub license](https://img.shields.io/github/license/chrisvogt/www.svg?style=flat-square)](https://github.com/chrisvogt/www/blob/master/LICENSE)
+[![Build status](https://img.shields.io/travis/personal-site/blog.svg?branch=master&style=flat-square)](https://travis-ci.org/personal-site/blog)
+[![Code Climate](https://codeclimate.com/github/personal-site/blog/badges/gpa.svg)](https://codeclimate.com/github/personal-site/blog)
+[![GitHub release](https://img.shields.io/github/release/personal-site/blog.svg?style=flat-square)](https://github.com/personal-site/blog/releases)
+[![David.io Dev Dependencies](https://david-dm.org/personal-site/blog/dev-status.svg?style=flat-square)](https://david-dm.org/personal-site/blog?type=dev)
+[![GitHub license](https://img.shields.io/github/license/personal-site/blog.svg?style=flat-square)](https://github.com/personal-site/blog/blob/master/LICENSE)
 
 My personal website and blog, current a Jekyll + ES7 website deployed to GitHub Pages.
 
-This is an open source project. I plan to make it fully customizable by [`v1.0.0`](https://github.com/chrisvogt/www/milestone/1) so others can spin up their own sites using this template.
+This is an open source project. I plan to make it fully customizable by [`v1.0.0`](https://github.com/personal-site/blog/milestone/1) so others can spin up their own sites using this template.
 
 _View live at [www.chrisvogt.me](https://www.chrisvogt.me)._
 
@@ -41,10 +41,6 @@ The components expect data be available from HTTP endpoints that return data dem
 ###### Deploy
 
 Builds output to _/_build_. This currently must be manually deployed.
-
-### Screenshot
-
-<img src="screenshot.png" alt="Website Screenshot" width="100%" />
 
 ### License
 
