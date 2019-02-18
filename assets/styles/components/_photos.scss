@@ -169,6 +169,9 @@ body.ig-modal-open {
     }
 
     .ig-image-container {
+        align-items: center;
+        display: flex;
+
         flex: 70%;
 
         @media only screen and (min-width: 40.063em) {
