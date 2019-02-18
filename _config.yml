@@ -11,13 +11,10 @@ url: ''
 analytics_id: UA-33558417-1
 
 components:
-  instagram:
-    access_token: "0000000000.0000000.00000000000000000000000000000000"
-    client_id: "00000000000000000000000000000000"
-    user_id: "0000000000"
+  instagram: https://api.chrisvogt.me/instagram
   latest_repos: https://gh-latest-repos-fmyaneprcd.now.sh
   latest_commit:
-    url: https://api.github.com/users/${username}/events/public
+    url: https://api.github.com/users/{username}/events/public
     username: chrisvogt
   metas: https://api.chrisvogt.me/metas
   profiles: https://api.chrisvogt.me/profiles

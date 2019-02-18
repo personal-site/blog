@@ -1,46 +1,62 @@
-export default ({config, jQuery}) => {
+import renderInstagramModal from './renderers/instagram-modal';
+import transformPhotos from './utils/transform-photos';
+
+export default async ({config, dom, jQuery}) => {
   const {
-    instagram: {
-      accessToken,
-      clientId,
-      userId
-    } = {}
+    instagram: url
   } = config;
 
+  const thumbnailContainer = dom.select('ul#feed');
+  const thumbnailTemplate = dom.select('#instagram-thumbnail-template').content;
+
   try {
-    if (!accessToken || !clientId || !userId) {
-      throw new Error('An access_token, client_id and user_id are required.');
+    if (!url || typeof url !== 'string') {
+      throw new Error('Unable to load Instagram without a config URL.');
     }
 
-    /**
-     * Instagram via instafeed.js
-     *
-     * @link https://instafeedjs.com/
-     */
-    const userFeed = new Instafeed({
-      get: 'user',
-      accessToken,
-      clientId,
-      userId,
-      sortBy: 'most-recent',
-      limit: 18,
-      template: '<li><a href="{{link}}" class="hvr-shadow-radial" title="View on Instagram"><img src="{{image}}" alt="{{caption}}"></a></li>',
-      success: () => {
-        jQuery('#photos').removeClass('hidden');
-        jQuery('#photos .js-load-more').click(() => {
-          if (feed && typeof feed.next === 'function') {
-            feed.next();
-          }
-        });
-      },
-      error: err => {
-        console.warn('Error loading Instafeed', err);
-        jQuery('#primary-nav a[href="#photos"]').parent('li').addClass('hidden');
-      }
-    });
+    try {
+      const {getJSON} = jQuery;
+      const {result: {photos} = {}} = await getJSON({url});
 
-    userFeed.run();
-    window.feed = userFeed;
+      const filtered = photos.filter(photo => photo.type === 'image');
+      const photosObj = filtered.reduce(transformPhotos, {});
+
+      const getClickHandler = id => {
+        const selected = photosObj[id];
+
+        if (!selected) {
+          return;
+        }
+
+        const handleThumbnailClick = event => {
+          renderInstagramModal({dom, photo: selected});
+          event.preventDefault();
+        };
+
+        return handleThumbnailClick;
+      };
+
+      for (const photo of filtered.slice(0, 12)) {
+        const content = thumbnailTemplate.cloneNode(true);
+
+        const img = content.querySelector('.ig-thumb-image');
+        img.src = photo.images.thumbnail.url;
+        img.height = photo.images.thumbnail.height;
+        img.width = photo.images.thumbnail.width;
+
+        const link = content.querySelector('.ig-thumb-link');
+        link.dataset.id = photo.id;
+
+        thumbnailContainer.appendChild(document.importNode(content, true));
+      }
+
+      const links = thumbnailContainer.getElementsByClassName('ig-thumb-link');
+      [...links].forEach(link => link.addEventListener('click', getClickHandler(link.dataset.id)));
+
+      $('#photos').removeClass('hidden');
+    } catch (error) {
+      console.log(error);
+    }
   } catch (error) {
     console.warn('Error loading Instagram component', error);
   }

@@ -1,0 +1,66 @@
+<template id="instagram-modal-template">
+  <div id="instagram-overlay">
+    <div class="modal">
+      <div class="ig-image-container bg-dark-gray">
+        <img class="ig-modal-image" src="" />
+      </div>
+
+      <div class="flex-50 padding-3 relative">
+        <div class="ig-modal-close">
+          <a href="#">
+            <i class="fas fa-times-circle" title="Close"></i>
+          </a>
+        </div>
+
+        <div class="modal-head margin-b-1">
+          <div class="avatar">
+            <img
+              class="img-modal-avatar avatar-circle"
+              src=""
+              width="40"
+            />
+          </div>
+          <div class="head-content">
+            <a class="ig-modal-username-link txt-size-default" href="" title="">
+              <strong class="ig-modal-username">c1v0</strong>
+            </a>
+            <div class="ig-modal-location txt-small txt-muted"></div>
+          </div>
+        </div>
+
+        <hr class="margin-b-1" aria-hidden="true">
+
+        <p class="margin-b-2">
+          <strong class="ig-modal-username">c1v0</strong>&nbsp;
+          <span class="ig-modal-text"></span>
+        </p>
+
+        <div class="margin-b-2 txt-small txt-muted">
+          <span class="ig-time-ago"></span>
+        </div>
+
+        <div class="margin-b-1 display-flex wrapper txt-center txt-size-default">
+          <div class="flex-50 margin-r-1">
+            <div class="bg-off-white radius-default padding-1">
+              <i class="fas fa-heart"></i>
+              <span class="ig-likes-count"></span>
+            </div>
+          </div>
+          <div class="flex-50">
+            <div class="bg-off-white radius-default padding-1">
+              <i class="fas fa-comment"></i>
+              <span class="ig-comments-count"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-cta">
+          <a href="https://stats.chrisvogt.me" title="View on instagram" class="ig-modal-link button dodger-blue expand">
+            <i class="far fa-external-link" aria-hidden="true"></i>
+            View on Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

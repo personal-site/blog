@@ -19,16 +19,18 @@
         </p>
       </div>
 
-      <ul id="instafeed" class="small-block-grid-3 medium-block-grid-6">
-        <!-- AJAX: instagram photos -->
+      <ul id="feed" class="small-block-grid-3 medium-block-grid-6">
+        {% include template/instagram/thumbnail.html %}
       </ul>
 
-      <div class="panel panel-sub text-center">
+      <!-- <div class="panel panel-sub text-center">
         <button type="button" class="js-load-more button tiny dodger-blue" title="Load More">
           <i class="fas fa-sync-alt"></i> Load More
         </button>
-      </div>
+      </div> -->
 
     </div>
   </div>
 </div>
+
+{% include template/instagram/modal.html %}
