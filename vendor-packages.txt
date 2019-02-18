@@ -5,4 +5,3 @@
 ./bower_components/foundation/js/foundation/foundation.magellan.js
 ./bower_components/foundation/js/foundation/foundation.orbit.js
 ./bower_components/foundation/js/foundation/foundation.topbar.js
-./node_modules/instafeed.js/instafeed.min.js
