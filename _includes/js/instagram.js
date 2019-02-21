@@ -29,7 +29,12 @@ export default async ({config, dom, jQuery}) => {
         }
 
         const handleThumbnailClick = event => {
-          renderInstagramModal({dom, photo: selected});
+          try {
+            renderInstagramModal({dom, photo: selected});
+          } catch (error) {
+            console.warn('Error opening Instagram modal.', error);
+          }
+
           event.preventDefault();
         };
 

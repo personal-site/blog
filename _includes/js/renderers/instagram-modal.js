@@ -6,11 +6,11 @@ const getRelativeTimeSinceString = date => {
 
 export default ({dom, photo}) => {
   if (!dom) {
-    console.log('A dom object is required');
+    throw new TypeError('Instagram modal requires a DOM object.');
   }
 
   if (!photo) {
-    console.log('A photo object is required');
+    throw new TypeError('Instagram modal requires a photo to render.');
   }
 
   const container = dom.select('#instagram-feed');
