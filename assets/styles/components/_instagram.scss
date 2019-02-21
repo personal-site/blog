@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the PHOTOS component.
+// This file contains all styles related to the INSTAGRAM component.
 // -----------------------------------------------------------------------------
 
-#photos {
+#instagram-feed {
     ul {
         margin: 0 -0.625rem -1.25em;
     }
@@ -19,6 +19,11 @@ body.ig-modal-open {
 }
 
 #instagram-overlay {
+    $ig-lg-breakpoint: 40.063em;
+    $ig-xl-breakpoint: 1400px;
+    $ig-default-space: 25px;
+    $ig-half-space: 25px * .5;
+
     background: rgba(0,0,0,0.6);
     position: fixed;
     color: white;
@@ -29,8 +34,11 @@ body.ig-modal-open {
     left: 0;
     overflow-y: scroll;
 
-    /* CSS Reset */
+    @media only screen and (min-width: $ig-lg-breakpoint) {
+        overflow-y: hidden;
+    }
 
+    /* CSS Reset */
     div, span, object, iframe,
     h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -76,10 +84,6 @@ body.ig-modal-open {
         }
     }
 
-    @media only screen and (min-width: 40.063em) {
-        overflow-y: hidden;
-    }
-
     .modal {
         background: white;
         color: #262626;
@@ -90,7 +94,7 @@ body.ig-modal-open {
 
         width: 100%;
 
-        @media only screen and (min-width: 40.063em) {
+        @media only screen and (min-width: $ig-lg-breakpoint) {
             max-height: 90%;
             max-width: 90%;
 
@@ -103,57 +107,104 @@ body.ig-modal-open {
         }
 
         // HACK: quick fix for an issue (#109) visible on large resolutions
-        @media only screen and (min-width: 1400px) {
+        @media only screen and (min-width: $ig-xl-breakpoint) {
             max-width: 1280px;
         }
-    }
-
-    .relative {
-        position: relative;
-    }
-
-    .modal-head {
-        display: flex;
-        margin-bottom: 25px;
-    }
-
-    .ig-modal-close {
-        position: absolute;
-        top: 12.5px;
-        right: 12.5px;
-    }
-
-    .head-content {
-        margin-left: 12.5px;
-    }
-
-    .font-xs {
-        font-size: 12px;
-    }
-
-    .txt-size-default {
-        font-size: 14px;
-    }
-
-    .radius-default {
-        border-radius: 6px;
-    }
-
-    .bg-off-white {
-        background-color: #f8f8f8;
     }
 
     .bg-dark-gray {
         background: #262626;
     }
 
-    .avatar-circle {
+    .bg-off-white {
+        background-color: #f8f8f8;
+    }
+
+    .circle {
         border-radius: 50%;
     }
 
-    .outlined {
-        border: 1px solid #989898;
+    .contain-object {
+        object-fit: contain;
+    }
+
+    .display-flex {
+        display: flex;
+    }
+
+    .flex-50 {
+        flex: 50%;
+    }
+
+    .head-content {
+        margin-left: $ig-half-space;
+    }
+
+    .hidden-mobile {
+        visibility: hidden;
+
+        @media only screen and (min-width: $ig-lg-breakpoint) {
+            visibility: auto;
+        }
+    }
+
+    .ig-modal-close {
+        position: absolute;
+        top: $ig-half-space;
+        right: $ig-half-space;
+    }
+
+    .ig-image-container {
+        align-items: center;
+        display: flex;
+
+        flex: 70%;
+
+        @media only screen and (min-width: $ig-lg-breakpoint) {
+            flex: 50%;
+        }
+    }
+
+    .margin-b-1 {
+        margin-bottom: $ig-half-space;
+    }
+
+    .margin-b-2 {
+        margin-bottom: $ig-default-space;
+    }
+
+    .margin-r-1 {
+        margin-right: $ig-half-space;
+    }
+
+    .modal-cta .button {
+        padding-top: $ig-half-space;
+        padding-bottom: $ig-half-space;
+    }
+
+    .modal-head {
+        display: flex;
+        margin-bottom: $ig-default-space;
+    }
+
+    .padding-1 {
+        padding: 6px;
+    }
+
+    .padding-2 {
+        padding: $ig-half-space;
+    }
+
+    .padding-3 {
+        padding: $ig-default-space;
+    }
+
+    .radius-default {
         border-radius: 6px;
+    }
+
+    .relative {
+        position: relative;
     }
 
     .txt-center {
@@ -164,77 +215,12 @@ body.ig-modal-open {
         color: #999;
     }
 
+    .txt-size-default {
+        font-size: 14px;
+    }
+
     .txt-small {
         font-size: 12px;
         line-height: 14px;
-    }
-
-    .ig-image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .padding-1 {
-        padding: 6px;
-    }
-
-    .padding-2 {
-        padding: 12.5px;
-    }
-
-    .padding-3 {
-        padding: 25px;
-    }
-
-    .display-flex {
-        display: flex;
-    }
-
-    .ig-image-container {
-        align-items: center;
-        display: flex;
-
-        flex: 70%;
-
-        @media only screen and (min-width: 40.063em) {
-            flex: 50%;
-        }
-    }
-
-    .flex-30 {
-        flex: 30%;
-    }
-
-    .flex-50 {
-        flex: 50%;
-    }
-
-    .flex-70 {
-        flex: 70%;
-    }
-
-    .margin-b-1 {
-        margin-bottom: 12.5px;
-    }
-
-    .margin-r-1 {
-        margin-right: 12.5px;
-    }
-
-    .margin-b-2 {
-        margin-bottom: 25px;
-    }
-
-    .modal-cta .button {
-        padding-top: 12.5px;
-        padding-bottom: 12.5px;
-    }
-
-    .hidden-mobile {
-        visibility: hidden;
-
-        @media only screen and (min-width: 40.063em) {
-            visibility: auto;
-        }
     }
 }

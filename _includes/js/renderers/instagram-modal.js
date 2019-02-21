@@ -13,7 +13,7 @@ export default ({dom, photo}) => {
     console.log('A photo object is required');
   }
 
-  const container = dom.select('#photos');
+  const container = dom.select('#instagram-feed');
   const template = dom.select('#instagram-modal-template').content;
   const content = template.cloneNode(true);
 
