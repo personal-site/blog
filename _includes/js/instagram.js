@@ -58,7 +58,7 @@ export default async ({config, dom, jQuery}) => {
       const links = thumbnailContainer.getElementsByClassName('ig-thumb-link');
       [...links].forEach(link => link.addEventListener('click', getClickHandler(link.dataset.id)));
 
-      $('#instagram-feed').removeClass('hidden');
+      $('#ig--feed').removeClass('hidden');
     } catch (error) {
       console.log(error);
     }

@@ -1,8 +1,19 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the INSTAGRAM component.
+// This file contains all styles related to the INSTAGRAM widget.
 // -----------------------------------------------------------------------------
 
-#instagram-feed {
+$ig--lg-breakpoint: 40.063em;
+$ig--xl-breakpoint: 1400px;
+$ig--default-space: 25px;
+$ig--half-space: 25px * .5;
+
+// NOTE: prevent the page from scrolling behind the modal
+body.ig--modal-open {
+    overflow: hidden;
+}
+
+// TODO: factor these styles out of this component
+#ig--feed {
     ul {
         margin: 0 -0.625rem -1.25em;
     }
@@ -14,16 +25,7 @@
     }
 }
 
-body.ig-modal-open {
-    overflow: hidden;
-}
-
-#instagram-overlay {
-    $ig-lg-breakpoint: 40.063em;
-    $ig-xl-breakpoint: 1400px;
-    $ig-default-space: 25px;
-    $ig-half-space: 25px * .5;
-
+#ig--overlay {
     background: rgba(0,0,0,0.6);
     position: fixed;
     color: white;
@@ -34,7 +36,7 @@ body.ig-modal-open {
     left: 0;
     overflow-y: scroll;
 
-    @media only screen and (min-width: $ig-lg-breakpoint) {
+    @media only screen and (min-width: $ig--lg-breakpoint) {
         overflow-y: hidden;
     }
 
@@ -84,7 +86,7 @@ body.ig-modal-open {
         }
     }
 
-    .modal {
+    .ig--modal {
         background: white;
         color: #262626;
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -94,7 +96,7 @@ body.ig-modal-open {
 
         width: 100%;
 
-        @media only screen and (min-width: $ig-lg-breakpoint) {
+        @media only screen and (min-width: $ig--lg-breakpoint) {
             max-height: 90%;
             max-width: 90%;
 
@@ -107,10 +109,12 @@ body.ig-modal-open {
         }
 
         // HACK: quick fix for an issue (#109) visible on large resolutions
-        @media only screen and (min-width: $ig-xl-breakpoint) {
+        @media only screen and (min-width: $ig--xl-breakpoint) {
             max-width: 1280px;
         }
     }
+
+    // Following are utility classes that are specific to this widget.
 
     .bg-dark-gray {
         background: #262626;
@@ -136,55 +140,24 @@ body.ig-modal-open {
         flex: 50%;
     }
 
-    .head-content {
-        margin-left: $ig-half-space;
-    }
-
     .hidden-mobile {
         visibility: hidden;
 
-        @media only screen and (min-width: $ig-lg-breakpoint) {
+        @media only screen and (min-width: $ig--lg-breakpoint) {
             visibility: auto;
         }
     }
 
-    .ig-modal-close {
-        position: absolute;
-        top: $ig-half-space;
-        right: $ig-half-space;
-    }
-
-    .ig-image-container {
-        align-items: center;
-        display: flex;
-
-        flex: 70%;
-
-        @media only screen and (min-width: $ig-lg-breakpoint) {
-            flex: 50%;
-        }
-    }
-
     .margin-b-1 {
-        margin-bottom: $ig-half-space;
+        margin-bottom: $ig--half-space;
     }
 
     .margin-b-2 {
-        margin-bottom: $ig-default-space;
+        margin-bottom: $ig--default-space;
     }
 
     .margin-r-1 {
-        margin-right: $ig-half-space;
-    }
-
-    .modal-cta .button {
-        padding-top: $ig-half-space;
-        padding-bottom: $ig-half-space;
-    }
-
-    .modal-head {
-        display: flex;
-        margin-bottom: $ig-default-space;
+        margin-right: $ig--half-space;
     }
 
     .padding-1 {
@@ -192,11 +165,11 @@ body.ig-modal-open {
     }
 
     .padding-2 {
-        padding: $ig-half-space;
+        padding: $ig--half-space;
     }
 
     .padding-3 {
-        padding: $ig-default-space;
+        padding: $ig--default-space;
     }
 
     .radius-default {
@@ -223,4 +196,35 @@ body.ig-modal-open {
         font-size: 12px;
         line-height: 14px;
     }
+}
+
+.ig--head-content {
+    margin-left: $ig--half-space;
+}
+
+.ig--image-container {
+    align-items: center;
+    display: flex;
+
+    flex: 70%;
+
+    @media only screen and (min-width: $ig--lg-breakpoint) {
+        flex: 50%;
+    }
+}
+
+.ig--modal-head {
+    display: flex;
+    margin-bottom: $ig--default-space;
+}
+
+.ig--modal-close {
+    position: absolute;
+    top: $ig--half-space;
+    right: $ig--half-space;
+}
+
+.ig--modal-cta .button {
+    padding-top: $ig--half-space;
+    padding-bottom: $ig--half-space;
 }
