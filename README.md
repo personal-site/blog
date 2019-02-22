@@ -6,13 +6,13 @@
 [![David.io Dev Dependencies](https://david-dm.org/personal-site/blog/dev-status.svg?style=flat-square)](https://david-dm.org/personal-site/blog?type=dev)
 [![GitHub license](https://img.shields.io/github/license/personal-site/blog.svg?style=flat-square)](https://github.com/personal-site/blog/blob/master/LICENSE)
 
-This is the code behind [www.chrisvogt.me](https://www.chrisvogt.me), a personal blog with built-in Instagram, GitHub and Goodreads widgets. This project is a hobby project that is not easily customizable currently, but by [the v1.0.0 milestone](https://github.com/personal-site/blog/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22v1.0.0+%E2%80%94+first+stable+release%22) it should be simple to setup a custimozable instance.
+This is the code behind [www.chrisvogt.me](https://www.chrisvogt.me), a personal blog with built-in Instagram, GitHub and Goodreads widgets. This is a hobby project that is not easily customizable, but by [the v1.0.0 milestone](https://github.com/personal-site/blog/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22v1.0.0+%E2%80%94+first+stable+release%22) there will be straightforward steps for cloning and configuring your own website using this theme.
 
 ## How to use
 
 ### Setup components
 
-Many of the components depend on external data. This table shows the components, the project code I'm using for the demonstration site above and example response data.
+Many of the components depend on external data. This table shows the components, the projects I'm using to power the demonstration site above and example response data.
 
 | Component      | Project                                                               | Example Response                                         |
 |----------------|-----------------------------------------------------------------------|----------------------------------------------------------|
@@ -27,7 +27,7 @@ Many of the components depend on external data. This table shows the components,
 ### Install dependencies
 
 ```
-gem install bundler && npm install
+gem install bundler && npm install && npm run build
 ```
 
 ### Develop
@@ -42,7 +42,7 @@ npm run start
 npm run build
 ```
 
-Build outputs to the `_/build` directory.
+Builds output to the `_/build` directory.
 
 ### Deploy
 
