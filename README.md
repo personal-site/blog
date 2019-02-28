@@ -32,6 +32,7 @@ Many of the available UI components depend on external data. This table document
 |---------|---------|---------------------------|----------------------------------|
 | Node    | 8       | https://nodejs.org        | Dev & build environment language |
 | npm     | 6       | https://npmjs.com         | JavaScript dependency management |
+| Bower   | >1.8.8  | https://npmjs.com         | Front-end dependencies. *See [#53](#53). |
 | Ruby    | 2       | https://www.ruby-lang.org | Dev & build environment language |
 | Bundler | >1.14   | https://bundler.io        | Ruby dependency management       |
 | Jekyll  | 3       | https://jekyllrb.com      | Blog and template engine         |
