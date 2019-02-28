@@ -49,5 +49,5 @@ export default ({dom, photo}) => {
   node.querySelector('.ig--modal-close').addEventListener('click', closeModal);
   document.addEventListener('keyup', handleCloseClick);
 
-  container.appendChild(node);
+  container.append(node);
 };

@@ -29,15 +29,15 @@ export default async ({config, dom, jQuery}) => {
       const blockquote = content.querySelector('.quote-content');
 
       const citeEl = document.createElement('cite');
-      citeEl.appendChild(document.createTextNode(cite));
+      citeEl.append(document.createTextNode(cite));
 
-      blockquote.appendChild(document.createTextNode(body));
-      blockquote.appendChild(citeEl);
+      blockquote.append(document.createTextNode(body));
+      blockquote.append(citeEl);
 
-      fragment.appendChild(content);
+      fragment.append(content);
     }
 
-    container.appendChild(document.importNode(fragment, true));
+    container.append(document.importNode(fragment, true));
   } catch (error) {
     console.warn('Error loading quotes section', error);
   }

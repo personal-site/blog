@@ -67,11 +67,11 @@ export default async ({config, dom, jQuery}) => {
       link.title = `Chris Vogt on ${displayName}`;
       link.href = href;
 
-      fragment.appendChild(document.importNode(content, true));
+      fragment.append(document.importNode(content, true));
     });
 
     container.innerHTML = '';
-    container.appendChild(document.importNode(fragment, true));
+    container.append(document.importNode(fragment, true));
   } catch (error) {
     console.warn('Error loading social profiles section', error);
     dom.select('#social').classList.add('hidden');

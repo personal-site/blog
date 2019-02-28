@@ -1,11 +1,12 @@
 {
   "name": "@personal-site/blog",
   "description": "A code and photography-focused Jekyll blog, powered by @personal-api.",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
-    "email": "mail@chrisvogt.me"
+    "email": "mail@chrisvogt.me",
+    "website": "https://www.chrisvogt.me"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,7 @@
     "start": "npm run js & bundle exec jekyll serve --watch --incremental --drafts",
     "pretest": "npm run build",
     "lint": "xo _includes/js",
-    "test": "bundlesize"
+    "test": "npm run lint && bundlesize"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
@@ -39,20 +40,18 @@
     "@babel/preset-env": "^7.2.3",
     "babel-minify": "^0.5.0",
     "babelify": "^10.0.0",
-    "bower": "^1.8.2",
+    "bower": "^1.8.8",
     "browserify": "^16.2.3",
     "bundlesize": "^0.17.1",
     "uglify-js": "^3.4.9",
-    "watchify": "^3.9.0",
+    "watchify": "^3.11.1",
     "xo": "^0.24.0"
   },
   "xo": {
     "globals": [
       "$",
       "document",
-      "ga",
       "jQuery",
-      "moment",
       "window"
     ],
     "space": true
