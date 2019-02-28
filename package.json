@@ -26,6 +26,7 @@
     "build": "npm run js:vendors && npm run js:babel && npm run js:min && jekyll build --config _config.prod.yml",
     "prestart": "npm run js:vendors",
     "start": "npm run js & bundle exec jekyll serve --watch --incremental --drafts",
+    "postinstall": "bower install",
     "pretest": "npm run build",
     "lint": "xo _includes/js",
     "test": "npm run lint && bundlesize"
