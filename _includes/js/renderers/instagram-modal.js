@@ -6,14 +6,14 @@ const getRelativeTimeSinceString = date => {
 
 export default ({dom, photo}) => {
   if (!dom) {
-    console.log('A dom object is required');
+    throw new TypeError('Instagram modal requires a DOM object.');
   }
 
   if (!photo) {
-    console.log('A photo object is required');
+    throw new TypeError('Instagram modal requires a photo to render.');
   }
 
-  const container = dom.select('#photos');
+  const container = dom.select('#ig--feed');
   const template = dom.select('#instagram-modal-template').content;
   const content = template.cloneNode(true);
 
@@ -21,7 +21,7 @@ export default ({dom, photo}) => {
   content.querySelector('.ig-likes-count').textContent = photo.likesCount;
   content.querySelector('.img-modal-avatar').src = photo.profilePicture;
   content.querySelector('.ig-modal-image').src = photo.images.standard_resolution.url;
-  content.querySelector('.ig-modal-link').href = photo.link;
+  content.querySelector('.ig--modal-link').href = photo.link;
   content.querySelector('.ig-modal-location').textContent = photo.locationName;
   content.querySelector('.ig-modal-text').textContent = photo.text;
   content.querySelector('.ig-time-ago').textContent = getRelativeTimeSinceString(photo.createdAt);
@@ -31,8 +31,8 @@ export default ({dom, photo}) => {
   usernameLink.title = photo.fullName;
 
   const closeModal = event => {
-    dom.select('#instagram-overlay').remove();
-    dom.select('body').classList.remove('ig-modal-open');
+    dom.select('#ig--overlay').remove();
+    dom.select('body').classList.remove('ig--modal-open');
     event.preventDefault();
   };
 
@@ -44,9 +44,9 @@ export default ({dom, photo}) => {
   };
 
   const node = document.importNode(content, true);
-  dom.select('body').classList.add('ig-modal-open');
+  dom.select('body').classList.add('ig--modal-open');
 
-  node.querySelector('.ig-modal-close').addEventListener('click', closeModal);
+  node.querySelector('.ig--modal-close').addEventListener('click', closeModal);
   document.addEventListener('keyup', handleCloseClick);
 
   container.appendChild(node);

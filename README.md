@@ -11,18 +11,19 @@ This is the code behind [www.chrisvogt.me](https://www.chrisvogt.me), a personal
 ## How to use
 
 ### Setup components
+Many of the components depend on external data. This table documents the components and projects behind the demonstration site's data sources and example response data.
 
-Many of the components depend on external data. This table shows the components, the projects I'm using to power the demonstration site above and example response data.
 
-| Component      | Project                                                               | Example Response                                         |
-|----------------|-----------------------------------------------------------------------|----------------------------------------------------------|
-| Latest Commit  | _Built in_                                                            | [_schema/latest-commit.json](_schema/latest-commit.json) |
-| Latest Repos   | _Built in_                                                            | [_schema/latest-repos.json](_schema/latest-repos.json)   |
-| Navigation     | _Built in_                                                            | [_data/navigation.json](_data/navigation.json)           |
-| Posts          | _Built in_                                                            | [_posts/hello-world.md](_posts/hello-world.md)
-| Profiles       | [personal-api/core](https://github.com/personal-api/core)             | [_schema/profiles.json](_schema/profiles.json)           |
-| Quotes         | [personal-api/core](https://github.com/personal-api/core)             | [_schema/quotes.json](_schema/quotes.json)               |
-| Recently Read  | [chrisvogt/recently-read](https://github.com/chrisvogt/recently-read) | [_schema/recently-read.json](_schema/recently-read.json) |
+| Component      | Project                                                                                       | Example Response                                         |
+|----------------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| Instagram      | [personal-api/plugin-instagram](https://github.com/personal-api/plugin-instagram) | [_schema/instagram.json](_schema/instagram.json)           |
+| Latest Commit  | _Built in_                                                                        | [_schema/latest-commit.json](_schema/latest-commit.json) |
+| Latest Repos   | _Built in_                                                                        | [_schema/latest-repos.json](_schema/latest-repos.json)   |
+| Navigation     | _Built in_                                                                        | [_data/navigation.json](_data/navigation.json)           |
+| Posts          | _Built in_                                                                        | [_posts/hello-world.md](_posts/hello-world.md)           |
+| Profiles       | [personal-api/core](https://github.com/personal-api/core)                         | [_schema/profiles.json](_schema/profiles.json)           |
+| Quotes         | [personal-api/core](https://github.com/personal-api/core)                         | [_schema/quotes.json](_schema/quotes.json)               |
+| Recently Read  | [chrisvogt/recently-read](https://github.com/chrisvogt/recently-read)             | [_schema/recently-read.json](_schema/recently-read.json) |
 
 ### Install dependencies
 

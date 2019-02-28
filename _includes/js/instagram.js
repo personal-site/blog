@@ -29,7 +29,12 @@ export default async ({config, dom, jQuery}) => {
         }
 
         const handleThumbnailClick = event => {
-          renderInstagramModal({dom, photo: selected});
+          try {
+            renderInstagramModal({dom, photo: selected});
+          } catch (error) {
+            console.warn('Error opening Instagram modal.', error);
+          }
+
           event.preventDefault();
         };
 
@@ -53,7 +58,7 @@ export default async ({config, dom, jQuery}) => {
       const links = thumbnailContainer.getElementsByClassName('ig-thumb-link');
       [...links].forEach(link => link.addEventListener('click', getClickHandler(link.dataset.id)));
 
-      $('#photos').removeClass('hidden');
+      $('#ig--feed').removeClass('hidden');
     } catch (error) {
       console.log(error);
     }
