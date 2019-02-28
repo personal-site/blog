@@ -1,4 +1,4 @@
-<img src="assets/images/h-logo.png" alt="www.chrisvogt.me" width="200" height="200">
+# Personal Blog Jekyll Theme
 
 [![Build status](https://img.shields.io/travis/personal-site/blog.svg?branch=master&style=flat-square)](https://travis-ci.org/personal-site/blog)
 [![Code Climate](https://codeclimate.com/github/personal-site/blog/badges/gpa.svg)](https://codeclimate.com/github/personal-site/blog)
@@ -6,53 +6,48 @@
 [![David.io Dev Dependencies](https://david-dm.org/personal-site/blog/dev-status.svg?style=flat-square)](https://david-dm.org/personal-site/blog?type=dev)
 [![GitHub license](https://img.shields.io/github/license/personal-site/blog.svg?style=flat-square)](https://github.com/personal-site/blog/blob/master/LICENSE)
 
-My personal website and blog, current a Jekyll + ES7 website deployed to GitHub Pages.
+This is the code behind [www.chrisvogt.me](https://www.chrisvogt.me), a personal blog with built-in Instagram, GitHub and Goodreads widgets. This is a hobby project that is not easily customizable, but by [the v1.0.0 milestone](https://github.com/personal-site/blog/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22v1.0.0+%E2%80%94+first+stable+release%22) there will be straightforward steps for cloning and configuring your own website using this theme.
 
-This is an open source project. I plan to make it fully customizable by [`v1.0.0`](https://github.com/personal-site/blog/milestone/1) so others can spin up their own sites using this template.
+## How to use
 
-_View live at [www.chrisvogt.me](https://www.chrisvogt.me)._
+### Setup components
 
-### How to use
+Many of the components depend on external data. This table shows the components, the projects I'm using to power the demonstration site above and example response data.
 
-###### Setup components
+| Component      | Project                                                               | Example Response                                         |
+|----------------|-----------------------------------------------------------------------|----------------------------------------------------------|
+| Latest Commit  | _Built in_                                                            | [_schema/latest-commit.json](_schema/latest-commit.json) |
+| Latest Repos   | _Built in_                                                            | [_schema/latest-repos.json](_schema/latest-repos.json)   |
+| Navigation     | _Built in_                                                            | [_data/navigation.json](_data/navigation.json)           |
+| Posts          | _Built in_                                                            | [_posts/hello-world.md](_posts/hello-world.md)
+| Profiles       | [personal-api/core](https://github.com/personal-api/core)             | [_schema/profiles.json](_schema/profiles.json)           |
+| Quotes         | [personal-api/core](https://github.com/personal-api/core)             | [_schema/quotes.json](_schema/quotes.json)               |
+| Recently Read  | [chrisvogt/recently-read](https://github.com/chrisvogt/recently-read) | [_schema/recently-read.json](_schema/recently-read.json) |
 
-The components expect data be available from HTTP endpoints that return data demonstrated in the _\_schema_ directory.
+### Install dependencies
 
-| Component | Example |
-|---|---|
-| Latest Commit | _\_schema/latest-commit.json_ |
-| Latest Repos | _\_schema/latest-repos.json_ |
-| Social Profiles | _\_schema/profiles.json_ |
-| Quotes | _\_schema/quotes.json_ |
-| Recently Read | _\_schema/quotes.json_ |
+```
+gem install bundler && npm install && npm run build
+```
 
-###### Install dependencies
+### Develop
 
-* `gem install bundler && npm install`
+```
+npm run start
+```
 
-###### Develop
+### Build
 
-* `npm run start`
+```
+npm run build
+```
 
-###### Build
+Builds output to the `_/build` directory.
 
-* `npm run build`
+### Deploy
 
-###### Deploy
+I manually deploy this to a `gh-pages` branch in [chrisvogt/www.chrisvogt.me](https://github.com/chrisvogt/www.chrisvogt.me).
 
-Builds output to _/_build_. This currently must be manually deployed.
-
-### License
+## License
 
 [MIT](LICENSE) © [Chris Vogt](https://www.chrisvogt.me).
-
-### Built with
-
-<p align="left">
-  <img src="https://bower.io/img/bower-logo.svg" alt="Bower.js" height="48" />
-  <img src="https://avatars0.githubusercontent.com/u/1335026?v=3&s=200" alt="Firebase" height="48" />
-  <img src="https://cdn.jsdelivr.net/gh/babel/logo/babel.png" alt="Babel" height="48" />
-	<img src="https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48" />
-  <img src="https://cdn.rawgit.com/mathamoz/ionic-builder/898ac76dc9e9edeb02d1825358eca95ec742b985/public/images/why-the-yeti.svg" alt="Zurb Foundation" height="48" />
-	<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg" alt="HTML5 &amp; CSS3" height="48" />
-</p>
