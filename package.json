@@ -29,7 +29,7 @@
     "postinstall": "bower install",
     "pretest": "npm run build",
     "lint": "xo _includes/js",
-    "test": "npm run lint && bundlesize"
+    "test": "bundlesize"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
