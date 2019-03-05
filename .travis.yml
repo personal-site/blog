@@ -8,5 +8,6 @@ before_install:
   - cp _config.yml _config.prod.yml
 install:
   - bundle install
-  - npm install && bower install
+  - npm install
+  - bower install
   - npm run build
