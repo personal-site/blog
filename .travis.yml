@@ -4,10 +4,10 @@ node_js:
   - v8
 before_install:
   - npm install -g bower
-  - gem install bundler
-  - cp _config.yml _config.prod.yml
-install:
-  - bundle install
-  - npm install
   - bower install
+  - gem install bundler
+  - bundle install
+  - bundle exec jekyll build
+install:
+  - npm install
   - npm run build
