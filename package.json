@@ -59,11 +59,11 @@
   },
   "bundlesize": [
     {
-      "path": "./_build/assets/js/**/*.js",
+      "path": "./_site/assets/js/**/*.js",
       "maxSize": "100 kB"
     },
     {
-      "path": "./_build/assets/css/**/*.css",
+      "path": "./_site/assets/css/**/*.css",
       "maxSize": "25 kB"
     }
   ]
