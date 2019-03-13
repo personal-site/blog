@@ -4,7 +4,9 @@
 .sass-cache
 .tmp
 .vscode
+CNAME
 _build
+_config.prod.yml
 _site
 assets/js/*.js
 bower_components

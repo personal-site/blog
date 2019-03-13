@@ -30,7 +30,7 @@ export default async ({config, dom, jQuery}) => {
       image.src = book.smallThumbnail;
       image.alt = book.title;
 
-      bookList.appendChild(document.importNode(content, true));
+      bookList.append(document.importNode(content, true));
       [container, navButton].forEach(el => el.classList.remove('hidden'));
     }
   } catch (error) {

@@ -52,10 +52,10 @@ export default async ({config, dom, jQuery}) => {
         const link = content.querySelector('.ig-thumb-link');
         link.dataset.id = photo.id;
 
-        thumbnailContainer.appendChild(document.importNode(content, true));
+        thumbnailContainer.append(document.importNode(content, true));
       }
 
-      const links = thumbnailContainer.getElementsByClassName('ig-thumb-link');
+      const links = thumbnailContainer.querySelectorAll('.ig-thumb-link');
       [...links].forEach(link => link.addEventListener('click', getClickHandler(link.dataset.id)));
 
       $('#ig--feed').removeClass('hidden');

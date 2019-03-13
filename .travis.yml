@@ -3,11 +3,11 @@ language: node_js
 node_js:
   - v8
 before_install:
+  - cp _config.yml _config.prod.yml
   - npm install -g bower
   - bower install
   - gem install bundler
   - bundle install
-  - bundle exec jekyll build
-install:
   - npm install
+install:
   - npm run build

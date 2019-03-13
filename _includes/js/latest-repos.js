@@ -18,7 +18,7 @@ export default async ({config, dom, jQuery}) => {
 
   const placeholder = placeholderTemplate.cloneNode(true);
   for (let i = 0; i < 6; i += 1) {
-    container.appendChild(document.importNode(placeholder, true));
+    container.append(document.importNode(placeholder, true));
   }
 
   try {
@@ -38,7 +38,7 @@ export default async ({config, dom, jQuery}) => {
       link.title = `${repo.name} on GitHub`;
       link.href = repo.url;
 
-      container.appendChild(document.importNode(content, true));
+      container.append(document.importNode(content, true));
     }
   } catch (error) {
     console.warn('Error loading contributions section', error);
