@@ -4,7 +4,7 @@ node_js:
   - v8
 before_install:
   - cp _config.yml _config.prod.yml
-  - perl -pi -e '$_ .= qq(destination: _build\n) if /analytics_id:/' _config.prod.yml
+  - sed -i '/analytics_id/a destination: _build' _config.prod.yml
   - npm install -g bower
   - bower install
   - gem install bundler
