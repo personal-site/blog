@@ -3,8 +3,7 @@ language: node_js
 node_js:
   - v8
 before_install:
-  - cp _config.yml _config.prod.yml
-  - sed -i "/analytics_id/a destination: _build" _config.prod.yml
+  - sed '/analytics_id/a destination: _build' _config.yml > _config.prod.yml
   - npm install -g bower
   - bower install
   - gem install bundler
