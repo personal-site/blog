@@ -1,5 +1,5 @@
 ---
-title:  My Personal Blog and Site's Architecture
+title: "Overview: My Personal Site & Blog"
 categories: [meta]
 slug: site-architecture
 tags: [meta, open source, JavaScript]
@@ -9,45 +9,64 @@ excerpt: >
   overview for my website's architecture and future plans.
 ---
 
-> History of this site
+<span class="text-drop-cap">I</span>'m going to write about how my site currently
+works and share thoughts on the direction I plan on taking it. This is the first
+in a series of posts tagged `meta` where I'll write about issues I'm working
+through while working on my personal site.
 
-<span class="text-drop-cap">W</span>hen I launched this site in 2012 it was a
-collection of pages displaying aggregated events – Facebook posts, GitHub commits,
-etc. – and links to demos and source code for projects I was working on. It was
-built using a custom WordPress theme because I had been building marketing websites
+### How this project came to be
 
-Over the years, as I gained interest in or became familiar with other tools from
-experience at work work, this website became my digital sandbox where could explore
-different design, tech, and architecture at my own priority. Since then this website
-has run on WordPress, CakePHP, Jekyll, custom Node and JavaScript build scripts,
-and finally back to Jekyll again.
+When this website was first published, _circa_ 2012, it was an aggregation of social
+posts and links to projects I was working on. That first version of the site was
+a self-hosted WordPress website using a custom theme and a mix of paid and free
+plugins.
 
-In 2015 I began to use WakaTime for tracking time spent editing code for projects.
-That's how [stats.chrisvogt.me](https://stats.chrisvogt.me) was started, and it
-has remained a separate CakePHP project with shockingly low maintenance needed to
-keep it running. It just works.
+Since then, this website has become a digital sandbox where I explore and test various
+tools, technology, and designs. Since its inception 7 years ago, this personal site
+has run on WordPress, then CakePHP, then Jekyll with jQuery, and finally Node with
+jQuery and HTML that was eventually wrapped, yet again, by Jekyll.
 
-By now most of those projects lay in the graveyard of archives found in my GitHub
-account. What remains published is made up of a patchwork of different experiments
-and personal projects that I've been tinkering on over the years. Here is a rough
-diagram showing the data behind this site. 
+Here is a diagram showing how requests for data currently currently flow for this site.
 
-![Data diagram, chrisvogt.me](/assets/images/posts/data-diagram-0314.svg)
+![Data diagram, chrisvogt.me](/assets/images/posts/data-diagram-0316.svg)
 
-> Data diagram for the current version of this site
+All of the components and services are open source projects available on GitHub.
 
-The original WordPress version of this site was monolithic and contained neatly
-within one project while the current iteration is spread across a hodge podge of
-microservices, APIs, and Jekyll for the blog engine.
+| Component      | Project                                                                           |
+|----------------|-----------------------------------------------------------------------------------|
+| Blog Engine    | [personal-site/blog](https://github.com/personal-site/blog)                       |
+| Personal API   | [personal-api/core](https://github.com/personal-api/core) 
+| Instagram Feed | [personal-api/plugin-instagram](https://github.com/personal-api/plugin-instagram) |
+| Latest Repos   | [sindresorhus/gh-latest-repos](https://github.com/sindresorhus/gh-latest-repos)   |                        |
+| Recently Read  | [chrisvogt/recently-read](https://github.com/chrisvogt/recently-read)             |
+| Stats          | [chrisvogt/stats](https://github.com/chrisvogt/stats)
 
-Every project for this site is available open source on GitHub although you would
-need to make a significant amount of changes to customize everything. My projects
-have a stable API and are considerate of backwards compatibility by version 1.0.0.
+### Where this project is going
 
-To mold this site into a more coherent, feature-rich project I will begin making
-changes to both the front and the back end with goals of simplicity and performance.
-I'm planning to keep Jekyll as the blog engine for the time being while focusing
-on the server-side changes to iterate on the client once I've met those goals.
+I have many ideas for the front end of this site, like replacing the unmaintained
+Foundation 5 front end framework with something modern, decoupling the JavaScript
+from the blog code so it can be maintained separately and imported into other
+projects, and features to showcase and share creative projects. To get there, I
+should first polish the back end.
+
+Here is a rough diagram showing how I plan to normalize the data flow.
 
 ![Proposed data diagram, chrisvogt.me](/assets/images/posts/data-diagram-proposed.svg)
 
+My plan calls for the following components.
+
+* *Personal Site* – blog engine and client.
+* *Personal API* – API for my personal data and metrics.
+* *Job Scheduler* – job scheduler for internal tasks.
+* *Entities* – data abstraction layer for fetch and save operations.
+
+The main items I'm addresing are:
+
+* Reducing the number of calls made by the client to render the site. The Personal
+API can have an endpoint that returns all data necessary to render the page.
+* Adds a new service for scheduling jobs to fetch and cache social feeds.
+* Moves data operations into an abstraction layer to decouple fetch and CRUD
+operations from the API core.
+
+It should then be possible for each component to provide hooks and events plugins
+can use to extend the Personal API in a modular and customizable way.
