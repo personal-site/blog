@@ -1,12 +1,25 @@
 .post-container {
-    --x-height-multiplier: 0.375;
     --baseline-multiplier: 0.17;
+    --x-height-multiplier: 0.375;
     max-width: 740px;
 }
 
-.post-content p {
-    line-height: 2.4rem;
-    font-size: 1.1rem;
+.post-content {
+    p,
+    ul li {
+        font-size: 1.1rem;
+        line-height: 2.4rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    ul {
+        font-family: inherit;
+        font-size: inherit;
+        text-transform: inherit;
+    }
 }
 
 .page-post {
