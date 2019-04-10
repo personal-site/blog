@@ -1,38 +1,40 @@
-<section id="blog" data-magellan-destination="blog">
-    <div class="row">
-      <div class="panel large-12 columns">
+<section id="blog" class="container">
+  <div class="row">
+    <div class="col-xs-12">
 
-        <div class="panel panel-controls small-only-text-center">
-          <p>
-            Latest blog posts. <span class="accent">New posts published monthly.</span>
-          </p>
-        </div>
+      <div class="panel panel-controls text-center text-md-left">
+        <p>
+          Latest blog posts. <span class="accent">New posts published monthly.</span>
+        </p>
+      </div>
 
-        <div id="latest-posts">
+      <div id="latest-posts">
 
-          {% for post in site.posts limit:5 %}
-          <a href="{{ post.url | relative_url }}" class="hvr-float-shadow" title="{{ post.title }}">
-            <div class="panel panel-post small-only-text-center">
-              <h5>{{ post.title }}</h5>
+        {% for post in site.posts limit:5 %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ post.title }}
+            </h5>
 
-              <div class="post-date m-b-1 text-small">
-                <i class="far fa-calendar-alt"></i> {{ post.date | date: '%B %d, %Y' }}
-              </div>
-
-              <p>
-                {{ post.excerpt }}
-
-                <span class="text-small text-muted font-stack-default">
-                  Read More &raquo;
-                </span>
-              </p>
+            <div class="post-date m-b-1 text-small">
+              <i class="far fa-calendar-alt"></i> {{ post.date | date: '%B %d, %Y' }}
             </div>
-          </a>
-          {% endfor %}
 
+            <p class="card-text">
+              {{ post.excerpt }}
+            </p>
+
+            <a class="btn btn-primary" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+              Read post &raquo;
+            </a>
+          </div>
         </div>
+        {% endfor %}
 
       </div>
-    </div>
 
-  </section>
+    </div>
+  </div>
+
+</section>
