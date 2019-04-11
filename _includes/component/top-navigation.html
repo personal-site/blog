@@ -18,26 +18,14 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-
-
       {% for item in site.data.navigation.top.left %}
         {% if item.slug == 'blog' and site.posts.size == 0 %}{% break %}{% endif %}
-        <li class="link-{{ item.slug }}{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}" data-magellan-arrival="{{ item.slug }}">
-          <a href="{{ item.path }}" title="{{ item.title }}">
+        <li class="link-{{ item.slug }} nav-item{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}">
+          <a class="nav-link" href="{{ item.path }}" title="{{ item.title }}">
             {{ item.text }}
           </a>
         </li>
       {% endfor %}
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search">

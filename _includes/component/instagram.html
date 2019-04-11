@@ -1,15 +1,16 @@
 <div id="ig--feed" class="hidden" data-magellan-destination="photos">
   <div class="row">
-    <div class="panel large-12 columns">
+    <div class="col-lg-12 w-100">
 
-      <div class="panel panel-controls small-only-text-center">
+      <div class="panel panel-controls text-center text-md-left">
         <p>
           Recent Photos. <span class="accent">Click on a thumbnail to view in Instagram.</span>
 
           {% if site.social.instagram_username %}
           <a
-            class="button secondary tiny"
+            class="btn btn-secondary btn-xs"
             href="{{ site.social.instagram_username }}"
+            role="button"
             title="{{ site.social.instagram_username }} on Instagram"
           >
             <i class="fab fa-instagram"></i>

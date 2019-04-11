@@ -4,8 +4,6 @@
 
 #projects {
     background-color: $dodger-blue;
-    padding: 50px 0;
-    text-align: center;
 
     .latest-repos-description {
         min-height: 50px;
@@ -13,27 +11,5 @@
 
     .panel {
         width: 100%;
-    }
-
-    a {
-        color: #efefef;
-        &:hover {
-            color: white;
-        }
-    }
-
-    #latest-commit {
-        color: #333;
-        margin-bottom: 1em;
-    }
-
-    h3 {
-        line-height: 40px;
-    }
-
-    @media only screen and (min-width: 40.063em) {
-        h3, p, div {
-            text-align: left;
-        }
     }
 }

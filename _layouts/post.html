@@ -5,8 +5,9 @@ slug: post
 {% include section/header.html %}
 {% capture headline %}<h1>{{ page.title }}</h1>{% endcapture %}
 
+<div class="container">
   <div class="row">
-    <div class="large-12" style="padding: 1em 2em;">
+    <div class="col-12">
 
       {{ headline }}
 
@@ -21,28 +22,29 @@ slug: post
 
     </div>
   </div>
+</div>
 
-  <div class="author-container">
-    <div class="row">
+<div class="author-container">
+  <div class="row">
 
-      <div class="small-12 medium-3 columns text-center">
-        <img
-          alt="Avatar – {{ site.strings.name }}"
-          class="circle"
-          src="/assets/images/avatar-256px.jpg"
-          height="128"
-          width="128"
-        >
-      </div>
-
-      <div
-        class="small-12 medium-9 columns d-flex align-items-center text-center text-medium-left"
-        style="min-height: 128px;line-height: 1.9em;"
+    <div class="small-12 medium-3 columns text-center">
+      <img
+        alt="Avatar – {{ site.strings.name }}"
+        class="circle"
+        src="/assets/images/avatar-256px.jpg"
+        height="128"
+        width="128"
       >
-        {{ site.strings.bio }}
-      </div>
-
     </div>
+
+    <div
+      class="small-12 medium-9 columns d-flex align-items-center text-center text-medium-left"
+      style="min-height: 128px;line-height: 1.9em;"
+    >
+      {{ site.strings.bio }}
+    </div>
+
   </div>
+</div>
 
 {% include section/footer.html %}
