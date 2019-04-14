@@ -13,7 +13,7 @@ export default async ({config, dom, jQuery}) => {
 
   const bookList = dom.select('#recent-books');
   const container = dom.select('#recently-read');
-  const navButton = dom.select('#primary-nav li[data-magellan-arrival="recently-read"]');
+  // const navButton = dom.select('#primary-nav li');
   const template = dom.select('#recent-book-template').content;
 
   try {
@@ -31,7 +31,7 @@ export default async ({config, dom, jQuery}) => {
       image.alt = book.title;
 
       bookList.append(document.importNode(content, true));
-      [container, navButton].forEach(el => el.classList.remove('hidden'));
+      [container].forEach(el => el.classList.remove('hidden'));
     }
   } catch (error) {
     console.warn('Error loading recently read section', error);
