@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="bg-light col-lg-12 w-100">
+        <div class="panel panel-controls text-center text-md-left">
 
-        <div class="panel panel-controls small-only-text-center">
           <p>
             Recent Photos. <span class="accent">Click on a thumbnail to view in Instagram.</span>
 
             {% if site.social.instagram_username %}
             <a
-              class="btn btn-secondary btn-xs"
+              class="btn btn-primary btn-sm float-md-right"
               href="{{ site.social.instagram_username }}"
               role="button"
               title="{{ site.social.instagram_username }} on Instagram"

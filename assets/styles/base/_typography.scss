@@ -17,12 +17,6 @@ body {
     color: white;
 }
 
-@media #{$medium-up} {
-    .text-medium-left {
-        text-align: left!important;
-    }
-}
-
 /* accents */
 hr {
     text-align: center;
@@ -57,12 +51,6 @@ h1 {
 }
 .page-home h1 {
     line-height: 28px;
-}
-
-@media #{$medium-up} {
-    h1 {
-        font-size: 3.124em;
-    }
 }
 
 h2 {

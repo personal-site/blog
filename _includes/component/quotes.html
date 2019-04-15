@@ -1,15 +1,21 @@
 <section id="quote">
-
   <div class="row">
-    <div class="large-12 columns">
-      <ul
-        class="orbit"
-        data-orbit data-options="variable_height:true;bullets:false;slide_number:false;timer_speed:6000;"
-        id="quote-container"
-      ></ul>
+    <div class="col-12">
+      <div id="carouselQuotesControls" class="carousel slide text-center" data-ride="carousel">
+        <div id="quote-container" class="carousel-inner">
+          <!-- Quotes will load here. -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselQuotesControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselQuotesControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </div>
 
   {% include template/quotes/quote.html %}
-
 </section>

@@ -4,14 +4,14 @@
       <div class="container">
         <div class="row">
           {% if site.theme_options.show_credits %}
-          <div class="col-12 col-md-6 columns">
+          <div class="col-12 col-md-6">
             <p>Made with <span class="fas fa-code"></span> + <span class="fas fa-heart"></span> by <i class="fab fa-twitter"></i> <a href="https://twitter.com/c1v0" title="@C1V0 on Twitter" class="twitter-username">@C1V0</a> in San Francisco, CA</p>
           </div>
           {% endif %}
           <div class="col-12 {% if site.theme_options.show_credits %}col-md-6{% endif %}">
-            <ul class="inline-list">
+            <ul class="list-inline">
               {% for item in site.data.navigation.bottom %}
-              <li>
+              <li class="list-inline-item">
                 <a href="{{ item.path }}" title="{{ item.title }}">
                   {{ item.text }}
                 </a>
