@@ -3,17 +3,18 @@
 // -----------------------------------------------------------------------------
 
 footer#docfoot {
+    a {
+        color: #afafaf;
+        &:hover {
+            color: white;
+        }
+    }
+
     p,
     ul {
         font-size: .75em;
         line-height: 32px;
         margin-bottom: 0;
-    }
-
-    p {
-        @media #{$small-only} {
-            text-align: center;
-        }
     }
 
     ul {

@@ -43,7 +43,5 @@ export default async ({config, dom, jQuery}) => {
   } catch (error) {
     console.warn('Error loading contributions section', error);
     dom.select('#projects').classList.add('hidden');
-    // TODO: factor out
-    // dom.select('#primary-nav li[data-magellan-arrival="projects"]').classList.add('hidden');
   }
 };

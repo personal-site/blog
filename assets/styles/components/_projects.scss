@@ -13,3 +13,8 @@
         width: 100%;
     }
 }
+
+#latest-commit a {
+    text-decoration: underline;
+    &:hover { text-decoration: none; }
+}

@@ -7,6 +7,10 @@ $ig--xl-breakpoint: 1400px;
 $ig--default-space: 25px;
 $ig--half-space: 25px * .5;
 
+.ig-thumb-link {
+    cursor: zoom-in;
+}
+
 // NOTE: prevent the page from scrolling behind the modal
 body.ig--modal-open {
     overflow: hidden;

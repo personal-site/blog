@@ -7,20 +7,10 @@
     padding-bottom: 50px;
     position: relative;
 
-    h1 {
-        margin-top: 25px;
-        margin-bottom: 15px;
-    }
-
     .lead {
         color: $grey-50;
         font-family: $text-headline-font-stack;
     }
-}
-
-.shrunken-head {
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 .hero,
@@ -28,51 +18,4 @@
     background: rgba(69, 39, 160, 1);
     background: linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4527a0', endColorstr='#711e9b', GradientType=1);
-}
-
-.top-bar-section li.active:not(.has-form) a:not(.button) {
-    background-color: $dodger-blue;
-    &:hover {
-        background-color: $dodger-blue;
-    }
-}
-
-.top-bar-section li:not(.has-form) a:not(.button) {
-    &:hover {
-        background-color: $dodger-blue;
-    }
-}
-
-[data-magellan-expedition],
-[data-magellan-expedition-clone] {
-    padding: 0;
-}
-
-#primary-nav.fixed {
-    box-shadow: $default-box-shadow;
-}
-
-.top-bar {
-    background: none;
-
-    ul li {
-        background: none;
-    }
-
-    a {
-        background: none;
-    }
-
-    .brand {
-        font-family: $text-headline-font-stack;
-    }
-}
-
-.top-bar-section li:not(.has-form) a:not(.button) {
-    background: none;
-    transition: background 1s ease;
-}
-
-.top-bar.expanded .title-area {
-    background: none;
 }

@@ -21,59 +21,11 @@
       {% for item in site.data.navigation.top.left %}
         {% if item.slug == 'blog' and site.posts.size == 0 %}{% break %}{% endif %}
         <li class="link-{{ item.slug }} nav-item{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}">
-          <a class="nav-link" href="{{ item.path }}" title="{{ item.title }}">
+          <a class="nav-link text-light" href="{{ item.path }}" title="{{ item.title }}">
             {{ item.text }}
           </a>
         </li>
       {% endfor %}
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
   </div>
 </nav>
-
-<!--
-<div id="primary-nav" class="contain-to-grid sticky">
-  <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <span class="brand">
-          <a href="/" alt="Home – {{ site.strings.title }}">
-            {{ site.strings.brand }}
-          </a>
-        </span>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="#">
-          <span>Menu</span>
-        </a>
-      </li>
-    </ul>
-    <section class="top-bar-section" data-magellan-expedition>
-      <ul class="left">
-        {% for item in site.data.navigation.top.left %}
-          {% if item.slug == 'blog' and site.posts.size == 0 %}{% break %}{% endif %}
-          <li class="link-{{ item.slug }}{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}" data-magellan-arrival="{{ item.slug }}">
-            <a href="{{ item.path }}" title="{{ item.title }}">
-              {{ item.text }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-      <ul class="right">
-        {% for item in site.data.navigation.top.right %}
-        <li>
-          <a href="{{ item.path }}" title="{{ item.title }}">
-            {{ item.text }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-  </nav>
-</div> -->
