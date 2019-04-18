@@ -48,7 +48,7 @@
     "bower": "^1.8.8",
     "browserify": "^16.2.3",
     "bundlesize": "^0.17.1",
-    "uglify-js": "^3.4.9",
+    "uglify-es": "^3.3.9",
     "watchify": "^3.11.1",
     "xo": "^0.24.0"
   },
