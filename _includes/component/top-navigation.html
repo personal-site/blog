@@ -1,40 +1,33 @@
 <!-- Component: Navigation -->
-<div id="primary-nav" class="contain-to-grid sticky">
-  <nav class="top-bar" role="navigation" data-options="sticky_on:[medium,large];scrolltop:false;" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <span class="brand">
-          <a href="/" alt="Home – {{ site.strings.title }}">
-            {{ site.strings.brand }}
-          </a>
-        </span>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="#">
-          <span>Menu</span>
-        </a>
-      </li>
-    </ul>
-    <section class="top-bar-section" data-magellan-expedition>
-      <ul class="left">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand font-stack-headline" href="/">
+      {{ site.strings.brand }}
+    </a>
+
+    <button
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+      data-target="#navbarTogglerDemo02"
+      data-toggle="collapse"
+      type="button"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav">
         {% for item in site.data.navigation.top.left %}
           {% if item.slug == 'blog' and site.posts.size == 0 %}{% break %}{% endif %}
-          <li class="link-{{ item.slug }}{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}" data-magellan-arrival="{{ item.slug }}">
-            <a href="{{ item.path }}" title="{{ item.title }}">
+          <li class="link-{{ item.slug }} nav-item{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}">
+            <a class="nav-link text-light font-stack-subhead" href="{{ item.path }}" title="{{ item.title }}">
               {{ item.text }}
             </a>
           </li>
         {% endfor %}
       </ul>
-      <ul class="right">
-        {% for item in site.data.navigation.top.right %}
-        <li>
-          <a href="{{ item.path }}" title="{{ item.title }}">
-            {{ item.text }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-  </nav>
-</div>
+    </div>
+  </div>
+</nav>

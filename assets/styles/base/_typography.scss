@@ -4,9 +4,7 @@
 
 /* common */
 body {
-    color: $text-raven;
     font-family: $text-default-font-stack;
-    font-size: 100%;
 }
 
 .text-small {
@@ -15,12 +13,6 @@ body {
 
 .text-inverse {
     color: white;
-}
-
-@media #{$medium-up} {
-    .text-medium-left {
-        text-align: left!important;
-    }
 }
 
 /* accents */
@@ -52,17 +44,6 @@ footer ul.inline-list {
 /* headlines */
 h1 {
     font-family: $text-headline-font-stack;
-    font-size: 2.124em;
-    margin-top: 16px;
-}
-.page-home h1 {
-    line-height: 28px;
-}
-
-@media #{$medium-up} {
-    h1 {
-        font-size: 3.124em;
-    }
 }
 
 h2 {
@@ -93,6 +74,10 @@ h4 {
 
 .font-stack-headline {
     font-family: $text-headline-font-stack;
+}
+
+.font-stack-subhead {
+    font-family: $text-subhead-font-stack;
 }
 
 blockquote {

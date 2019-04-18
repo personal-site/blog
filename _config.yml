@@ -9,6 +9,7 @@ permalink: /blog/:categories/:slug
 url: ''
 
 analytics_id: UA-33558417-1
+destination: _site
 
 components:
   instagram: https://api.chrisvogt.me/instagram

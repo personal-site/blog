@@ -1,3 +1,4 @@
+import chunkArray from './utils/chunk-array';
 import renderInstagramModal from './renderers/instagram-modal';
 import transformPhotos from './utils/transform-photos';
 
@@ -6,7 +7,7 @@ export default async ({config, dom, jQuery}) => {
     instagram: url
   } = config;
 
-  const thumbnailContainer = dom.select('ul#feed');
+  const thumbnailContainer = dom.select('#feed');
   const thumbnailTemplate = dom.select('#instagram-thumbnail-template').content;
 
   try {
@@ -41,19 +42,34 @@ export default async ({config, dom, jQuery}) => {
         return handleThumbnailClick;
       };
 
-      for (const photo of filtered.slice(0, 12)) {
-        const content = thumbnailTemplate.cloneNode(true);
+      const CONFIG_COLUMN_MAX_PHOTOS = 3;
+      const filteredPhotos = filtered.slice(0, 12);
+      const photoFeedArray = chunkArray(filteredPhotos, CONFIG_COLUMN_MAX_PHOTOS);
 
-        const img = content.querySelector('.ig-thumb-image');
-        img.src = photo.images.thumbnail.url;
-        img.height = photo.images.thumbnail.height;
-        img.width = photo.images.thumbnail.width;
+      // NOTE(cvogt): loop through the chunked array of photos and create a
+      // '.column' div element containing photos from each chunked set.
+      const photoFeedFragment = photoFeedArray.reduce((fragment, photoSet) => {
+        const column = document.createElement('div');
+        column.className = 'column';
 
-        const link = content.querySelector('.ig-thumb-link');
-        link.dataset.id = photo.id;
+        for (const photo of photoSet) {
+          const content = thumbnailTemplate.cloneNode(true);
 
-        thumbnailContainer.append(document.importNode(content, true));
-      }
+          const img = content.querySelector('.ig-thumb-image');
+          img.src = photo.images.low_resolution.url;
+
+          const link = content.querySelector('.ig-thumb-link');
+          link.dataset.id = photo.id;
+
+          column.appendChild(document.importNode(content, true));
+        }
+
+        fragment.append(column);
+
+        return fragment;
+      }, document.createDocumentFragment());
+
+      thumbnailContainer.append(photoFeedFragment);
 
       const links = thumbnailContainer.querySelectorAll('.ig-thumb-link');
       [...links].forEach(link => link.addEventListener('click', getClickHandler(link.dataset.id)));

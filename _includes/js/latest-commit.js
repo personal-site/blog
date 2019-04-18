@@ -17,9 +17,12 @@ export default async ({config, dom, jQuery}) => {
     console.warn('Unable to load the Latest Commit component without a config url.');
   }
 
-  const {getJSON} = jQuery;
+  const {get} = jQuery;
   const url = urlTemplate.replace(/{username}/, username);
-  const response = await getJSON({url});
+  const response = await get({
+    dataType: 'json',
+    url
+  });
 
   const latestPushEvent = response.find(event => event.type === 'PushEvent');
   const {repo, payload, created_at: createdAt} = latestPushEvent;

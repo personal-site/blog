@@ -1,42 +1,43 @@
 <section id="masthead" class="hero">
-  <div class="row">
-
-    <div class="small-12 medium-3 columns text-center">
-      <img
-        alt="Chris Vogt Engineer San Francisco"
-        class="circle"
-        src="/assets/images/avatar-256px.jpg"
-        height="128"
-        width="128"
-      >
-    </div>
-
-    <div
-      class="small-12 medium-9 columns d-flex align-items-start text-center text-medium-left"
-      style="min-height: 128px;"
-    >
-      <div style="width: 100%;">
-        <h1 class="text-inverse">
-          {{ site.strings.name }}
-        </h1>
-
-        {% if site.strings.subhead %}
-        <p class="lead text-subhead-font-stack">
-          {{ site.strings.subhead }}
-        </p>
-        {% endif %}
-
-        {% if site.social.twitter_username %}
-        <a
-          class="twitter-follow-button"
-          href="https://twitter.com/{{ site.social.twitter_username }}"
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-3 p-0 d-flex flex-md-row justify-content-center justify-content-md-end">
+        <img
+          alt="Chris Vogt Engineer San Francisco"
+          class="rounded d-block"
+          src="/assets/images/avatar-256px.jpg"
+          height="128"
+          width="128"
         >
-          Follow @{{ site.social.twitter_username }}
-        </a>
-        {% endif %}
       </div>
-    </div>
 
+      <div
+        class="col-12 col-md-9 d-flex align-items-start text-center text-md-left"
+        style="min-height: 128px;"
+      >
+        <div class="text-white w-100">
+          <h1>
+            {{ site.strings.name }}
+          </h1>
+
+          {% if site.strings.subhead %}
+          <p class="lead text-subhead-font-stack">
+            {{ site.strings.subhead }}
+          </p>
+          {% endif %}
+
+          {% if site.social.twitter_username %}
+          <a
+            class="twitter-follow-button"
+            href="https://twitter.com/{{ site.social.twitter_username }}"
+          >
+            Follow @{{ site.social.twitter_username }}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
   </div>
 
   {% if site.theme_options.show_credits %}

@@ -1,38 +1,39 @@
-<section id="blog" data-magellan-destination="blog">
+<section id="blog" class="mb-3">
+  <div class="container">
     <div class="row">
-      <div class="panel large-12 columns">
+      <div class="bg-light col-12 py-3">
 
-        <div class="panel panel-controls small-only-text-center">
-          <p>
-            Latest blog posts. <span class="accent">New posts published monthly.</span>
+        <div class="bg-white p-4 mb-3 w-100">
+          <p class="text-center text-md-left mb-0">
+            Latest blog posts. <span class="text-secondary font-italic">New posts published monthly.</span>
           </p>
         </div>
 
         <div id="latest-posts">
-
           {% for post in site.posts limit:5 %}
-          <a href="{{ post.url | relative_url }}" class="hvr-float-shadow" title="{{ post.title }}">
-            <div class="panel panel-post small-only-text-center">
-              <h5>{{ post.title }}</h5>
+          <div class="card border-0">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ post.title }}
+              </h5>
 
               <div class="post-date m-b-1 text-small">
                 <i class="far fa-calendar-alt"></i> {{ post.date | date: '%B %d, %Y' }}
               </div>
 
-              <p>
+              <p class="card-text">
                 {{ post.excerpt }}
-
-                <span class="text-small text-muted font-stack-default">
-                  Read More &raquo;
-                </span>
               </p>
-            </div>
-          </a>
-          {% endfor %}
 
+              <a class="btn btn-primary" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+                Read post &raquo;
+              </a>
+            </div>
+          </div>
+          {% endfor %}
         </div>
 
       </div>
     </div>
-
-  </section>
+  </div>
+</section>
