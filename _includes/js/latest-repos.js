@@ -28,7 +28,7 @@ export default async ({config, dom, jQuery}) => {
 
     container.innerHTML = '';
 
-    for (const repo of repos) {
+    for (const [i, repo] of repos.entries()) {
       const content = template.cloneNode(true);
 
       content.querySelector('.latest-repos-title').textContent = repo.name;
@@ -37,6 +37,10 @@ export default async ({config, dom, jQuery}) => {
       const link = content.querySelector('.latest-repos-link');
       link.title = `${repo.name} on GitHub`;
       link.href = repo.url;
+
+      if (i !== repos.length - 1 && i !== repos.length - 2) {
+        content.querySelector('.latest-repos-column').classList.add('mb-3');
+      }
 
       container.append(document.importNode(content, true));
     }
