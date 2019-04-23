@@ -22,7 +22,7 @@ export default ({dom, photo}) => {
   content.querySelector('.img-modal-avatar').src = photo.profilePicture;
   content.querySelector('.ig-modal-image').src = photo.images.standard_resolution.url;
   content.querySelector('.ig--modal-link').href = photo.link;
-  content.querySelector('.ig-modal-location').textContent = photo.locationName;
+  content.querySelector('.ig-modal-location').textContent = photo.locationName || '';
   content.querySelector('.ig-modal-text').textContent = photo.text;
   content.querySelector('.ig-time-ago').textContent = getRelativeTimeSinceString(photo.createdAt);
 
