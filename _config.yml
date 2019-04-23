@@ -53,8 +53,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - bower.json
-  - bower_components
   - node_modules
   - package-lock.json
   - package.json

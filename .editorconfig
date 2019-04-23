@@ -23,6 +23,6 @@ trim_trailing_whitespace = false
 [*.scss]
 indent_size = 4
 
-[{package,bower}.json]
+[*.json]
 indent_style = space
 indent_size = 2
