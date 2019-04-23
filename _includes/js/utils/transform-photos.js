@@ -18,9 +18,6 @@ export default (acc, photo = {}) => {
     } = {},
     type,
     link,
-    location: {
-      name: locationName = ''
-    } = {},
     created_time: createdAt
   } = photo;
 
@@ -32,7 +29,7 @@ export default (acc, photo = {}) => {
     images,
     likesCount,
     link,
-    locationName,
+    locationName: photo.location ? photo.location.name : null,
     profilePicture,
     text,
     type,
