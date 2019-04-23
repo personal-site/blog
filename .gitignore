@@ -9,6 +9,5 @@ _build
 _config.prod.yml
 _site
 assets/js/*.js
-bower_components
 node_modules
 npm-debug.log

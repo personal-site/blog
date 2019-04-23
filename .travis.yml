@@ -4,8 +4,6 @@ node_js:
   - v8
 before_install:
   - cp _config.yml _config.prod.yml
-  - npm install -g bower
-  - bower install
   - gem install bundler
   - bundle install
   - npm install
