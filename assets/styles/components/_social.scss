@@ -15,22 +15,17 @@
     }
 }
 
-#social-profiles {
-    margin-bottom: 0;
-    margin: 64px auto;
-}
-
 #social-profiles li {
     float: none;
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 0 14px;
 }
 
 @media only screen and (max-width: $breakpoint-lg) {
     #social-profiles li {
         margin: 0 24px;
-        font-size: 2rem;
+        font-size: 1.67rem;
     }
 }
 

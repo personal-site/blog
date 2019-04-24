@@ -38,10 +38,6 @@ export default async ({config, dom, jQuery}) => {
       link.title = `${repo.name} on GitHub`;
       link.href = repo.url;
 
-      if (i !== repos.length - 1 && i !== repos.length - 2) {
-        content.querySelector('.latest-repos-column').classList.add('mb-3');
-      }
-
       container.append(document.importNode(content, true));
     }
   } catch (error) {
