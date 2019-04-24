@@ -16,16 +16,6 @@ body {
 }
 
 /* accents */
-hr {
-    text-align: center;
-    margin: 0 auto;
-    opacity: 0.5;
-}
-
-ul {
-    text-transform: uppercase;
-}
-
 ul.inline-list.right,
 footer ul.inline-list {
     text-transform: none;
@@ -78,11 +68,6 @@ h4 {
 
 .font-stack-subhead {
     font-family: $text-subhead-font-stack;
-}
-
-blockquote {
-    text-decoration: none;
-    text-transform: none;
 }
 
 footer,
