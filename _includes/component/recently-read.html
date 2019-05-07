@@ -2,20 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="bg-light col-lg-12">
-
-        <div class="panel panel-controls text-center text-md-left">
-          <p>
-            Recently read books. <span class="accent">Click on a thumbnail to view on Google Books.</span>
-
-            {% if site.social.goodreads_link %}
-            <a
-              href="{{ site.social.goodreads_link }}"
-              class="btn btn-primary btn-sm float-md-right"
-              title="Chris Vogt on Goodreads"
-            >
-              <i class="fab fa-goodreads"></i> Visit Goodreads
-            </a>
-            {% endif %}
+        <div class="bg-white p-4 mt-3 mb-3 w-100">
+          <p class="text-center text-md-left mb-0">
+            Recently read books. <span class="text-secondary font-italic">Click on a thumbnail to view on Google Books.</span>
           </p>
         </div>
 
@@ -23,6 +12,17 @@
           {% include template/recently-read/book.html %}
         </div>
 
+        {% if site.social.goodreads_link %}
+        <div class="bg-white text-center p-4 mb-3 w-100">
+          <a
+            href="{{ site.social.goodreads_link }}"
+            class="btn btn-primary"
+            title="Chris Vogt on Goodreads"
+          >
+            <i class="fab fa-goodreads"></i> Visit Goodreads
+          </a>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
