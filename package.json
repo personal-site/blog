@@ -1,7 +1,7 @@
 {
   "name": "@personal-site/blog",
   "description": "Jekyll blog with GitHub, Instagram, and social widgets.",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
@@ -34,7 +34,7 @@
     "@babel/polyfill": "^7.2.5",
     "array-to-obj": "^1.0.0",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "popper.js": "^1.14.7",
     "timeago": "^1.6.3",
     "whatwg-fetch": "^3.0.0"
@@ -62,7 +62,7 @@
   "bundlesize": [
     {
       "path": "./_site/assets/js/**/*.js",
-      "maxSize": "100 kB"
+      "maxSize": "200 kB"
     },
     {
       "path": "./_site/assets/css/**/*.css",

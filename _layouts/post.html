@@ -3,28 +3,36 @@ slug: post
 ---
 
 {% include section/header.html %}
-{% capture headline %}<h1 class="mt-3">{{ page.title }}</h1>{% endcapture %}
+{% capture headline %}
+<h1>
+  <span class="bg-white px-2">
+    {{ page.title }}
+  </span>
+</h1>
 
-<div class="container">
+<div class="post-date text-white text-center m-b-1">
+  <i class="far fa-calendar-alt"></i>&nbsp;
+  {{ page.date | date: '%B %d, %Y' }}
+</div>
+{% endcapture %}
+
+<div class="masthead masthead--post d-flex flex-column align-items-center justify-content-center w-100 py-5 px-3">
+  {{ headline }}
+</div>
+
+<div class="container text-body mt-4 mb-1">
   <div class="row">
+
     <div class="col-12">
-
-      {{ headline }}
-
-      <div class="post-date text-center m-b-1">
-        <i class="far fa-calendar-alt"></i>&nbsp;
-        {{ page.date | date: '%B %d, %Y' }}
-      </div>
-
       <div class="post-content">
         {{ content }}
       </div>
-
     </div>
+
   </div>
 </div>
 
-<div class="author-container py-3 bg-dark text-light">
+<div class="author-container text-muted bg-white border-top py-3">
   <div class="container">
     <div class="row">
 
@@ -48,5 +56,12 @@ slug: post
     </div>
   </div>
 </div>
+
+<script>
+  window.__WWW_CONFIG__ = {
+    metas: '{{site.components.metas}}',
+    profiles: '{{site.components.profiles}}'
+  };
+</script>
 
 {% include section/footer.html %}
