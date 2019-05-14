@@ -20,7 +20,7 @@ slug: post
   {{ headline }}
 </div>
 
-<div class="container mt-4 mb-1">
+<div class="container text-body mt-4 mb-1">
   <div class="row">
 
     <div class="col-12">
@@ -32,7 +32,7 @@ slug: post
   </div>
 </div>
 
-<div class="author-container py-3 bg-dark text-light">
+<div class="author-container text-muted bg-white border-top py-3">
   <div class="container">
     <div class="row">
 
@@ -62,15 +62,6 @@ slug: post
     metas: '{{site.components.metas}}',
     profiles: '{{site.components.profiles}}'
   };
-
-  window.__WWW_LAYOUT_MODULES__ = [
-    'instagram',
-    'latest-commit',
-    'latest-repository',
-    'quotes',
-    'recently-read',
-    'twitter'
-  ];
 </script>
 
 {% include section/footer.html %}
