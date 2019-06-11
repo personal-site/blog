@@ -24,7 +24,7 @@ export default async ({config, dom, jQuery}) => {
   try {
     const {getJSON} = jQuery;
     const response = await getJSON({url});
-    const repos = response.reverse().filter(repo => Boolean(repo.description));
+    const repos = response.reverse().slice(0, 7).filter(repo => Boolean(repo.description));
 
     container.innerHTML = '';
 
