@@ -13,7 +13,6 @@ export default async ({config, dom, jQuery}) => {
 
   const bookList = dom.select('#recent-books');
   const container = dom.select('#recently-read');
-  // const navButton = dom.select('#primary-nav li');
   const template = dom.select('#recent-book-template').content;
 
   try {

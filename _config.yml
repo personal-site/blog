@@ -13,7 +13,7 @@ destination: _site
 
 components:
   instagram: https://api.chrisvogt.me/instagram
-  latest_repos: https://gh-latest-repos-fmyaneprcd.now.sh
+  latest_repos: https://metrics.chrisvogt.me/api/latest-repositories
   latest_commit:
     url: https://api.github.com/users/{username}/events/public
     username: chrisvogt
