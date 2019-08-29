@@ -13,11 +13,11 @@ destination: _site
 
 components:
   instagram: https://api.chrisvogt.me/instagram
-  latest_repos: https://metrics.chrisvogt.me/api/latest-repositories
   latest_commit:
     url: https://api.github.com/users/{username}/events/public
     username: chrisvogt
   metas: https://api.chrisvogt.me/metas
+  pinned_repositories: https://metrics.chrisvogt.me/api/pinned-repositories
   profiles: https://api.chrisvogt.me/profiles
   quotes: https://api.chrisvogt.me/quotes
   recently_read: https://recently-read.chrisvogt.me
