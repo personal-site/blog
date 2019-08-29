@@ -1,5 +1,0 @@
-[{
-  "name": "is-midi",
-  "description": "Check if a Buffer/Uint8Array is a MIDI file",
-  "url": "https://github.com/chrisvogt/is-midi"
-}]

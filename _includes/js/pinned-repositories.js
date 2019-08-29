@@ -5,9 +5,6 @@ export default async ({config, dom, jQuery}) => {
     } = config;
     return pinnedRepositories;
   };
-
-  console.log(config);
-
   const url = selectURL(config);
 
   if (!url) {
@@ -24,7 +21,6 @@ export default async ({config, dom, jQuery}) => {
   }
 
   try {
-    console.log('About to fetch repositories', {url});
     const {getJSON} = jQuery;
     const {pinnedRepositories = []} = await getJSON({url});
 

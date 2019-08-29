@@ -17,8 +17,8 @@ Many of the available UI components depend on external data. This table document
 |----------------|-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | Instagram      | [personal-api/plugin-instagram](https://github.com/personal-api/plugin-instagram) | [_schema/instagram.json](_schema/instagram.json)         |
 | Latest Commit  | _Built in_                                                                        | [_schema/latest-commit.json](_schema/latest-commit.json) |
-| Latest Repos   | _Built in_                                                                        | [_schema/pinned-repositories.json](_schema/pinned-repositories.json)   |
 | Navigation     | _Built in_                                                                        | [_data/navigation.json](_data/navigation.json)           |
+| Pinned Repositories   | _Built in_                                                                 | [_schema/pinned-repositories.json](_schema/pinned-repositories.json)   |
 | Posts          | _Built in_                                                                        | [_posts/hello-world.md](_posts/2019-01-01-hello-world.md)           |
 | Profiles       | [personal-api/core](https://github.com/personal-api/core)                         | [_schema/profiles.json](_schema/profiles.json)           |
 | Quotes         | [personal-api/core](https://github.com/personal-api/core)                         | [_schema/quotes.json](_schema/quotes.json)               |
