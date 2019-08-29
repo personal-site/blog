@@ -12,6 +12,17 @@
           {% include template/recently-read/book.html %}
         </div>
 
+        <div class="bg-white p-4 mt-3 mb-3 w-100">
+          <p class="text-center text-md-left mb-0">
+            Reading updates. <span class="text-secondary font-italic">Click on a thumbnail to view on Google Books.</span>
+          </p>
+        </div>
+
+        <div id="reading-updates" class="row text-center">
+          {% include template/reading-updates/review.html %}
+          {% include template/reading-updates/status.html %}
+        </div>
+
         {% if site.social.goodreads_link %}
         <div class="bg-white text-center p-4 mb-3 w-100">
           <a

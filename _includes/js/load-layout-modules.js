@@ -2,6 +2,7 @@ import instagram from './instagram';
 import latestCommit from './latest-commit';
 import latestRepos from './latest-repos';
 import quotes from './quotes';
+import readingUpdates from './reading-updates';
 import recentlyRead from './recently-read';
 import socialProfiles from './social-profiles';
 import twitter from './twitter';
@@ -19,6 +20,7 @@ const registry = {
   'latest-commit': latestCommit,
   'latest-repository': latestRepos,
   quotes,
+  'reading-updates': readingUpdates,
   'recently-read': recentlyRead,
   'social-profiles': socialProfiles,
   twitter
@@ -27,6 +29,8 @@ const registry = {
 export default jQuery => {
   const config = window.__WWW_CONFIG__ || {};
   const args = {config, dom, jQuery};
+
+  console.log(args);
 
   const modules = [
     ...commonModules,

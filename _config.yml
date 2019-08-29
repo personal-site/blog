@@ -12,6 +12,7 @@ analytics_id: UA-33558417-1
 destination: _site
 
 components:
+  goodreads_updates: https://metrics.chrisvogt.me/api/goodreads-updates
   instagram: https://api.chrisvogt.me/instagram
   latest_repos: https://gh-latest-repos-fmyaneprcd.now.sh
   latest_commit:
