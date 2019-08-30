@@ -1,6 +1,6 @@
 import instagram from './instagram';
 import latestCommit from './latest-commit';
-import latestRepos from './latest-repos';
+import pinnedRepositories from './pinned-repositories';
 import quotes from './quotes';
 import recentlyRead from './recently-read';
 import socialProfiles from './social-profiles';
@@ -17,7 +17,7 @@ const commonModules = [
 const registry = {
   instagram,
   'latest-commit': latestCommit,
-  'latest-repository': latestRepos,
+  'pinned-repositories': pinnedRepositories,
   quotes,
   'recently-read': recentlyRead,
   'social-profiles': socialProfiles,

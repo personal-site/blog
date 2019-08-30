@@ -1,7 +1,7 @@
 {
   "name": "@personal-site/blog",
   "description": "Jekyll blog with GitHub, Instagram, and social widgets.",
-  "version": "0.9.7",
+  "version": "0.10.0",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
@@ -45,7 +45,7 @@
     "babel-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
-    "bundlesize": "^0.17.1",
+    "bundlesize": "^0.18.0",
     "uglify-es": "^3.3.9",
     "watchify": "^3.11.1",
     "xo": "^0.24.0"
