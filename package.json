@@ -1,7 +1,7 @@
 {
   "name": "@personal-site/blog",
-  "description": "Jekyll blog with GitHub, Instagram, and social widgets.",
-  "version": "0.10.0",
+  "description": "Jekyll blog with GitHub, Instagram, and Goodreads widgets.",
+  "version": "0.11.0",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",
@@ -23,7 +23,7 @@
     "js:clean": "rm ./assets/js/*.js",
     "js:min": "minify ./assets/js/app.js -d ./assets/js",
     "js:vendors": "uglifyjs $(cat ./vendor-packages.txt) -o ./assets/js/vendor.min.js",
-    "build": "npm run js:vendors && npm run js:babel && npm run js:min && jekyll build --config _config.prod.yml",
+    "build": "npm run js:vendors && npm run js:babel && npm run js:min && bundle exec jekyll build --config _config.prod.yml",
     "prestart": "npm run js:vendors",
     "start": "npm run js & bundle exec jekyll serve --watch --incremental --drafts",
     "pretest": "npm run build",
