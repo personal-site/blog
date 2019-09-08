@@ -11,3 +11,4 @@ _site
 assets/js/*.js
 node_modules
 npm-debug.log
+vendor

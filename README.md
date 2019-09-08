@@ -30,7 +30,7 @@ Many of the available UI components depend on external data. This table document
 
 | Tool    | Version | Link                      | Description                      |
 |---------|---------|---------------------------|----------------------------------|
-| Node    | 8       | https://nodejs.org        | Dev & build environment language |
+| Node    | 10       | https://nodejs.org        | Dev & build environment language |
 | npm     | 6       | https://npmjs.com         | JavaScript dependency management |
 | Ruby    | 2       | https://www.ruby-lang.org | Dev & build environment language |
 | Bundler | >1.14   | https://bundler.io        | Ruby dependency management       |
