@@ -1,11 +1,11 @@
 sudo: false
 language: node_js
 node_js:
-  - v8
+  - v10
 before_install:
   - cp _config.yml _config.prod.yml
   - gem install bundler
-  - bundle install
+  - bundle install --path vendor/bundle
   - npm install
 install:
   - npm run build
