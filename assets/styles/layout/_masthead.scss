@@ -3,14 +3,16 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-    padding-top: 50px;
-    padding-bottom: 50px;
     position: relative;
 
     .lead {
         color: $grey-50;
         font-family: $text-headline-font-stack;
     }
+}
+
+.masthead-wrapper {
+    min-height: 15em;
 }
 
 .hero,

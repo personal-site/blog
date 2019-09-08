@@ -1,5 +1,5 @@
 <!-- Component: Navigation -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-inverse">
+<nav class="navbar navbar-expand-sm navbar-light bg-white">
   <div class="container">
     <a class="navbar-brand font-stack-headline" href="/">
       {{ site.strings.brand }}
@@ -22,7 +22,7 @@
         {% for item in site.data.navigation.top.left %}
           {% if item.slug == 'blog' and site.posts.size == 0 %}{% break %}{% endif %}
           <li class="link-{{ item.slug }} nav-item{% if item.class %} {{ item.class }}{% endif %}{% if item.slug == 'blog' and page.layout == 'post' %} active{% endif %}">
-            <a class="nav-link text-light font-stack-subhead" href="{{ item.path }}" title="{{ item.title }}">
+            <a class="nav-link font-stack-subhead" href="{{ item.path }}" title="{{ item.title }}">
               {{ item.text }}
             </a>
           </li>
