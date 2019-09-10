@@ -10,7 +10,11 @@ slug: home
 
 {% include component/projects.html %}
 
-<div class="bg-dark-grey py-3">
+<div class="bg-white">
+  <svg class="mb-5 align-top" width="100%" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 63.05">
+    <path fill="#1E90FF" d="M0,0V12.46C-.15,14,89,42.65,218.94,54.27,348.92,68,519.8,64.69,683,50.88,846.62,38.17,1017.88,20.08,1147.62,14c129.85-7.39,218.18-2.75,218.38-.43V0Z" />
+  </svg>
+
   {% if site.posts.size > 0 %}
   {% include component/blog-posts.html %}
   {% endif %}
@@ -18,6 +22,10 @@ slug: home
   {% include component/instagram.html %}
 
   {% include component/recently-read.html %}
+
+  <svg class="mt-5 align-bottom" width="100%" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 64">
+    <path fill="#f8f9fa" d="M1366,64V3.58c-.2-2.32-88.53-7-218.38.43-129.74,6.07-301,24.16-464.62,36.87C519.8,54.69,348.92,58,218.94,44.27,89,32.65-.15,4,0,2.46V64Z"></path>
+  </svg>
 </div>
 
 {% include component/quotes.html %}

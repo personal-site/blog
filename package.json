@@ -1,7 +1,7 @@
 {
   "name": "@personal-site/blog",
   "description": "Jekyll blog with GitHub, Instagram, and Goodreads widgets.",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "homepage": "https://www.chrisvogt.me",
   "author": {
     "name": "Chris Vogt",

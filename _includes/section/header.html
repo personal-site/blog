@@ -3,7 +3,7 @@
 {% else %}
   {%- assign description = site.description -%}
 {% endif %}<!doctype html>
-<html class="no-js" lang="{{ site.locale | default: 'en-US' }}" >
+<html class="no-js h-100" lang="{{ site.locale | default: 'en-US' }}" >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -79,6 +79,6 @@
     <link rel="dns-prefetch" href="//pro.fontawesome.com">
     <link rel="dns-prefetch" href="//scontent.cdninstagram.com">
   </head>
-  <body class="page-{{ layout.slug }}">
+  <body class="page-{{ layout.slug }} h-100">
 
   {% include component/top-navigation.html %}
