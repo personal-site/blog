@@ -16,6 +16,11 @@
     float: right;
 }
 
+.border-heavy {
+    border-style: solid;
+    border-width: $heavy-border-width;
+}
+
 /**
  * Flexbox helpers
  */

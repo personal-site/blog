@@ -12,6 +12,7 @@ body {
 }
 
 .text-inverse {
+    @include smooth;
     color: white;
 }
 
@@ -74,6 +75,14 @@ footer,
 ul.inline-list a,
 .text-muted {
     color: #afafaf;
+}
+
+.text-dodger-blue {
+    color: $dodger-blue;
+}
+
+.text-subhead {
+    font-family: $text-subhead-font-stack;
 }
 
 .text-drop-cap {
