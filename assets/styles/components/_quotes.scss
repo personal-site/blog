@@ -22,6 +22,11 @@ section#quote {
     blockquote {
         border-left: none;
     }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        filter: invert(100%);
+    }
 }
 
 .orbit-container .orbit-next > span {

@@ -37,6 +37,7 @@ export default async ({config, dom, jQuery}) => {
       const citeEl = document.createElement('cite');
       citeEl.append(document.createTextNode(cite));
       citeEl.classList.add('d-block');
+      citeEl.classList.add('font-stack-default');
 
       blockquote.append(document.createTextNode(body));
       blockquote.append(citeEl);
