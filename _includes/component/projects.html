@@ -28,6 +28,13 @@
           {% include template/pinned-repositories/link.html %}
         </div>
 
+        {% if site.social.instagram_username %}
+        <p class="text-light text-md-right">
+          <a class="text-white" href="https://github.com/{{ site.social.github_username }}?tab=repositories" title="View repositories on GitHub">
+            View repositories on GitHub
+          </a>
+        </p>
+        {% endif %}
       </div>
     </div>
   </div>

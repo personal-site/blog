@@ -10,14 +10,3 @@
     min-height: 15em;
 }
 
-.hero,
-#social {
-    background: rgba(69, 39, 160, 1);
-    background: linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4527a0', endColorstr='#711e9b', GradientType=1);
-}
-
-.masthead.masthead--post {
-    background: url(/assets/images/trianglify.svg);
-    min-height: 280px;
-}

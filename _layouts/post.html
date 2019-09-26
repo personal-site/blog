@@ -4,8 +4,8 @@ slug: post
 
 {% include section/header.html %}
 {% capture headline %}
-<h1>
-  <span class="bg-white px-2">
+<h1 class="font-stack-headline text-center">
+  <span class="bg-white px-2 py-1">
     {{ page.title }}
   </span>
 </h1>
@@ -16,8 +16,13 @@ slug: post
 </div>
 {% endcapture %}
 
-<div class="masthead masthead--post d-flex flex-column align-items-center justify-content-center w-100 py-5 px-3">
-  {{ headline }}
+<div class="masthead masthead--post bg-trianglify-purple d-flex flex-column align-items-center justify-content-center w-100">
+  <div class="container-fluid py-5">
+    {{ headline }}
+  </div>
+  <svg class="align-bottom" width="100%" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 64">
+    <path fill="white" d="M1366,64V3.6c-.2-2.32-88.53-7-218.38.43C1017.88,10.1,846.62,28.18,683,40.89,519.8,54.69,348.92,58,218.94,44.28,89,32.66-.15,4,0,2.48V64Z"></path>
+  </svg>
 </div>
 
 <div class="container text-body mt-4 mb-1">
@@ -40,7 +45,7 @@ slug: post
         <img
           alt="Avatar – {{ site.strings.name }}"
           class="rounded-circle mb-3 mb-md-0"
-          src="/assets/images/avatar-256px.jpg"
+          src="/assets/images/avatar-512px.jpg"
           height="128"
           width="128"
         >
