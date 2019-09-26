@@ -39,24 +39,15 @@ h1 {
 
 h2 {
     font-family: $text-subhead-font-stack;
-    margin-bottom: 1em;
-    padding-top: 0;
     color: $text-jet;
-    font-size: 36px;
-    line-height: 34px;
-    font-weight: 400;
 }
 
 h3 {
     font-family: $text-subhead-font-stack;
-    font-weight: 500;
 }
 
 h4 {
     font-family: $text-subhead-font-stack;
-    color: black;
-    font-size: 28px;
-    padding-top: 5px;
 }
 
 .font-stack-default {
@@ -88,7 +79,7 @@ ul.inline-list a,
 .text-drop-cap {
     color: $text-jet;
     float: left;
-    font-family: $text-default-font-stack;
+    font-family: $text-headline-font-stack;
     font-size: 75px;
     line-height: 75px;
     padding-right: 8px;
